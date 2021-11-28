@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Python Pillow Tutorial - javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Python Pillow Tutorial - javatpoint">
+  <meta property="og:description" content="Python Pillow Tutorial with What is Image Processing, Installation of Pillow, Attributes of Image Module, Working with Images, Creating Thumbnails, Merging Images Using Pillow etc."> 
+  <meta name="keywords" content="python pillow tutorial, pillow, what is image processing, installation of pillow, attributes of image module, working with images, creating thumbnails, merging images using pillow">
+  <meta name="description" content="Python Pillow Tutorial with What is Image Processing, Installation of Pillow, Attributes of Image Module, Working with Images, Creating Thumbnails, Merging Images Using Pillow etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/python-pillow"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Python Pillow Tutorial - javatpoint">
+  <meta name="twitter:description" property="og:description" content="Python Pillow Tutorial with What is Image Processing, Installation of Pillow, Attributes of Image Module, Working with Images, Creating Thumbnails, Merging Images Using Pillow etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/python-pillow">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> 
+  <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> 
+          <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script>
+          <gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> 
+      <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> 
+      <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> 
+      <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="python-pillow" class="selected">Pillow</a></li> 
+       <li><a href="python-tutorial">Python</a></li> 
+       <li><a href="python-turtle-programming">Turtle</a></li> 
+       <li><a href="python-openpyxl">Openpyxl</a></li> 
+       <li><a href="python-pygame">Pygame</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="sql-tutorial">SQL</a></li> 
+       <li><a href="android-tutorial">Android</a></li> 
+       <li><a href="cloud-computing-tutorial">Cloud</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="servlet-tutorial">Servlet</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="struts-2-tutorial">Struts2</a></li> 
+       <li><a href="spring-tutorial">Spring</a></li> 
+       <li><a href="examaccess">Quiz</a></li> 
+       <li><a href="comment.jsp">Comment</a></li> 
+       <li><a href="forum">Forum</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Pillow Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> 
+      <a href="python-pillow">Python Pillow Tutorial</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> <h1 class="h1">Python Pillow Tutorial</h1> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow.png" class="imageright" alt="Python Pillow Tutorial"> <p>As technology emerges day by day, digital images can be an indispensable source of receiving data. We encounter a lot of digital images in daily life. However, these pictures can be related to anything.</p> <p>In the programming world, we can process digital images using various libraries or tools. In this article, we will learn about one of the popular tools of Python is <strong>Pillow</strong>. However, <a href="https://www.javatpoint.com/python-tutorial">Python</a> provides many other useful libraries such as <a href="https://www.javatpoint.com/opencv">OpenCV</a>, Python Image Library (PIL), and <strong>Scikit-image</strong>. This article completely focuses on the <strong>Python Pillow module (PIL)</strong>.</p> <p>Before dive deep into this topic, let's understand image processing.</p> <h2 class="h2">What is Image Processing?</h2> <p>Image processing is a method of analyzing and manipulating digital images. The main goal is to extracting some information that can be used somewhere else. Let's make it simple to understand with a real-life example.</p> <p><strong>For example -</strong> Nowadays, <a href="https://www.javatpoint.com/cctv-full-form">CCTV</a> cameras are instated in the traffic light that capture digital images, identify the vehicle's number plate, and check whether the vehicle violated the traffic rules or not. All this process is related to image processing.</p> <h2 class="h2">Introduction</h2> <p>Python Pillow module is built on top of PIL (Python Image Library). It is the essential modules for image processing in Python. But it is not supported by Python 3. But, we can use this module with the Python 3.x versions as PIL. It supports the variability of images such as <a href="https://www.javatpoint.com/jpg-full-form">jpeg</a>, <a href="https://www.javatpoint.com/png-full-form">png</a>, bmp, <a href="https://www.javatpoint.com/gif-full-form">gif</a>, ppm, and tiff.</p> <p>We can do anything on the digital images using the pillow module. In the upcoming section, we will learn various operations on the images such as filtering images, Creating thumbnail, merging images, cropping images, blur an image, resizing an image, creating a water mark and many other operations.</p> <h2 class="h2">Installation of Pillow</h2> <p>Before start working with Python, we need to install the pillow library to our local machine. We can do it by typing the following command in the terminal.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+pip install pillow
+or 
+pip install PIL
+</textarea>
+           </div> <p>If pip is already installed in the system, it will simply show the <strong>"requirement already satisfied".</strong></p> <h2 class="h2">Using the Image Module</h2> <p>Python pillow library is used to image class within it to show the image. The image modules that belong to the pillow package have a few inbuilt functions such as load images or create new images, etc.</p> <h2 class="h2">Opening, Rotating and Displaying an Image</h2> <p>Opening an image is a basic operation of the image processing. We import the image module from the PIL library to load the image. It provides the <strong>Image.open()</strong> method, which takes an image filename as an argument. This method returns the image object.</p> <p>We can make any modification to image object which can be saved to an image with the <strong>save()</strong> method. Once the image is open, we can perform operations as resize, crop, draw or many others.</p> <p>Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+from PIL import Image
+#Open image using Image module
+im = Image.open(r"C:\Users\DEVANSH SHARMA\Downloads\car.jpg")
+#Show actual Image
+im.show()
+#Show rotated Image
+im = im.rotate(45)
+im.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow2.png" alt="Python Pillow Tutorial"> <p><strong>Image after Rotation -</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow3.png" alt="Python Pillow Tutorial"> <p><strong>Explanation</strong></p> <p>The above code displayed the original and rotated image using the standard jpeg display utility. If we run the above code in the <strong><a href="https://www.javatpoint.com/jupyter-notebook">Jupyter notebook</a></strong> then the output will be shown in the local machine image gallery.</p> <h2 class="h2">Attributes of Image Module</h2> <p>The Image class contains some attributes to manipulate the image object. Let's understand these attributes using one by one.</p> <h3 class="h3">Image.filemname</h3> <p>The Image.filename function returns the name of the image.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+image = Image.open('beach1.jpg')
+image.filename
+</textarea>
+           </div> <p><strong>Output:</strong></p> 
+           <div class="codeblock3">
+            <pre>'C:\\Users\\DEVANSH SHARMA\\Downloads\\car.jpg'
+</pre>
+           </div> <h3 class="h3">Image.format</h3> <p>This function is used to get file format of the image file such as 'JPEG', 'BMP', 'PNG', etc.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+image = Image.open('beach1.jpg')
+image.format
+</textarea>
+           </div> <p><strong>Output:</strong></p> 
+           <div class="codeblock3">
+            <pre>'JPEG'
+</pre>
+           </div> <h3 class="h3">Image.mode</h3> <p>The above method returns the pixel format used by the image. Typing variables are '1', 'L', 'RGB', or 'CMYK'.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+im = Image.open(r"C:\Users\DEVANSH SHARMA\Downloads\car.jpg")
+im.mode
+</textarea>
+           </div> <p><strong>Output:</strong></p> 
+           <div class="codeblock3">
+            <pre>'RGB'
+</pre>
+           </div> <h3 class="h3">Image.size</h3> <p>The Image.size function returns the tuple that contains height &amp; weight of the image.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+im = Image.open(r"C:\Users\DEVANSH SHARMA\Downloads\car.jpg")
+im.size
+</textarea>
+           </div> <p><strong>Output:</strong></p> 
+           <div class="codeblock3">
+            <pre>(480, 320)
+</pre>
+           </div> <h3 class="h3">Image.width</h3> <p>This method returns the width of the image.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+im = Image.open(r"C:\Users\DEVANSH SHARMA\Downloads\car.jpg")
+im.width
+</textarea>
+           </div> <p><strong>Output:</strong></p> 
+           <div class="codeblock3">
+            <pre>480
+</pre>
+           </div> <h3 class="h3">Image.height</h3> <p>This method returns the width of the image.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+im = Image.open(r"C:\Users\DEVANSH SHARMA\Downloads\car.jpg")
+im.width
+</textarea>
+           </div> <p><strong>Output:</strong></p> 
+           <div class="codeblock3">
+            <pre>320
+</pre>
+           </div> <h3 class="h3">Image.info</h3> <p>This method returns a dictionary holding data associated with the image.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+im = Image.open(r"C:\Users\DEVANSH SHARMA\Downloads\car.jpg")
+im.info
+</textarea>
+           </div> <p><strong>Output:</strong></p> 
+           <div class="codeblock3">
+            <pre>{'jfif': 257,
+ 'jfif_version': (1, 1),
+ 'jfif_unit': 0,
+ 'jfif_density': (1, 1),
+ 'progressive': 1,
+ 'progression': 1}
+</pre>
+           </div> <h2 class="h2">Working with Images</h2> <p>Python pillow module makes very simple to work with the images. We can use <strong>PIL.Image modle</strong> function. Let's see the syntax.</p> <p><strong>Syntax -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+Image.open(fp, mode = 'r')
+</textarea>
+           </div> <p>In the above syntax -</p> 
+           <ul class="points"> 
+            <li><strong>fp -</strong> It is a file object or represents the file name, <strong>Path</strong> object. This file object can implement the <strong>read(), seek(),</strong> and <strong>tell()</strong> methods.</li> 
+            <li><strong>mode -</strong> It represents a file mode. It is an optional argument if given, by default is 'r'.</li> 
+           </ul> <p>Consider the following example.</p> <p><strong>Example -</strong></p> <p>In the following example, we will open an image in .jpg format. First, we will display the image and then save it with another file format.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+from PIL import Image
+#We are Opening image using Image module
+img = Image.open("images/cuba.jpg")
+#It will display the actual image
+imimg = img.rotate(45)
+img.show()
+</textarea>
+           </div> <p>The above code will display the actual and rotate image at 45 degree.</p> <p><strong>Explanation -</strong> </p> <p>In the above code, we have imported the Image module from <strong>PIL library</strong>, called <strong>Image.open()</strong> function to read an image. The <strong>Image.open()</strong> function returns an image object. This method takes a <strong>filename(string),</strong> a path object or an <strong>image(file)</strong> object.</p> <h2 class="h2">Saving an Image</h2> <p>The Image module provides the <strong>save()</strong> method to save the image to file. It takes a filename, a file object that has been opened to write. Let's understand the following syntax.</p> <p><strong>Syntax &amp;ndash</strong> </p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+Image.save(fp, format = None, **params)
+</textarea>
+           </div> <p>In the above syntax -</p> 
+           <ul class="points"> 
+            <li><strong>fp -</strong> It represents a filename (string), <strong>Path</strong> object or file object.</li> 
+            <li><strong>format -</strong> It is an optional format override. It is used when a file object was used in its place of a filename.</li> 
+            <li><strong>options -</strong> It is an additional parameter to the image writer.</li> 
+            <li><strong>Return value -</strong> The return value is</li> 
+            <li><strong>KeyError -</strong> It is used when the output format could not be determined from the file name.</li> 
+            <li><strong>IOError -</strong> It is used when the file may have been formed and may have fractional data.</li> 
+           </ul> <p>If we sum up the above syntax, the file saves based on the given filename. If we don't specify the format, it is based on the current filename extension.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+image.save('dev.png')
+</textarea>
+           </div> <p>In the above example, it keeps the file based on the file extension the image type. <strong>For example -</strong> The code will save as a <strong>png</strong> file in our current working directory.</p> <p>We can also obviously identify the file type as a second parameter. Let's see the following line.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+image.save('dev.gif', 'GIF') 
+</textarea>
+           </div> <h2 class="h2">Creating Thumbnails</h2> <p>Thumbnail is images of equal height and width. Sometimes, we need to create a thumbnail to specify the actual image. The pillow library provides <strong>thumbnail()</strong> function. This method transforms the actual image to contain a thumbnail version of it. The size of the thumbnail will not be same as the given size.</p> <p>The <strong>thumbnail()</strong> estimates a suitable thumbnail size to preserve the aspect of the image. We need to call another method <strong>draft()</strong> method, configuring the file reader and, finally, resizing the image. Let's see the following syntax.</p> <p><strong>Syntax -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+Image.thumbnail(size, resample=3)
+</textarea>
+           </div> <p>The above syntax -</p> 
+           <ul class="points"> 
+            <li><strong>Size -</strong> It is the defined size of a thumbnail.</li> 
+            <li><strong>Resample -</strong> It is an optional resampling filter. This filter can be one of these <strong>Image.NEAREST</strong>, BILNEAR, PIL.Image.BICUBIC, or PIL.Image.LANCZOS. By default, it is PIL.Image.BICUBIC.</li> 
+            <li><strong>Return -</strong> It returns <strong>None</strong>.</li> 
+           </ul> <p>Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+from PIL import Image
+def thumbs():
+   try:
+      img = Image.open(r"C:\Users\DEVANSH SHARMA\Downloads\car.jpg")
+      img.thumbnail((80,80))
+      img.save('images/thumbnail.jpg')
+      image1 = Image.open('images/thumbnail.jpg')
+      image1.show()
+   except IOError:
+      pass
+thumb()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow4.png" alt="Python Pillow Tutorial"> <p><strong>Explanation -</strong></p> <p>In the above code, we have defined the <strong>thumbs()</strong> function that contains the try-expect to handle any occurrence. In the try block, we have opened an image which we want to modify as thumbnail.</p> <p>Then, we have called the <strong>thumbnail()</strong> function to the image object and we have passed the thumbnail size. Somehow, if the try block would through an error, it will jump to <strong>except</strong> block where we defined the <strong>IOErro</strong>r exception.</p> <h2 class="h2">Merging Images Using Pillow</h2> <p>We can paste an image onto another one. Pillow library provides <strong>merge()</strong> function which takes a mode and tuple of the images parameters. Then, it associates them with a single image. Let's see the following syntax.</p> <p><strong>Syntax -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+Image.merge(mode, bands)
+</textarea>
+           </div> <p>In the above syntax -</p> 
+           <ul class="points"> 
+            <li><strong>mode -</strong> It is used for the output image.</li> 
+            <li><strong>bands -</strong> It is an order that contains one single-band image for each band in the output.</li> 
+            <li><strong>Return value -</strong> It returns an image object.</li> 
+           </ul> <p>Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+from PIL import Image
+image = Image.open(r"C:\Users\DEVANSH SHARMA\Downloads\car.jpg")
+r, g, b = image.split()
+image.show()
+image = Image.merge("RGB", (b, g, r))
+image.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow5.png" alt="Python Pillow Tutorial"> <br> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow6.png" alt="Python Pillow Tutorial"> <p>When we execute the above code, we can observe the difference between original image and the image with merge the RGB bands.</p> <h2 class="h2">Merging Two Images</h2> <p>Merging two images is the same as above. First, it requires to create an image object for the essential image using the <strong>open()</strong> function. One point should be remembered by developer; both images must be the same size before merging them. Then we create empty images using the <strong>Image.new()</strong> function, we paste the images using the <strong>paste()</strong> function.</p> <p>After that, we save and display the resultant image using the <strong>save()</strong> and <strong>show()</strong> functions. Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+from PIL import Image
+#Read the two images
+image1 = Image.open(r"C:\Users\DEVANSH SHARMA\Downloads\car.jpg")
+
+# # image1.show()
+image2 = Image.open(r"C:\Users\DEVANSH SHARMA\Downloads\staus.jpg")
+
+image2.show()
+#we must resize, first image before merging them 
+image1 = image1.resize((266, 190))
+image1_size = image1.size
+image2_size = image2.size
+new_image = Image.new('RGB',(2*image1_size[0], image1_size[1]), (250,250,250))
+new_image.paste(image1,(0,0))
+new_image.paste(image2,(image1_size[0],0))
+
+new_image.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow7.png" alt="Python Pillow Tutorial"> <p><strong>Explanation -</strong></p> <p>In the above code, we have imported the Image module from the PIL library. We opened two images to merge them with each other. Before perform the merge operation, we need to make sure both images should be the same size. We made the size of the first image as the second image. Then, we used the <strong>paste()</strong> method to merge them.</p> <h2 class="h2">Blur an Image Using Pillow</h2> <p>Blurring an image is a method of decreasing the level of noise in the image by applying a filter to an image. It is the most important aspect of image processing. The pillow library offers the <strong>ImageFilter</strong> class that contains several standard image filters.</p> <p>In this section, we will discuss various techniques of blurring images. These techniques are mentioned below.</p> 
+           <ul class="points"> 
+            <li>Simple Blur</li> 
+            <li>Box Blur</li> 
+            <li>Gaussian Blur</li> 
+           </ul> <p>The <strong>Image.filter()</strong> method will use the techniques mentioned above to apply the filters' images.</p> <h3 class="h3">Simple Blur</h3> <p>In the simple blur, the blurring effect is applied to the image as specified through a specific kernel. Let's see the following syntax.</p> <p><strong>Syntax -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+filter(ImageFilter.BLUR)
+</textarea>
+           </div> <p>Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+from PIL import Image, ImageFilter
+#Open image
+Original_Image = Image.open(r"C:\Users\DEVANSH SHARMA\Downloads\car.jpg")
+Original_Image.show()
+
+# Applying simple blur function
+blur_Image = OriImage.filter(ImageFilter.BLUR)
+blur_Image.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <p><strong>Original Image -</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow8.png" alt="Python Pillow Tutorial"> <p><strong>Blurred Image -</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow9.png" alt="Python Pillow Tutorial"> <p>We have opened two standard images to perform blur operation. We can see the difference between the original image and the blurred image.</p> <h3 class="h3">Box Blur</h3> <p>The Box Blur filter uses the <strong>'radius'</strong> as a parameter. It is directly proportional to the blur value.</p> <p><strong>Syntax -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+ImageFilter.BoxBlur(radius)
+</textarea>
+           </div> <p>In the above syntax -</p> 
+           <ul class="points"> 
+            <li><strong>Radius -</strong> It represents the box in one direction.</li> 
+            <li><strong>Radius 0 -</strong> It means no blur operation perform and returns the same image.</li> 
+            <li><strong>RRadius 1 &amp; minnus</strong> - It takes total of 9 pixels, one pixels in each direction.</li> 
+           </ul> <p>Let's understand the following example.</p> <p><strong>Example -</strong></p> <p><strong>Original Image -</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow10.png" alt="Python Pillow Tutorial"> <p><strong>Box Blurred Image -</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow11.png" alt="Python Pillow Tutorial"> <h3 class="h3">Gaussian Blur</h3> <p>This filter works the same as box blur but slight changes in its algorithm. It also takes the radius parameter. We can generate a different intensity of <strong>Gaussianblur</strong> image by changing the radius value.</p> <p><strong>Syntax -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+ImageFilter.GaussianBlur(radius=2)
+</textarea>
+           </div> <p>Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+#Import Image and ImageFiler module 
+from PIL import Image, ImageFilter
+
+#Open image
+Original_Image = Image.open(r"C:\Users\DEVANSH SHARMA\Downloads\car.jpg")
+Original_Image.show()
+
+# Applying gaussina blur function
+blur_Image = Original_Image.filter(ImageFilter.GaussianBlur(6))
+blur_Image.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <p><strong>Original Image -</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow12.png" alt="Python Pillow Tutorial"> <p><strong>Gaussian Blurred Image -</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow13.png" alt="Python Pillow Tutorial"> <h2 class="h2">Creating a Watermark using Pillow</h2> <p>We all may see a tiny text on the bottom of the online photos which is called watermark. It is an excellent way to protect images and prevent their misuse. Watermark does not only protect from misuse but also provide the copyright to our creative photos. So, it is preferred to add a watermark to the image, before sharing to the social media.</p> <p>It is kind of text or logo overlaid on the photo that have a small identity of the owner or who owns the rights to the photo.</p> <p>With the Python Pillow library, we can add the watermark to the image very easily. This library provides the Image, ImageDraw and ImageFont module.</p> <p>Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+#Import all three modules from Image library
+from PIL import Image, ImageDraw, ImageFont
+
+#Creating an Image Object 
+img = Image.open(r'C:\Users\DEVANSH SHARMA\Downloads\car.jpg')
+width, height = img.size
+
+draw_1 = ImageDraw.Draw(img)
+# passing sample watermark text
+text_1 = "JavaTpoint.com"
+
+
+# Specifyig the font familiy and font size
+font = ImageFont.truetype('arial.ttf', 36)
+textwidth, textheight = draw.textsize(text_1, font)
+
+# calculate the x,y coordinates of the text
+margin = 10
+x = width - textwidth - margin
+y = height - textheight - margin
+
+# draw watermark in the bottom right corner
+draw_1.text((x, y), text, font=font)
+im.show()
+</textarea>
+           </div> <p><strong>Explanation -</strong></p> <p>In the above code, we have imported the Image, <strong>ImageDraw</strong> and <strong>ImageFont</strong> modules from the pillow library where the <strong>ImageDraw</strong> module enhances the functionality to draw 2D graphics to the image.</p> <p>The ImageFont module is responsible for adding font functionality while writing watermark. We created an image object where we will apply the watermark. The image object passed to the <strong>Draw()</strong> method; we wrote the watermark and saved it to the text variable.</p> <p>We can also set the font-family and font-size as we have set 'Times New Roman' and font-size 25. Then, we calculated the x, y coordinate to specify the text position in the image. Once we calculated the coordinate, we drew the watermark in the bottom right corner.</p> <h2 class="h2">Apply Color to the Image</h2> <p>Pillow library provides the <strong>ImageColor</strong> module that contains colors in the several formats. It also has the converter from CSS3-style color specifiers to RGB tuples. Let's have a look at the color names which are supported by the ImageColor module.</p> <p>The first format is Hexadecimal color specifiers, specified as <strong>#rgb</strong> or <strong>#rrggbb.</strong> For example, #00ff00 denotes pure green.</p> <p>The second format is #00ff00 hex color, red value is 0 (0% red), green value is 255(100% green) and the blue value of its RGB is 0 (0% blue).</p> <p>There are 140 standard color names in the <strong>ImageColor</strong> module. Most of the colors are supported by the Window system and most web browsers.</p> <h3 class="h3">ImageColor.getrgb() Method</h3> <p>This method is used to convert a color string to an RGB tuple and it raises a <strong>ValueError</strong> exception in case of string cannot be parsed. Let's see the following syntax.</p> <p><strong>Syntax -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+PIL.ImageColor.getrgb(color)
+</textarea>
+           </div> <p>In the above syntax -</p> 
+           <ul class="points"> 
+            <li>color - It is a color string.</li> 
+            <li>Return Value - It returns RGB (red, green, blue [,alpha]).</li> 
+           </ul> <p>Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+# Importig ImageColor module
+from PIL import ImageColor
+
+# using getrgb method
+img = ImageColor.getrgb("blue")
+print(img)
+
+image_1 = ImageColor.getrgb("red")
+print(image_1)
+</textarea>
+           </div> <p><strong>Output:</strong></p> 
+           <div class="codeblock3">
+            <pre>(0, 0, 255)
+(255, 0, 0)
+</pre>
+           </div> <p>As we can see in the above code, the getrgb() method taken the color name and returned the RGB values.</p> <p><strong>Example - 2</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+#Import necessary image modules
+from PIL import Image,ImageColor
+
+# Create new image &amp; get color RGB tuple.
+img = Image.new("RGB", (256, 256), ImageColor.getrgb("#add8e6"))
+
+#Show image
+img.show()
+</textarea>
+           </div> <h2 class="h2">ImageDraw Module</h2> <p>The ImageDraw module is a very important component of the Pillow library. We can provide some simple 2D graphics support for image object.</p> <p>This module helps create new images, provides some additional touches to the image, and creates some graphics. It also supports the annotation of text and drawing of shapes.</p> <p>ImageDraw module uses the origin of the two-dimension co-ordinate which is in the upper left corner of the image.</p> <p>It supports the various fonts for the text annotations such as bitmap, OpenType, or TrueType.</p> <p>Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+from PIL import Image, ImageDraw, ImageFont
+
+# get an image
+img = Image.open('C:').convert('RGBA')
+
+# making a blank image for the text, initialized to transparent text color
+text1 = Image.new('RGBA', img.size, (255,255,255,0))
+
+# getting a font from the saved library
+fnt = ImageFont.truetype('E:/PythonPillow/Fonts/Pacifico.ttf', 40)
+
+
+d = ImageDraw.Draw(text1)
+
+# draw text with the half opacity
+d.text((14,14), "Tutorials", font=fnt, fill=(255,255,255,128))
+
+# draw text with the  full opacity
+d.text((14,60), "Point", font=fnt, fill=(255,255,255,255))
+out = Image.alpha_composite(img, text1)
+
+out.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <h2 class="h2">Image Sequence in Pillow</h2> <p>Image Sequence is equivalent to the animation formats support by the Python PIL library. FLI/FLC, GIF and some new formats are the maintained by sequence formats. TIFF files can contain more than one frame as well.</p> <p>PIL uploads the image in the sequence like first frame is loads according to the image sequence. We can use seek() and tell() methods to move the different frames. Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+from PIL import Image
+img = Image.open(r'C:\Users\DEVANSH SHARMA\Downloads\car.jpg')
+#Here are Skipping to the second frame
+img.seek(1)
+try:
+   while 1:
+      img.seek(img.tell() + 1)
+      
+except EOFError:
+   #End of sequence
+   pass
+</textarea>
+           </div> <p><strong>Output:</strong></p> 
+           <div class="codeblock3">
+            <pre>raise EOFError
+EOFError
+</pre>
+           </div> <p><strong>Explanation -</strong></p> <p>In the above code, we can see that the EOFError exception is thrown when the sequence ends.</p> <p>To overcome that situation, we can create a sequence iterator class.</p> <p><strong>A sequence iterator class</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+class ImageSequence:
+   def __init__(self, img1):
+      self.img1 = img1
+   def __getitem__(self, xi):
+      try:
+         if xi:
+            self.img1.seek(xi)
+         return self.img1
+      except EOFError:
+         raise IndexError # end of sequence
+for frame in ImageSequence(img):
+</textarea>
+           </div> <h2 class="h2">Writing Text on the Image Using Pillow</h2> <p>This is different from the creating a watermark. We can write text to the image by passing the location where we want to write text on the image. We can pass the multiple parameters to text method. Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+from PIL import Image, ImageDraw
+#Creating an Image Object 
+img = Image.open(r'C:\Users\DEVANSH SHARMA\Downloads\car.jpg')
+d1 = ImageDraw.Draw(img)
+d1.text((32, 44), "Hello, JavaTPoint!", fill=(255, 255, 0))
+img.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow14.png" alt="Python Pillow Tutorial"> <h2 class="h2">Flip and Rotate Image Using Pillow</h2> <p>Sometimes, we need to perform a few basic operations such as rotating and flipping the image. These operations are helpful to get the insight form the existing image, it also enhance the visibility of the image.</p> <p>Pillow library allows us to flip and rotate an image very easily. We will use the transpose (method) function from the image module to perform the flip operation. Some of the most common methods are given below.</p> 
+           <ul class="points"> 
+            <li><strong>FLIP_LEFT_RIGHT -</strong> It is used for flipping the image horizontally.</li> 
+            <li><strong>FLIP_TOP_BOTTOM -</strong> It is used to flipping the image vertically.</li> 
+            <li><strong>ROTATE_90 -</strong> It is used to rotate the image by specifying degree.</li> 
+           </ul> <p>Let's understand the example how to flip an image horizontally.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+# import  image module
+from PIL import Image
+
+# Open an already existing image and create image object
+imageObject = Image.open(r'C:\Users\DEVANSH SHARMA\Downloads\car.jpg')
+
+# perform a flip of left and right
+hori_flippedImage = imageObject.transpose(Image.FLIP_LEFT_RIGHT)
+
+# display the original image
+imageObject.show()
+
+# display the horizontal flipped image
+hori_flippedImage.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <p><strong>Original Image</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow15.png" alt="Python Pillow Tutorial"> <p><strong>Flipped Image -</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow16.png" alt="Python Pillow Tutorial"> <p><strong>Explanation -</strong></p> <p>In the above code, we have read the image and flipped it horizontally. Both images original and flipped displayed image using standard JPG display utility.</p> <p><strong>Example - 2 Vertically Flipped Image</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+# import  image module
+from PIL import Image
+
+# Open an already existing image and create image object
+imageObject = Image.open(r'C:\Users\DEVANSH SHARMA\Downloads\car.jpg')
+
+# perform a flip of left and right
+hori_flippedImage = imageObject.transpose(Image.FLIP_LEFT_RIGHT)
+
+# display the original image
+imageObject.show()
+
+# display the horizontal flipped image
+hori_flippedImage.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <p><strong>Original Image -</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow17.png" alt="Python Pillow Tutorial"> <p><strong>Flipped Image -</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow18.png" alt="Python Pillow Tutorial"> <p>Let's understand another example of rotation</p> <p><strong>Example - 3</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+# import  image module
+from PIL import Image
+
+# Open an already existing image and create image object
+imageObject = Image.open(r'C:\Users\DEVANSH SHARMA\Downloads\car.jpg')
+
+# perform a flip of left and right
+horizonFlippedImage = imageObject.transpose(Image.FLIP_LEFT_RIGHT)
+imageObject.show()
+
+horizonFlippedImage.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <p><strong>Original Image -</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow19.png" alt="Python Pillow Tutorial"> <p><strong>Rotated Image -</strong></p> <img src="https://static.javatpoint.com/tutorial/python-pillow/images/python-pillow20.png" alt="Python Pillow Tutorial"> 
+           <hr> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> 
+       <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="55333030313734363e153f34233421253a3c3b217b363a38">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> 
+      <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/python-pillow"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> 
+      <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/python-pillow"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> 
+      <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/python-pillow"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> 
+        <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> 
+        <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> 
+        <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> 
+        <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2c445e6c464d5a4d585c43454258024f4341">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="553d27153f34233421253a3c3b217b363a387b">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> 
+      <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> 
+      <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> 
+      <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> 
+      <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> 
+      <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> 
+      <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> 
+      <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3>
+       <a href="https://www.javatpoint.com/java-tutorial">Learn Java</a>
+       <a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a>
+       <a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a>
+       <a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a>
+       <a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a>
+       <a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a>
+       <a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a>
+       <a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a>
+       <a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a>
+       <a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3>
+       <a href="https://www.javatpoint.com">Javatpoint.com</a>
+       <a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a>
+       <a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a>
+       <a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a>
+       <a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p>
+       <a href="https://www.javatpoint.com/contact-us">Contact Us</a> 
+       <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> 
+       <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a>
+       <a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br>
+       <a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>   
+ </body>
+</html>

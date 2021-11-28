@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Python Turtle Programming Tutorial - javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Python Turtle Programming Tutorial - javatpoint">
+  <meta property="og:description" content="Python Turtle Programming Tutorial with What is Turtle Programming, Programming with Turtle, Drawing a Shape, Drawing Preset Figures, Changing Screen Color, Changing Image Size etc."> 
+  <meta name="keywords" content="python turtle programming tutorial, what is turtle programming, turtle introduction, programming with turtle, drawing a shape, drawing preset figures, changing the screen color, changing the image size">
+  <meta name="description" content="Python Turtle Programming Tutorial with What is Turtle Programming, Programming with Turtle, Drawing a Shape, Drawing Preset Figures, Changing Screen Color, Changing Image Size etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/python-turtle-programming"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Python Turtle Programming Tutorial - javatpoint">
+  <meta name="twitter:description" property="og:description" content="Python Turtle Programming Tutorial with What is Turtle Programming, Programming with Turtle, Drawing a Shape, Drawing Preset Figures, Changing Screen Color, Changing Image Size etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/python-turtle-programming">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> 
+  <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> 
+          <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script>
+          <gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> 
+      <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> 
+      <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> 
+      <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="python-turtle-programming" class="selected">Python Turtle</a></li> 
+       <li><a href="python-tutorial">Python</a></li> 
+       <li><a href="python-openpyxl">Openpyxl</a></li> 
+       <li><a href="python-pygame">Pygame</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="sql-tutorial">SQL</a></li> 
+       <li><a href="android-tutorial">Android</a></li> 
+       <li><a href="cloud-computing-tutorial">Cloud</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="servlet-tutorial">Servlet</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="struts-2-tutorial">Struts2</a></li> 
+       <li><a href="spring-tutorial">Spring</a></li> 
+       <li><a href="examaccess">Quiz</a></li> 
+       <li><a href="corejava-interview-questions">Interview Q</a></li> 
+       <li><a href="comment.jsp">Comment</a></li> 
+       <li><a href="forum">Forum</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Python Turtle Programming</span></h2> 
+     </div> 
+     <div class="leftmenu"> 
+      <a href="python-turtle-programming">Python Turtle Tutorial</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> <h1 class="h1">Python Turtle Programming</h1> <p>Turtle is a Python library which used to create graphics, pictures, and games. It was developed by <strong>Wally Feurzeig, Seymour Parpet</strong> and <strong>Cynthina Slolomon</strong> in 1967. It was a part of the original Logo programming language.</p> <p>The Logo programming language was popular among the kids because it enables us to draw attractive graphs to the screen in the simple way. It is like a little object on the screen, which can move according to the desired position. Similarly, turtle library comes with the interactive feature that gives the flexibility to work with Python.</p> <p>In this tutorial, we will learn the basic concepts of the turtle library, how to set the turtle up on a computer, programming with the Python turtle library, few important turtle commands, and develop a short but attractive design using the Python turtle library.</p> <h2 class="h2">Introduction</h2> <p>Turtle is a pre-installed library in Python that is similar to the virtual canvas that we can draw pictures and attractive shapes. It provides the onscreen pen that we can use for drawing.</p> <p>The <strong>turtle</strong> Library is primarily designed to introduce children to the world of programming. With the help of Turtle's library, new programmers can get an idea of how we can do programming with <a href="https://www.javatpoint.com/python-tutorial">Python</a> in a fun and interactive way.</p> <p>It is beneficial to the children and for the experienced programmer because it allows designing unique shapes, attractive pictures, and various games. We can also design the mini games and animation. In the upcoming section, we will learn to various functionality of turtle library.</p> <h2 class="h2">Getting started with turtle</h2> <p>Before working with the turtle library, we must ensure the two most essential things to do programming.</p> 
+           <ul class="points"> 
+            <li><strong>Python Environment -</strong> We must be familiar with the working Python environment. We can use applications such as <strong>IDLE</strong> or <strong>Jupiter Notebook</strong>. We can also use the Python interactive shell.</li> 
+            <li><strong>Python Version -</strong> We must have Python 3 in our system; if not, then download it from Python's official website.</li> 
+           </ul> <p>The turtle is built in library so we don't need to install separately. We just need to import the library into our Python environment.</p> <p>The Python turtle library consists of all important methods and functions that we will need to create our designs and images. Import the turtle library using the following command.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+</textarea>
+           </div> <p>Now, we can access all methods and functions. First, we need to create a dedicated window where we carry out each drawing command. We can do it by initializing a variable for it.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+s = turtle.getscreen() 
+</textarea>
+           </div> <br> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming.png" alt="Python Turtle Programming"> <p>It will look like an above image and the little triangle in the middle of the screen is a turtle. If the screen is not appearing in your computer system, use the below code.</p> <h3 class="h3">Example -</h3> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle screen
+s = turtle.getscreen()
+# To stop the screen to display
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming2.png" alt="Python Turtle Programming"> <p>The screen same as the canvas and turtle acts like a pen. You can move the turtle to design the desired shape. The turtle has certain changeable features such as color, speed, and size. It can be moved to a specific direction, and move in that direction unless we tell it otherwise.</p> <p>In the next section, we will learn to program with the Python turtle library.</p> <h2 class="h2">Programming with turtle</h2> <p>First, we need to learn to move the turtle all direction as we want. We can customize the pen like turtle and its environment. Let's learn the couple of commands to perform a few specific tasks.</p> <p>Turtle can be moved in four directions.</p> 
+           <ul class="points"> 
+            <li>Forward</li> 
+            <li>Backward</li> 
+            <li>Left</li> 
+            <li>Right</li> 
+           </ul> <h3 class="h3">Turtle motion</h3> <p>The turtle can move forward and backward in direction that it's facing. Let's see the following functions.</p> 
+           <ul class="points"> 
+            <li><strong>forward(<em>distance</em>) or turtle.fd(<em>distance</em>) -</strong> It moves the turtle in the forward direction by a certain distance. It takes one parameter <strong>distance,</strong> which can be an integer or float.</li> 
+           </ul> <p><strong>Example - 3:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle screen
+t = turtle.Turtle()
+# To stop the screen to display
+
+t.forward(100)
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming3.png" alt="Python Turtle Programming"> 
+           <ul class="points"> 
+            <li><strong>back(distance)</strong> or <strong>turtle.bk</strong> or <strong>turtle.backward(distance) -</strong> This method moves the turtle in the opposite direction the turtle is headed. It doesn't change the turtle heading.</li> 
+           </ul> <p><strong>Example - 2:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle screen
+t = turtle.Turtle()
+# Move turtle in opposite direction
+t.backward(100)
+# To stop the screen to display
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming4.png" alt="Python Turtle Programming"> 
+           <ul class="points"> 
+            <li><strong>right(angle)</strong> or <strong>turtle.rt(angle)</strong> - This method moves the turtle right by <strong><em>angle</em></strong> units.</li> 
+           </ul> <p><strong>Example - 3:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle screen
+t = turtle.Turtle()
+
+t.heading()
+# Move turtle in opposite direction
+t.right(25)
+
+t.heading()
+# To stop the screen to display
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> 
+           <ul class="points"> 
+            <li><strong>left(angle)</strong> or <strong>turtle.lt(angle) -</strong> This method turn the turtle left by <strong><em>angle</em></strong> units. Let's understand the following example.</li> 
+           </ul> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle screen
+t = turtle.Turtle()
+
+t.heading()
+# Move turtle in left 
+t.left(100)
+
+t.heading()
+# To stop the screen to display
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming5.png" alt="Python Turtle Programming"> <p>The screen is initially divided into four quadrants. The turtle is positioned at the beginning of the program is (0,0) known as the <strong>Home.</strong> </p> 
+           <ul class="points"> 
+            <li><strong>goto(<em>x, y=None</em>) or turtle.setpos(<em>x, y=None</em>) turtle.setposition(<em>x, y=None</em>) -</strong> This method is used to move the turtle in the other area on the screen. It takes the two coordinates - <strong>x and y</strong>. Consider the following example.</li> 
+           </ul> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle screen
+t = turtle.Turtle()
+# Move turtle with coordinates
+t.goto(100, 80)
+# To stop the screen to display
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming6.png" alt="Python Turtle Programming"> <h2 class="h2">Drawing a Shape</h2> <p>We discussed the movement of the turtle. Now, we learn to move on to making actual shape. First, we draw the <strong>polygon</strong> since they all consist of straight lines connected at the certain angles. Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+t.fd(100)
+t.rt(90)
+t.fd(100)
+t.rt(90)
+t.fd(100)
+t.rt(90)
+t.fd(100)
+</textarea>
+           </div> <p>It will look like the following image.</p> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming7.png" alt="Python Turtle Programming"> <p>We can draw any shape using the turtle, such as a rectangle, triangle, square, and many more. But, we need to take care of coordinate while drawing the rectangle because all four sides are not equal. Once we draw the rectangle, we can even try creating other polygons by increasing number of side.</p> <h2 class="h2">Drawing Preset Figures</h2> <p>Suppose you want to draw a <strong>circle</strong>. If you attempt to draw it in the same way as you drew the square, it would be extremely tedious, and you'd have to spend a lot of time just for that one shape. Thankfully, the Python turtle library provides a solution for this. You can use a single command to draw a circle.</p> 
+           <ul class="points"> 
+            <li><strong>circle( radius, extent = None, steps = an integer ) -</strong> It is used to draw the circle to the screen. It takes three arguments. 
+             <ol class="points"> 
+              <li><strong>radius -</strong> It can be a number.</li> 
+              <li><strong>extent -</strong> It can be a number or None.</li> 
+              <li><strong>steps -</strong> It can be an integer.</li> 
+             </ol></li> 
+           </ul> <p>The circle is drawn with the given radius. The extent determines which part of circle is drawn and if the extent is not provided or none, then draw the entire circle. Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle screen
+t = turtle.Turtle()
+
+t.circle(50)
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming8.png" alt="Python Turtle Programming"> <p>We can also draw a dot, which is also known as a filled-in circle. Follow the given method to draw a filled-in circle.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle screen
+t = turtle.Turtle()
+
+t.dot(50)
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming9.png" alt="Python Turtle Programming"> <p>The number we have passed in the <strong>dot()</strong> function is diameter of the dot. We can increase and decrease the size of the dot by changing its diameter.</p> <p>So far, we have learned movement of turtle and design the various shapes. In the next few sections, we will learn the customization of turtle and its environment.</p> <h2 class="h2">Changing the Screen Color</h2> <p>By default, the turtle screen is opened with the white background. However, we can modify the background color of the screen using the following function.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle screen
+t = turtle.Turtle()
+
+turtle.bgcolor("red")
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming10.png" alt="Python Turtle Programming"> <p>We have passed a red color. We can also replace it with any color or we can use the hex code to use variety of code for our screen.</p> <h3 class="h3">Adding Image to the background</h3> <p>Same as the screen background color, we can add the background image using the following function.</p> 
+           <ul class="points"> 
+            <li><strong>bgpic (picname=None) -</strong> It sets the background image or return name of current background image. It takes one argument picname which can be a string, name of a gif-file or <strong>"nopic"</strong> or <strong>"none"</strong>. If the picname is <strong>"nopic",</strong> delete the background image. Let's see the following example.</li> 
+           </ul> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle turtle
+t = turtle.Turtle()
+
+turtle.bgpic()
+
+turtle.bgpic(r"C:\Users\DEVANSH SHARMA\Downloads\person.jpg")
+turtle.bgpic()
+
+turtle.mainloop()
+</textarea>
+           </div> <h2 class="h2">Changing the Image Size</h2> <p>We can change the image size using the <strong>screensize()</strong> function. The syntax is given below.</p> <p><strong>Syntax -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+turtle.screensize(canvwidth = None, canvheight = None, bg = None)
+</textarea>
+           </div> <p><strong>Parameter -</strong> It takes three parameters.</p> 
+           <ul class="points"> 
+            <li><strong>canvwidth -</strong> It can be a positive number, new canvas width in pixel.</li> 
+            <li><strong>canvheight -</strong> It can be a positive number, new height of the canvas in pixel.</li> 
+            <li><strong>bg -</strong> It is colorstring or color-tuple. New background color.</li> 
+           </ul> <p>Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle turtle
+t = turtle.Turtle()
+
+turtle.screensize()
+
+turtle.screensize(1500,1000)
+turtle.screensize()
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming11.png" alt="Python Turtle Programming"> <h2 class="h2">Changing the Screen Title</h2> <p>Sometimes, we want to change the title of the screen. By default, it shows the <em>Python tutorial graphics</em>. We can make it personal such as <strong>"My First Turtle Program"</strong> or <strong>"Drawing Shape with Python"</strong>. We can change the title of the screen using the following function.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+turtle.Title("Your Title")
+</textarea>
+           </div> <p>Let's see the example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle 
+t = turtle.Turtle()
+
+turtle.title("My Turtle Program")
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming12.png" alt="Python Turtle Programming"> <p>You can change the screen title according to preference.</p> <h2 class="h2">Changing the Pen Size</h2> <p>We can increase or decrease the turtle's size according the requirement. Sometimes, we need thickness in the pen. We can do this using the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle turtle
+t = turtle.Turtle()
+
+t.pensize(4)
+t.forward(200)
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming13.png" alt="Python Turtle Programming"> <p>As we can see in the above image, the pen is four times the original size. We can use it draw lines of various sizes.</p> <h2 class="h2">Pen Color Control</h2> <p>By default, when we open a new screen, the turtle comes up with the black color and draws with black ink. We can change it according the two things.</p> 
+           <ul class="points"> 
+            <li>We can change the color of the turtle, which is a fill color.</li> 
+            <li>We can change the pen's color, which basically a change of the outline or the ink color.</li> 
+           </ul> <p>We can also change both the pen color and turtle color if we want. We suggest increasing the size of the turtle that changes in the color can be clearly visible. Let's understand the following code.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle turtle
+t = turtle.Turtle()
+
+# Increase the turtle size
+t.shapesize(3,3,3)
+
+# fill the color
+t.fillcolor("blue")
+
+# Change the pen color
+t.pencolor("yellow")
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming14.png" alt="Python Turtle Programming"> <p>Type the following function to change the color of both.</p> <p><strong>Example - 2:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle turtle
+t = turtle.Turtle()
+
+t.shapesize(3,3,3)
+
+# Chnage the color of both
+t.color("green", "red")
+
+t.forward(100)
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming15.png" alt="Python Turtle Programming"> <p><strong>Explanation:</strong></p> <p>In the above code, the first color is a pen color and second is a fill color.</p> <h2 class="h2">Turtle fill in the Image</h2> <p>Colors make an image or shapes very attractive. We can fill shapes with various colors. Let's understand the following example to add color to the drawings. Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle turtle
+t = turtle.Turtle()
+
+t.shapesize(3,3,3)
+
+t.begin_fill()
+t.fd(100)
+t.lt(120)
+t.fd(100)
+t.lt(120)
+t.fd(100)
+t.end_fill()
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming16.png" alt="Python Turtle Programming"> <p><strong>Explanation:</strong></p> <p>When the program executes, it draw first the triangle and then filled it with the solid black color as the above output. We have used the <strong>begin_fill()</strong> method which indicates that we will draw a closed shape to be filled. Then, we use the <strong>.end_fill(),</strong> which indicates that we have done with the creating shape. Now, it can be filled with color.</p> <h2 class="h2">Changing the Turtle Shape</h2> <p>By default, the turtle shape is triangular. However, we can change the turtle's shape and this module provides many shapes for the turtle. Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle turtle
+t = turtle.Turtle()
+
+t.shape("turtle")
+# Change to arrow
+t.shape("arrow")
+# Chnage to circle
+t.shape("circle")
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming17.png" alt="Python Turtle Programming"> <p>We can change the turtle shape according to the requirement. These shapes can be a square, triangle, classic, turtle, arrow and circle. The <strong>classic</strong> is the original shape of the turtle.</p> <h2 class="h2">Changing the Pen Speed</h2> <p>The speed of the turtle can be changed. Generally, it moves at a moderate sped over the screen but we can increase and decrease its speed. Below is the method to modify the turtle speed.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle
+t = turtle.Turtle()
+
+t.speed(3)
+t.forward(100)
+t.speed(7)
+t.forward(100)
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming18.png" alt="Python Turtle Programming"> <p>The turtle speed can vary integer values in the range 0&#x2026;10. No argument is passed in the <strong>speed()</strong> function, it returns the current speed. Speed strings are mapped to speed values as follows.</p> 
+           <table class="alt"> 
+            <tbody>
+             <tr> 
+              <td><strong>0</strong></td> 
+              <td>Fastest</td> 
+             </tr> 
+             <tr> 
+              <td><strong>10</strong></td> 
+              <td>Fast</td> 
+             </tr> 
+             <tr> 
+              <td><strong>6</strong></td> 
+              <td>Normal</td> 
+             </tr> 
+             <tr> 
+              <td><strong>3</strong></td> 
+              <td>Slow</td> 
+             </tr> 
+             <tr> 
+              <td><strong>1</strong></td> 
+              <td>Slowest</td> 
+             </tr> 
+            </tbody>
+           </table> <h4 class="n">Note - If speed is assigned to zero means no animation will take place.</h4> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+turtle.speed()
+turtle.speed('normal')
+turtle.speed()
+
+turtle.speed(9)
+turtle.speed()
+</textarea>
+           </div> <h2 class="h2">Customization in One line</h2> <p>Suppose we want multiple changes within the turtle; we can do it by using just one line. Below are a few characteristics of the turtle.</p> 
+           <ul class="points"> 
+            <li>The pen color should be red.</li> 
+            <li>The fill color should be orange.</li> 
+            <li>The pen size should be 10.</li> 
+            <li>The pen speed should 7</li> 
+            <li>The background color should be blue.</li> 
+           </ul> <p>Let's see the following example.</p> <p><strong>Example -</strong> </p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle
+t = turtle.Turtle()
+
+t.pencolor("red")
+t.fillcolor("orange")
+t.pensize(10)
+t.speed(7)
+t.begin_fill()
+t.circle(75)
+turtle.bgcolor("blue")
+t.end_fill()
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming19.png" alt="Python Turtle Programming"> <p>We used just one line and changed the turtle's characteristics. To learn about this command, you can learn from the <strong>library official documentation</strong>.</p> <h2 class="h2">Change the Pen Direction</h2> <p>By default, the turtle points to the right on the screen. Sometimes, we require moving the turtle to the other side of the screen itself. To accomplish this, we can use the <strong>penup()</strong> method. The <strong>pendown()</strong> function uses to start drawing again. Consider the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle
+t = turtle.Turtle()
+
+t.fd(100)
+t.rt(90)
+t.penup()
+t.fd(100)
+t.rt(90)
+t.pendown()
+t.fd(100)
+t.rt(90)
+t.penup()
+t.fd(100)
+t.pendown()
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming20.png" alt="Python Turtle Programming"> <p>As we can see in the above output, we have obtained two parallel lines instead of a square.</p> <h2 class="h2">Clearing Screen</h2> <p>We have covered most of designing concepts of the turtle. Sometimes, we need a clear screen to draw more designs. We can do it using the following function.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+t.clear()
+</textarea>
+           </div> <p>The above method will clear the screen so that we can draw more designs. This function only removes the existing designs or shapes not make any changes in variable. The turtle will remain in the same position.</p> <h2 class="h2">Resetting the Environment</h2> <p>We can also reset the current working using the reset function. It restores the <strong>turle's</strong> setting and clears the screen. We just need to use the following function.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+t.reset
+</textarea>
+           </div> <p>All tasks will be removed and the turtle back to its home position. The default settings of turtle, such as color, size, and shape and other features will be restored.</p> <p>We have learned the basic fundamental of the turtle programming. Now, we will discuss a few essential and advanced concepts of the turtle library.</p> <h2 class="h2">Leaving a Stamp</h2> <p>We can leave the stamp of turtle on the screen. The stamp is nothing but an imprint of the turtle. Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle
+t = turtle.Turtle()
+t.stamp()
+
+t.fd(200)
+t.stamp()
+
+t.fd(100)
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming21.png" alt="Python Turtle Programming"> <p>If we print the <strong>stamp()</strong> method, it will display a number which is nothing but a turtle's location or stamp ID. We can also remove a particular stamp by using the following command.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+t.clearstamp(8)  # 8 is a stamp location.
+</textarea>
+           </div> <h2 class="h2">Cloning of a turtle</h2> <p>Sometimes, we look for the multiple turtle to design a unique shape. It provides the facility to clone the current working turtle into the environment and we can move both turtle on the screen. Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle
+t = turtle.Turtle()
+
+c = t.clone()
+t.color("blue")
+c.color("red")
+t.circle(20)
+c.circle(30)
+for i in range(40, 100, 10):
+    c.circle(i)
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming22.png" alt="Python Turtle Programming"> <p><strong>Explanation:</strong></p> <p>In the above code, we cloned the turtle to the c variable and called the circle function. First, it draws the blue circle and then draw the outer circles based on the for loop conditions.</p> <p>In the next section, we will discuss how we can use Python conditional and loop statements to create design using the turtle.</p> <h2 class="h2">Turtle Programming Using Loops and Conditional Statements</h2> <p>We have learned the basic and advanced concepts of the turtle library so far. The next step is to explore those concepts with Python's loops and conditional statements. It will give us a practical approach when it comes to an understanding of these concepts. Before moving further, we should remember the following concepts.</p> 
+           <ul class="points"> 
+            <li><strong>Loops -</strong> These are used to repeat a set of code until a particular condition is matched.</li> 
+            <li><strong>Conditional Statements -</strong> These are used to perform a task based on specific conditions.</li> 
+            <li><strong>Indentation -</strong> It is used to define a block of code and it is essential when we are using loops and conditional statements. Indentation is nothing but a set of whitespaces. The statements that are on the same level are considered as the same block statements.</li> 
+           </ul> <p>Let's understand the following examples.</p> <h3 class="h3">for loops</h3> <p>In the previous example, we wrote multiple repeated lines in our code. Here, we will implement create a square program using for loop. For example -</p> <p><strong>Example:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+t.fd(100)
+t.rt(90)
+t.fd(100)
+t.rt(90)
+t.fd(100)
+t.rt(90)
+t.fd(100)
+t.rt(90)
+</textarea>
+           </div> <p>We can make it shorter using a for loop. Run the below code.</p> <p><strong>Example</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle
+t = turtle.Turtle()
+
+for i in range(4):
+    t.fd(100)
+    t.rt(90)
+
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming23.png" alt="Python Turtle Programming"> <p><strong>Explanation</strong></p> <p>In the above code, for loop repeated the code until it reached at counter 4. The i is like a counter that starts from zero and keep increasing by one. Let's understand the above loop execution step by step.</p> 
+           <ul class="points"> 
+            <li>In the first iteration, i = 0, the turtle moves forward by 100 units and then turns 90 degrees to the right.</li> 
+            <li>In the second iteration, i = 1, the turtle moves forward by 100 units and then turns 90 degrees to the right.</li> 
+            <li>In the third iteration, i = 2, the turtle moves forward by 100 units and then turns 90 degrees to the right.</li> 
+            <li>In the third iteration, i = 3, the turtle moves forward by 100 units and then turns 90 degrees to the right.</li> 
+           </ul> <p>After completing the iteration, the turtle will jump out of the loop.</p> <h3 class="h3">while loops</h3> <p>It is used to run a block of code until a condition is satisfied. The code will be terminated when it finds a false condition. Let's understand the following example.</p> <p><strong>Example -</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle
+t = turtle.Turtle()
+
+n=10
+while n &lt;= 60:
+    t.circle(n)
+    n = n+10
+
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming24.png" alt="Python Turtle Programming"> <p>As we can see in the output, we draw multiple circles using the while loop. Every time the loop executes the new circle will be larger than the previous one. The n is used as a counter where we specified the value of n increase in the each iteration. Let's understand the iteration of the loop.</p> 
+           <ul class="points"> 
+            <li>In the first iteration, the initial value of n is 10; it means the turtle draw the circle with the radius of 10 units.</li> 
+            <li>In the second iteration, the value of n is increased by 10 + 10 = 20; the turtle draws the circle with the radius of 20 units.</li> 
+            <li>In the second iteration, the value of n is increased by 20 + 10 = 30; the turtle draws the circle with the radius of 30 units.</li> 
+            <li>In the second iteration, the value of n is increased by 30 + 10 = 40; the turtle draws the circle with the radius of 30 units.</li> 
+           </ul> <h2 class="h2">Conditional Statement</h2> <p>The conditional statement is used to check whether a given condition is true. If it is true, execute the corresponding lines of code. Let's understand the following example.</p> <p><strong>Example</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle
+t = turtle.Turtle()
+
+n = 40
+if n&lt;=50:
+    t.circle(n)
+else:
+    t.forward(n)
+    t.backward(n-10)
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming25.png" alt="Python Turtle Programming"> <p><strong>Explanation</strong></p> <p>In the above program, we define the two outcomes based on user input. If the entered number is less of equal than the 50 means draw the circle otherwise else part. We gave the 40 as input so that if block got executed and drew the circle.</p> <p>Now let's move to see a few cool designs using the turtle library.</p> <h3 class="h3">Attractive Designs using Python Turtle Library</h3> <p>We have learned basic and advance concepts of Python turtle library. We explain every possible feature of this library. By using its function, we can design games, unique shapes and many more things. Here, we mention a few designs using the turtle library.</p> <h3 class="h3">Design -1 Circle Spiro graph</h3> <p><strong>Code</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle
+t = turtle.Turtle()
+
+turtle.bgcolor("black")
+turtle.pensize(2)
+turtle.speed(0)
+
+while (True):
+    for i in range(6):
+        for colors in ["red", "blue", "magenta", "green", "yellow", "white"]:
+            turtle.color(colors)
+            turtle.circle(100)
+            turtle.left(10)
+
+
+turtle.hideturtle()
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming26.png" alt="Python Turtle Programming"> <p>The turtle will move for the infinite time because we have used the infinite while loop. Copy the above code and see the magic.</p> <h3 class="h3">Design - 2: Python Vibrate Circle</h3> <p><strong>Code</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle
+t = turtle.Turtle()
+s = turtle.Screen()
+s.bgcolor("black")
+t.pencolor("red")
+
+a = 0
+b = 0
+t.speed(0)
+t.penup()
+t.goto(0,200)
+t.pendown()
+while(True):
+    t.forward(a)
+    t.right(b)
+    a+=3
+    b+=1
+    if b == 210:
+        break
+    t.hideturtle()
+
+turtle.done()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming27.png" alt="Python Turtle Programming"> <p><strong>Code</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import turtle
+# Creating turtle
+t = turtle.Turtle()
+s = turtle.Screen()
+s.bgcolor("black")
+
+turtle.pensize(2)
+
+# To design curve
+def curve():
+    for i in range(200):
+        t.right(1)
+        t.forward(1)
+
+t. speed(3)
+t.color("red", "pink")
+
+t.begin_fill()
+t.left(140)
+t.forward(111.65)
+curve()
+
+t.left(120)
+curve()
+t.forward(111.65)
+t.end_fill()
+t.hideturtle()
+
+turtle.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/python-turtle/images/python-turtle-programming28.png" alt="Python Turtle Programming"> <p>In the above code, we define the curve function to create curve to screen. When it takes the complete heart shape, the color will fill automatically. Copy the above code and run, you can also modify it by adding more designs.</p> 
+           <hr> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> 
+       <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e1878484858380828aa18b80978095918e888f95cf828e8c">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> 
+      <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/python-turtle-programming"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> 
+      <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/python-turtle-programming"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> 
+      <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/python-turtle-programming"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> 
+        <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> 
+        <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> 
+        <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> 
+        <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> 
+        <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="731b01331912051207031c1a1d075d101c1e">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="99f1ebd9f3f8eff8ede9f6f0f7edb7faf6f4b7">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> 
+      <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> 
+      <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> 
+      <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> 
+      <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> 
+      <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> 
+      <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> 
+      <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3>
+       <a href="https://www.javatpoint.com/java-tutorial">Learn Java</a>
+       <a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a>
+       <a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a>
+       <a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a>
+       <a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a>
+       <a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a>
+       <a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a>
+       <a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a>
+       <a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a>
+       <a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3>
+       <a href="https://www.javatpoint.com">Javatpoint.com</a>
+       <a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a>
+       <a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a>
+       <a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a>
+       <a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p>
+       <a href="https://www.javatpoint.com/contact-us">Contact Us</a> 
+       <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> 
+       <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a>
+       <a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br>
+       <a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>   
+ </body>
+</html>
