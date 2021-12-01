@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#"> 
  <head> 
   <title>Open a Demat Account Online - Demat Account Opening at Upstox</title> 
   <meta charset="utf-8"> 
@@ -28,18 +28,15 @@
   <meta name="msapplication-square150x150logo" content="/favicon/mstile-150x150.png"> 
   <meta name="msapplication-wide310x150logo" content="/favicon/mstile-310x150.png"> 
   <meta name="msapplication-square310x310logo" content="/favicon/mstile-310x310.png"> 
-  <script type="text/javascript" src="/open-demat-account/assets/js/tracking.js"></script> 
-  <!-- Loading IBM Plex Sans font here, --> 
+  <script type="text/javascript" src="/open-demat-account/assets/js/tracking.js"></script> <!-- Loading IBM Plex Sans font here, --> 
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,500i,600,600i&amp;display=swap" rel="stylesheet"> 
   <link rel="stylesheet" type="text/css" href="styles.css?v=1.0.101"> 
   <link rel="stylesheet" href="assets/styles/bootstrap-grid.min.css"> 
  </head> 
- <body> 
-  <!-- Google Tag Manager (noscript) --> 
+ <body> <!-- Google Tag Manager (noscript) --> 
   <noscript>
    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T99SMW" height="0" width="0" style="display: none; visibility: hidden"></iframe>
-  </noscript> 
-  <!-- End Google Tag Manager (noscript) --> 
+  </noscript> <!-- End Google Tag Manager (noscript) --> 
   <div class="hellobar">
    ? Upstox joins Vivo IPL as an Official Partner 
    <img src="assets/images/arrow-right.svg" alt="arrow-right"> 
@@ -62,7 +59,7 @@
         <img src="assets/images/start-karke-lg.svg" alt="heading"> 
        </div> 
        <h1 class="form-header">With Upstox, it’s easy! </h1> 
-       <p class="pay-99">Pay ?249 to open a Demat + Trading account and get:</p> 
+       <p class="pay-99">Open a free Demat + Trading account and get:</p> 
        <ul class="offer-points fs-20"> 
         <li><img src="assets/images/tick.svg"><span>?1000 brokerage credit valid for 30 days<sup>#</sup></span></li> 
         <li><img src="assets/images/tick.svg"><span>Up to ?20/order on Equity, F&amp;O, Commodity and Currency<span></span></span></li> 
@@ -78,10 +75,7 @@
           <div class="input-field"> 
            <img class="input-field-icon" src="assets/images/email-icon.svg" alt="email-icon"> 
            <input type="text" id="txtemail" class="form-control" placeholder="Email Address" clevertapevent="Email Text Box" value="" oninput="onInputChange()"> 
-          </div> 
-          <small class="validation-text invalid-email">Enter a valid email ID</small> 
-          <small class="invalid-email-plus">Email IDs with a + sign are not accepted</small> 
-          <small class="suggested-email-para">Did you mean <span id="suggested-email" onclick="replaceEmailWithSuggestion()"></span>? </small> 
+          </div> <small class="validation-text invalid-email">Enter a valid email ID</small> <small class="invalid-email-plus">Email IDs with a + sign are not accepted</small> <small class="suggested-email-para">Did you mean <span id="suggested-email" onclick="replaceEmailWithSuggestion()"></span>? </small> 
          </div> 
          <div id="mobileGroup" class="input-group"> 
           <div class="input-field"> 
@@ -90,15 +84,12 @@
             +91
            </div> 
            <input type="tel" pattern="/^[0-9]{10}$/" onkeypress="return isNumber(event)" maxlength="10" id="txtcontact" class="form-control" placeholder="Mobile Number" clevertapevent="Mobile Text Box" value="" oninput="onInputChange()"> 
-          </div> 
-          <small class="validation-text invalid-mobile">Enter a valid mobile number</small> 
-          <small class="validation-text zero_start">Mobile number cannot start with a 0</small> 
+          </div> <small class="validation-text invalid-mobile">Enter a valid mobile number</small> <small class="validation-text zero_start">Mobile number cannot start with a 0</small> 
          </div> 
          <div class="signup-footnote">
            By signing up, you agree to receive transactional updates on WhatsApp. You may also receive a call from an Upstox representative to help you with the account opening process 
          </div> 
-         <div class="form-group"> 
-          <button id="sendOtpButton" type="button" class="btn-primary" onclick="sendOTPForRegistration()"> Send OTP </button> 
+         <div class="form-group"> <button id="sendOtpButton" type="button" class="btn-primary" onclick="sendOTPForRegistration()"> Send OTP </button> 
          </div> 
          <div class="form-divider"></div> 
          <section class="signinbox"> 
@@ -112,17 +103,12 @@
           <div class="input-field"> 
            <img class="input-field-icon" src="assets/images/shield.svg" alt="phone-icon"> 
            <input id="otp" type="text" class="form-control" inputmode="numeric" autocomplete="one-time-code" pattern="\d{6}" maxlength="6" minlength="6" onkeypress="return isNumber(event)" placeholder="------"> 
-          </div> 
-          <small class="validation-text empty-otp">Otp cannot be empty</small> 
-          <small class="validation-text short-otp">Invalid OTP</small> 
+          </div> <small class="validation-text empty-otp">Otp cannot be empty</small> <small class="validation-text short-otp">Invalid OTP</small> 
          </div> 
-         <div class="form-group"> 
-          <button id="submitSignup" type="button" class="btn-primary" onclick="signupClickHandler(this)" clevertapevent="Sign Up"> Sign up </button> 
+         <div class="form-group"> <button id="submitSignup" type="button" class="btn-primary" onclick="signupClickHandler(this)" clevertapevent="Sign Up"> Sign up </button> 
          </div> 
          <div class="message-with-resend"> 
-          <div class="resend-buttons"> 
-           <button type="button" class="cancel-go-back" onclick="cancelAndGoBack()">Cancel and start over</button> 
-           <button id="otp-resend" type="button" class="resend-button" onclick="sendOTPForRegistration()"> Resend OTP </button> 
+          <div class="resend-buttons"> <button type="button" class="cancel-go-back" onclick="cancelAndGoBack()">Cancel and start over</button> <button id="otp-resend" type="button" class="resend-button" onclick="sendOTPForRegistration()"> Resend OTP </button> 
           </div> 
           <div id="otp-msg" class="otp-response-msg"></div> 
          </div> 
@@ -133,21 +119,18 @@
      </div> 
     </div> 
    </div> 
-  </section> 
-  <!-- End of First-Fold --> 
-  <!-- <div class='terms-condition'>
+  </section> <!-- End of First-Fold --> <!-- <div class='terms-condition'>
 					<p class="tnc-offer1">*Terms & Conditions apply</p>
 					<p class="tnc-offer-new" id="tnc-modal-link" onclick="openModal();" >View Terms & Conditions</p>
 				</div>	 --> 
   <div id="modal-overlay-tnc" class="tnc-modal-overlay"> 
    <div class="tnc-modal"> 
     <div class="header-with-button"> 
-     <h3>Terms and conditions</h3> 
-     <button onclick="closeModal(event);">X</button> 
+     <h3>Terms and conditions</h3> <button onclick="closeModal(event);">X</button> 
     </div> 
     <hr> 
     <ol> 
-     <li>This offer is valid for new users only. Plan charges are towards account opening fees.</li> 
+     <li>This offer is valid for new users only.</li> 
      <li>Intraday Equity, F&amp;O, Commodity and Currency trades at zero brokerage charges up to ?1000 for the first 30 days<sup>#</sup> from when your Upstox account has been created. After 30 days<sup>#</sup>, brokerage of ?20*/order would be applicable.</li> 
      <li>*The Equity Delivery brokerage charges of 2.5% or up to Rs 20 per order only apply to customers onboarded on or after 21st September 2021</li> 
      <li>Brokerage charged shall not exceed SEBI prescribed limits.</li> 
@@ -197,12 +180,10 @@
        </div> 
        <div role="tab" data-tab-value="4" data-target="product-4" class="product">
         Future &amp; Options
-       </div> 
-       <span class="pill"></span> 
+       </div> <span class="pill"></span> 
       </div> 
      </div> 
-     <div class="slides"> 
-      <button onclick="back()" class="back"> <img src="assets/images/left-arrow.svg" alt="left-arrow"> </button> 
+     <div class="slides"> <button onclick="back()" class="back"> <img src="assets/images/left-arrow.svg" alt="left-arrow"> </button> 
       <div role="tabpanel" data-target="product-1" class="product-description active-tab"> 
        <div class="desc-row"> 
         <div class="desc-col--left"> 
@@ -262,8 +243,7 @@
          <img class="slide-img" src="assets/images/futures.png"> 
         </div> 
        </div> 
-      </div> 
-      <button onclick="next()" class="next"> <img src="assets/images/right-arrow.svg" alt="right-arrow"> </button> 
+      </div> <button onclick="next()" class="next"> <img src="assets/images/right-arrow.svg" alt="right-arrow"> </button> 
      </div> 
     </div> 
    </div> 
@@ -308,7 +288,7 @@
     </div> 
     <div class="price-item text-center"> 
      <div class="price">
-      ?249
+      ?0
      </div> 
      <div class="price-title bold gray">
       Charges
@@ -406,9 +386,7 @@
          </div> 
         </div> 
        </div> 
-      </div> 
-      <a class="fs-20 lh-28 purple bold view-more-button animated-link d-i-block">View more FAQs</a> 
-      <a class="fs-20 lh-28 purple bold view-less-button animated-link d-none">View less FAQs</a> 
+      </div> <a class="fs-20 lh-28 purple bold view-more-button animated-link d-i-block">View more FAQs</a> <a class="fs-20 lh-28 purple bold view-less-button animated-link d-none">View less FAQs</a> 
      </div> 
     </div> 
    </section> 
@@ -528,8 +506,7 @@
   <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script> 
   <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mailcheck/1.1.2/mailcheck.min.js" integrity="sha256-0YrFKC1J34jsOD3yraBxgVJ91zLp4Rb8NztS6QNZV9A=" crossorigin="anonymous"></script> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/7.0.3/uuidv4.min.js" integrity="sha512-D07FsNvANU0GBvSgKciR+53xHuOlL6G7DIUTjqXYpaypDzXWDcEoLOBZeEqR17cncvXlI9FmmVdbqScSWRdseA==" crossorigin="anonymous"></script> 
-  <!-- JS File --> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/7.0.3/uuidv4.min.js" integrity="sha512-D07FsNvANU0GBvSgKciR+53xHuOlL6G7DIUTjqXYpaypDzXWDcEoLOBZeEqR17cncvXlI9FmmVdbqScSWRdseA==" crossorigin="anonymous"></script> <!-- JS File --> 
   <script type="text/javascript" src="/open-demat-account/assets/js/utils.js"></script> 
   <script type="text/javascript" src="app.js?v=1.0.101" defer></script> 
   <script>
@@ -562,6 +539,6 @@
       }
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
-    </script>   
+    </script>  
  </body>
 </html>
