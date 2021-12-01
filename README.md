@@ -4,23 +4,23 @@ A search engine is developed using Java which will search words in html files, f
 giving word suggestion if the word is misspelled. 
 
 Project feature : 
--> Web Crawler : Implemented using java Jsoup library and java regex
--> HTML to text file conversion : Implemented in Java using Jsoup library
--> Word Search: Implemented in java using Ternary Search Trie
--> Page Ranking : Implemented using java HashMap
--> Word suggestion : Implemented in java using edit distance algorithm
+1. Web Crawler : Implemented using java Jsoup library and java regex
+2. HTML to text file conversion : Implemented in Java using Jsoup library
+3. Word Search: Implemented in java using Ternary Search Trie
+4. Page Ranking : Implemented using java HashMap
+5. Word suggestion : Implemented in java using edit distance algorithm
 
 Project Details : 
--> External Library : Jsoup
--> Imported Packages : Text Processing, Edit distance
--> Text Files: website.txt
--> Folders: textfiles, webFiles
--> Java package : scr/websearchengine
-					-> Crawler.java
-					-> EditDistance.java
-					-> ParseURL.java
-					-> SearchEngine.java
-					->SuggestAltWord.java
+1. External Library : Jsoup
+2. Imported Packages : Text Processing, Edit distance
+3. Text Files: website.txt
+4. Folders: textfiles, webFiles
+5. Java package : scr/websearchengine
+					a. Crawler.java
+					b. EditDistance.java
+					c. ParseURL.java
+					d. SearchEngine.java
+					e. SuggestAltWord.java
 
 
 
