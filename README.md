@@ -16,11 +16,11 @@ Project Details :
 3. Text Files: website.txt
 4. Folders: textfiles, webFiles
 5. Java package : scr/websearchengine
-					a. Crawler.java
-					b. EditDistance.java
-					c. ParseURL.java
-					d. SearchEngine.java
-					e. SuggestAltWord.java
+		    a. Crawler.java
+         	    b. EditDistance.java
+		    c. ParseURL.java
+		    d. SearchEngine.java
+		    e. SuggestAltWord.java
 
 
 
@@ -34,3 +34,5 @@ Search engine flow of execution
 6. For each text file, a TST is constructed, and the frequency of keywords is extracted.
 7. HashMap is sroted in decreasing order to find the ranking of the pages.
 8. Edit Distance algorithm is used to suggest alternative similar words in case a word is not found in files
+
+
