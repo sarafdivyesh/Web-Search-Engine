@@ -1,0 +1,314 @@
+pygame tutorial - javatpoint ? scroll to top home python pygame java sql android cloud javascript servlet jsp html struts2 spring quiz projects interview q comment forum training pygame tutorial pygame tutorial python pygame (game development library) python is the most popular programming language or nothing wrong to say that it is the next-generation programming language. in every emerging field in computer science, python makes its presence actively. python has vast libraries for various fields such as machine learning (numpy, pandas, matplotlib), artificial intelligence (pytorch, tensorflow), and game development (pygame,pyglet). in this tutorial, we are going to learn about game development using the pygame (python library) pygame pygame is a cross-platform set of python modules which is used to create video games. it consists of computer graphics and sound libraries designed to be used with the python programming language. pygame was officially written by pete shinners to replace pysdl. pygame is suitable to create client-side applications that can be potentially wrapped in a standalone executable. prerequisites for pygame: before learning about pygame, we need to understand what kind of game we want to develop. to learn pygame, it is required to have basic knowledge of python. pygame installation install pygame in windows before installing pygame, python should be installed in the system, and it is good to have 3.6.1 or above version because it is much friendlier to beginners, and additionally runs faster. there are mainly two ways to install pygame, which are given below: 1. installing through pip: the good way to install pygame is with the pip tool (which is what python uses to install packages). the command is the following: 
+py -m pip install -u pygame --user
+ 2. installing through an ide: the second way is to install it through an ide and here we are using pycharm ide. installation of pygame in the pycharm is straightforward. we can install it by running the above command in the terminal or use the following steps: open the file tab and click on the settings option. select the project interpreter and click on the + icon. it will display the search box. search the pygame and click on the install package button. to check whether the pygame is properly installed or not, in the idle interpreter, type the following command and press enter: 
+import pygame
+ if the command runs successfully without throwing any errors, it means we have successfully installed pygame and found the correct version of idle to use for pygame programming. install pygame in mac the steps are following to install pygame in mac visit the official site of pygame pygame.org and, it will display the following window, download the pygame-1.9.1release-python.org-32bit-py2.7-macosx10.3.dmg: note: if you are using the different version of python, download the last link. double click on the downloaded file and unzip it. now double click on the unzipped mpkg file that appears to run the installer. follow the instructions to install pygame. start the terminal (cmd+space, then enter 'terminal' in the search box). in the terminal, type 'python2.7' and press enter. python should start up, display the version as 2.7.2 (2.7.1 is fine too), and give you a prompt. at the python prompt, type 'import pygame'. if you don't get any errors, everything is working fine. simple pygame example here is the simple program of pygame which gives a basic idea of the syntax. 
+import pygame
+
+pygame.init()
+screen = pygame.display.set_mode((400,500))
+done = false
+
+while not done:
+    for event in pygame.event.get():
+        if event.type == pygame.quit:
+            done = true
+    pygame.display.flip()
+ output: after successful execution it will give the following window as an output: let's understand the basic syntax of the above program line by line: import pygame - this provides access to the pygame framework and imports all functions of pygame. pygame.init() - this is used to initialize all the required module of the pygame. pygame.display.set_mode((width, height)) - this is used to display a window of the desired size. the return value is a surface object which is the object where we will perform graphical operations. pygame.event.get()- this is used to empty the event queue. if we do not call this, the window messages will start to pile up and, the game will become unresponsive in the opinion of the operating system. pygame.quit - this is used to terminate the event when we click on the close button at the corner of the window. pygame.display.flip() - pygame is double-buffered, so this shifts the buffers. it is essential to call this function in order to make any updates that you make on the game screen to make visible. pygame surface the pygame surface is used to display any image. the surface has a pre-defined resolution and pixel format. the surface color is by default black. its size is defined by passing the size argument. surfaces can have the number of extra attributes like alpha planes, color keys, source rectangle clipping, etc. the blit routines will attempt to use hardware acceleration when possible; otherwise, they will use highly enhanced software blitting methods. pygame clock times are represented in millisecond (1/1000 seconds) in pygame. pygame clock is used to track the time. the time is essential to create motion, play a sound, or, react to any event. in general, we don't count time in seconds. we count it in milliseconds. the clock also provides various functions to help in controlling the game's frame rate. the few functions are the following: tick() this function is used to update the clock. the syntax is the following: 
+tick(framerate=0)
+ this method should be called once per frame. it will calculate how many milliseconds have passed since the previous call. the framerate argument is optional to pass in the function, and if it is passed as an argument then the function will delay to keep the game running slower than the given ticks per second. tick_busy_loop() the tick_busy_loop() is same as the tick(). by calling the clock.tick_busy_loop(20) once per frame, the program will never run at more than 20 frames per second. the syntax is the following: 
+tick_busy_loop()
+ get_time() the get_time() is used to get the previous tick. the number of a millisecond that isdra passed between the last two calls in clock.tick(). 
+get_time()
+ pygame blit the pygame blit is the process to render the game object onto the surface, and this process is called blitting. when we create the game object, we need to render it. if we don't render the game objects and run the program, then it will give the black window as an output. blitting is one of the slowest operations in any game so, we need to be careful to not to blit much onto the screen in every frame. the primary function used in blitting is blit(), which is: blit() 
+blit(source,dest,area=none,special_flags=0)
+ this function is used to draw one image into another. the draw can be placed with the dest argument. the dest argument can either be a pair of coordinates representing the upper left corner of the source. pygame adding image to add an image on the window, first, we need to instantiate a blank surface by calling the surface constructor with a width and height tuple. 
+surface = pygame.surface((100,100))
+ the above line creates a blank 24-bit rgb image that's 100*100 pixels with the default black color. for the transparent initialization of surface, pass the srcalpha argument. 
+surface = pygame.surface((100,100), pygame.srcalpha)
+ consider the following example to display image on the surface: 
+import pygame
+pygame.init()
+white = (255, 255, 255)
+# assigning values to height and width variable 
+height = 400
+width = 400
+# creating the display surface object 
+# of specific dimension..e(x, y). 
+display_surface = pygame.display.set_mode((height, width))
+
+# set the pygame window name 
+pygame.display.set_caption('image')
+
+# creating a surface object, image is drawn on it. 
+image = pygame.image.load(r'c:\users\devansh sharma\desktop\download.png')
+
+# infinite loop 
+while true:
+    display_surface.fill(white)
+    display_surface.blit(image, (0, 0))
+
+    for event in pygame.event.get():
+        if event.type == pygame.quit:
+            pygame.quit()
+            # quit the program. 
+            quit()
+        # draws the surface object to the screen. 
+        pygame.display.update() 
+ output: pygame rect rect is used to draw a rectangle in pygame. pygame uses rect objects to store and manipulate rectangular areas. a rect can be formed from a combination of left, top, width, and height values. it can also be created from python objects that are already a rect or have an attribute named "rect". the rect() function is used to perform changes in the position or size of a rectangle. it returns the new copy of the rect with the affected changes. no modification happens in the original rectangle. the rect object has various virtual attributes which can be used to move and align the rect: 
+x,y
+top, left, right, bottom
+topleft, bottomleft, topright, bottomright
+midtop, midleft, midbottom, midright
+center, centerx, centery
+size, width, height
+w,h
+ the dimension of the rectangle can be changed by assigning the size, width, or height. all other assignment moves the rectangle without resizing it. if the width or height is a non-zero value of rect, then it will return true for a non-zero test. some methods return a rect with 0 sizes to represent an invalid rectangle. let's create a rectangle on the pygame window using the rect: 
+import pygame
+
+pygame.init()
+screen = pygame.display.set_mode((400, 300))
+done = false
+
+while not done:
+    for event in pygame.event.get():
+        if event.type == pygame.quit:
+            done = true
+    pygame.draw.rect(screen, (0, 125, 255), pygame.rect(30, 30, 60, 60))  
+
+    pygame.display.flip()
+ after execution of the above code, it will display the rectangle on the pygame window. pygame keydown pygame keydown and keyup detect the event if a key is physically pressed and released. keydown detects the key press and, keyup detects the key release. both events (key press and key release) have two attributes which are the following: key: key is an integer id which represents every key on the keyword. mod: this is a bitmask of all the modifier keys that were in the pressed state when the event occurred. consider the following example of the key press and key release. 
+import pygame
+pygame.init()
+# sets the window title
+pygame.display.set_caption(u'keyboard events')
+# sets the window size
+pygame.display.set_mode((400, 400))
+
+while true:
+    # gets a single event from the event queue
+    event = pygame.event.wait()
+    # if the 'close' button of the window is pressed
+    if event.type == pygame.quit:
+        # stops the application
+        break
+    # detects the 'keydown' and 'keyup' events
+    if event.type in (pygame.keydown, pygame.keyup):
+        # gets the key name
+        key_name = pygame.key.name(event.key)
+        # converts to uppercase the key name
+        key_name = key_name.upper()
+        # if any key is pressed
+        if event.type == pygame.keydown:
+            # prints on the console the key pressed
+            print(u'"{}" key pressed'.format(key_name))
+        # if any key is released
+        elif event.type == pygame.keyup:
+            # prints on the console the released key
+            print(u'"{}" key released'.format(key_name))
+ output: let's have a look the another example 
+import pygame
+
+pygame.init()
+screen = pygame.display.set_mode((400, 300))
+done = false
+is_blue = true
+x = 30
+y = 30
+
+while not done:
+    for event in pygame.event.get():
+        if event.type == pygame.quit:
+            done = true
+        if event.type == pygame.keydown and event.key == pygame.k_space:
+            is_blue = not is_blue
+
+    pressed = pygame.key.get_pressed()
+    if pressed[pygame.k_up]: y -= 3
+    if pressed[pygame.k_down]: y += 3
+    if pressed[pygame.k_left]: x -= 3
+    if pressed[pygame.k_right]: x += 3
+
+    if is_blue:
+        color = (0, 128, 255)
+    else: 
+        color = (255, 100, 0)
+    pygame.draw.rect(screen, color, pygame.rect(x, y, 60, 60))
+
+    pygame.display.flip()
+ in the above code, the rectangle will be displayed on the pygame window. when we press the down key, the rectangle is reshaped in the downwards. the output is the following: pygame draw pygame provides geometry functions to draw simple shapes to the surface. these functions will work for rendering to any format to surfaces. most of the functions accept a width argument to signify the size of the thickness around the edge of the shape. if the width is passed 0, then the shape will be solid(filled). all the drawing function takes the color argument that can be one of the following formats: a pygame.color objects an (rgb) triplet(tuple/list) an (rgba) quadruplet(tuple/list) an integer value that has been mapped to the surface's pixel format draw a rectangle the following functions are used to draw a rectangle on the given surface. 
+pygame.draw.rect(surface, color, rect)
+pygame.draw.rect(surface, color, rect, width=0)
+ parameters: surface - screen to draw on. color- this argument is used to color the given shape. the alpha value is optional if we are using a tuple. rect(rect)- draw rectangle, position, and dimensions. width(int)- this is optional to use the line thickness or to indicate that the rectangle is filled. 
+if width == 0, (default) fill the rectangle
+if width > 0, used for line thickness
+if width < 0, nothing will be drawn
+ draw a polygon the following functions are used to draw a polygon on the given surface. pygame.draw.polygon(surface,color,points) pygame.draw.polygon(surface, color, points, width=0) parameters: surface - screen to draw on. color- this argument is used to color the given shape. the alpha value is optional if we are using a tuple. points(tuple(coordinate) or list(coordinate)): a sequence of 3 or more (x,y) coordinates that make up the vertices of the polygon. each coordinate in the sequence must be tuple/list. note: - if the len(points) < 3 or points is not a sequence or points does not contain number pair, then it will raise the value error draw an ellipse the following functions are used to draw an ellipse on the given surface. 
+pygame.draw.ellipse(surface, color, rect)
+pygame.draw.ellipse(surface, color, rect, width=0)
+ parameters: surface - screen to draw on. color- this argument is used to color the given shape. the alpha value is optional if we are using a tuple. rect(rect)- draw rectangle, position, and dimensions. draw a straight line this method is used to draw a straight line on the given surface. there are no endcaps. 
+pygame.draw.line(surface,color,start_pos,end_pos,width)
+pygame.draw.line(surface,color,start_pos,end_pos,width=1)
+ parameters: surface - screen to draw on. color- this argument is used to color the given shape. the alpha value is optional if we are using a tuple. start_pos- start position of the line(x,y) end_pos- end position of the line draw a circle below are the functions, which are used to draw a circle on the given surface. circle(surface, color, center, radius) circle(surface, color, center, radius, width=0) parameters: surface - screen to draw on. color- this argument is used to color the given shape. the alpha value is optional if we are using a tuple. center - the center point of the circle as a sequence of two int/float, e.g. (x,y) radius(int or float)- radius of the circle, measured from the center parameter, if the radius is zero, then it will only draw the center pixel. draw an elliptical arc below functions are used to draw an elliptical arc on the given surface. 
+?  arc(surface, color, rect, start_angle, stop_angle) 
+?  arc(surface, color, rect, start_angle, stop_angle, width=1)
+ parameters: surface - screen to draw on. color- this argument is used to color the given shape. the alpha value is optional if we are using a tuple. rect(rect)- draw rectangle, position, and dimensions. start_angle- start angle of the arc in radians. stop_angle- stop angle of the arc in radians. there are three conditions for start_angle and stop_angle parameter: if start_angle < stop_angle then the arc will be drawn in a counter-clock direction from the start_angle to end_angle. if start_angle>stop_angle then tau(tau=2*pi) will be added to the stop angle. if start_angle==stop_angle, nothing will be drawn. let's consider an example: 
+import pygame
+from math import pi
+pygame.init()
+# size variable is using for set screen size
+size = [400, 300]
+screen = pygame.display.set_mode(size)
+pygame.display.set_caption("example program to draw geometry")
+# done variable is using as flag 
+done = false
+clock = pygame.time.clock()
+while not done:
+    # clock.tick() limits the while loop to a max of 10 times per second.
+        clock.tick(10)
+
+    for event in pygame.event.get():  # user did something
+        if event.type == pygame.quit:  # if user clicked on close symbol 
+            done = true  # done variable that we are complete, so we exit this loop
+
+    # all drawing code occurs after the for loop and but
+    # inside the main while done==false loop.
+
+    # clear the default screen background and set the white screen background
+    screen.fill((0, 0, 0))
+
+    # draw on the screen a green line which is 5 pixels wide.
+    pygame.draw.line(screen, (0, 255, 0), [0, 0], [50, 30], 5)
+    # draw on the screen a green line which is 5 pixels wide.
+    pygame.draw.lines(screen, (0, 0, 0), false, [[0, 80], [50, 90], [200, 80], [220, 30]], 5)
+
+    # draw a rectangle outline
+    pygame.draw.rect(screen, (0, 0, 0), [75, 10, 50, 20], 2)
+
+    # draw a solid rectangle
+    pygame.draw.rect(screen, (0, 0, 0), [150, 10, 50, 20])
+
+    # this draw an ellipse outline, using a rectangle as the outside boundaries
+    pygame.draw.ellipse(screen, (255, 0, 0), [225, 10, 50, 20], 2)
+
+    # this draw a solid ellipse, using a rectangle as the outside boundaries
+    pygame.draw.ellipse(screen, (255, 0, 0), [300, 10, 50, 20])
+
+    # draw a triangle using the polygon function
+    pygame.draw.polygon(screen, (0, 0, 0), [[100, 100], [0, 200], [200, 200]], 5)
+
+    # this draw a circle
+    pygame.draw.circle(screen, (0, 0, 255), [60, 250], 40)
+
+    # this draw an arc
+    pygame.draw.arc(screen, (0, 0, 0), [210, 75, 150, 125], 0, pi / 2, 2)
+
+    # this function must write after all the other drawing commands.
+    pygame.display.flip()
+
+# quite the execution when clicking on close
+pygame.quit()
+ output: pygame text and font pygame also provides facilities to render the font and text. we can load fonts from the system by using the pygame.font.sysfont() function. pygame comes with the built-in default font which can be accessed by passing the font name or none. there are many functions to help to work with the font. the font objects are created with pygame.font.font().the actual font objects do most of the works done with fonts. font objects are generally used to render the text into new surface objects. few important font functions are the following: render() this function is used to draw text on a new surface. pygame has no facility to draw text on the existing surface. this creates a new surface with the specified text render on it. the syntax is the following: 
+render(text, antialias, color, background=none)
+ size() this function is used to determine the number of space or positioning needed to render text. it can also be used for word-wrapping and other layout effects. the syntax is the following: 
+size(bool)
+ set_bold() this function is used for bold rending of text. the syntax is following: 
+set_bold(bool)
+ let's consider the following example: 
+import pygame
+pygame.init()
+screen = pygame.display.set_mode((640, 480))
+done = false
+
+#load the fonts
+font = pygame.font.sysfont("times new roman", 72)
+# render the text in new surface
+text = font.render("hello, pygame", true, (158, 16, 16))
+while not done:
+    for event in pygame.event.get():
+        if event.type == pygame.quit:
+            done = true
+        if event.type == pygame.keydown and event.key == pygame.k_escape:
+            done = true
+    screen.fill((255, 255, 255))
+    #we will discuss blit() in the next topic
+    screen.blit(text,(320 - text.get_width() // 2, 240 - text.get_height() // 2))
+
+    pygame.display.flip()
+ output: note- it is necessary to remember that the certain font must be installed on the user's computer. if you don't know whether fonts install or not, pygame has the following function to enumerate all the fonts available on the machine: 
+ all_font = pygame.font.get_fonts()
+ there is another function to instantiate the default system font: 
+font = pygame.font.font(none,size)
+ using any above functions, we can work with the attractive font in game. pygame sprite and collision detection a pygame sprite is a two-dimensional image that is part of the large graphical scene. usually, a sprite will be some object in the scene. one of the most advantages of working with sprites is the ability to work with them in groups. we can easily move and draw all the sprites with the one command if they are in the group. the sprite module contains the various simple classes to be used within the games. it is optional to use sprite classes and different group classes when using pygame. pygame provides sprites and sprite groups that help for collision detection. collision detection is the process when two objects on the screen collide each other. for example, if a player is hit by the enemy's bullet, then it may lose a life or, the program need to know when the player touches a coin so that they automatically picked up. let's consider the following example: 
+import pygame
+import sys
+#sprite class 
+class sprite(pygame.sprite.sprite):
+    def __init__(self, pos):
+        pygame.sprite.sprite.__init__(self)
+        self.image = pygame.surface([20, 20])
+        self.image.fill((255, 0, 255))
+        self.rect = self.image.get_rect()
+        self.rect.center = pos
+def main():
+    pygame.init()
+    clock = pygame.time.clock()
+    fps = 50
+    bg = [0, 0, 0]
+    size =[300, 300]
+    screen = pygame.display.set_mode(size)
+    player = sprite([40, 50])
+    # define keys for player movement
+    player.move = [pygame.k_left, pygame.k_right, pygame.k_up, pygame.k_down]
+    player.vx = 5
+    player.vy = 5
+
+    wall = sprite([100, 60])
+
+    wall_group = pygame.sprite.group()
+    wall_group.add(wall)
+
+    player_group = pygame.sprite.group()
+    player_group.add(player)
+
+    while true:
+        for event in pygame.event.get():
+            if event.type == pygame.quit:
+                return false
+        key = pygame.key.get_pressed()
+        for i in range(2):
+            if key[player.move[i]]:
+                player.rect.x += player.vx * [-1, 1][i]
+
+        for i in range(2):
+            if key[player.move[2:4][i]]:
+                player.rect.y += player.vy * [-1, 1][i]
+        screen.fill(bg)
+        # first parameter takes a single sprite
+        # second parameter takes sprite groups
+        # third parameter is a kill command if true
+        hit = pygame.sprite.spritecollide(player, wall_group, true)
+        if hit:
+        # if collision is detected call a function to destroy
+            # rect
+            player.image.fill((255, 255, 255))
+        player_group.draw(screen)
+        wall_group.draw(screen)
+        pygame.display.update()
+        clock.tick(fps)
+    pygame.quit()
+    sys.exit
+if __name__ == '__main__':
+ output: after pressing the arrow keys, one rectangle will collide with another rectangle then output is: pyglet python provide another game library named pyglet which is cross-platform windowing and multimedia library for python. it is used to developing games and other visually rich applications. it supports user interface event handling, windowing, opengl graphics, loading images and videos, and playing sounds and music. few features of pyglet are the following: no external installation requirements or dependencies. take benefit of multiple windows and multi-monitor. it can load images, sound, music, and video in any format. pyglet is provided under the bsd open-source license. it supports both python 2 and 3. installation of pyglet is simple; it can be installed by typing the following command. 
+pip install pyglet
+ consider the following example. 
+import pyglet
+window = pyglet.window.window()
+lable = pyglet.text.label('hello world', font_name='times new roman', font_size=36,
+                          x= window.width//2,y=window.height//2,anchor_x='center', anchor_y='center')
+@window.event
+def on_draw():
+    window.clear()
+    lable.draw()
+pyglet.app.run()
+ output: comparison between pygame and pyglet pyglet pygame 3d support since pyglet is so firmly merged with opengl. it allows the support of drawing in 3d. easy python syntax pygame uses python as its scripting language. python is widely treated one of the most natural languages to grasp even for beginners. cross-platform it can work with window, linux, and os x. usage api the api is very straightforward. written in pure python it can be compiled using the other python interpreters. best canvas system pygame provides a drawing system that allows the user to create and draw an unlimited number of the canvas. less popularity pyglet is less popularee because it has small community support. more popular pygame is more popular than the pyglet. in this tutorial, we have discussed the simple game development programming approach by installing the open-source module pygame into python 3 programming environment. for videos join our youtube channel: join now feedback send your feedback to [email protected] help others, please share learn latest tutorials splunk spss swagger transact-sql tumblr reactjs regex reinforcement learning r programming rxjs react native python design patterns python pillow python turtle keras preparation aptitude reasoning verbal ability interview questions company questions trending technologies artificial intelligence aws selenium cloud computing hadoop reactjs data science angular 7 blockchain git machine learning devops b.tech / mca dbms data structures daa operating system computer network compiler design computer organization discrete mathematics ethical hacking computer graphics software engineering web technology cyber security automata c programming c++ java .net python programs control system data mining data warehouse javatpoint services javatpoint offers too many high quality services. mail us on [email protected], to get more information about given services. website designing website development java development php development wordpress graphic designing logo digital marketing on page and off page seo ppc content development corporate training classroom and online training data entry training for college campus javatpoint offers college campus training on core java, advance java, .net, android, hadoop, php, web technology and python. please mail your requirement at [email protected] duration: 1 week to 2 week like/subscribe us for latest updates or newsletter learn tutorialslearn javalearn data structureslearn c programminglearn c++ tutoriallearn c# tutoriallearn php tutoriallearn html tutoriallearn javascript tutoriallearn jquery tutoriallearn spring tutorial our websitesjavatpoint.comhindi100.comlyricsia.comquoteperson.comjobandplacement.com our services website development android development website designing digital marketing summer training industrial training college campus training contact address: g-13, 2nd floor, sec-3 noida, up, 201301, india contact no: 0120-4256464, 9990449935contact us subscribe us privacy policysitemap about me ? copyright 2011-2021 www.javatpoint.com. all rights reserved. developed by javatpoint.

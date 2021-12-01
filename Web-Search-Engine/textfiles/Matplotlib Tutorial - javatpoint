@@ -1,0 +1,305 @@
+matplotlib tutorial - javatpoint ? scroll to top home python matplotlib pygame java sql cloud javascript servlet html struts2 spring quiz projects interview q comment forum training matplotlib tutorial matplotlib tutorial matplotlib (python plotting library) human minds are more adaptive for the visual representation of data rather than textual data. we can easily understand things when they are visualized. it is better to represent the data through the graph where we can analyze the data more efficiently and make the specific decision according to data analysis. before learning the matplotlib, we need to understand data visualization and why data visualization is important. data visualization graphics provides an excellent approach for exploring the data, which is essential for presenting results. data visualization is a new term. it expresses the idea that involves more than just representing data in the graphical form (instead of using textual form). this can be very helpful when discovering and getting to know a dataset and can help with classifying patterns, corrupt data, outliers, and much more. with a little domain knowledge, data visualizations can be used to express and demonstrate key relationships in plots and charts. the static does indeed focus on quantitative description and estimations of data. it provides an important set of tools for gaining a qualitative understanding. there are five key plots that are used for data visualization. there are five phases which are essential to make the decision for the organization: visualize: we analyze the raw data, which means it makes complex data more accessible, understandable, and more usable. tabular data representation is used where the user will look up a specific measurement, while the chart of several types is used to show patterns or relationships in the data for one or more variables. analysis: data analysis is defined as cleaning, inspecting, transforming, and modeling data to derive useful information. whenever we make a decision for the business or in daily life, is by past experience. what will happen to choose a particular decision, it is nothing but analyzing our past. that may be affected in the future, so the proper analysis is necessary for better decisions for any business or organization. document insight: document insight is the process where the useful data or information is organized in the document in the standard format. transform data set: standard data is used to make the decision more effectively. why need data visualization? data visualization can perform below tasks: it identifies areas that need improvement and attention. it clarifies the factors. it helps to understand which product to place where. predict sales volumes. benefit of data visualization here are some benefits of the data visualization, which helps to make an effective decision for the organizations or business: 1. building ways of absorbing information data visualization allows users to receive vast amounts of information regarding operational and business conditions. it helps decision-makers to see the relationship between multi-dimensional data sets. it offers new ways to analyses data through the use of maps, fever charts, and other rich graphical representations. visual data discovery is more likely to find the information that the organization needs and then end up with being more productive than other competitive companies. 2. visualize relationship and patterns in businesses the crucial advantage of data visualization is that it is essential to find the correlation between operating conditions and business performance in today's highly competitive business environment. the ability to make these types of correlations enables the executives to identify the root cause of the problem and act quickly to resolve it. suppose a food company is looking their monthly customer data, and the data is presented with bar charts, which shows that the company's score has dropped by five points in the previous months in that particular region; the data suggest that there's a problem with customer satisfaction in this area. 3. take action on the emerging trends faster data visualization allows the decision-maker to grasp shifts in customer behavior and market conditions across multiple data sets more efficiently. having an idea about the customer's sentiments and other data discloses an emerging opportunity for the company to act on new business opportunities ahead of their competitor. 4. geological based visualization geo-spatial visualization is occurred due to many websites providing web-services, attracting visitor's interest. these types of websites are required to take benefit of location-specific information, which is already present in the customer details. matplotlib is a python library which is defined as a multi-platform data visualization library built on numpy array. it can be used in python scripts, shell, web application, and other graphical user interface toolkit. the john d. hunter originally conceived the matplotlib in 2002. it has an active development community and is distributed under a bsd-style license. its first version was released in 2003, and the latest version 3.1.1 is released on 1 july 2019. matplotlib 2.0.x supports python versions 2.7 to 3.6 till 23 june 2007. python3 support started with matplotlib 1.2. matplotlib 1.4 is the last version that supports python 2.6. there are various toolkits available that are used to enhance the functionality of the matplotlib. some of these tools are downloaded separately, others can be shifted with the matplotlib source code but have external dependencies. bashmap: it is a map plotting toolkit with several map projections, coastlines, and political boundaries. cartopy: it is a mapping library consisting of object-oriented map projection definitions, and arbitrary point, line, polygon, and image transformation abilities. excel tools: matplotlib provides the facility to utilities for exchanging data with microsoft excel. mplot3d: it is used for 3d plots. natgrid: it is an interface to the natgrid library for irregular gridding of the spaced data. matplotlib architecture there are three different layers in the architecture of the matplotlib which are the following: backend layer artist layer scripting layer backend layer the backend layer is the bottom layer of the figure, which consists of the implementation of the various functions that are necessary for plotting. there are three essential classes from the backend layer figurecanvas(the surface on which the figure will be drawn), renderer(the class that takes care of the drawing on the surface), and event(it handle the mouse and keyboard events). artist layer the artist layer is the second layer in the architecture. it is responsible for the various plotting functions, like axis, which coordinates on how to use the renderer on the figure canvas. scripting layer the scripting layer is the topmost layer on which most of our code will run. the methods in the scripting layer, almost automatically take care of the other layers, and all we need to care about is the current state (figure & subplot). the general concept of matplotlib a matplotlib figure can be categorized into various parts as below: figure: it is a whole figure which may hold one or more axes (plots). we can think of a figure as a canvas that holds plots. axes: a figure can contain several axes. it consists of two or three (in the case of 3d) axis objects. each axes is comprised of a title, an x-label, and a y-label. axis: axises are the number of line like objects and responsible for generating the graph limits. artist: an artist is the all which we see on the graph like text objects, line2d objects, and collection objects. most artists are tied to axes. installing matplotlib before start working with the matplotlib or its plotting functions first, it needs to be installed. the installation of matplotlib is dependent on the distribution that is installed on your computer. these installation methods are following: use the anaconda distribution of python the easiest way to install matplotlib is to download the anaconda distribution of python. matplotlib is pre-installed in the anaconda distribution no further installation steps are necessary. visit the official site of anaconda and click on the download button choose download according to your python interpreter configuration. install matplotlib using with anaconda prompt matplotlib can be installed using with the anaconda prompt by typing command. to install matplotlib, open anaconda prompt and type the following command: 
+conda install matplotlib
+ install matplotlib with pip the python package manager pip is also used to install matplotlib. open the command prompt window, and type the following command: 
+pip install matplotlib
+ verify the installation to verify that matplotlib is installed properly or not, type the following command includes calling .__version __ in the terminal. 
+import matplotlib
+matplotlib.__version__
+'3.1.1'
+ basic example of plotting graph here is the basic example of generating a simple graph; the program is following: 
+from matplotlib import pyplot as plt
+#ploting our canvas
+plt.plot([1,2,3],[4,5,1])
+#display the graph
+plt.show()
+ output: it takes only three lines to plot a simple graph using the python matplotlib. we can add titles, labels to our chart which are created by python matplotlib library to make it more meaningful. the example is the following: 
+from matplotlib import pyplot as plt
+
+x = [5, 2, 7]
+y = [1, 10, 4]
+plt.plot(x, y)
+plt.title('line graph')
+plt.ylabel('y axis')
+plt.xlabel('x axis')
+plt.show()
+ output: the graph is more understandable from the previous graph. working with pyplot the matplotlib.pyplot is the collection command style functions that make matplotlib feel like working with matlab. the pyplot functions are used to make some changes to figure such as create a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot including labels, etc. it is good to use when we want to plot something quickly without instantiating any figure or axes. while working with matplotlib.pyplot, some states are stored across function calls so that it keeps track of the things like current figure and plotting area, and these plotting functions are directed to the current axes. the pyplot module provide the plot() function which is frequently use to plot a graph. let's have a look on the simple example: 
+from matplotlib import pyplot as plt
+plt.plot([1,2,3,4,5])
+plt.ylabel("y axis")
+plt.xlabel('x axis')
+plt.show()
+ output: in the above program, it plots the graph x-axis ranges from 0-4 and the y-axis from 1-5. if we provide a single list to the plot(), matplotlib assumes it is a sequence of y values, and automatically generates the x values. since we know that python index starts at 0, the default x vector has the same length as y but starts at 0. hence the x data are [0, 1, 2, 3, 4]. we can pass the arbitrary number of arguments to the plot(). for example, to plot x versus y, we can do this following way: 
+from matplotlib import pyplot as plt
+plt.plot([1,2,3,4,5],[1,4,9,16,25])
+plt.ylabel("y axis")
+plt.xlabel('x axis')
+plt.show()
+ output: formatting the style of the plot there is an optional third argument, which is a format string that indicates the color and line type of the plot. the default format string is 'b-'which is the solid blue as you can observe in the above plotted graph. let's consider the following example where we plot the graph with the red circle. 
+from matplotlib import pyplot as plt
+plt.plot([1, 2, 3, 4,5], [1, 4, 9, 16,25], 'ro')
+plt.axis([0, 6, 0, 20])
+plt.show()
+ output: example format string 'b' using for the blue marker with default shape. 'ro' red circle '-g' green solid line '--' a dashed line with the default color '^k:' black triangle up markers connected by a dotted line the matplotlib supports the following color abbreviation: character color 'b' blue 'g' green 'r' red 'c' cyan 'm' magenta 'y' yellow 'k' black 'w' white plotting with categorical variables matplotlib allows us to pass categorical variables directly to many plotting functions: consider the following example 
+from matplotlib import pyplot
+names = ['abhishek', 'himanshu', 'devansh']
+marks= [87,50,98]
+
+plt.figure(figsize=(9,3))
+
+plt.subplot(131)
+plt.bar(names, marks)
+plt.subplot(132)
+plt.scatter(names, marks)
+plt.subplot(133)
+plt.plot(names, marks)
+plt.suptitle('categorical plotting')
+plt.show()
+ output: in the above program, we have plotted the categorical graph using the subplot() function. let's a have a look on the subplot() function. what is subplot() the matplotlib subplot() function is defined as to plot two or more plots in one figure. we can use this method to separate two graphs which plotted in the same axis matplotlib supports all kinds of subplots, including 2x1 vertical, 2x1 horizontal, or a 2x2 grid. it accepts the three arguments: they are nrows, ncols, and index. it denote the number of rows, number of columns and the index. the subplot() function can be called in the following way: 
+subplot(nrows,ncols,index,**kwargs)
+subplot(pos,**kwargs)	
+subplot(ax)
+ parameters: *args: three separate integers or three-digit integer describes the position of the subplot. if the three integers are nrows, ncols, and index in order, the subplot will take the index position on a grid with nrows row and ncol column. the argument pos are a three-digit integer, where the first digit is denoted the number of rows, the second digit denoted the number of columns, and the third represents the index of the subplot. for example, subplot (1, 3, 2) is the same as the subplot (132). note: passed integer must be less than 10. **kwargs the subplot() function also accepts the keyword arguments for the returned axes base class. consider the following example: creating different types of graph 1. line graph the line graph is one of charts which shows information as a series of the line. the graph is plotted by the plot() function. the line graph is simple to plot; let's consider the following example: 
+from matplotlib import pyplot as plt
+
+x = [4,8,9]
+y = [10,12,15]
+
+plt.plot(x,y)
+
+plt.title("line graph")
+plt.ylabel('y axis')
+plt.xlabel('x axis')
+plt.show()
+ output: we can customize the graph by importing the style module. the style module will be built into a matplotlib installation. it contains the various functions to make the plot more attractive. in the below program, we are using the style module: 
+from matplotlib import pyplot as plt
+from matplotlib import style
+
+style.use('ggplot')
+x = [16, 8, 10]
+y = [8, 16, 6]
+x2 = [8, 15, 11]
+y2 = [6, 15, 7]
+plt.plot(x, y, 'r', label='line one', linewidth=5)
+plt.plot(x2, y2, 'm', label='line two', linewidth=5)
+plt.title('epic info')
+fig = plt.figure()
+plt.ylabel('y axis')
+plt.xlabel('x axis')
+plt.legend()
+plt.grid(true, color='k')
+plt.show()
+ output: in matplotlib, the figure (an instance of class plt.figure) can be supposed of as a single container that consists of all the objects denoting axes, graphics, text, and labels. example-3 
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+ax = plt.axes()
+
+x = np.linspace(0, 10, 1000)
+ax.plot(x, np.sin(x))
+ output: the matplotlib provides the fill_between() function which is used to fill area around the lines based on the user defined logic. example-4 
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+ax = plt.axes()
+
+x = np.linspace(0, 10, 1000)
+ax.plot(x, np.sin(x))
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.arange(0.0, 2, 0.01)
+y1 = np.sin(2 * np.pi * x)
+y2 = 1.2 * np.sin(4 * np.pi * x)
+fig, ax = plt.subplots(1, sharex=true)
+ax.plot(x, y1, x, y2, color='black')
+ax.fill_between(x, y1, y2, where=y2 >= y1, facecolor='blue', interpolate=true)
+ax.fill_between(x, y1, y2, where=y2 <= y1, facecolor='red', interpolate=true)
+ax.set_title('fill between where')
+ output: 2. bar graphs bar graphs are one of the most common types of graphs and are used to show data associated with the categorical variables. matplotlib provides a bar() to make bar graphs which accepts arguments such as: categorical variables, their value and color. 
+from matplotlib import pyplot as plt
+players = ['virat','rohit','shikhar','hardik']
+runs = [51,87,45,67]
+plt.bar(players,runs,color = 'green')
+plt.title('score card')
+plt.xlabel('players')
+plt.ylabel('runs')
+plt.show()
+ output: another function barh() is used to make horizontal bar graphs. it accepts xerr or yerr as arguments (in case of vertical graphs) to depict the variance in our data as follows: 
+from matplotlib import pyplot as plt
+players = ['virat','rohit','shikhar','hardik']
+runs = [51,87,45,67]
+plt.barh(players,runs, color = 'green')
+plt.title('score card')
+plt.xlabel('players')
+plt.ylabel('runs')
+plt.show()
+ output: let's have a look on the other example using the style() function: 
+from matplotlib import pyplot as plt
+from matplotlib import style
+
+style.use('ggplot')
+
+x = [5,8,10]
+y = [12,16,6]
+
+x2 = [6,9,11]
+y2 = [7,15,7]
+
+
+plt.bar(x, y, color = 'y', align='center')
+plt.bar(x2, y2, color='c', align='center')
+
+plt.title('information')
+
+plt.ylabel('y axis')
+plt.xlabel('x axis')
+ output: similarly to vertical stack, the bar graph together by using the bottom argument and define the bar graph, which we want to stack below and its value. 
+from matplotlib import pyplot as plt
+import numpy as np
+
+countries = ['usa', 'india', 'china', 'russia', 'germany']
+bronzes = np.array([38, 17, 26, 19, 15])
+silvers = np.array([37, 23, 18, 18, 10])
+golds = np.array([46, 27, 26, 19, 17])
+ind = [x for x, _ in enumerate(countries)]
+
+plt.bar(ind, golds, width=0.5, label='golds', color='gold', bottom=silvers+bronzes)
+plt.bar(ind, silvers, width=0.5, label='silvers', color='silver', bottom=bronzes)
+plt.bar(ind, bronzes, width=0.5, label='bronzes', color='#cd853f')
+
+plt.xticks(ind, countries)
+plt.ylabel("medals")
+plt.xlabel("countries")
+plt.legend(loc="upper right")
+plt.title("2019 olympics top scorers")
+ output: 3. pie chart a pie chart is a circular graph that is broken down in the segment or slices of pie. it is generally used to represent the percentage or proportional data where each slice of pie represents a particular category. let's have a look at the below example: 
+from matplotlib import pyplot as plt
+
+# pie chart, where the slices will be ordered and plotted counter-clockwise:
+players = 'rohit', 'virat', 'shikhar', 'yuvraj'
+runs = [45, 30, 15, 10]
+explode = (0.1, 0, 0, 0)  # it "explode" the 1st slice 
+
+fig1, ax1 = plt.subplots()
+ax1.pie(runs, explode=explode, labels=players, autopct='%1.1f%%',
+        shadow=true, startangle=90)
+ax1.axis('equal')  # equal aspect ratio ensures that pie is drawn as a circle.
+
+plt.show()
+ output: 4. histogram first, we need to understand the difference between the bar graph and histogram. a histogram is used for the distribution, whereas a bar chart is used to compare different entities. a histogram is a type of bar plot that shows the frequency of a number of values compared to a set of values ranges. for example we take the data of the different age group of the people and plot a histogram with respect to the bin. now, bin represents the range of values that are divided into series of intervals. bins are generally created of the same size. 
+from matplotlib import pyplot as plt
+from matplotlib import pyplot as plt
+population_age = [21,53,60,49,25,27,30,42,40,1,2,102,95,8,15,105,70,65,55,70,75,60,52,44,43,42,45]
+bins = [0,10,20,30,40,50,60,70,80,90,100]
+plt.hist(population_age, bins, histtype='bar', rwidth=0.8)
+plt.xlabel('age groups')
+plt.ylabel('number of people')
+plt.title('histogram')
+plt.show()
+ output: let's consider the another example of plotting histogram: 
+from matplotlib import pyplot as plt
+# importing numpy library
+import numpy as np
+plt.style.use('fivethirtyeight')
+
+mu = 50
+sigma = 7
+x = np.random.normal(mu, sigma, size=200)
+fig, ax = plt.subplots()
+
+ax.hist(x, 20)
+ax.set_title('historgram')
+ax.set_xlabel('bin range')
+ax.set_ylabel('frequency')
+
+fig.tight_layout()
+plt.show()
+ output: 5. scatter plot the scatter plots are mostly used for comparing variables when we need to define how much one variable is affected by another variable. the data is displayed as a collection of points. each point has the value of one variable, which defines the position on the horizontal axes, and the value of other variable represents the position on the vertical axis. let's consider the following simple example: example-1: 
+from matplotlib import pyplot as plt
+from matplotlib import style
+style.use('ggplot')
+
+x = [5,7,10]
+y = [18,10,6]
+
+x2 = [6,9,11]
+y2 = [7,14,17]
+
+plt.scatter(x, y)
+
+plt.scatter(x2, y2, color='g')
+
+plt.title('epic info')
+plt.ylabel('y axis')
+plt.xlabel('x axis')
+
+plt.show()
+ output: example-2 
+import matplotlib.pyplot as plt
+x = [2, 2.5, 3, 3.5, 4.5, 4.7, 5.0]
+y = [7.5, 8, 8.5, 9, 9.5, 10, 10.5]
+
+x1 = [9, 8.5, 9, 9.5, 10, 10.5, 12]
+y1 = [3, 3.5, 4.7, 4, 4.5, 5, 5.2]
+plt.scatter(x, y, label='high income low saving', color='g')
+plt.scatter(x1, y1, label='low income high savings', color='r')
+plt.xlabel('saving*100')
+plt.ylabel('income*1000')
+plt.title('scatter plot')
+plt.legend()
+plt.show()
+ output: 6. 3d graph plot matplotlib was initially developed with only two-dimension plot. its 1.0 release was built with some of three-dimensional plotting utilities on top of two-dimension display, and the result is a convenient set of tools for 3d data visualization. three-dimension plots can be created by importing the mplot3d toolkit, include with the main matplotlib installation: 
+from mpl_toolkits import mplot3d
+ when this module is imported in the program, three-dimension axes can be created by passing the keyword projection='3d' to any of the normal axes creation routines: let's see the simple 3d plot example-1: 
+from mpltoolkits import mplot3d
+import numpy as np
+import matplotlib.pyplot as plt
+fig = plt.figure()
+ax = plt.axes(projection='3d')_
+ output: example-2: 
+from mpl_toolkits import mplot3d
+import numpy as np
+import matplotlib.pyplot as plt
+
+height = np.array([100,110,87,85,65,80,96,75,42,59,54,63,95,71,86])
+weight = np.array([105,123,84,85,78,95,69,42,87,91,63,83,75,41,80])
+
+
+scatter(height,weight)
+
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+# this is used to plot 3d scatter
+ax.scatter3d(height,weight)
+plt.title("3d scatter plot")
+plt.xlabel("height")
+plt.ylabel("weight")
+plt.title("3d scatter plot")
+plt.xlabel("height")
+plt.ylabel("weight")
+
+plt.show()
+ output: note: we can use the plot3d () to plot simple 3d line graph. example-3 
+import matplotlib as mpl
+from mpl_toolkits.mplot3d import axes3d
+import numpy as np
+import matplotlib.pyplot as plt
+
+mpl.rcparams['legend.fontsize'] = 10
+
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+theta1 = np.linspace(-4 * np.pi, 4 * np.pi, 100)
+z = np.linspace(-2, 2, 100)
+r = z**2 + 1
+x = r * np.sin(theta1)
+y = r * np.cos(theta1)
+ax.plot3d(x, y, z, label='parametric curve', color = 'red')
+ax.legend()
+
+plt.show()
+ output: important functions of matplotlib functions description plot(x-axis value, y-axis-values) it is used to plot a simple line graph with x-axis value against the y-axis values. show() it is used to display the graph. title("string") it is used to set the title of the plotted graph as specified by the string. xlabel("string") it is used to set the label for the x-axis as specified by the string. ylabel("string") it is used to set the label for y-axis as specified by the string. figure() it is used to control a figure level attributes. subplots(nrows,ncol,index) it is used to add a subplot to recent figure. subtitle("string") it adds a common title to the plotted graph specified by the string. subplots(nrows,ncols,figsize) it provides the simple way to create subplot, in a single call and returns a tuple of a figure and number of axes. set_title("string") it is an axes level method which is used to set the title of the subplots. bar(categorical variables, values, color) it is used to create a vertical bar graph. barh(categorical variables, values, color) it is used to create horizontal bar graphs. legend(loc) it is used to make a legend of the graph. xtricks(index, categorical variables) it is used to set or get the current tick locations labels of the x-axis. pie(value, categorical variables) it is used to create a pie chart. hist(value, number of bins) it is used to create a histogram. xlim(start value, end value) it is used to set the limit of values of the x-axis. ylim(start value, end value) it is used to set the limit of values of the y-axis. scatter(x-axis values, y-axis values) it is used to plots a scatter plot with x-axis value against the y-axis values. axes() it is used to add axes to the recent figure. set_xlabel("string") it is an axes level method which is used to set the x-label of the plot specified as a string. set_ylabel("string") it is used to set the y-label of the plot specified as a string. scatter3d(x-axis values, y-axis values) it is used to plot a three-dimension scatter plot with x- axis value against the y-axis. plot3d(x-axis values, y-axis values) it is used to plots a three-dimension line graph with x- axis values against y-axis values. in this tutorial, we have learned about the matplotlib (python library), where we covered the brief introduction of data visualization and how data visualization is essential to make a decision for the organization. we have plotted the different types of graphs for the graphical representation of the data. for videos join our youtube channel: join now feedback send your feedback to [email protected] help others, please share learn latest tutorials splunk spss swagger transact-sql tumblr reactjs regex reinforcement learning r programming rxjs react native python design patterns python pillow python turtle keras preparation aptitude reasoning verbal ability interview questions company questions trending technologies artificial intelligence aws selenium cloud computing hadoop reactjs data science angular 7 blockchain git machine learning devops b.tech / mca dbms data structures daa operating system computer network compiler design computer organization discrete mathematics ethical hacking computer graphics software engineering web technology cyber security automata c programming c++ java .net python programs control system data mining data warehouse javatpoint services javatpoint offers too many high quality services. mail us on [email protected], to get more information about given services. website designing website development java development php development wordpress graphic designing logo digital marketing on page and off page seo ppc content development corporate training classroom and online training data entry training for college campus javatpoint offers college campus training on core java, advance java, .net, android, hadoop, php, web technology and python. please mail your requirement at [email protected] duration: 1 week to 2 week like/subscribe us for latest updates or newsletter learn tutorialslearn javalearn data structureslearn c programminglearn c++ tutoriallearn c# tutoriallearn php tutoriallearn html tutoriallearn javascript tutoriallearn jquery tutoriallearn spring tutorial our websitesjavatpoint.comhindi100.comlyricsia.comquoteperson.comjobandplacement.com our services website development android development website designing digital marketing summer training industrial training college campus training contact address: g-13, 2nd floor, sec-3 noida, up, 201301, india contact no: 0120-4256464, 9990449935contact us subscribe us privacy policysitemap about me ? copyright 2011-2021 www.javatpoint.com. all rights reserved. developed by javatpoint.

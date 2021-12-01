@@ -1,0 +1,391 @@
+python turtle programming tutorial - javatpoint ? scroll to top home python turtle python openpyxl pygame java sql android cloud javascript servlet html struts2 spring quiz interview q comment forum python turtle programming python turtle tutorial python turtle programming turtle is a python library which used to create graphics, pictures, and games. it was developed by wally feurzeig, seymour parpet and cynthina slolomon in 1967. it was a part of the original logo programming language. the logo programming language was popular among the kids because it enables us to draw attractive graphs to the screen in the simple way. it is like a little object on the screen, which can move according to the desired position. similarly, turtle library comes with the interactive feature that gives the flexibility to work with python. in this tutorial, we will learn the basic concepts of the turtle library, how to set the turtle up on a computer, programming with the python turtle library, few important turtle commands, and develop a short but attractive design using the python turtle library. introduction turtle is a pre-installed library in python that is similar to the virtual canvas that we can draw pictures and attractive shapes. it provides the onscreen pen that we can use for drawing. the turtle library is primarily designed to introduce children to the world of programming. with the help of turtle's library, new programmers can get an idea of how we can do programming with python in a fun and interactive way. it is beneficial to the children and for the experienced programmer because it allows designing unique shapes, attractive pictures, and various games. we can also design the mini games and animation. in the upcoming section, we will learn to various functionality of turtle library. getting started with turtle before working with the turtle library, we must ensure the two most essential things to do programming. python environment - we must be familiar with the working python environment. we can use applications such as idle or jupiter notebook. we can also use the python interactive shell. python version - we must have python 3 in our system; if not, then download it from python's official website. the turtle is built in library so we don't need to install separately. we just need to import the library into our python environment. the python turtle library consists of all important methods and functions that we will need to create our designs and images. import the turtle library using the following command. 
+import turtle
+ now, we can access all methods and functions. first, we need to create a dedicated window where we carry out each drawing command. we can do it by initializing a variable for it. 
+s = turtle.getscreen() 
+ it will look like an above image and the little triangle in the middle of the screen is a turtle. if the screen is not appearing in your computer system, use the below code. example - 
+import turtle
+# creating turtle screen
+s = turtle.getscreen()
+# to stop the screen to display
+turtle.mainloop()
+ output: the screen same as the canvas and turtle acts like a pen. you can move the turtle to design the desired shape. the turtle has certain changeable features such as color, speed, and size. it can be moved to a specific direction, and move in that direction unless we tell it otherwise. in the next section, we will learn to program with the python turtle library. programming with turtle first, we need to learn to move the turtle all direction as we want. we can customize the pen like turtle and its environment. let's learn the couple of commands to perform a few specific tasks. turtle can be moved in four directions. forward backward left right turtle motion the turtle can move forward and backward in direction that it's facing. let's see the following functions. forward(distance) or turtle.fd(distance) - it moves the turtle in the forward direction by a certain distance. it takes one parameter distance, which can be an integer or float. example - 3: 
+import turtle
+# creating turtle screen
+t = turtle.turtle()
+# to stop the screen to display
+
+t.forward(100)
+turtle.mainloop()
+ output: back(distance) or turtle.bk or turtle.backward(distance) - this method moves the turtle in the opposite direction the turtle is headed. it doesn't change the turtle heading. example - 2: 
+import turtle
+# creating turtle screen
+t = turtle.turtle()
+# move turtle in opposite direction
+t.backward(100)
+# to stop the screen to display
+turtle.mainloop()
+ output: right(angle) or turtle.rt(angle) - this method moves the turtle right by angle units. example - 3: 
+import turtle
+# creating turtle screen
+t = turtle.turtle()
+
+t.heading()
+# move turtle in opposite direction
+t.right(25)
+
+t.heading()
+# to stop the screen to display
+turtle.mainloop()
+ output: left(angle) or turtle.lt(angle) - this method turn the turtle left by angle units. let's understand the following example. example - 
+import turtle
+# creating turtle screen
+t = turtle.turtle()
+
+t.heading()
+# move turtle in left 
+t.left(100)
+
+t.heading()
+# to stop the screen to display
+turtle.mainloop()
+ output: the screen is initially divided into four quadrants. the turtle is positioned at the beginning of the program is (0,0) known as the home. goto(x, y=none) or turtle.setpos(x, y=none) turtle.setposition(x, y=none) - this method is used to move the turtle in the other area on the screen. it takes the two coordinates - x and y. consider the following example. example - 
+import turtle
+# creating turtle screen
+t = turtle.turtle()
+# move turtle with coordinates
+t.goto(100, 80)
+# to stop the screen to display
+turtle.mainloop()
+ output: drawing a shape we discussed the movement of the turtle. now, we learn to move on to making actual shape. first, we draw the polygon since they all consist of straight lines connected at the certain angles. let's understand the following example. example - 
+t.fd(100)
+t.rt(90)
+t.fd(100)
+t.rt(90)
+t.fd(100)
+t.rt(90)
+t.fd(100)
+ it will look like the following image. output: we can draw any shape using the turtle, such as a rectangle, triangle, square, and many more. but, we need to take care of coordinate while drawing the rectangle because all four sides are not equal. once we draw the rectangle, we can even try creating other polygons by increasing number of side. drawing preset figures suppose you want to draw a circle. if you attempt to draw it in the same way as you drew the square, it would be extremely tedious, and you'd have to spend a lot of time just for that one shape. thankfully, the python turtle library provides a solution for this. you can use a single command to draw a circle. circle( radius, extent = none, steps = an integer ) - it is used to draw the circle to the screen. it takes three arguments. radius - it can be a number. extent - it can be a number or none. steps - it can be an integer. the circle is drawn with the given radius. the extent determines which part of circle is drawn and if the extent is not provided or none, then draw the entire circle. let's understand the following example. example - 
+import turtle
+# creating turtle screen
+t = turtle.turtle()
+
+t.circle(50)
+
+turtle.mainloop()
+ output: we can also draw a dot, which is also known as a filled-in circle. follow the given method to draw a filled-in circle. example - 
+import turtle
+# creating turtle screen
+t = turtle.turtle()
+
+t.dot(50)
+
+turtle.mainloop()
+ output: the number we have passed in the dot() function is diameter of the dot. we can increase and decrease the size of the dot by changing its diameter. so far, we have learned movement of turtle and design the various shapes. in the next few sections, we will learn the customization of turtle and its environment. changing the screen color by default, the turtle screen is opened with the white background. however, we can modify the background color of the screen using the following function. example - 
+import turtle
+# creating turtle screen
+t = turtle.turtle()
+
+turtle.bgcolor("red")
+
+turtle.mainloop()
+ output: we have passed a red color. we can also replace it with any color or we can use the hex code to use variety of code for our screen. adding image to the background same as the screen background color, we can add the background image using the following function. bgpic (picname=none) - it sets the background image or return name of current background image. it takes one argument picname which can be a string, name of a gif-file or "nopic" or "none". if the picname is "nopic", delete the background image. let's see the following example. example - 
+import turtle
+# creating turtle turtle
+t = turtle.turtle()
+
+turtle.bgpic()
+
+turtle.bgpic(r"c:\users\devansh sharma\downloads\person.jpg")
+turtle.bgpic()
+
+turtle.mainloop()
+ changing the image size we can change the image size using the screensize() function. the syntax is given below. syntax - 
+turtle.screensize(canvwidth = none, canvheight = none, bg = none)
+ parameter - it takes three parameters. canvwidth - it can be a positive number, new canvas width in pixel. canvheight - it can be a positive number, new height of the canvas in pixel. bg - it is colorstring or color-tuple. new background color. let's understand the following example. example - 
+import turtle
+# creating turtle turtle
+t = turtle.turtle()
+
+turtle.screensize()
+
+turtle.screensize(1500,1000)
+turtle.screensize()
+
+turtle.mainloop()
+ output: changing the screen title sometimes, we want to change the title of the screen. by default, it shows the python tutorial graphics. we can make it personal such as "my first turtle program" or "drawing shape with python". we can change the title of the screen using the following function. 
+turtle.title("your title")
+ let's see the example. example - 
+import turtle
+# creating turtle 
+t = turtle.turtle()
+
+turtle.title("my turtle program")
+
+turtle.mainloop()
+ output: you can change the screen title according to preference. changing the pen size we can increase or decrease the turtle's size according the requirement. sometimes, we need thickness in the pen. we can do this using the following example. example - 
+import turtle
+# creating turtle turtle
+t = turtle.turtle()
+
+t.pensize(4)
+t.forward(200)
+
+turtle.mainloop()
+ output: as we can see in the above image, the pen is four times the original size. we can use it draw lines of various sizes. pen color control by default, when we open a new screen, the turtle comes up with the black color and draws with black ink. we can change it according the two things. we can change the color of the turtle, which is a fill color. we can change the pen's color, which basically a change of the outline or the ink color. we can also change both the pen color and turtle color if we want. we suggest increasing the size of the turtle that changes in the color can be clearly visible. let's understand the following code. example - 
+import turtle
+# creating turtle turtle
+t = turtle.turtle()
+
+# increase the turtle size
+t.shapesize(3,3,3)
+
+# fill the color
+t.fillcolor("blue")
+
+# change the pen color
+t.pencolor("yellow")
+
+turtle.mainloop()
+ output: type the following function to change the color of both. example - 2: 
+import turtle
+# creating turtle turtle
+t = turtle.turtle()
+
+t.shapesize(3,3,3)
+
+# chnage the color of both
+t.color("green", "red")
+
+t.forward(100)
+
+turtle.mainloop()
+ output: explanation: in the above code, the first color is a pen color and second is a fill color. turtle fill in the image colors make an image or shapes very attractive. we can fill shapes with various colors. let's understand the following example to add color to the drawings. let's understand the following example. example - 
+import turtle
+# creating turtle turtle
+t = turtle.turtle()
+
+t.shapesize(3,3,3)
+
+t.begin_fill()
+t.fd(100)
+t.lt(120)
+t.fd(100)
+t.lt(120)
+t.fd(100)
+t.end_fill()
+
+turtle.mainloop()
+ output: explanation: when the program executes, it draw first the triangle and then filled it with the solid black color as the above output. we have used the begin_fill() method which indicates that we will draw a closed shape to be filled. then, we use the .end_fill(), which indicates that we have done with the creating shape. now, it can be filled with color. changing the turtle shape by default, the turtle shape is triangular. however, we can change the turtle's shape and this module provides many shapes for the turtle. let's understand the following example. example - 
+import turtle
+# creating turtle turtle
+t = turtle.turtle()
+
+t.shape("turtle")
+# change to arrow
+t.shape("arrow")
+# chnage to circle
+t.shape("circle")
+
+turtle.mainloop()
+ output: we can change the turtle shape according to the requirement. these shapes can be a square, triangle, classic, turtle, arrow and circle. the classic is the original shape of the turtle. changing the pen speed the speed of the turtle can be changed. generally, it moves at a moderate sped over the screen but we can increase and decrease its speed. below is the method to modify the turtle speed. example - 
+import turtle
+# creating turtle
+t = turtle.turtle()
+
+t.speed(3)
+t.forward(100)
+t.speed(7)
+t.forward(100)
+
+turtle.mainloop()
+ output: the turtle speed can vary integer values in the range 0…10. no argument is passed in the speed() function, it returns the current speed. speed strings are mapped to speed values as follows. 0 fastest 10 fast 6 normal 3 slow 1 slowest note - if speed is assigned to zero means no animation will take place. 
+turtle.speed()
+turtle.speed('normal')
+turtle.speed()
+
+turtle.speed(9)
+turtle.speed()
+ customization in one line suppose we want multiple changes within the turtle; we can do it by using just one line. below are a few characteristics of the turtle. the pen color should be red. the fill color should be orange. the pen size should be 10. the pen speed should 7 the background color should be blue. let's see the following example. example - 
+import turtle
+# creating turtle
+t = turtle.turtle()
+
+t.pencolor("red")
+t.fillcolor("orange")
+t.pensize(10)
+t.speed(7)
+t.begin_fill()
+t.circle(75)
+turtle.bgcolor("blue")
+t.end_fill()
+
+turtle.mainloop()
+ output: we used just one line and changed the turtle's characteristics. to learn about this command, you can learn from the library official documentation. change the pen direction by default, the turtle points to the right on the screen. sometimes, we require moving the turtle to the other side of the screen itself. to accomplish this, we can use the penup() method. the pendown() function uses to start drawing again. consider the following example. example - 
+import turtle
+# creating turtle
+t = turtle.turtle()
+
+t.fd(100)
+t.rt(90)
+t.penup()
+t.fd(100)
+t.rt(90)
+t.pendown()
+t.fd(100)
+t.rt(90)
+t.penup()
+t.fd(100)
+t.pendown()
+
+turtle.mainloop()
+ output: as we can see in the above output, we have obtained two parallel lines instead of a square. clearing screen we have covered most of designing concepts of the turtle. sometimes, we need a clear screen to draw more designs. we can do it using the following function. 
+t.clear()
+ the above method will clear the screen so that we can draw more designs. this function only removes the existing designs or shapes not make any changes in variable. the turtle will remain in the same position. resetting the environment we can also reset the current working using the reset function. it restores the turle's setting and clears the screen. we just need to use the following function. 
+t.reset
+ all tasks will be removed and the turtle back to its home position. the default settings of turtle, such as color, size, and shape and other features will be restored. we have learned the basic fundamental of the turtle programming. now, we will discuss a few essential and advanced concepts of the turtle library. leaving a stamp we can leave the stamp of turtle on the screen. the stamp is nothing but an imprint of the turtle. let's understand the following example. example - 
+import turtle
+# creating turtle
+t = turtle.turtle()
+t.stamp()
+
+t.fd(200)
+t.stamp()
+
+t.fd(100)
+
+turtle.mainloop()
+ output: if we print the stamp() method, it will display a number which is nothing but a turtle's location or stamp id. we can also remove a particular stamp by using the following command. 
+t.clearstamp(8)  # 8 is a stamp location.
+ cloning of a turtle sometimes, we look for the multiple turtle to design a unique shape. it provides the facility to clone the current working turtle into the environment and we can move both turtle on the screen. let's understand the following example. example - 
+import turtle
+# creating turtle
+t = turtle.turtle()
+
+c = t.clone()
+t.color("blue")
+c.color("red")
+t.circle(20)
+c.circle(30)
+for i in range(40, 100, 10):
+    c.circle(i)
+
+turtle.mainloop()
+ output: explanation: in the above code, we cloned the turtle to the c variable and called the circle function. first, it draws the blue circle and then draw the outer circles based on the for loop conditions. in the next section, we will discuss how we can use python conditional and loop statements to create design using the turtle. turtle programming using loops and conditional statements we have learned the basic and advanced concepts of the turtle library so far. the next step is to explore those concepts with python's loops and conditional statements. it will give us a practical approach when it comes to an understanding of these concepts. before moving further, we should remember the following concepts. loops - these are used to repeat a set of code until a particular condition is matched. conditional statements - these are used to perform a task based on specific conditions. indentation - it is used to define a block of code and it is essential when we are using loops and conditional statements. indentation is nothing but a set of whitespaces. the statements that are on the same level are considered as the same block statements. let's understand the following examples. for loops in the previous example, we wrote multiple repeated lines in our code. here, we will implement create a square program using for loop. for example - example: 
+t.fd(100)
+t.rt(90)
+t.fd(100)
+t.rt(90)
+t.fd(100)
+t.rt(90)
+t.fd(100)
+t.rt(90)
+ we can make it shorter using a for loop. run the below code. example 
+import turtle
+# creating turtle
+t = turtle.turtle()
+
+for i in range(4):
+    t.fd(100)
+    t.rt(90)
+
+
+turtle.mainloop()
+ output: explanation in the above code, for loop repeated the code until it reached at counter 4. the i is like a counter that starts from zero and keep increasing by one. let's understand the above loop execution step by step. in the first iteration, i = 0, the turtle moves forward by 100 units and then turns 90 degrees to the right. in the second iteration, i = 1, the turtle moves forward by 100 units and then turns 90 degrees to the right. in the third iteration, i = 2, the turtle moves forward by 100 units and then turns 90 degrees to the right. in the third iteration, i = 3, the turtle moves forward by 100 units and then turns 90 degrees to the right. after completing the iteration, the turtle will jump out of the loop. while loops it is used to run a block of code until a condition is satisfied. the code will be terminated when it finds a false condition. let's understand the following example. example - 
+import turtle
+# creating turtle
+t = turtle.turtle()
+
+n=10
+while n <= 60:
+    t.circle(n)
+    n = n+10
+
+
+turtle.mainloop()
+ output: as we can see in the output, we draw multiple circles using the while loop. every time the loop executes the new circle will be larger than the previous one. the n is used as a counter where we specified the value of n increase in the each iteration. let's understand the iteration of the loop. in the first iteration, the initial value of n is 10; it means the turtle draw the circle with the radius of 10 units. in the second iteration, the value of n is increased by 10 + 10 = 20; the turtle draws the circle with the radius of 20 units. in the second iteration, the value of n is increased by 20 + 10 = 30; the turtle draws the circle with the radius of 30 units. in the second iteration, the value of n is increased by 30 + 10 = 40; the turtle draws the circle with the radius of 30 units. conditional statement the conditional statement is used to check whether a given condition is true. if it is true, execute the corresponding lines of code. let's understand the following example. example 
+import turtle
+# creating turtle
+t = turtle.turtle()
+
+n = 40
+if n<=50:
+    t.circle(n)
+else:
+    t.forward(n)
+    t.backward(n-10)
+
+turtle.mainloop()
+ output: explanation in the above program, we define the two outcomes based on user input. if the entered number is less of equal than the 50 means draw the circle otherwise else part. we gave the 40 as input so that if block got executed and drew the circle. now let's move to see a few cool designs using the turtle library. attractive designs using python turtle library we have learned basic and advance concepts of python turtle library. we explain every possible feature of this library. by using its function, we can design games, unique shapes and many more things. here, we mention a few designs using the turtle library. design -1 circle spiro graph code 
+import turtle
+# creating turtle
+t = turtle.turtle()
+
+turtle.bgcolor("black")
+turtle.pensize(2)
+turtle.speed(0)
+
+while (true):
+    for i in range(6):
+        for colors in ["red", "blue", "magenta", "green", "yellow", "white"]:
+            turtle.color(colors)
+            turtle.circle(100)
+            turtle.left(10)
+
+
+turtle.hideturtle()
+turtle.mainloop()
+ output: the turtle will move for the infinite time because we have used the infinite while loop. copy the above code and see the magic. design - 2: python vibrate circle code 
+import turtle
+# creating turtle
+t = turtle.turtle()
+s = turtle.screen()
+s.bgcolor("black")
+t.pencolor("red")
+
+a = 0
+b = 0
+t.speed(0)
+t.penup()
+t.goto(0,200)
+t.pendown()
+while(true):
+    t.forward(a)
+    t.right(b)
+    a+=3
+    b+=1
+    if b == 210:
+        break
+    t.hideturtle()
+
+turtle.done()
+ output: code 
+import turtle
+# creating turtle
+t = turtle.turtle()
+s = turtle.screen()
+s.bgcolor("black")
+
+turtle.pensize(2)
+
+# to design curve
+def curve():
+    for i in range(200):
+        t.right(1)
+        t.forward(1)
+
+t. speed(3)
+t.color("red", "pink")
+
+t.begin_fill()
+t.left(140)
+t.forward(111.65)
+curve()
+
+t.left(120)
+curve()
+t.forward(111.65)
+t.end_fill()
+t.hideturtle()
+
+turtle.mainloop()
+ output: in the above code, we define the curve function to create curve to screen. when it takes the complete heart shape, the color will fill automatically. copy the above code and run, you can also modify it by adding more designs. for videos join our youtube channel: join now feedback send your feedback to [email protected] help others, please share learn latest tutorials splunk spss swagger transact-sql tumblr reactjs regex reinforcement learning r programming rxjs react native python design patterns python pillow python turtle keras preparation aptitude reasoning verbal ability interview questions company questions trending technologies artificial intelligence aws selenium cloud computing hadoop reactjs data science angular 7 blockchain git machine learning devops b.tech / mca dbms data structures daa operating system computer network compiler design computer organization discrete mathematics ethical hacking computer graphics software engineering web technology cyber security automata c programming c++ java .net python programs control system data mining data warehouse javatpoint services javatpoint offers too many high quality services. mail us on [email protected], to get more information about given services. website designing website development java development php development wordpress graphic designing logo digital marketing on page and off page seo ppc content development corporate training classroom and online training data entry training for college campus javatpoint offers college campus training on core java, advance java, .net, android, hadoop, php, web technology and python. please mail your requirement at [email protected] duration: 1 week to 2 week like/subscribe us for latest updates or newsletter learn tutorialslearn javalearn data structureslearn c programminglearn c++ tutoriallearn c# tutoriallearn php tutoriallearn html tutoriallearn javascript tutoriallearn jquery tutoriallearn spring tutorial our websitesjavatpoint.comhindi100.comlyricsia.comquoteperson.comjobandplacement.com our services website development android development website designing digital marketing summer training industrial training college campus training contact address: g-13, 2nd floor, sec-3 noida, up, 201301, india contact no: 0120-4256464, 9990449935contact us subscribe us privacy policysitemap about me ? copyright 2011-2021 www.javatpoint.com. all rights reserved. developed by javatpoint.

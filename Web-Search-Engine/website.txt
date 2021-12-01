@@ -1,0 +1,102 @@
+Tutorials List - Javatpoint:::https://www.javatpoint.com/
+Tutorials List - Javatpoint:::https://www.javatpoint.com
+Quantitative Aptitude Questions and Answers - javatpoint:::https://www.javatpoint.com/aptitude/quantitative
+:::https://bit.ly/2FOeX6S
+:::https://training.javatpoint.com/
+Open a Demat Account Online - Demat Account Opening at Upstox:::https://bv7np.app.goo.gl/5fgVtoW7VMyKfEib9
+Splunk Tutorial - Javatpoint:::https://www.javatpoint.com/splunk
+SPSS Tutorial - javatpoint:::https://www.javatpoint.com/spss
+Swagger Tutorial | What is Swagger - Javatpoint:::https://www.javatpoint.com/swagger
+T-SQL Tutorial - javatpoint:::https://www.javatpoint.com/t-sql
+Tumblr | Tumblr Tutorial - javatpoint:::https://www.javatpoint.com/tumblr
+ReactJS Tutorial - javatpoint:::https://www.javatpoint.com/reactjs-tutorial
+Regex Tutorial | Regular Expression - Javatpoint:::https://www.javatpoint.com/regex
+Reinforcement Learning Tutorial - Javatpoint:::https://www.javatpoint.com/reinforcement-learning
+R Tutorial | Learn R Programming Language Tutorial - javatpoint:::https://www.javatpoint.com/r-tutorial
+RxJS Tutorial - javatpoint:::https://www.javatpoint.com/rxjs
+Learn React Native Tutorial - javatpoint:::https://www.javatpoint.com/react-native-tutorial
+Python Design Patterns - javatpoint:::https://www.javatpoint.com/python-design-pattern
+Python Pillow Tutorial - javatpoint:::https://www.javatpoint.com/python-pillow
+Python Turtle Programming Tutorial - javatpoint:::https://www.javatpoint.com/python-turtle-programming
+Keras Tutorial | Deep Learning with Python - Javatpoint:::https://www.javatpoint.com/keras
+AI Tutorial | Artificial Intelligence Tutorial - Javatpoint:::https://www.javatpoint.com/artificial-intelligence-tutorial
+AWS Tutorial | Amazon Web Services Tutorial - Javatpoint:::https://www.javatpoint.com/aws-tutorial
+Selenium Tutorial - javatpoint:::https://www.javatpoint.com/selenium-tutorial
+Learn Cloud Computing Tutorial - javatpoint:::https://www.javatpoint.com/cloud-computing-tutorial
+Learn Big Data Hadoop Tutorial - javatpoint:::https://www.javatpoint.com/hadoop-tutorial
+What is Data Science: Tutorial, Components, Tools, Life Cycle, Applications - Javatpoint:::https://www.javatpoint.com/data-science
+Angular 7 Tutorial - Javatpoint:::https://www.javatpoint.com/angular-7-tutorial
+Blockchain Tutorial - Javatpoint:::https://www.javatpoint.com/blockchain-tutorial
+Git Tutorial - javatpoint:::https://www.javatpoint.com/git
+Machine Learning Tutorial | Machine Learning with Python - Javatpoint:::https://www.javatpoint.com/machine-learning
+DevOps Tutorial - javatpoint:::https://www.javatpoint.com/devops
+Logical Reasoning Questions - javatpoint:::https://www.javatpoint.com/reasoning
+Verbal Ability Questions and Answers - javatpoint:::https://www.javatpoint.com/verbal-ability
+Company Interview Questions and Recruitment Process (2021) - javatpoint:::https://www.javatpoint.com/company-interview-questions-and-recruitment-process
+DBMS Tutorial | Database Management System - javatpoint:::https://www.javatpoint.com/dbms-tutorial
+Data Structures | DS Tutorial - javatpoint:::https://www.javatpoint.com/data-structure-tutorial
+DAA Tutorial | Design and Analysis of Algorithms Tutorial - javatpoint:::https://www.javatpoint.com/daa-tutorial
+Learn Operating System (OS) Tutorial - javatpoint:::https://www.javatpoint.com/os-tutorial
+Computer Network Tutorial - javatpoint:::https://www.javatpoint.com/computer-network-tutorial
+Learn Compiler Design Tutorial - javatpoint:::https://www.javatpoint.com/compiler-tutorial
+Computer Organization and Architecture Tutorial | COA Tutorial - javatpoint:::https://www.javatpoint.com/computer-organization-and-architecture-tutorial
+Discrete Mathematics Tutorial - javatpoint:::https://www.javatpoint.com/discrete-mathematics-tutorial
+Ethical Hacking Tutorial - javatpoint:::https://www.javatpoint.com/ethical-hacking-tutorial
+Computer Graphics Tutorial - javatpoint:::https://www.javatpoint.com/computer-graphics-tutorial
+Software Engineering Tutorial - javatpoint:::https://www.javatpoint.com/software-engineering-tutorial
+Learn HTML Tutorial - javatpoint:::https://www.javatpoint.com/html-tutorial
+Cyber Security Tutorial - javatpoint:::https://www.javatpoint.com/cyber-security-tutorial
+Automata Tutorial | Theory of Computation - Javatpoint:::https://www.javatpoint.com/automata-tutorial
+Learn C Programming Language Tutorial - javatpoint:::https://www.javatpoint.com/c-programming-language-tutorial
+C++ Tutorial | Learn C++ Programming - javatpoint:::https://www.javatpoint.com/cpp-tutorial
+Java Tutorial | Learn Java Programming - javatpoint:::https://www.javatpoint.com/java-tutorial
+Learn .Net Framework Tutorial - javatpoint:::https://www.javatpoint.com/net-framework
+Learn Python Tutorial - javatpoint:::https://www.javatpoint.com/python-tutorial
+Programs List | Programming Examples - javatpoint:::https://www.javatpoint.com/programs-list
+Control Systems Tutorial - javatpoint:::https://www.javatpoint.com/control-system-tutorial
+Data Mining Tutorial - Javatpoint:::https://www.javatpoint.com/data-mining
+Data Warehouse Tutorial - javatpoint:::https://www.javatpoint.com/data-warehouse
+Microsoft Azure Tutorial - javatpoint:::https://www.javatpoint.com/microsoft-azure
+Salesforce | Salesforce Tutorial - Javatpoint:::https://www.javatpoint.com/salesforce
+Google Cloud Platform Tutorial - Javatpoint:::https://www.javatpoint.com/google-cloud-platform
+Learn Software Testing Tutorial - javatpoint:::https://www.javatpoint.com/software-testing-tutorial
+Agile Tutorial - Javatpoint:::https://www.javatpoint.com/agile
+Jira Tutorial | What is Jira Tool - Javatpoint:::https://www.javatpoint.com/jira-tutorial
+Bugzilla Tutorial - What is, Features, Installation, Components - Javatpoint:::https://www.javatpoint.com/bugzilla
+ETL Testing Tutorial - javatpoint:::https://www.javatpoint.com/etl-testing
+What is Quality Assurance (QA): Tutorial, Attributes, Components, Types - Javatpoint:::https://www.javatpoint.com/quality-assurance
+TestNG Tutorial - Javatpoint:::https://www.javatpoint.com/testng-tutorial
+Automation Anywhere Tutorial - javatpoint:::https://www.javatpoint.com/automation-anywhere
+UiPath Tutorial - javatpoint:::https://www.javatpoint.com/uipath
+Selenium WebDriver with Python Tutorial - javatpoint:::https://www.javatpoint.com/selenium-python
+Postman Tutorial - Javatpoint:::https://www.javatpoint.com/postman
+SoapUI Tutorial - javatpoint:::https://www.javatpoint.com/soapui
+RPA Tutorial - javatpoint:::https://www.javatpoint.com/rpa
+Manual Testing - javatpoint:::https://www.javatpoint.com/manual-testing
+Cucumber | Cucumber Testing Tutorial - javatpoint:::https://www.javatpoint.com/cucumber-testing
+Appium Tutorial - Javatpoint:::https://www.javatpoint.com/appium
+Python Flask Tutorial - Javatpoint:::https://www.javatpoint.com/flask-tutorial
+NumPy Tutorial - Javatpoint:::https://www.javatpoint.com/numpy-tutorial
+Python Tkinter Tutorial - Javatpoint:::https://www.javatpoint.com/python-tkinter
+PyTorch Tutorial - javatpoint:::https://www.javatpoint.com/pytorch
+Pygame Tutorial - javatpoint:::https://www.javatpoint.com/pygame
+Python SciPy Tutorial - javatpoint:::https://www.javatpoint.com/python-scipy
+Python Pandas | Python Pandas Tutorial - javatpoint:::https://www.javatpoint.com/python-pandas
+OpenCV Tutorial | OpenCV using Python - javatpoint:::https://www.javatpoint.com/opencv
+Matplotlib Tutorial - javatpoint:::https://www.javatpoint.com/matplotlib
+Python Openpyxl Tutorial - javatpoint:::https://www.javatpoint.com/python-openpyxl
+Kivy Tutorial - javatpoint:::https://www.javatpoint.com/kivy
+Jupyter Notebook Tutorial - javatpoint:::https://www.javatpoint.com/jupyter-notebook
+RESTful Web Services Tutorial | Spring Boot RESTful Web Services - javatpoint:::https://www.javatpoint.com/restful-web-services-tutorial
+Microservices | Microservices With Spring Cloud Tutorial - javatpoint:::https://www.javatpoint.com/microservices
+Spring Cloud Tutorial - Javatpoint:::https://www.javatpoint.com/spring-cloud
+Jenkins Tutorial - javatpoint:::https://www.javatpoint.com/jenkins
+IntelliJ IDEA Tutorial - javatpoint:::https://www.javatpoint.com/intellij-idea-tutorial
+HTTP Tutorial - javatpoint:::https://www.javatpoint.com/http-tutorial
+DHTML Tutorial - Javatpoint:::https://www.javatpoint.com/dhtml
+Laravel Tutorial - Javatpoint:::https://www.javatpoint.com/laravel
+Magento 2 Tutorial - Javatpoint:::https://www.javatpoint.com/magento-2
+Joomla Tutorial - Javatpoint:::https://www.javatpoint.com/joomla
+XAMPP Tutorial - javatpoint:::https://www.javatpoint.com/xampp
+OneNote Tutorial: What is OneNote, Features, Alternatives - JavaTpoint:::https://www.javatpoint.com/onenote
+:::https://pay.javatpoint.com/

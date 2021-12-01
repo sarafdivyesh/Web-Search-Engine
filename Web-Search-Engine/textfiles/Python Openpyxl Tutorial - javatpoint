@@ -1,0 +1,338 @@
+python openpyxl tutorial - javatpoint ? scroll to top home python openpyxl pygame java sql android cloud javascript servlet html struts2 spring quiz interview q comment forum training openpyxl tutorial openpyxl tutorial python openpyxl in this tutorial, we will learn about the following topics: openpyxl introduction openpyxl working process openpyxl installation openpyxl write data to cell openpyxl reading excel file openpyxl read data from cell openpyxl read multiple cells openpyxl sheets openpyxl filter and sort data openpyxl merging cells openpyxl append values openpyxl iterate by column openpyxl iterate by rows openpyxl adding chart to excel file openpyxl adding image python openpyxl introduction python provides the openpyxl module, which is used to deal with excel files without involving third-party microsoft application software. by using this module, we can have control over excel without open the application. it is used to perform excel tasks such as read data from excel file, or write data to the excel file, draw some charts, accessing excel sheet, renaming sheet, modification (adding and deleting) in excel sheet, formatting, styling in the sheet, and any other task. openpyxl is very efficient to perform these tasks for you. data scientists often use the openpyxl to perform different operations such as data copying to data mining as well as data analysis. openpyxl working process the openpyxl library is used to write or read the data in the excel file and many other tasks. an excel file that we use for operation is called workbook that contains a minimum of one sheet and a maximum of tens of sheets. sheets consist of rows (horizontal series) starting from 1 and columns (vertical series) starting from a. row and column together make a grid and form a cell that may store some data. data can be of any type, such as numeric, string. openpyxl provides flexibility to read data from the individual cell or write data to it. installation of openpyxl in the above section, we have discussed the openpyxl briefly and its working process. in order to use openpyxl, one should have python 3.7 and openpyxl 2.6.2 installed in the system. let's start working with openpyxl by installing openpyxl using the following command: 
+pip install openpyxl
+ the xlsx is the extension of the xml spreadsheet file. the xlsx file supports macros. let's understand the basic operation related to the excel file. consider the following code: 
+from openpyxl import workbook
+import time
+
+wb = workbook()
+sheet = wb.active
+
+sheet['a1'] = 87
+sheet['a2'] = "devansh"
+sheet['a3'] = 41.80
+sheet['a4'] = 10
+
+now = time.strftime("%x")
+sheet['a5'] = now
+
+wb.save("sample_file.xlsx")
+ output: in the above code, we have written data into the five cells a1, a2, a3, a4, and a5. these cells consist of different types of values. we have imported workbook class from the openpyxl module. a workbook class is a container that contains all parts of the document. here we have defined a new workbook. at least one sheet is always made with a workbook. 
+wb = workbook()
+ we get the location of the active sheet. 
+sheet['a1'] = 87
+sheet['a2'] = 'devansh'
+ we have saved all data to the sample_file.xlsx file using the save() method. openpyxl write data to cell we can add data to the excel file using the following python code. first, we will import the load_workbook function from the openpyxl module, then create the object of the file and pass filepath as an argument. consider the following code: 
+from openpyxl import load_workbook
+wb = load_workbook(r'c:\users\devansh sharma\desktop\demo.xlsx')
+
+sheet = wb.active
+sheet['a1'] = 'devansh sharma'
+
+sheet.cell(row=2, column=2).value = 5
+wb.save(r'c:\users\devansh sharma\desktop\demo.xlsx')
+ output: openpyxl append values openpyxl provides an append() method, which is used to append the group of values. we can append any type of value. these values are appended at the bottom of the current working sheet. consider the following code: 
+from openpyxl import workbook
+
+wb = workbook()
+sheet = wb.active
+
+data = (
+    (11, 48, 50),
+    (81, 30, 82),
+    (20, 51, 72),
+    (21, 14, 60),
+    (28, 41, 49),
+    (74, 65, 53),
+    ("peter", 'andrew',45.63)
+)
+
+for i in data:
+    sheet.append(i)
+wb.save('appending_values.xlsx')
+ output: openpyxl read data from cell we can read the data that we have previously written in the cell. there are two methods to read a cell, firstly we can access it by cell name, and secondly, we can access it by the cell() function. for example, we are reading the data from the sample_file.xlrs file. 
+import openpyxl
+
+wb = openpyxl.load_workbook('sample_file.xlsx')
+
+sheet = wb.active
+
+x1 = sheet['a1']
+x2 = sheet['a2']
+#using cell() function
+x3 = sheet.cell(row=3, column=1)
+
+print("the first cell value:",x1.value)
+print("the second cell value:",x2.value)
+print("the third cell value:",x3.value)
+ output: the first cell value: 87
+the second cell value: devansh
+the third cell value: 41.8
+ openpyxl read multiple cells we can read the values from the multiple cells. in the following example, we have marks.xlsx named excel file and we will read each cell of file using the range operator. let's have a look at the following program: 
+import openpyxl
+
+wb = openpyxl.load_workbook('marks.xlsx')
+
+sheet = wb.active
+#
+cells = sheet['a1','b7']
+# cells behave like range operator
+for i1,i2 in cells:
+    print("{0:8} {1:8}".format(i1.value,i2.value))
+ output: student_name        marks
+tony stark           47
+loki                 59
+oddin                73
+nick fury            62
+samaul               75
+peter parkar         80
+ openpyxl iterate by rows the openpyxl provides the iter_row() function, which is used to read data corresponding to rows. consider the following example: 
+from openpyxl import workbook
+
+wb = workbook()
+sheet = wb.active
+
+rows = (
+    (90, 46, 48, 44),
+    (81, 30, 32, 16),
+    (23, 95, 87,27),
+    (65, 12, 89, 53),
+    (42, 81, 40, 44),
+    (34, 51, 76, 42)
+)
+
+for row in rows:
+    sheet.append(row)
+
+for row in sheet.iter_rows(min_row=1, min_col=1, max_row=6, max_col=4):
+    for cell in row:
+        print(cell.value, end=" ")
+    print()
+
+book.save('iter_rows.xlsx')
+ output: 90 46 48 44 
+81 30 32 16 
+23 95 87 27 
+65 12 89 53 
+42 81 40 44 
+34 51 76 42
+ openpyxl iterate by column the openpyxl provides iter_col() method which return cells from the worksheet as columns. consider the following example: 
+from openpyxl import workbook
+
+book = workbook()
+sheet = book.active
+
+rows = (
+     (90, 46, 48, 44),
+     (81, 30, 32, 16),
+     (23, 95, 87, 27),
+     (65, 12, 89, 53),
+     (42, 81, 40, 44),
+     (34, 51, 76, 42)
+)
+for row in rows:
+    sheet.append(row)
+
+for row in sheet.iter_cols(min_row=1, min_col=1, max_row=6, max_col=3):
+    for cell in row:
+        print(cell.value, end=" ")
+    print()
+
+book.save('iterbycols.xlsx')
+ output: 90 81 23 65 42 34 
+46 30 95 12 81 51 
+48 32 87 89 40 76
+ openpyxl sheets as we know that each workbook can have multiple sheets. first, we need to create more than one sheet in a single workbook then we can access those excel sheets using python. in the following example, we have created a workbook with three sheets: 
+import openpyxl
+wb = openpyxl.load_workbook('dimension_1.xlsx')
+
+#getting list of all sheet available in workbook
+print(wb.get_sheet_names())
+
+# returning object
+active_sheet = wb.active
+print(type(active_sheet))
+
+# title of sheet
+sheet = wb.get_sheet_by_name("monday")
+print(sheet.title)
+ output: ['sheet', 'sunday', 'monday', 'tuesday', 'wednesday']
+<class 'openpyxl.worksheet.worksheet.worksheet'>
+monday
+ it will look like the following image. openpyxl filter and sort data the auto_filter attribute is used to set filtering and sorting conditions. consider the following code: 
+from openpyxl import workbook
+
+wb = workbook()
+sheet = wb.active
+
+sheet['a3'] = 40
+sheet['b3'] = 26
+
+row_count = [
+    (93,45),
+    (23,54),
+    (80,43),
+    (21,12),
+    (63,29),
+    (34,15),
+    (80,68),
+    (20,41)
+]
+
+for row in row_count:
+    sheet.append(row)
+
+print(sheet.dimensions)
+
+for a1,a2 in sheet[sheet.dimensions]:
+    print(a1.value, a2.value)
+
+sheet.auto_filter.add_sort_condition('b2:b8')
+sheet.auto_filter.add_filter_column(1, ['40', '26'])
+
+wb.save('dimension_1.xlsx')
+ output: a3:b11
+40 26
+93 45
+23 54
+80 43
+21 12
+63 29
+34 15
+80 68
+20 41
+ openpyxl merging cell we can merge the cell using the merge_cells() method. when we merge the cells, the top-left one is removed from the worksheet. the openpyxl also provides the unmerged_cells() method to unmerge the cell. consider the following code: 
+from openpyxl.styles import alignment
+
+wb = workbook()
+sheet = wb.active
+
+sheet.merge_cells('a1:b2')
+
+cell = sheet.cell(row=1, column=1)
+cell.value = 'devansh sharma'
+cell.alignment = alignment(horizontal='center', vertical='center')
+
+wb.save('merging.xlsx')
+ output: the freezing panes are simply mean to freeze an area of worksheet as visible while scrolling to other parts of the worksheet. it is useful feature where we can display the top row or leftmost column on the screen. we can do this by passing the cell name to the freeze_panes variable. to unfreeze all panes, set freeze_panes to 'none'. consider the following code: 
+from openpyxl import workbook
+from openpyxl.styles import alignment
+
+wb = workbook()
+sheet = wb.active
+
+sheet.freeze_panes = 'a1'
+
+wb.save('freez_cells.xlsx')
+ output: run the above code and scroll the worksheet. openpyxl formulas we can write formula into the cell. these formulas are used to perform operations in excel file. after writing in the cell execute it from the workbook. consider the following example: 
+from openpyxl import workbook
+wb = workbook()
+sheet = wb.active
+
+rows_count = (
+    (14, 27),
+    (22, 30),
+    (42, 92),
+    (51, 32),
+    (16, 60),
+    (63, 13)
+)
+
+for i in rows_count:
+    sheet.append(i)
+
+cell = sheet.cell(row=7, column=3)
+cell.value = "=sum(a1:b6)"
+cell.font = cell.font.copy(bold=true)
+
+wb.save('formulas_book.xlsx')
+ output: openpyxl cell inverter the openpyxl cell inverter is used to invert the row and column of the cell in the spreadsheet. for example, the value at 3 rows will be inverted into 5 columns and row at row 5 will invert to column 3 (vice versa). you can see in the following images: this program is written with the help of nested for loop. first the data structure writes in the sheetdata[x][y] for the cell at column x and row y then the newly created spreadsheet in the spreaddata[y][x] for the cell at column y and row x. adding chart to excel file charts are effective way to represent the data. using the charts, it visualizes the data which can be easily untestable. there are various types of chart: pie chart, line chart, bar chart, and so on. we can draw a chart on a spreadsheet using an openpyxl module. for building any chart on the spreadsheet, we need to define the chart type like barchart, linechart, and so on. we also import reference which represents data that is used for the chart. it is important to define what data we want to represent on the chart. let's understand by the following example: 
+from openpyxl import workbook
+from openpyxl.chart import barchart, reference
+
+wb = workbook()
+sheet = wb.active
+
+# let's create some sample student data
+rows = [
+    ["serial_no", "roll no", "marks"],
+    [1, "0090011", 75],
+    [2, "0090012", 60],
+    [3, "0090013", 43],
+    [4, "0090014", 97],
+    [5, "0090015", 63],
+    [6, "0090016", 54],
+    [7, "0090017", 86],
+]
+
+for i in rows:
+    sheet.append(i)
+
+chart = barchart()
+values = reference(worksheet=sheet,
+                 min_row=1,
+                 max_row=8,
+                 min_col=2,
+                 max_col=3)
+
+chart.add_data(values, titles_from_data=true)
+sheet.add_chart(chart, "e2")
+
+wb.save("student_chart.xlsx")
+ output: in the above code, we have created the sample data and drawn the bar chart corresponding to sample data. now we will create the line chart. consider the following code: 
+import random
+from openpyxl import workbook
+from openpyxl.chart import linechart, reference
+
+wb = workbook()
+spreadsheet = wb.active
+
+# let's create some sample data
+rows = [
+    ["", "january", "february", "march", "april",
+    "may", "june", "july", "august", "september",
+     "october", "november", "december"],
+    [1, ],
+    [2, ],
+    [3, ],
+]
+
+for row in rows:
+    spreadsheet.append(row)
+
+for row in spreadsheet.iter_rows(min_row=2,
+                           max_row=4,
+                           min_col=2,
+                           max_col=13):
+    for cell in row:
+        cell.value = random.randrange(5, 100)
+
+chart = linechart()
+data = reference(worksheet=spreadsheet,
+                 min_row=2,
+                 max_row=4,
+                 min_col=1,
+                 max_col=13)
+
+chart.add_data(data, from_rows=true, titles_from_data=true)
+spreadsheet.add_chart(chart, "c6")
+
+wb.save("line_chart1.xlsx")
+ output: in the above code, we are used from_rows = true as a parameter, it denotes chart plot row by row instead of the column by column. adding image images are not generally used in a spreadsheet but sometimes we can use as per our requirement. we can use an image for the branding purposes or to make the spreadsheet more personal and attractive. for loading an image to spreadsheet, we need to install an additional module called pillow by the following command. 
+pip install pillow 
+ in the following program, we are importing the image into the excel file. 
+from openpyxl import load_workbook
+from openpyxl.drawing.image import image
+
+# let's use the hello_world spreadsheet since it has less data
+workbook = load_workbook(filename="student_chart1.xlsx")
+sheet = workbook.active
+
+logo = image(r"c:\users\devansh sharma\pictures\screenshots\image.png")
+
+# a bit of resizing to not fill the whole spreadsheet with the logo
+logo.height = 150
+logo.width = 150
+
+sheet.add_image(logo, "e2")
+workbook.save(filename="hello_world_logo1.xlsx")
+ in this tutorial, we have covered all basic and advance concept of openpyxl. for videos join our youtube channel: join now feedback send your feedback to [email protected] help others, please share learn latest tutorials splunk spss swagger transact-sql tumblr reactjs regex reinforcement learning r programming rxjs react native python design patterns python pillow python turtle keras preparation aptitude reasoning verbal ability interview questions company questions trending technologies artificial intelligence aws selenium cloud computing hadoop reactjs data science angular 7 blockchain git machine learning devops b.tech / mca dbms data structures daa operating system computer network compiler design computer organization discrete mathematics ethical hacking computer graphics software engineering web technology cyber security automata c programming c++ java .net python programs control system data mining data warehouse javatpoint services javatpoint offers too many high quality services. mail us on [email protected], to get more information about given services. website designing website development java development php development wordpress graphic designing logo digital marketing on page and off page seo ppc content development corporate training classroom and online training data entry training for college campus javatpoint offers college campus training on core java, advance java, .net, android, hadoop, php, web technology and python. please mail your requirement at [email protected] duration: 1 week to 2 week like/subscribe us for latest updates or newsletter learn tutorialslearn javalearn data structureslearn c programminglearn c++ tutoriallearn c# tutoriallearn php tutoriallearn html tutoriallearn javascript tutoriallearn jquery tutoriallearn spring tutorial our websitesjavatpoint.comhindi100.comlyricsia.comquoteperson.comjobandplacement.com our services website development android development website designing digital marketing summer training industrial training college campus training contact address: g-13, 2nd floor, sec-3 noida, up, 201301, india contact no: 0120-4256464, 9990449935contact us subscribe us privacy policysitemap about me ? copyright 2011-2021 www.javatpoint.com. all rights reserved. developed by javatpoint.
