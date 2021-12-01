@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>UiPath Tutorial - javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="UiPath Tutorial - javatpoint">
+  <meta property="og:description" content="UiPath Tutorial with What is UiPath, History, Why use UiPath, Architecture, Products of UiPath, Types of Bots in UiPath, Features, Workflow in UiPath, Installation etc."> 
+  <meta name="keywords" content="uipath, what is uipath, history of uipath, why use uipath, uipath architecture, products of uipath, types of bots in uipath, uipath features, workflow in uipath, uipath installation">
+  <meta name="description" content="UiPath Tutorial with What is UiPath, History, Why use UiPath, Architecture, Products of UiPath, Types of Bots in UiPath, Features, Workflow in UiPath, Installation etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/uipath"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="UiPath Tutorial - javatpoint">
+  <meta name="twitter:description" property="og:description" content="UiPath Tutorial with What is UiPath, History, Why use UiPath, Architecture, Products of UiPath, Types of Bots in UiPath, Features, Workflow in UiPath, Installation etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/uipath">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/icon/home.png" alt="home"> Home</a></li> 
+       <li><a href="uipath" class="selected"><img src="https://static.javatpoint.com/images/icon/uipath.png" alt="uipath"> UIPath</a></li> 
+       <li><a href="software-testing-tutorial"><img src="https://static.javatpoint.com/images/icon/testing.png" alt="software testing"> Software Testing</a></li> 
+       <li><a href="selenium-tutorial"><img src="https://static.javatpoint.com/images/icon/selenium.png" alt="selenium"> Selenium</a></li> 
+       <li><a href="appium"><img src="https://static.javatpoint.com/images/icon/appium.png" alt="appium"> Appium</a></li> 
+       <li><a href="jmeter-tutorial"><img src="https://static.javatpoint.com/images/icon/jmeter.png" alt="jmeter"> JMeter</a></li> 
+       <li><a href="junit-tutorial"><img src="https://static.javatpoint.com/images/icon/junit.png" alt="junit"> JUnit</a></li> 
+       <li><a href="postman"><img src="https://static.javatpoint.com/images/icon/postman.png" alt="postman"> Postman</a></li> 
+       <li><a href="jira-tutorial"><img src="https://static.javatpoint.com/images/icon/jira.png" alt="jira"> Jira</a></li> 
+       <li><a href="testng-tutorial"><img src="https://static.javatpoint.com/images/icon/testng.png" alt="testng"> TestNG</a></li> 
+       <li><a href="soapui"><img src="https://static.javatpoint.com/images/icon/soapui.png" alt="soapui"> SoapUI</a></li> 
+       <li><a href="rpa"><img src="https://static.javatpoint.com/images/icon/rpa.png" alt="rpa"> RPA</a></li> 
+       <li><a href="quality-assurance"><img src="https://static.javatpoint.com/images/icon/qa.png" alt="qa"> QA</a></li> 
+       <li><a href="selenium-python"><img src="https://static.javatpoint.com/images/icon/selenium-python.png" alt="selenium python"> Selenium Python</a></li> 
+       <li><a href="uipath-interview-questions"><img src="https://static.javatpoint.com/images/icon/interview.png" alt="uipath interview questions"> Interview Q</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">UiPath Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="uipath">UiPath Tutorial</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> <h1 class="h1">UiPath Tutorial</h1> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath.png" class="imageright" alt="UiPath Tutorial"> <p>Our UiPath Tutorial provides the basic and advanced concepts of UiPath. This tutorial is designed for both beginners and professionals.</p> <p>This tutorial gives you an introduction to UiPath along with a wide range of topics such as <strong>why use UiPath, history of UiPath, UiPath architecture, features of UiPath, products of UiPath, types of robots in UiPath, installation,</strong> etc.</p> <h2 class="h2">UiPath</h2> <p>UiPath is one of the most popular RPA tools that offers end-to-end solutions to help organizations effectively automate repetitive and redundant tasks. UiPath is a leading <a href="https://www.javatpoint.com/rpa">RPA</a> provider in the industry, providing advanced robotic power capabilities to organizations to automate their recurring business processes. <a href="https://www.javatpoint.com/rpa-interview-questions">RPA</a> UiPath is an open platform tool, which provides hundreds of built-in, customizable integrations with multiple technologies such as ERP, BPM, and <a href="https://www.javatpoint.com/artificial-intelligence-tutorial">AI</a>.</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath2.png" alt="UiPath Tutorial"> <p>We can develop software robots (also called bots) using UiPath that mimic human actions and perform tasks just like a human would do. Unlike humans, bots produce rapid results without making errors. Thus, UiPath can help organizations to convert their boring, repetitive tasks into an automation process and allow humans to focus on other tasks that require human intelligence or intervention.</p> 
+           <ul class="points"> 
+            <li>UiPath is primarily used to perform automation for Windows desktop tasks.</li> 
+            <li>UiPath provides easy to use user interface with drag and drops support.</li> 
+            <li>UiPath is used to automate redundant tasks and reduce/remove human intervention from such tasks.</li> 
+            <li>UiPath provides a standard Studio version with all premium features which has a trial period of 60 days.</li> 
+            <li>UiPath also has a Community Edition, which is free and includes most of the Studio version features.</li> 
+           </ul> <h2 class="h2">History of UiPath</h2> <p>UiPath is currently one of the top leading global software companies providing a platform for robotic process automation. It was first introduced in early 2005 by the Romanian entrepreneurs, Daniel Dines and Marius Tirca. The company started its journey from Bucharest, Romania. Later, it was expanded to several countries worldwide.</p> <p>In April 2020, UiPath was declared the top tech company and the 2<sup>nd</sup> in overall growing companies by the Financial Times 100.</p> <h2 class="h2">Why use UiPath</h2> <p>There are various automation tools such as Automation Anywhere, Blue Prism, Pega, etc. However, they are made according to industry standards, but UiPath has a slight advantage over them. This is because when it comes to desktop automation, UiPath is most effective amongst them.</p> <p>Some other key aspects that explain why we should prefer UiPath are listed below:</p> 
+           <ul class="points"> 
+            <li>Desktop automation is a unique feature of UiPath compared to other automation tools.</li> 
+            <li>UiPath can handle remote desktop applications easily.</li> 
+            <li>Data handling processes and techniques are far better in UiPath as compared to the other automation tools.</li> 
+            <li>UiPath is completely flexible and compatible with scraping techniques.</li> 
+            <li>Writing logic and methods are better in UiPath when compared with other automation tools in the RPA market.</li> 
+           </ul> <h2 class="h2">UiPath Architecture</h2> <p>The architecture has mainly three UiPath components - UiPath Studio, UiPath Orchestrator, and UiPath Robot, along with the database servers and the browser components:</p> 
+           <ul class="points"> 
+            <li>UiPath Studio is a GUI based dashboard used to create automation workflow for the tasks to be automated.</li> 
+            <li>The software robots or bots are used to execute the automated steps or activities as specified.</li> 
+            <li>Orchestrator is the medium that acts as the interface between UiPath Studio and software robots. It helps to manage the automation tasks.</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath-architecture.png" alt="UiPath Tutorial"> <p>The architecture can be classified in the following two parts:</p> 
+           <ul class="points"> 
+            <li>Client-side and server-side detailing</li> 
+            <li>Three Layered detailing</li> 
+           </ul> <h3 class="h3">Client-side and Server Side Detailing</h3> <p>Here, the term client-side includes such components of UiPath that can be directly accessed by the user or developer. It generally includes UiPath Studio, Robot, <a href="https://www.javatpoint.com/browsers">Browser</a>, and UiPath Agent.</p> <p>Besides, the server-side includes the backend tasks of UiPath. When a user creates activities or workflows, they are stored in the databases. UiPath orchestrator selects the appropriate functions and instructs the software robots to perform the specified tasks as per the code. Also, the logs and stats of the robots are part of the backend. Logs are helpful for analyzing the performance of robots and find errors.</p> <h3 class="h3">Three Layered Detailing</h3> <p>The architecture of UiPath can be explained by classifying the components into the following three layers:</p> <p><strong>Client Layer</strong>: The client layer consists of those components of UiPath that are assessable to the users. For example, UiPath Studio, Robots, Browsers, UiPath agent, and executors. By using these components, a user or a developer can design and develop various tasks to be automated. The tasks can be executed with the help of software robots. This layer is also known as the presentation layer.</p> <p>The UiPath robot contains the following two components:</p> 
+           <ul class="points"> 
+            <li><strong>UiPath Agent Service</strong>: In UiPath, this service acts as the mediator between the client-side and the server-side of UiPath. All the details and information are communicated over the agent. Also, the messages are logged into the Orchestrator and then transferred to the SQL server.<br> The service can also be used to check all the available tasks in the system tray. Additionally, it can modify system settings and allow existing tasks to start/stop.</li> 
+            <li><strong>UiPath Executor Service</strong>: This service is used by software robots to execute the specified tasks under a Windows session.</li> 
+           </ul> <p><strong>Server Layer</strong>: This is the second and most important layer of UiPath architecture. All server details are displayed in the server layer. The server layer mainly includes the UiPath Orchestrator. When the robots are completely developed to execute the tasks, the entire project can be uploaded on the server. The project can be executed on multiple systems with the help of an Orchestrator.</p> <p>The Orchestrator controls the entire project. It monitors project activities, schedules software robots for execution, and generates summarized reports based on filtered requirements. It helps to orchestrate software robots to continue executing repetitive tasks. With its web-based management system, it helps our project to meet project requirement, service levels and timelines.</p> <p><strong>Persistency Layer</strong>: This layer mainly consists of database servers. All the configuration details of the robots are stored in this layer. The configuration details include different user's data, their respective robots, assigned tasks, logging information, and asset details, etc. All these details are entered by the users in the Orchestrator.</p> <p>Besides, the persistency layer is also responsible to keep the log details updated by the UiPath agent services. These logs are stored in elastic search. The logs are mainly helpful for finding errors and rectify them. The process-level data is generally stored in the relational database management systems such as <a href="https://www.javatpoint.com/sql-tutorial">SQL</a> Server. This makes searching for logs easier from the huge quantity of data.</p> <p>The persistency layer also takes care of queues and the tasks in queues.</p> <h2 class="h2">Products of UiPath</h2> <p>UiPath includes some other products that provide different features and functionalities to work with the tool efficiently. The tool mainly offers the following three products:</p> <p><strong>UiPath Studio</strong>: UiPath studio is a user-friendly interface within the tool that allows users to plan and design different automation processes visually with the help of diagrams. These diagrams are noting but a structural representation of particular tasks to be performed.</p> <p><strong>UiPath Robot</strong>: Once the process is designed, the next step is to execute the same within the UiPath studio. To execute the entire process, UiPath Robots are used to convert the processes into a task. These robots are used to assign different steps and execute them in the same way as human but without any human intervention. UiPath robots are designed to automatically start executing tasks when a defined activity occurs on the machine.</p> <p><strong>UiPath Orchestrator</strong>: In UiPath, the Orchestrator is a web-based application. It provides options to deploy, monitor, schedule, and control software bots and processes. It is a centralized platform used to control/manage all software bots.</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/products-of-uipath.png" alt="UiPath Tutorial"> <h2 class="h2">Types of Bots in UiPath</h2> <p>UiPath has mainly two types of bots (robots), such as Attended Robots and Unattended Robots:</p> <h3 class="h3">Attended Robots</h3> <p>Attended robots operate on the corresponding workstation as humans, which helps users get their regular tasks done. These types of robots are usually triggered by user events. They cannot be used to start any task from Orchestrator or when a screen is locked. Such robots can only be started from the Robot tray or by using a specific command in Command Prompt. Attended robots should be run only when they are under human supervision.</p> <p>As per the licensing types, Attended robots can be further classified into the following types:</p> 
+           <ul class="points"> 
+            <li><strong>Attended</strong>: They can work on the same workstation as a person and are usually launched through user events.</li> 
+            <li><strong>Studio</strong>: They are used to connect Studio to Orchestrator for further development process.</li> 
+            <li><strong>StudioX</strong>: They are used to connect StudioX to Orchestrator for further development process.</li> 
+            <li><strong>StudioPro</strong>: They are used to connect StudioPro to Orchestrator for further development process.</li> 
+           </ul> <h3 class="h3">Unattended Robots</h3> <p>Unattended robots are usually referred to as autonomous robots that do not require human supervision while executing tasks. These types of robots work in virtual environments and can automate several tasks at once. They consist of all the capabilities of attended robots. They are also responsible for other tasks like remote execution, monitoring, scheduling, and offering support for process queue.</p> <p>Unattended robots can execute any type of process, task, and test cases. When they are used to run parallel processes, each of the existing processes consumes a separate license.</p> <p>As per the licensing types, Unattended robots can be further classified into the following types:</p> 
+           <ul class="points"> 
+            <li><strong>Unattended</strong>: They can work in virtual environments automating many tasks without human supervision.</li> 
+            <li><strong>NonProduction</strong>: They are used in an unattended mode for the further development process. These types of robots cannot run test-cases.</li> 
+            <li><strong>Testing</strong>: They are used in an unattended mode for the further testing process. These types of robots can only be used to execute test-cases.</li> 
+           </ul> <h2 class="h2">UiPath Features</h2> <p>UiPath has several features and functionalities, such as:</p> <p><strong>Hosting Options</strong>: UiPath can be easily hosted on cloud environments and virtual terminals, making this tool flexible with cloud platforms.</p> <p><strong>Application Compatibility</strong>: Because of greater compatibility with web and desktop applications, UiPath supports a wide range of applications and activities. Having both web and desktop applications include more benefits for automation.</p> <p><strong>Centralized Repository</strong>: Because of the centralized repository, multiple users can handle or control software robots simultaneously.</p> <p><strong>Security</strong>: Security is one of the leading features of UiPath. UiPath has included many security features and continuously adding more through frequent updates:</p> 
+           <ul class="points"> 
+            <li>UiPath includes settings for account lockout that protects users from brute force attacks.</li> 
+            <li>If the user logs in across different machines, the tool will automatically detect and end the previous login session. It means that the same login credentials can stay active in a single system at a time, which increases security.</li> 
+            <li>UiPath restricts the auto-submission of data across web browsers for all of the orchestrator credentials input boxes. This feature protects user data and improves overall security.</li> 
+            <li>UiPath has implemented stealth mode that can be used to execute tasks in the background. This hides the execution from the screen and executes the tasks silently.</li> 
+           </ul> <p><strong>Advanced Screen Scraping Solution</strong>: UiPath has advanced screen scraping feature that can work with various applications such as <a href="https://www.javatpoint.com/java-tutorial">Java</a>, <a href="https://www.javatpoint.com/sap-full-form">SAP</a>, <a href="https://www.javatpoint.com/net-framework">.Net</a>, Flash, <a href="https://www.javatpoint.com/pdf">PDF</a>, etc. With advanced screen scraping solutions, users can achieve maximum possible accuracy than other automation tools present in the market.</p> <p><strong>Reliable tool for Modeling Business Processes</strong>: UiPath offers several reliable tools to increase automation capabilities and excellence with model business processes.</p> <p><strong>Scalability and Robustness</strong>: The tool is robust and scalable and comes with:</p> 
+           <ul class="points"> 
+            <li>Efficient and effective debugging support and exception handling systems.</li> 
+            <li>Artificial intelligence handling for regular applications such as excel, PDFs, Outlook tasks, etc.</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath-features.png" alt="UiPath Tutorial"> <h2 class="h2">Workflow in UiPath</h2> <p>The workflow is a set of multiple processes combined in a single task. The workflow is executed in the same way as an individual task is executed in UiPath. The activities of a workflow are extracted from the core activities pack that includes basic activities required to design and develop automation tasks in UiPath.</p> <p>The activities enable software robots to perform the following tasks:</p> 
+           <ul class="points"> 
+            <li>Recreate or automate human actions and activities, such as working with mouse and keyboards, form-filling, extracting content or comparing data, etc.</li> 
+            <li>Extracting data using OCR or Image recognition techniques in an automated way.</li> 
+            <li>Creating trigger-based actions and activities to be performed automatically on the machine.</li> 
+            <li>Perform browser automation, web automation, interaction, and data-manipulation.</li> 
+            <li>Work on data by obtaining more information from machines, such as system logs or error logs, etc.</li> 
+            <li>Performing other routine tasks on the machine just as how a human would do while working on it.</li> 
+           </ul> <p>The workflow might include several activities throughout the entire flow of the task. Some of the important activities are tabulated below:</p> 
+           <table class="alt"> 
+            <tbody>
+             <tr> 
+              <th>Activity</th> 
+              <th>Syntax</th> 
+              <th>Action</th> 
+             </tr> 
+             <tr> 
+              <td>For Each</td> 
+              <td>UiPath.Core.Activities.ForEach</td> 
+              <td>Used to Apply any specific activity or a set of multiple activities on each element of the component.</td> 
+             </tr> 
+             <tr> 
+              <td>Break</td> 
+              <td>UiPath.Core.Activities.Break</td> 
+              <td>Used to perform Exit for current Each activity and move onto the next activity of the workflow.</td> 
+             </tr> 
+             <tr> 
+              <td>Retry scope</td> 
+              <td>UiPath.Core.Activities.RetryScope</td> 
+              <td>Used to retry existing activities until the condition is found or an error is thrown.</td> 
+             </tr> 
+             <tr> 
+              <td>Check True</td> 
+              <td>UiPath.core.Activities.CheckTrue</td> 
+              <td>Used to check whether an applied Boolean expression is True. Else, returns an error if not.</td> 
+             </tr> 
+             <tr> 
+              <td>Check False</td> 
+              <td>UiPath.Core.Activities.CheckFalse</td> 
+              <td>Used to check whether an applied Boolean expression is False. Else, returns an error if not.</td> 
+             </tr> 
+             <tr> 
+              <td>Invoke Workflow File</td> 
+              <td>UiPath.Core.Activities.InvokeWorkflowFile</td> 
+              <td>Used to invoke workflow synchronously with or without arguments.</td> 
+             </tr> 
+             <tr> 
+              <td>Invoke Workflow Interactive</td> 
+              <td>UiPath.Core.Activities.InvokeWorkflowInteractive</td> 
+              <td>Almost similar to the Invoke Workflow File activity, but provides an interactive session in Windows.</td> 
+             </tr> 
+             <tr> 
+              <td>Continue</td> 
+              <td>UiPath.Core.Activities.Continue</td> 
+              <td>Used to skip current iteration inside the For Each loop.</td> 
+             </tr> 
+            </tbody>
+           </table> <h2 class="h2">Processes that can be automated with UiPath</h2> <p>Although UiPath is capable of significantly providing operational improvements. But even though it provides several options for automation, some business processes are more beneficial than others. In order to achieve better ROI, it is very important to use well-suited business processes for automation.</p> <p>The following are the most important factors that can help organizations find processes that can be automated with UiPath:</p> <h3 class="h3">Human Involvement</h3> <p>Most organizational processes are repetitive and time-consuming, which are highly dependent on human involvement but do not generally require human intelligence. These processes might include order processing, claims processing, data migration, managing customer database, etc. These are the most suitable processes for automation. Automating such processes will reduce the overall time and make the execution of tasks quicker and less error-prone.</p> <p>Additionally, employees involved in such manual processes will be free to focus on more meaningful and innovative tasks that require human intelligence and intervention.</p> <h3 class="h3">Complexity</h3> <p>UiPath can be used for simple processes like copy-paste or typing to the complex processes like fraud detection or accounts payable. Although complex processes are more likely to take greater time and investment to be automated, these are the best suitable processes and deliver a greater impact on the company's business operations.</p> <h3 class="h3">Volume</h3> <p>Most business processes do not have a certain set of time limits or boundation, which means that there can be a high volume of orders, requests, or complaints regardless of holidays. When an organization is dependent on human employees, this workload is not easy to handle. Therefore, these processes can be automated using UiPath robots. These robots will work 24x7, and 365 days of the year. Robots are the most efficient and productive option for performing these high volume tasks.</p> <h3 class="h3">Standardization and Stability</h3> <p>UiPath is most suited for such processes that are rule-based, consistent, and data-driven. These processes are highly definable and occur in the same way every time. Back-office processes come under such processes and are considered more suitable for automation as they tend to be more transactional and repetitive. These processes might include account opening, claims processing, and transaction duplication or management, etc. On the other hand, front-office automation is also possible depending on the complexity of the process.</p> <h3 class="h3">Difficulty of Outsourcing</h3> <p>Generally, it is seen that many business processes require a high level of regulatory compliance. Such processes are difficult to maintain when it comes to security. This is because those types of processes require a higher degree of oversight and direct control. Such processes are generally seen in financial and BPO (business process outsourcing) sectors. With UiPath robots, organizations can develop more secure and robust compliance strategies.</p> <h2 class="h2">UiPath Installation</h2> <p>Before we move onto the installation, let's look at the different versions of UiPath in brief:</p> 
+           <ul class="points"> 
+            <li><strong>Community Cloud</strong>: This version is suitable for individuals to understand the basics of UiPath automation and practice automating tasks on it.</li> 
+            <li><strong>Studio</strong>: This version is generally used by individuals on an enterprise level.</li> 
+            <li><strong>Enterprise Cloud</strong>: This version of UiPath is based on Cloud and contains Studio, Robots, and Orchestrator. This version is generally used by big organizations and enterprises.</li> 
+            <li><strong>Enterprise Server</strong>: The Enterprise Server of UiPath is an on-premise version of the entire automation platform. It also consists of UiPath Studio, Robots, and Orchestrator. This version is used for automation on a large scale.</li> 
+           </ul> <p>Here, we will install the Community Cloud edition of UiPath. The installation process is the same for other versions. Also, UiPath Community Cloud is the free edition of UiPath. Other versions come with 60 days of the free trial period.</p> <p>Follow the steps given below to install UiPath:</p> <p><strong>Step 1</strong>: First, we need to navigate to the official site using the following link: <a href="https://www.uipath.com/" rel="nofollow" target="_blank">https://www.uipath.com/</a></p> <p><strong>Step 2</strong>: Then, we need to click on the button "Try UiPath Free", as shown in the following image:</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath-installation.png" alt="UiPath Tutorial"> <p><strong>Step 3</strong>: On the next screen, we will see different versions of UiPath on the left side and the sign-up page on the right side, as shown in the image:</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath-installation2.png" alt="UiPath Tutorial"> <p>Here, we need to sign up using an Email, Google account, Microsoft account, or Linkedln. We are going to use "Sign up with Email".</p> <p><strong>Step 4</strong>: Once, we click on the "Sign up with Email" button, we will get a form asking for some details, as shown below:</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath-installation3.png" alt="UiPath Tutorial"> <p><strong>Step 5</strong>: After we submit the form, we will receive a verification mail on the submitted email-id.</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath-installation4.png" alt="UiPath Tutorial"> <p>We need to login to our email account and click on the "Verify Email" button.</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath-installation5.png" alt="UiPath Tutorial"> <p><strong>Step 6</strong>: After clicking on the "Verify Email" button, we will be redirected into the customized home page of the UiPath Automation Cloud. Here, we need to click on the highlighted link, as shown in the following image:</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath-installation6.png" alt="UiPath Tutorial"> <p>It will display all the available resources and packages of UiPath.</p> <p><strong>Step 7</strong>: On the next screen, we need to download the UiPath. Here we download a stable version of "UiPath Community Edition".</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath-installation7.png" alt="UiPath Tutorial"> <p><strong>Step 8</strong>: After the download has finished, we need to double-click on the UiPath setup file to start the installation. Once we launch a setup, we will get the following screen to choose a license type. Here, we need to click on the "Community Licence".</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath-installation8.png" alt="UiPath Tutorial"> <p><strong>Step 9</strong>: Next, we need to choose an appropriate profile between "UiPath Studio Pro Community" and "UiPath StudioX Community". He, we choose the "UiPath Studio Pro Community".</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath-installation9.png" alt="UiPath Tutorial"> <p><strong>Step 10</strong>: After that, we need to choose between a "Preview" version and a "Stable" version of UiPath. Here, we choose the "Stable" edition.</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath-installation10.png" alt="UiPath Tutorial"> <p><strong>Step 11</strong>: On the next screen, we need to select the required source control support and click on the 'Continue' button. We leave the settings as per the recommendations by UiPath.</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath-installation11.png" alt="UiPath Tutorial"> <p><strong>Step 12</strong>: Once we have completed all these on-screen instructions, we will be directed into the main screen of UiPath, as shown below:</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/uipath-installation12.png" alt="UiPath Tutorial"> <p>Here, we can start a new automation project or work with the existing one based on the requirements.</p> <p>That is how we can configure/install UiPath.</p> <h2 class="h2">Creating a Simple Script in UiPath</h2> <p>Let's create a simple automation script using this tool. To get a better idea about how it works, we are creating a script that will automatically perform the recorded task just by executing the script.</p> <p><strong>Step 1</strong>: First, we need to click on the "Test Automation" option, as shown in the following image:</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/creating-simple-script-in-uipath.png" alt="UiPath Tutorial"> <p><strong>Step 2</strong>: On the next screen, we need to enter our project's name and click on the "Create" button:</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/creating-simple-script-in-uipath2.png" alt="UiPath Tutorial"> <p><strong>Step 3</strong>: After clicking on the "Create" button, a blank project will be created. We need to click on the "Recording" and then "Basic" from the top panel:</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/creating-simple-script-in-uipath3.png" alt="UiPath Tutorial"> <p><strong>Step 4</strong>: Once we click on the "Basic", it will open a new pop up window with various recording tools:</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/creating-simple-script-in-uipath4.png" alt="UiPath Tutorial"> <p><strong>Step 5</strong>: Then, we are required to click on the "Record" button:</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/creating-simple-script-in-uipath5.png" alt="UiPath Tutorial"> <p><strong>Step 5</strong>: After clicking on the "Record" button, the mouse cursor will turn into a hand icon, and the entire screen will turn into blue, highlighting all the objects. Then, we perform manual tasks using recording tools. We will be using a calculator application and record a simple calculation:</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/creating-simple-script-in-uipath6.png" alt="UiPath Tutorial"> <p><strong>Step 6</strong>: Once we are done with our task, we need to click on the "Save &amp; Exit" button:</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/creating-simple-script-in-uipath7.png" alt="UiPath Tutorial"> <p><strong>Step 7</strong>: The entire process will be recorded, and the workflow will be shown as a flowchart:</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/creating-simple-script-in-uipath8.png" alt="UiPath Tutorial"> <p><strong>Step 8</strong>: We can run our script using the "Run" button, as shown below:</p> <img src="https://static.javatpoint.com/tutorial/uipath/images/creating-simple-script-in-uipath9.png" alt="UiPath Tutorial"> <p>The execution will repeat the entire action performed on the screen.</p> <p>Using this way, we can simply create a small automation task. UiPath contains lots of advanced features and templates to help us automate more complex tasks.</p> <h2 class="h2">Project Types and Templates in UiPath</h2> <h3 class="h3">Projects</h3> 
+           <ul class="points"> 
+            <li><strong>Process</strong>: This type of project is used to design a new automation process.</li> 
+            <li><strong>Library</strong>: This type of project is used to develop reusable components and publish them as a library. These libraries can be further used as dependencies for the automation process.</li> 
+            <li><strong>Test Automation</strong>: This type of project is used to create a new test project.</li> 
+           </ul> <h3 class="h3">Templates</h3> 
+           <ul class="points"> 
+            <li><strong>Orchestration Process</strong>: This template is used to implement a process through service orchestration and human intervention. This type of template is also used for long-running transactions.</li> 
+            <li><strong>Background Process</strong>: This template is used when we require a process that can execute in the background with other existing processes for as long as it does not interact with UI.</li> 
+            <li><strong>Mobile Testing Project</strong>: This template is generally used to create a mobile app automated test case project.</li> 
+            <li><strong>Transactional Process</strong>: This type of template is primarily used to model the automation workflow as a flowchart diagram.</li> 
+            <li><strong>Trigger Based Attended Automation</strong>: This type of template is used when we need to trigger an automation task in response to mouse clicks, keyboard strokes, or any other activity.</li> 
+            <li><strong>Robotic Enterprise Framework</strong>: This template is used to create a transactional business process. It is best suited for large scale deployments.</li> 
+           </ul> <h2 class="h2">Jobs and Future Scope of UiPath</h2> <p>The use of <a href="https://www.javatpoint.com/rpa-tools">RPA tools</a> is growing rapidly in the automation sector, but UiPath, specifically, has created a positive impact on most of the organizations. Because of that, more and more companies are showing their interest in terms of making utilization and gaining other benefits the tool is offering. UiPath has gained more user acceptance and opportunities than the other similar RPA tools present in the market. The tool has significantly increased the productivity for organizations and has drastically reduced the overall operational costs.</p> <p>Therefore, the future of UiPath has a positive side to it as most organizations are showing their interest and investing their time, money, and resources to achieve good ROI. The tool is eventually helping them to streamline their business process and efficiently automate them. Additionally, UiPath keeps pushing new features through updates to enhance the quality and improve it further.</p> <p>As the use of RPA tools is drastically growing, there are more opportunities for jobs like UiPath Developer and Manager. Because there is a scarcity of RPA resources in the current market, a person with 1-2 years of expertise in UiPath will get a good amount of salary.</p> <h2 class="h2">Audience</h2> <p>Our UiPath Tutorial is designed to help beginners and professionals.</p> <h2 class="h2">Problem</h2> <p>We assure you that you will not find any difficulty while learning through our UiPath Tutorial. But if you find any mistake in this tutorial, we request you to kindly post the problem in the contact form so that we can improve it.</p> 
+           <hr> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e38586868781828088a38982958297938c8a8d97cd808c8e">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/uipath"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/uipath"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/uipath"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dfb7ad9fb5bea9beabafb0b6b1abf1bcb0b2">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e18993a18b80978095918e888f95cf828e8ccf">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

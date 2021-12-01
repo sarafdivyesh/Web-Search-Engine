@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Blockchain Tutorial - Javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Blockchain Tutorial - Javatpoint">
+  <meta property="og:description" content="Blockchain Tutorial with Introduction, History of Blockchain, Bitcoin, Blockchain Version, Role of Bitcoin Miners, Blockchain Hash Functions, Blockchain Block Hashing, Block Hashes, etc."> 
+  <meta name="keywords" content="blockchain, tutorial, introduction, history of blockchain, bitcoin, blockchain version, role of bitcoin miners, blockchain hash functions, blockchain block hashing, block hashes, blockchain distributed ledger, four components of bitcoin">
+  <meta name="description" content="Blockchain Tutorial with Introduction, History of Blockchain, Bitcoin, Blockchain Version, Role of Bitcoin Miners, Blockchain Hash Functions, Blockchain Block Hashing, Block Hashes, etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/blockchain-tutorial"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Blockchain Tutorial - Javatpoint">
+  <meta name="twitter:description" property="og:description" content="Blockchain Tutorial with Introduction, History of Blockchain, Bitcoin, Blockchain Version, Role of Bitcoin Miners, Blockchain Hash Functions, Blockchain Block Hashing, Block Hashes, etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/blockchain-tutorial">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="dbms-tutorial">DBMS</a></li> 
+       <li><a href="blockchain-tutorial" class="selected">Blockchain</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="css-tutorial">CSS</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="selenium-tutorial">Selenium</a></li> 
+       <li><a href="data-structure-tutorial">DS</a></li> 
+       <li><a href="control-system-tutorial">Control System</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="selenium-tutorial">Selenium</a></li> 
+       <li><a href="jquery-tutorial">jQuery</a></li> 
+       <li><a href="examaccess">Quiz</a></li> 
+       <li><a href="free-java-projects">Projects</a></li> 
+       <li><a href="corejava-interview-questions">Interview Q</a></li> 
+       <li><a href="comment.jsp">Comment</a></li> 
+       <li><a href="forum">Forum</a></li> 
+       <li><a href="training">Training</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Blockchain Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="blockchain-tutorial">Blockchain Tutorial</a> <a href="history-of-blockchain">History of Blockchain</a> <a href="bitcoin">What is Bitcoin?</a> <a href="blockchain-version">Blockchain Version</a> <a href="role-of-bitcoin-miners">Role of Bitcoin Miners</a> <a href="blockchain-hash-function">Blockchain Hash Functions</a> <a href="blockchain-block-hashing">Blockchain Block Hashing</a> <a href="how-block-hashes-work-in-blockchain">How Block Hashes Work in Blockchain</a> <a href="blockchain-distributed-ledger">Blockchain Distributed Ledger</a> <a href="basic-components-of-bitcoin">Basic Components of Bitcoin</a> <a href="blockchain-proof-of-work">Blockchain Proof of Work</a> <a href="coinbase-transaction">Coinbase Transaction</a> <a href="key-concepts-of-bitcoin">Key Concepts in Bitcoin</a> <a href="blockchain-key-areas">Blockchain Key Areas</a> <a href="blockchain-cryptocurrency">Blockchain Cryptocurrency</a> <a href="blockchain-dao">Blockchain DAO</a> <a href="limitation-of-blockchain-technology">Blockchain Limitation</a> <a href="blockchain-double-spending">Blockchain Double Spending</a> <a href="blockchain-bitcoin-cash">Blockchain Bitcoin Cash</a> <a href="bitcoin-forks-and-segwit">Bitcoin Forks and SegWit</a> <a href="blockchain-merkle-tree">Blockchain Merkle Tree</a> <a href="blockchain-vs-database">Blockchain Vs Database</a> <a href="bitcoin-mitigating-attacks">Bitcoin Mitigating Attacks</a> <a href="who-sets-the-bitcoin-price">Who sets the Bitcoin Price</a> <a href="getting-started-with-bitcoin">Getting Started With Bitcoin</a> <a href="how-to-choose-bitcoin-wallet">How to Choose Bitcoin Wallet</a> <a href="sending-and-receiving-bitcoin">Sending and Receiving Bitcoin</a> <a href="converting-bitcoins-to-fiat-currency">Converting Bitcoins to Fiat Currency</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Interview Questions</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="blockchain-interview-questions">Blockchain Interview Questions</a> <a href="bitcoin-interview-questions">Bitcoin Interview Questions</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> 
+           <div id="bottomnextup"> <a class="next" href="history-of-blockchain">next &#x2192;</a> 
+           </div> <h1 class="h1">Blockchain Tutorial</h1> <img src="https://static.javatpoint.com/tutorial/blockchain/images/blockchain-tutorial.png" alt="Blockchain Tutorial" style="float:right;padding-left:15px"> <p>Blockchain Tutorial provides basic and advanced concepts of blockchain. Blockchain is a constantly growing <strong>ledger</strong> that keeps a <strong>permanent</strong> record of all the transactions that have taken place in a <strong>secure</strong>, <strong>chronological</strong>, and <strong>immutable</strong> way. It can be used for the secure transfer of money, property, contracts, etc. without requiring a third-party intermediary such as bank or government. Blockchain is a software protocol, but it could not be run without the Internet (like SMTP is for email).</p> <h2 class="h2">What is Blockchain?</h2> <p>A blockchain is a constantly growing ledger which keeps a permanent record of all the transactions that have taken place in a secure, chronological, and immutable way.</p> <p>Let's breakdown the definition,</p> 
+           <ul class="points"> 
+            <li><strong>Ledger:</strong> It is a file that is constantly growing.</li> 
+            <li><strong>Permanent:</strong> It means once the transaction goes inside a blockchain, you can put up it permanently in the ledger.</li> 
+            <li><strong>Secure:</strong> Blockchain placed information in a secure way. It uses very advanced cryptography to make sure that the information is locked inside the blockchain.</li> 
+            <li><strong>Chronological:</strong> Chronological means every transaction happens after the previous one.</li> 
+            <li><strong>Immutable:</strong> It means as you build all the transaction onto the blockchain, this ledger can never be changed.</li> 
+           </ul> <p>A blockchain is a chain of blocks which contain information. Each block records all of the recent transactions, and once completed goes into the blockchain as a permanent database. Each time a block gets completed, a new block is generated.</p> <img src="https://static.javatpoint.com/tutorial/blockchain/images/blockchain-introduction.png" alt="Blockchain Introduction"> <h4 class="n"><span class="bold">Note:</span> A blockchain can be used for the secure transfer of money, property, contracts, etc. without requiring a third-party intermediary like bank or government. Blockchain is a software protocol, but it could not be run without the Internet (like SMTP used in email).</h4> <h2 class="h2">Who uses the blockchain?</h2> <p>Blockchain technology can be integrated into multiple areas. The primary use of blockchains is as a distributed ledger for cryptocurrencies. It shows great promise across a wide range of business applications like Banking, Finance, Government, Healthcare, Insurance, Media and Entertainment, Retail, etc.</p> <h2 class="h2">Need of Blockchain</h2> <img src="https://static.javatpoint.com/tutorial/blockchain/images/need-of-blockchain.png" alt="Blockchain Introduction"> <p>Blockchain technology has become popular because of the following.</p> 
+           <ul class="points"> 
+            <li><strong>Time reduction:</strong> In the financial industry, blockchain can allow the quicker settlement of trades. It does not take a lengthy process for verification, settlement, and clearance. It is because of a single version of agreed-upon data available between all stakeholders.</li> 
+            <li><strong>Unchangeable transactions:</strong> Blockchain register transactions in a chronological order which certifies the unalterability of all operations, means when a new block is added to the chain of ledgers, it cannot be removed or modified.</li> 
+            <li><strong>Reliability:</strong> Blockchain certifies and verifies the identities of each interested parties. This removes double records, reducing rates and accelerates transactions.</li> 
+            <li><strong>Security:</strong> Blockchain uses very advanced cryptography to make sure that the information is locked inside the blockchain. It uses Distributed Ledger Technology where each party holds a copy of the original chain, so the system remains operative, even the large number of other nodes fall.</li> 
+            <li><strong>Collaboration:</strong> It allows each party to transact directly with each other without requiring a third-party intermediary.</li> 
+            <li><strong>Decentralized:</strong> It is decentralized because there is no central authority supervising anything. There are standards rules on how every node exchanges the blockchain information. This method ensures that all transactions are validated, and all valid transactions are added one by one.</li> 
+           </ul> 
+           <hr> <h2 class="h2 center" style="text-shadow: 1px 1px 2px #ccc;">Blockchain Tutorial Index</h2> 
+           <hr> 
+           <div class="responsivediv"> 
+            <div class="col-2"> 
+             <ul class="points"> 
+              <li><a href="blockchain-tutorial">Blockchain Tutorial</a></li> 
+              <li><a href="history-of-blockchain">History of Blockchain</a></li> 
+              <li><a href="bitcoin">What is Bitcoin?</a></li> 
+              <li><a href="blockchain-version">Blockchain Version</a></li> 
+              <li><a href="role-of-bitcoin-miners">Role of Bitcoin Miners</a></li> 
+              <li><a href="blockchain-hash-function">Blockchain Hash Functions</a></li> 
+              <li><a href="blockchain-block-hashing">Blockchain Block Hashing</a></li> 
+              <li><a href="how-block-hashes-work-in-blockchain">How Block Hashes Work in Blockchain</a></li> 
+              <li><a href="blockchain-distributed-ledger">Blockchain Distributed Ledger</a></li> 
+              <li><a href="basic-components-of-bitcoin">Basic Components of Bitcoin</a></li> 
+              <li><a href="blockchain-proof-of-work">Blockchain Proof of Work</a></li> 
+              <li><a href="coinbase-transaction">Coinbase Transaction</a></li> 
+              <li><a href="key-concepts-of-bitcoin">Key Concepts in Bitcoin</a></li> 
+             </ul> 
+            </div> 
+            <div class="col-2"> 
+             <ul class="points"> 
+              <li><a href="blockchain-key-areas">Blockchain Key Areas</a></li> 
+              <li><a href="blockchain-cryptocurrency">Blockchain Cryptocurrency</a></li> 
+              <li><a href="blockchain-dao">Blockchain DAO</a></li> 
+              <li><a href="limitation-of-blockchain-technology">Blockchain Limitation</a></li> 
+              <li><a href="blockchain-double-spending">Blockchain Double Spending</a></li> 
+              <li><a href="blockchain-bitcoin-cash">Blockchain Bitcoin Cash</a></li> 
+              <li><a href="bitcoin-forks-and-segwit">Bitcoin Forks and SegWit</a></li> 
+              <li><a href="blockchain-merkle-tree">Blockchain Merkle Tree</a></li> 
+              <li><a href="blockchain-vs-database">Blockchain Vs Database</a></li> 
+              <li><a href="bitcoin-mitigating-attacks">Bitcoin Mitigating Attacks</a></li> 
+              <li><a href="who-sets-the-bitcoin-price">Who sets the Bitcoin Price</a></li> 
+              <li><a href="getting-started-with-bitcoin">Getting Started With Bitcoin</a></li> 
+              <li><a href="how-to-choose-bitcoin-wallet">How to Choose Bitcoin Wallet</a></li> 
+              <li><a href="sending-and-receiving-bitcoin">Sending and Receiving Bitcoin</a></li> 
+              <li><a href="converting-bitcoins-to-fiat-currency">Converting Bitcoins to Fiat Currency</a></li> 
+             </ul> 
+            </div> 
+           </div> 
+           <hr> <p>Our Blockchain tutorial includes all the topics which help to learn Blockchain Technology. These are Introduction of Blockchain, History of Blockchain, What is Bitcoin, The Role of Bitcoin Miners, Hash Functions, Block Hashing, How Block Hashes Work in a Blockchain, How Distributed Blockchain Works, Cryptographic Hashing, Components of Bitcoin, Coinbase Transaction, Key Concepts in Bitcoin, Blockchain DAO, Blockchain Limitations, Blockchain Double Spending, What is Bitcoin Cash, Bitcoin Proof of Work, Merkle Tree, Who sets the bitcoin price, and many more.</p> <h2 class="h2">Prerequisite</h2> <p>Before learning blockchain in depth, you must have the basic knowledge of scripting languages such as HTML, JavaScript, and CSS.</p> <h2 class="h2">Audience</h2> <p>We have developed this blockchain tutorial for beginners and professionals both who want to build a career around blockchain or learn the precepts of blockchain in a seamless manner. There are given a lot of topics which will help you to learn blockchain technology easily.</p> <h2 class="h2">Problems</h2> <p>We assure you that you will not find any problem with our Blockchain tutorial. But, if you find any mistake, you can post it in our comment section.</p> 
+           <hr> 
+           <div class="nexttopicdiv"> <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="history-of-blockchain">History of Blockchain</a></span> 
+           </div> <br><br> 
+           <div id="bottomnext"> <a style="float:right" class="next" href="history-of-blockchain">next &#x2192;</a> 
+           </div> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fb9d9e9e9f999a9890bb919a8d9a8f8b9492958fd5989496">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/blockchain-tutorial"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/blockchain-tutorial"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/blockchain-tutorial"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="412933012b20372035312e282f356f222e2c">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e18993a18b80978095918e888f95cf828e8ccf">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

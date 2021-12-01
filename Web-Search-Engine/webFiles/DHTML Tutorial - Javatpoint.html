@@ -1,0 +1,975 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>DHTML Tutorial - Javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="DHTML Tutorial - Javatpoint">
+  <meta property="og:description" content="DHTML Tutorial with Uses of DHTML, Features of DHTML, DHTML JavaScript, DHTML CSS, HTML vs DHTML, DHTML Events, DHTML DOM, Advantages and Disadvantages etc."> 
+  <meta name="keywords" content="dhtml tutorial, dhtml, dynamic html, dynamic hypertext markup language, Uses of dhtml, features of dhtml, dhtml javascript, dhtml css, html vs dhtml, dhtml events, dhtml dom, advantage and disadvantage">
+  <meta name="description" content="DHTML Tutorial with Uses of DHTML, Features of DHTML, DHTML JavaScript, DHTML CSS, HTML vs DHTML, DHTML Events, DHTML DOM, Advantages and Disadvantages etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/dhtml"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="DHTML Tutorial - Javatpoint">
+  <meta name="twitter:description" property="og:description" content="DHTML Tutorial with Uses of DHTML, Features of DHTML, DHTML JavaScript, DHTML CSS, HTML vs DHTML, DHTML Events, DHTML DOM, Advantages and Disadvantages etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/dhtml">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="dhtml" class="selected">DHTML</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="xhtml-tutorial">XHTML</a></li> 
+       <li><a href="css-tutorial">CSS</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="bootstrap-tutorial">Bootstrap</a></li> 
+       <li><a href="jquery-tutorial">jQuery</a></li> 
+       <li><a href="xml-tutorial">XML</a></li> 
+       <li><a href="json-tutorial">JSON</a></li> 
+       <li><a href="c-programming-language-tutorial">C</a></li> 
+       <li><a href="comment.jsp">Comment</a></li> 
+       <li><a href="forum">Forum</a></li> 
+       <li><a href="training">Training</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">DHTML Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="dhtml">DHTML Tutorial</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> <h1 class="h1">DHTML Tutorial</h1> <img src="https://static.javatpoint.com/tutorial/dhtml/images/dhtml-tutorial.png" class="imageright" alt="DHTML Tutorial"> <p><strong>DHTML</strong> stands for <strong>Dynamic Hypertext Markup language</strong> i.e., <strong>Dynamic HTML</strong>.</p> <p>Dynamic HTML is not a markup or programming language but it is a term that combines the features of various web development technologies for creating the web pages dynamic and interactive.</p> <p>The DHTML application was introduced by Microsoft with the release of the 4<sup>th</sup> version of IE (Internet Explorer) in 1997.</p> <h2 class="h2">Components of Dynamic HTML</h2> <p>DHTML consists of the following four components or languages:</p> 
+           <ul class="points"> 
+            <li>HTML 4.0</li> 
+            <li>CSS</li> 
+            <li>JavaScript</li> 
+            <li>DOM.</li> 
+           </ul> <h3 class="h4">HTML 4.0</h3> <p>HTML is a client-side markup language, which is a core component of the DHTML. It defines the structure of a web page with various defined basic elements or tags.</p> <h3 class="h4">CSS</h3> <p>CSS stands for Cascading Style Sheet, which allows the web users or developers for controlling the style and layout of the HTML elements on the web pages.</p> <h3 class="h4">JavaScript</h3> <p>JavaScript is a scripting language which is done on a client-side. The various browser supports JavaScript technology. DHTML uses the JavaScript technology for accessing, controlling, and manipulating the HTML elements. The statements in JavaScript are the commands which tell the browser for performing an action.</p> <h3 class="h4">DOM</h3> <p>DOM is the document object model. It is a w3c standard, which is a standard interface of programming for HTML. It is mainly used for defining the objects and properties of all elements in HTML.</p> <h2 class="h2">Uses of DHTML</h2> <p>Following are the uses of DHTML (Dynamic HTML):</p> 
+           <ul class="points"> 
+            <li>It is used for designing the animated and interactive web pages that are developed in real-time.</li> 
+            <li>DHTML helps users by animating the text and images in their documents.</li> 
+            <li>It allows the authors for adding the effects on their pages.</li> 
+            <li>It also allows the page authors for including the drop-down menus or rollover buttons.</li> 
+            <li>This term is also used to create various browser-based action games.</li> 
+            <li>It is also used to add the ticker on various websites, which needs to refresh their content automatically.</li> 
+           </ul> <h2 class="h2">Features of DHTML</h2> <p>Following are the various characteristics or features of DHTML (Dynamic HTML):</p> 
+           <ul class="points"> 
+            <li>Its simplest and main feature is that we can create the web page dynamically.</li> 
+            <li><strong>Dynamic Style</strong> is a feature, that allows the users to alter the font, size, color, and content of a web page.</li> 
+            <li>It provides the facility for using the events, methods, and properties. And, also provides the feature of code reusability.</li> 
+            <li>It also provides the feature in browsers for data binding.</li> 
+            <li>Using DHTML, users can easily create dynamic fonts for their web sites or web pages.</li> 
+            <li>With the help of DHTML, users can easily change the tags and their properties.</li> 
+            <li>The web page functionality is enhanced because the DHTML uses low-bandwidth effect.</li> 
+           </ul> <h2 class="h2">Difference between HTML and DHTML</h2> <p>Following table describes the differences between HTML and DHTML:</p> 
+           <table class="alt"> 
+            <tbody>
+             <tr> 
+              <th>HTML (Hypertext Markup language)</th> 
+              <th>DHTML (Dynamic Hypertext Markup language)</th> 
+             </tr> 
+             <tr> 
+              <td>1. HTML is simply a markup language.</td> 
+              <td>1. DHTML is not a language, but it is a set of technologies of web development.</td> 
+             </tr> 
+             <tr> 
+              <td>2. It is used for developing and creating web pages.</td> 
+              <td>2. It is used for creating and designing the animated and interactive web sites or pages.</td> 
+             </tr> 
+             <tr> 
+              <td>3. This markup language creates static web pages.</td> 
+              <td>3. This concept creates dynamic web pages.</td> 
+             </tr> 
+             <tr> 
+              <td>4. It does not contain any server-side scripting code.</td> 
+              <td>4. It may contain the code of server-side scripting.</td> 
+             </tr> 
+             <tr> 
+              <td>5. The files of HTML are stored with the .html or .htm extension in a system.</td> 
+              <td>5. The files of DHTML are stored with the .dhtm extension in a system. </td> 
+             </tr> 
+             <tr> 
+              <td>6. A simple page which is created by a user without using the scripts or styles called as an HTML page.</td> 
+              <td>6. A page which is created by a user using the HTML, CSS, DOM, and JavaScript technologies called a DHTML page.</td> 
+             </tr> 
+             <tr> 
+              <td>7. This markup language does not need database connectivity.</td> 
+              <td>7. This concept needs database connectivity because it interacts with users.</td> 
+             </tr> 
+            </tbody>
+           </table> <h2 class="h2">DHTML JavaScript</h2> <p>JavaScript can be included in HTML pages, which creates the content of the page as dynamic. We can easily type the JavaScript code within the &lt;head&gt; or &lt;body&gt; tag of a HTML page. If we want to add the external source file of JavaScript, we can easily add using the &lt;src&gt; attribute.</p> <p>Following are the various examples, which describes how to use the JavaScript technology with the DHTML:</p> <h3 class="h3">Document.write() Method</h3> <p>The document.write() method of JavaScript, writes the output to a web page.</p> <p><strong>Example 1:</strong> The following example simply uses the <strong>document.write()</strong> method of JavaScript in the DHTML. In this example, we type the JavaScript code in the <strong>&lt;body&gt;</strong> tag.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+&lt;HTML&gt;
+&lt;head&gt;
+&lt;title&gt;
+Method of a JavaScript
+&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script type="text/javascript"&gt;
+document.write("JavaTpoint");
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+           </div> <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=DHTMLJavaScript1" target="_blank">Test it Now</a></span> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/dhtml/images/dhtml-javascript1.png" alt="DHTML JavaScript"> <h3 class="h3">JavaScript and HTML event</h3> <p>A JavaScript code can also be executed when some event occurs. Suppose, a user clicks an HTML element on a webpage, and after clicking, the JavaScript function associated with that HTML element is automatically invoked. And, then the statements in the function are performed.</p> <p><strong>Example 1:</strong> The following example shows the current date and time with the JavaScript and HTML event (Onclick). In this example, we type the JavaScript code in the &lt;head&gt; tag.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;
+DHTML with JavaScript
+&lt;/title&gt;
+&lt;script type="text/javascript"&gt;
+function dateandtime()
+{
+alert(Date());
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body bgcolor="orange"&gt;
+&lt;font size="4" color="blue"&gt;
+&lt;center&gt; &lt;p&gt;
+Click here # &lt;a href="#" onClick="dateandtime();"&gt; Date and Time &lt;/a&gt;
+# to check the today's date and time. 
+&lt;/p&gt; &lt;/center&gt;
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+           </div> <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=DHTMLJavaScript2" target="_blank">Test it Now</a></span> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/dhtml/images/dhtml-javascript2.png" alt="DHTML JavaScript"> <p><strong>Explanation:</strong></p> <p>In the above code, we displayed the current date and time with the help of JavaScript in DHTML. In the body tag, we used the anchor tag, which refers to the page itself. When you click on the link, then the function of JavaScript is called.</p> <p>In the JavaScript function, we use the alert() method in which we type the date() function. The date function shows the date and time in the alert dialog box on the web page.</p> <h3 class="h3">JavaScript and HTML DOM</h3> <p>With version 4 of HTML, JavaScript code can also change the inner content and attributes of the HTML event.</p> <p><strong>Example 1:</strong> This example checks the Grade of a student according to the percentage criteria with the JavaScript and HTML DOM. In this example, we type the code of a JavaScript in the &lt;body&gt; tag.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+&lt;html&gt; 
+    &lt;head&gt; 
+        &lt;title&gt; Check Student Grade
+&lt;/title&gt; 
+    &lt;/head&gt; 
+      
+    &lt;body&gt; 
+&lt;p&gt;Enter the percentage of a Student:&lt;/p&gt; 
+&lt;input type="text" id="percentage"&gt;
+&lt;button type="button" onclick="checkGrade()"&gt;
+Find Grade
+&lt;/button&gt; 
+&lt;p id="demo"&gt;&lt;/p&gt;
+&lt;script type="text/javascript"&gt;  
+            function checkGrade() { 
+                var x,p, text; 
+                p = document.getElementById("percentage").value; 
+		
+		x=parseInt(p);
+		
+		
+               if (x&gt;90 &amp;&amp; x &lt;= 100) { 
+                    document.getElementById("demo").innerHTML = "A1";
+                } else if (x&gt;80 &amp;&amp; x &lt;= 90) { 
+                   document.getElementById("demo").innerHTML = "A2";
+		 } else if (x&gt;70 &amp;&amp; x &lt;= 80) { 
+                   document.getElementById("demo").innerHTML = "A3";
+		}	
+            } 
+        &lt;/script&gt; 
+    &lt;/body&gt; 
+&lt;/html&gt; 
+</textarea>
+           </div> <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=DHTMLJavaScript3" target="_blank">Test it Now</a></span> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/dhtml/images/dhtml-javascript3.png" alt="DHTML JavaScript"> <p><strong>Explanation:</strong> </p> <p>In the above code, we check the student&#x2019;s Grade with the help of JavaScript in DHTML. In the JavaScript code, we used the checkGrade() method, which is invoked when we click on the button. In this function, we stored the value in variable p. The value is taken in the input field. When the value is stored, then we convert the value of <strong>p</strong> into integer and store the conversion value in x, because the value in <strong>p</strong> is text.</p> <p>After that, we used the if-else-if statement for finding the grade according to the percentage.</p> <h3 class="h3">CSS with JavaScript in DHTML</h3> <p>With version 4 of HTML, JavaScript code can also change the style such as size, color, and face of an HTML element.</p> <p><strong>Example 1:</strong> The following example changes the color of a text.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;
+getElementById.style.property example
+&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p id="demo"&gt; This text changes color when click on the following different buttons. &lt;/p&gt;
+  &lt;button onclick="change_Color('green');"&gt; Green &lt;/button&gt;
+  &lt;button onclick="change_Color('blue');"&gt; Blue &lt;/button&gt;
+&lt;script type="text/javascript"&gt;
+
+function change_Color(newColor) {
+  var element = document.getElementById('demo').style.color = newColor;
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+           </div> <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=DHTMLJavaScript4" target="_blank">Test it Now</a></span> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/dhtml/images/dhtml-javascript4.png" alt="DHTML JavaScript"> <p><strong>Explanation:</strong></p> <p>In the above code, we changed the color of a text by using the following syntax:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+document.getElementById('demo').style.property=new_value;. 
+</textarea>
+           </div> <p>The above syntax is used in the JavaScript function, which is performed or called when we clicked on the HTML buttons. The different HTML buttons specify the color of a text.</p> <h2 class="h2">DHTML CSS</h2> <p>We can easily use the CSS with the DHTML page with the help of JavaScript and HTML DOM. With the help of <strong>this.style.property=new style</strong> statement, we can change the style of the currently used HTML element. Or, we can also update the style of any particular HTML element by <strong>document.getElementById(id).style.property = new_style</strong> statement.</p> <p><strong>Example 1:</strong> The following example uses the DHTML CSS for changing the style of current element:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;
+Changes current HTML element
+&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;center&gt;
+&lt;h1 onclick="this.style.color='blue'"&gt; This is a JavaTpoint Site &lt;/h1&gt;
+&lt;center&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+           </div> <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=DHTMLCSS1" target="_blank">Test it Now</a></span> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/dhtml/images/dhtml-css1.png" alt="DHTML CSS"> <p><strong>Explanation:</strong></p> <p>In the above code, we used the <strong>this.style.color='blue'</strong> statement, which shows the color of a text as blue.</p> <p><strong>Example 2:</strong> The following example uses the DHTML CSS for changing the style of the HTML element:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;
+changes the particular HTML element example
+&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p id="demo"&gt; This text changes color when click on the following different buttons. &lt;/p&gt;
+  &lt;button onclick="change_Color('green');"&gt; Green &lt;/button&gt;
+  &lt;button onclick="change_Color('blue');"&gt; Blue &lt;/button&gt;
+&lt;script type="text/javascript"&gt;
+
+function change_Color(newColor) {
+  var element = document.getElementById('demo').style.color = newColor;
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+           </div> <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=DHTMLCSS2" target="_blank">Test it Now</a></span> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/dhtml/images/dhtml-css2.png" alt="DHTML CSS"> <p><strong>Explanation:</strong></p> <p>In the above code, we used the <strong>var element = document.getElementById('demo').style.color = newColor;</strong> statement, which changes the color of a text as green and blue according to the buttons.</p> <h2 class="h2">DHTML Events</h2> <p>An event is defined as changing the occurrence of an object.</p> <p>It is compulsory to add the events in the DHTML page. Without events, there will be no dynamic content on the HTML page. The event is a term in the HTML, which triggers the actions in the web browsers.</p> <p>Suppose, any user clicks an HTML element, then the JavaScript code associated with that element is executed. Actually, the event handlers catch the events performed by the user and then execute the code.</p> <p><strong>Example of events:</strong></p> 
+           <ol class="points"> 
+            <li>Click a button.</li> 
+            <li>Submitting a form.</li> 
+            <li>An image loading or a web page loading, etc.</li> 
+           </ol> <p>Following table describes the Event Handlers used in the DHTML:</p> 
+           <table class="alt"> 
+            <tbody>
+             <tr> 
+              <th>S.No.</th> 
+              <th>Event</th> 
+              <th>When it occurs</th> 
+             </tr> 
+             <tr> 
+              <td><strong>1.</strong></td> 
+              <td>onabort</td> 
+              <td>It occurs when the user aborts the page or media file loading. </td> 
+             </tr> 
+             <tr> 
+              <td><strong>2.</strong></td> 
+              <td>onblur</td> 
+              <td>It occurs when the user leaves an HTML object. </td> 
+             </tr> 
+             <tr> 
+              <td><strong>3.</strong></td> 
+              <td>onchange</td> 
+              <td>It occurs when the user changes or updates the value of an object.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>4.</strong></td> 
+              <td>onclick</td> 
+              <td>It occurs or triggers when any user clicks on an HTML element.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>5.</strong></td> 
+              <td>ondblclick</td> 
+              <td>It occurs when the user clicks on an HTML element two times together.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>6.</strong></td> 
+              <td>onfocus</td> 
+              <td>It occurs when the user focuses on an HTML element. This event handler works opposite to onblur.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>7.</strong></td> 
+              <td>onkeydown</td> 
+              <td>It triggers when a user is pressing a key on a keyboard device. This event handler works for all the keys.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>8.</strong></td> 
+              <td>onkeypress</td> 
+              <td>It triggers when the users press a key on a keyboard. This event handler is not triggered for all the keys.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>9.</strong></td> 
+              <td>onkeyup</td> 
+              <td>It occurs when a user released a key from a keyboard after pressing on an object or element. </td> 
+             </tr> 
+             <tr> 
+              <td><strong>10.</strong></td> 
+              <td>onload</td> 
+              <td>It occurs when an object is completely loaded. </td> 
+             </tr> 
+             <tr> 
+              <td><strong>11.</strong></td> 
+              <td>onmousedown</td> 
+              <td>It occurs when a user presses the button of a mouse over an HTML element. </td> 
+             </tr> 
+             <tr> 
+              <td><strong>12.</strong></td> 
+              <td>onmousemove</td> 
+              <td>It occurs when a user moves the cursor on an HTML object.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>13.</strong></td> 
+              <td>onmouseover</td> 
+              <td>It occurs when a user moves the cursor over an HTML object.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>14.</strong></td> 
+              <td>onmouseout</td> 
+              <td>It occurs or triggers when the mouse pointer is moved out of an HTML element.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>15.</strong></td> 
+              <td>onmouseup</td> 
+              <td>It occurs or triggers when the mouse button is released over an HTML element. </td> 
+             </tr> 
+             <tr> 
+              <td><strong>16.</strong></td> 
+              <td>onreset</td> 
+              <td>It is used by the user to reset the form. </td> 
+             </tr> 
+             <tr> 
+              <td><strong>17.</strong></td> 
+              <td>onselect</td> 
+              <td>It occurs after selecting the content or text on a web page. </td> 
+             </tr> 
+             <tr> 
+              <td><strong>18.</strong></td> 
+              <td>onsubmit</td> 
+              <td>It is triggered when the user clicks a button after the submission of a form.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>19.</strong></td> 
+              <td>onunload</td> 
+              <td>It is triggered when the user closes a web page.</td> 
+             </tr> 
+            </tbody>
+           </table> <p>Following are the different examples using the different event handlers, which helps us to understand the concept of DHTML events:</p> <p><strong>Example 1:</strong> This example uses the onclick event handler, which is used to change the text after clicking.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;
+Example of onclick event
+&lt;/title&gt;
+&lt;script type="text/javascript"&gt;
+function ChangeText(ctext)
+{
+ctext.innerHTML=" Hi JavaTpoint! ";
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;font color="red"&gt; Click on the Given text for changing it: &lt;br&gt;
+&lt;/font&gt;
+&lt;font color="blue"&gt; 
+&lt;h1 onclick="ChangeText(this)"&gt; Hello World! &lt;/h1&gt;
+&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+           </div> <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=DHTMLEvents1" target="_blank">Test it Now</a></span> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/dhtml/images/dhtml-events1.png" alt="DHTML Events"> <p><strong>Example 2:</strong> This example uses the onsubmit event handler, which gives an alert after clicking on a submit button.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;
+Example of onsubmit event
+&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form onsubmit="Submit_Form()"&gt;
+&lt;label&gt; Enter your name: &lt;/label&gt;
+&lt;input type="text"&gt;
+&lt;label&gt; Enter your Roll no: &lt;/label&gt;
+&lt;input type="Number"&gt;
+&lt;input type="submit" value="submit"&gt;
+&lt;/form&gt;
+&lt;script type="text/javascript"&gt;
+function Submit_Form()
+{
+alert(" Your form is submitted");
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+           </div> <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=DHTMLEvents2" target="_blank">Test it Now</a></span> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/dhtml/images/dhtml-events2.png" alt="DHTML Events"> <h2 class="h2">DHTML DOM</h2> <p>DHTML DOM stands for Dynamic HTML Document Object Model.</p> <p>It is a w3c standard, which is a standard interface of programming for HTML. It is mainly used for defining the objects and properties of all elements in HTML. It also defines the methods for accessing the HTML elements.</p> <p><strong>Example:</strong> The following program helps in understanding the concept of DHTML DOM. This example changes the color of text and displays the text in red colour automatically.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="xml">
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;
+Example of DHTML DOM
+&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;font color = "blue"&gt;
+  &lt;p id="demo"&gt; This text changes color when the page loaded. &lt;/p&gt;
+&lt;/font&gt; 
+&lt;script type="text/javascript"&gt;
+document.getElementById('demo').style.color = "red";
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</textarea>
+           </div> <span class="testit"><a href="https://www.javatpoint.com/oprweb/test.jsp?filename=DHTMLDOM1" target="_blank">Test it Now</a></span> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/dhtml/images/dhtml-dom1.png" alt="DHTML DOM"> <h2 class="h2">Advantages of DHTML</h2> <p>Following are the various benefits or the advantages of DHTML (Dynamic HTML):</p> 
+           <ul class="points"> 
+            <li>Those web sites and web pages which are created using this concept are fast.</li> 
+            <li>There is no plug-in required for creating the web page dynamically.</li> 
+            <li>Due to the low-bandwidth effect by the dynamic HTML, the web page functionality is enhanced.</li> 
+            <li>This concept provides advanced functionalities than the static HTML.</li> 
+            <li>It is highly flexible, and the user can make changes easily in the web pages.</li> 
+           </ul> <h2 class="h2">Disadvantages of DHTML</h2> <p>Following are the various disadvantages or limitations of DHTML (Dynamic HTML):</p> 
+           <ul class="points"> 
+            <li>The scripts of DHTML does not run properly in various web browsers. Or in simple words, we can say that various web browsers do not support the DHTML. It is only supported by the latest browsers.</li> 
+            <li>The coding of those websites that are created using DHTML is long and complex.</li> 
+            <li>For understanding the DHTML, users must know about HTML, CSS, and JavaScript. If any user does not know these languages, then it is a time-consuming and long process in itself.</li> 
+           </ul> 
+           <hr> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bbdddededfd9dad8d0fbd1dacddacfcbd4d2d5cf95d8d4d6">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/dhtml"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/dhtml"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/dhtml"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f59d87b59f94839481859a9c9b81db969a98">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="701802301a11061104001f191e045e131f1d5e">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

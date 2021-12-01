@@ -1,0 +1,143 @@
+<html> 
+ <head> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/metropolis" type="text/css"> 
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
+  <style type="text/css">
+	html,body { 
+	height: 100%; 
+}
+
+.global-container{
+	height:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:url(https://pay.javatpoint.com/cmn/img/bg.jpg);
+	background-size:cover;
+}
+
+
+form{
+	padding-top: 10px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+
+.card-title{ font-weight:300; }
+
+.btn{
+	font-size: 14px;
+	margin-top:20px;
+}
+
+
+.login-form{ 
+	width:550px;
+	margin:20px;
+}
+
+.sign-up{
+	text-align:center;
+	padding:20px 0 0;
+}
+
+.line_one{
+	height:2px;
+	width:100px;
+	background:#1a7aa3;
+}
+
+#error p{
+    color: red!important;
+  }
+
+</style> 
+ </head> 
+ <body> 
+  <div class="global-container"> 
+   <div class="card login-form border-0 shadow-lg"> 
+    <div class="card-body"> 
+     <div class="text-center"> 
+      <img src="https://pay.javatpoint.com/uploads/logo/28ce440ee2ef1055629c350e180d3118.png"> 
+     </div> 
+     <h3 class="card-title text-center text-primary font-weight-bold">Register</h3> 
+     <div class="col-md-12 text-danger text-center"> 
+      <p> </p> 
+     </div> 
+     <div class="line_btn d-flex justify-content-center align-items-center"> 
+      <div class="line_one text-center"></div> 
+     </div> 
+     <div class="card-text"> 
+      <form method="post" enctype="multipart/form-data"> 
+       <div class="row"> 
+        <div class="col-sm-6"> 
+         <div class="form-group"> <label><b>Full Name</b></label> 
+          <input name="name" type="text" value="" placeholder="Enter Full Name" class="form-control "> 
+         </div> 
+        </div> 
+        <div class="col-sm-6"> 
+         <div class="form-group"> <label><b>Mobile</b></label> 
+          <input name="mobile" type="text" minlength="10" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" placeholder="Enter Mobile" class="form-control "> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div class="col-sm-6"> 
+         <div class="form-group"> <label><b>Email</b></label> 
+          <input name="email" type="email" value="" placeholder="Enter Email" class="form-control "> 
+         </div> 
+        </div> 
+        <div class="col-sm-6"> 
+         <div class="form-group"> <label><b>Address</b></label> 
+          <input name="address" type="text" value="" placeholder="Enter Address" class="form-control "> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div class="col-sm-6"> 
+         <div class="form-group"> <label><b>Town/City</b></label> 
+          <input name="town_city" type="text" value="" placeholder="Enter Town/City" class="form-control "> 
+         </div> 
+        </div> 
+        <div class="col-sm-6"> 
+         <div class="form-group"> <label><b>State</b></label> 
+          <input name="state" type="text" value="" placeholder="Enter State" class="form-control "> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div class="col-sm-6"> 
+         <div class="form-group"> <label><b>Country</b></label> 
+          <input name="country" type="text" value="" placeholder="Enter Country" class="form-control "> 
+         </div> 
+        </div> 
+        <div class="col-sm-6"> 
+         <div class="form-group"> <label><b>Zip Code</b></label> 
+          <input name="zipcode" type="text" minlength="6" maxlength="6" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" placeholder="Enter Zip Code" class="form-control "> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div class="col-sm-12"> 
+         <div class="form-group"> <label><b>Technology</b></label> <select class="form-control" name="technology"> <option selected disabled value="">Choose One</option> <option value="1">Python</option> <option value="2">Datascience</option> <option value="3">Machine learning</option> <option value="4">Aws</option> <option value="5">Azure</option> <option value="6">Salesforce</option> <option value="7">Hadoop</option> <option value="8">Linux</option> <option value="9">Java</option> <option value="10">C</option> <option value="11">C++</option> <option value="12">Android</option> <option value="13">Iot</option> <option value="14">Ios</option> <option value="15">Sap</option> <option value="16">ORACLE</option> <option value="17">Data science with R</option> <option value="18">Power bi</option> <option value="19">Tableau</option> <option value="20">Ms SQL</option> <option value="21">SQL</option> <option value="22">Mis</option> <option value="23">AutoCAD</option> <option value="24">Embedded system</option> <option value="25">Plc scada</option> <option value="26">Php</option> <option value="27">Web designing</option> <option value="28">UI</option> <option value="29">React</option> <option value="30">Mern</option> <option value="31">Angular</option> <option value="32">Mean</option> <option value="33">Graphic design</option> <option value="34">Dotnet</option> <option value="35">Testing</option> <option value="36">Ccna</option> <option value="37">Ccnp</option> <option value="38">MCSa</option> <option value="39">Digital Marketing</option> <option value="40">Ethical hacking</option> <option value="41">Other</option> </select> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="row"> 
+        <div class="col-sm-12"> 
+         <div class="form-group"> <label><b>Amount</b></label> 
+          <input name="amount" type="text" minlength="10" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" placeholder="Enter Amount" class="form-control "> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="form-group text-center"> 
+        <input class="btn btn-primary" type="submit" value="Submit" name="submit"> 
+       </div> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

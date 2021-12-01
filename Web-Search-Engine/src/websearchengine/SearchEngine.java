@@ -225,7 +225,7 @@ public class SearchEngine {
 				if (choice == "Yes") {
 					System.out.println("Enterd URL " + URL + " is valid\n");
 					System.out.println("Crwaling started....");
-					crawler.triggerCrawler(URL);
+					Crawler.triggerCrawler(URL);
 					System.out.println("Crwaling finished....");
 					searchWord();
 				} else {
@@ -239,7 +239,7 @@ public class SearchEngine {
 				if (choice == "Yes") {
 					System.out.println("Enterd URL https://www.javatpoint.com/ is valid\n");
 					System.out.println("Crwaling started....");
-					crawler.triggerCrawler("https://www.javatpoint.com/");
+					Crawler.triggerCrawler("https://www.javatpoint.com/");
 					System.out.println("Crwaling finished....");
 					searchWord();
 				} else {

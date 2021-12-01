@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Jupyter Notebook Tutorial - javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Jupyter Notebook Tutorial - javatpoint">
+  <meta property="og:description" content="Jupyter Notebook Tutorial with What is Jupyter Notebook, Advantage and Disadvantage of Jupyter Notebook, Installation of Jupyter Notebook, Dashboard of Jupyter Notebook, Types of Cells in Jupyter Notebook, Components of Jupyter Notebook etc."> 
+  <meta name="keywords" content="jupyter notebook tutorial, jupyter notebook introduction, jupyter notebook, what is jupyter notebook, advantage of jupyter notebook, disadvantage of jupyter notebook, installation of jupyter notebook, dashboard of jupyter notebook, types of cells in jupyter notebook, components of jupyter notebook">
+  <meta name="description" content="Jupyter Notebook Tutorial with What is Jupyter Notebook, Advantage and Disadvantage of Jupyter Notebook, Installation of Jupyter Notebook, Dashboard of Jupyter Notebook, Types of Cells in Jupyter Notebook, Components of Jupyter Notebook etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/jupyter-notebook"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Jupyter Notebook Tutorial - javatpoint">
+  <meta name="twitter:description" property="og:description" content="Jupyter Notebook Tutorial with What is Jupyter Notebook, Advantage and Disadvantage of Jupyter Notebook, Installation of Jupyter Notebook, Dashboard of Jupyter Notebook, Types of Cells in Jupyter Notebook, Components of Jupyter Notebook etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/jupyter-notebook">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="python-tutorial">Python</a></li> 
+       <li><a href="jupyter-notebook" class="selected">Jupyter Notebook</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="sql-tutorial">SQL</a></li> 
+       <li><a href="android-tutorial">Android</a></li> 
+       <li><a href="cloud-computing-tutorial">Cloud</a></li> 
+       <li><a href="servlet-tutorial">Servlet</a></li> 
+       <li><a href="jsp-tutorial">JSP</a></li> 
+       <li><a href="struts-2-tutorial">Struts2</a></li> 
+       <li><a href="spring-tutorial">Spring</a></li> 
+       <li><a href="corejava-interview-questions">Interview Q</a></li> 
+       <li><a href="comment.jsp">Comment</a></li> 
+       <li><a href="forum">Forum</a></li> 
+       <li><a href="training">Training</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Jupyter Notebook</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="jupyter-notebook">Jupyter Notebook</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> <h1 class="h1">Jupyter Notebook Tutorial</h1> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/jupyter-notebook-tutorial.png" class="imageright" alt="Jupyter Notebook Tutorial"> <p>Jupyter Notebook tutorial provides basic and advanced concepts of the Jupyter Notebook. Our Jupyter Notebook tutorial is designed for beginners and professionals. </p> <h2 class="h2">What is Jupyter Notebook?</h2> <p>Jupyter Notebook is an <strong>open-source, web-based interactive environment,</strong> which allows you to create and share documents that contain <strong>live code, mathematical equations, graphics, maps, plots, visualizations,</strong> and <strong>narrative text</strong>. It integrates with many programming languages like <strong>Python, PHP, R, C#,</strong> etc. </p> <h4 class="n"><span class="bold">Note:</span> Jupyter Notebook mainly used for Python because Python is used with Artificial Intelligence (AI), Machine learning, as well as Deep learning.</h4> <p>In this tutorial, we are going to discuss the following topics:</p> 
+           <ul class="points"> 
+            <li><a href="#Advantages">Advantages of Jupyter Notebook</a></li> 
+            <li><a href="#Disadvantages">Disadvantages of Jupyter Notebook</a></li> 
+            <li><a href="#Installation">Installation of Jupyter Notebook</a></li> 
+            <li><a href="#Dashboard">The Dashboard of Jupyter Notebook</a></li> 
+            <li><a href="#UserInterface">User interface of Jupyter Notebook</a></li> 
+            <li><a href="#Components">Components of Jupyter Notebook</a></li> 
+            <li><a href="#CreatingNotebook">Creating a Notebook in Jupyter Notebook</a></li> 
+            <li><a href="#Typesofcells">Types of cells in Jupyter Notebook</a></li> 
+            <li><a href="#IPyWidgets">ipywidgets in the Jupyter Notebook</a></li> 
+           </ul> 
+           <hr> <h2 id="Advantages" class="h2">Advantages of Jupyter Notebook</h2> <p>There are the following advantages of Jupyter Notebook -</p> 
+           <ol class="points"> 
+            <li><strong>All in one place:</strong> As you know, Jupyter Notebook is an open-source web-based interactive environment that combines code, text, images, videos, mathematical equations, plots, maps, graphical user interface and widgets to a single document.</li> 
+            <li><strong>Easy to convert:</strong> Jupyter Notebook allows users to convert the notebooks into other formats such as HTML and PDF. It also uses online tools and nbviewer which allows you to render a publicly available notebook in the browser directly.</li> 
+            <li><strong>Easy to share:</strong> Jupyter Notebooks are saved in the structured text files (JSON format), which makes them easily shareable.</li> 
+            <li><strong>Language independent:</strong> Jupyter Notebook is platform-independent because it is represented as JSON (JavaScript Object Notation) format, which is a language-independent, text-based file format. Another reason is that the notebook can be processed by any programing language, and can be converted to any file formats such as Markdown, HTML, PDF, and others.</li> 
+            <li><strong>Interactive code:</strong> Jupyter notebook uses <strong>ipywidgets</strong> packages, which provide many common user interfaces for exploring code and data interactivity.</li> 
+           </ol> 
+           <hr> <h2 id="Disadvantages" class="h2">Disadvantages of Jupyter Notebook</h2> <p>There are the following disadvantages of Jupyter Notebook:</p> 
+           <ul class="points"> 
+            <li>It is very hard to test long asynchronous tasks.</li> 
+            <li>Less Security</li> 
+            <li>It runs cell out of order</li> 
+            <li>In Jupyter notebook, there is no IDE integration, no linting, and no code-style correction.</li> 
+           </ul> 
+           <hr> <h2 id="Installation" class="h2">Installation of Jupyter Notebook using pip package</h2> <p>To install the Jupyter Notebook, first, you need to install the Python. You can follow the below steps to download the Python.</p> <p><strong>Step1:</strong> Click on the link <a href="https://www.python.org/downloads/windows/" rel="nofollow" target="_blank">https://www.python.org/downloads/windows/</a> to download the latest version of the Python.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/installation-of-jupyter-notebook.png" alt="Installation of Jupyter Notebook using pip package"> <br> <p><strong>Step2:</strong> Now, double click on the downloaded file, the following window is opened. Select <strong>Install Now</strong> to Install Python.</p><p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/installation-of-jupyter-notebook2.png" alt="Installation of Jupyter Notebook using pip package"> <br> </p><p><strong>Step3:</strong> You can see that installation is in process.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/installation-of-jupyter-notebook3.png" alt="Installation of Jupyter Notebook using pip package"> <br> <p><strong>Step4:</strong> Once the installation is completed, the following window is open, you simply click on the close.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/installation-of-jupyter-notebook4.png" alt="Installation of Jupyter Notebook using pip package"> <br> <p>Once the Python installation is completed, follow the below steps to install the Jupyter Notebook with pip package.</p> <p><strong>Step1:</strong> Open the command prompt.</p> <p><strong>Step2:</strong> Copy/ set the path, where the Python script is presented.</p> <p class="pq"><strong>For Example:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+Path= C:\Users\Manya\AppData\Local\Programs\Python\Python37\Scripts
+</textarea>
+           </div> <h4 class="n"><span class="bold">Note:</span> If AppData is not visible, then go to View -&gt; Options, select change folder, and search options. After clicking on the select change folder, click on the view, and select show hidden files, folders, and drives then click on the Apply -&gt; OK.</h4> <p><strong>Step3:</strong> To upgrade the older version of pip, give the following command after the specified path:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+pip install --upgrade pip
+</textarea>
+           </div> <p><strong>Step4:</strong> To install the Jupyter Notebook, type the below command:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+pip install jupyter 
+</textarea>
+           </div> <p>It takes a few seconds to install the Jupyter Notebook.</p> <p><strong>Step5:</strong> Once the installation process is completed, you can run your notebook on the server using the following command in command prompt.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+jupyter notebook
+</textarea>
+           </div> <p>After a few seconds, Jupyter notebook starts with the default web browser which shows the list of all python files. </p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/installation-of-jupyter-notebook5.png" alt="Installation of Jupyter Notebook using pip package"> 
+           <hr> <h2 id="Dashboard" class="h2">Dashboard of Jupyter Notebook</h2> <p>The below screenshot shows dashboard of the Jupyter Notebook which contains the <strong>three</strong> tabs.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/dashboard-of-jupyter-notebook.png" alt="Dashboard of Jupyter Notebook"> <h3 class="h4">Files Tab</h3> <p>The Files tab is used to display <strong>files</strong> and <strong>folders</strong> in the current directory. It also uses an <strong>Upload</strong> button through which a file can be uploaded to a notebook server.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/dashboard-of-jupyter-notebook2.png" alt="Dashboard of Jupyter Notebook"> <h3 class="h4">Running Tab</h3> <p>The Running tab is used to show currently running notebooks.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/dashboard-of-jupyter-notebook3.png" alt="Dashboard of Jupyter Notebook"> <h3 class="h4">Cluster Tab</h3> <p>IPython provides the Cluster Tab. IPython is a parallel computing framework, which is an extended version of the IPython kernel.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/dashboard-of-jupyter-notebook4.png" alt="Dashboard of Jupyter Notebook"> 
+           <hr> <h2 id="UserInterface" class="h2">User interface of Jupyter Notebook</h2> <p>When you create a new notebook, the notebook will be presented with the <strong>notebook name, menu bar, toolbar,</strong> and an <strong>empty code cell</strong>.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/user-interface-of-jupyter-notebook.png" alt="User interface of Jupyter Notebook"> <p><strong>Notebook name:</strong> Notebook name is displayed at the top of the page, next to the Jupyter logo.</p> <p><strong>Menu bar:</strong> The menu bar presents different options that are used to manipulate the notebook functions.</p> <p><strong>Toolbar:</strong> The toolbar provides a quick way for performing the most-used operations within the notebook.</p> <p><strong>Code cell:</strong> A code cell allows you to edit and write a new code.</p> 
+           <hr> <h2 id="Components" class="h2">Components of Jupyter Notebook</h2> <p>There are the following <strong>three</strong> components of Jupyter Notebook -</p> <p><strong>1. The notebook web application:</strong> It is an interactive web application for writing and running the code.</p> <p>The notebook web application allows users to:</p> 
+           <ul class="points"> 
+            <li>Edit code in the browser with automatic syntax highlighting and indentation.</li> 
+            <li>Run code on the browser.</li> 
+            <li>See results of computations with media representations, such as HTML, LaTex, png, pdf, etc.</li> 
+            <li>Create and use JavaScript widgets.</li> 
+            <li>Includes mathematical equations using Markdown cells.</li> 
+           </ul> <p><strong>2. Kernels:</strong> Kernels are the separate processes started by the notebook web application that is used to run a user's code in the given language and return output to the notebook web application.</p> <p>In Jupyter notebook kernel is available in the following languages:</p> 
+           <ul class="points"> 
+            <li>Python</li> 
+            <li>Julia</li> 
+            <li>Ruby</li> 
+            <li>R</li> 
+            <li>Scala</li> 
+            <li>node.js</li> 
+            <li>Go</li> 
+           </ul> <p><strong>3. Notebook documents:</strong> Notebook document contains a representation of all content which is visible in the notebook web application, including inputs and outputs of the computations, text, mathematical equations, graphs, and images.</p> <h2 id="CreatingNotebook" class="h2">Creating a Notebook</h2> <p>To create a Notebook in Jupyter, go to <strong>New</strong> and select <strong>Python3</strong>.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/creating-a-notebook.png" alt="Creating a Notebook of Jupyter Notebook"> <br> <p>Now, you can see that a new notebook opens in a new tab. </p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/creating-a-notebook2.png" alt="Creating a Notebook of Jupyter Notebook"> <h3 class="h3">Rename the Notebook</h3> <p>To rename the Notebook, double click on the Untitled at the top of the screen. A pop up window will open to renaming the file. Enter a new notebook name that you want to add. Then click on the Rename.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/creating-a-notebook3.png" alt="Creating a Notebook of Jupyter Notebook"> <h2 class="h2">How to write and run a program in Jupyter</h2> <p>After renaming the file, click on the first cell in the notebook to enter in the edit mode. Now you can write the code in working area. After writing the code, you can run it by pressing the <strong>Shift+ Enter</strong> key or directly click on the <strong>run button</strong> at the top of the screen.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/write-and-run-program.png" alt="How to write and run a program in Jupyter"> 
+           <hr> <h2 id="Typesofcells" class="h2">Types of cells in Jupyter Notebook </h2> <p>There are the following <strong>four types</strong> of cells used in the Jupyter Notebook.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook.png" alt="Types of cells in Jupyter Notebook"> <h3 class="h3">1. Code Cell</h3> <p>The contents present in a code cell is treated as statements in a programming language of the current kernel. By default, Jupyter notebook's kernel is in <strong>Python</strong> so you can write Python statements in a code cell. When you run the statement, its output is displayed below the code. Output can be presented in the form of text, image, matplotlib plots, or HTML tables. </p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook2.png" alt="Types of cells in Jupyter Notebook"> <h3 class="h3">2. Markdown Cell</h3> <p>Markdown cell provides documentation to the notebook and makes the notebook more attractive. This cell contains all types of formatting features such as making text bold and italic, headers, displaying ordered or unordered list, Bullet lists, Hyperlinks, tabular contents, images, etc.</p> <p>To perform the following formatting features, first <strong>select Markdown cell</strong> from the drop-down menu.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook3.png" alt="Types of cells in Jupyter Notebook"> <h3 class="h4">Bold and Italics</h3> 
+           <ul class="pointS"> 
+            <li>To make text bold, write text between the <strong>double underscores</strong> or <strong>double asterisks</strong>.</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook4.png" alt="Types of cells in Jupyter Notebook"> <p>The following screenshot shows the output of the above code.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook5.png" alt="Types of cells in Jupyter Notebook"> 
+           <ul class="points"> 
+            <li>To make text italics, write text between <strong>single underscore</strong> or <strong>single asterisk</strong>. </li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook6.png" alt="Types of cells in Jupyter Notebook"> <p>The following screenshot shows the output of the above code.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook7.png" alt="Types of cells in Jupyter Notebook"> <h3 class="h4">Headers</h3> <p>Creating headers in Markdown is quite similar to the creating headers in HTML. It displays text in 6 sizes. To make the text as a header, start the text using <strong>#</strong> symbol. The number of # symbols depends upon the size of the header.</p> <p><strong>For example -</strong></p> <p>Header 1 use one # symbol, header 2 use two # symbol, and so on.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook8.png" alt="Types of cells in Jupyter Notebook"> <p>The following screenshot shows the output of the above Header cells.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook9.png" alt="Types of cells in Jupyter Notebook"> <h3 class="h4">Ordered Lists</h3> <p>The ordered list starts with 1. Use tab to make the suborder followed by the order.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook10.png" alt="Types of cells in Jupyter Notebook"> <p>The following screenshot shows the output of the above Markdown data.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook11.png" alt="Types of cells in Jupyter Notebook"> <h3 class="h4">Bullet lists</h3> <p>In Jupyter notebook, if text starts with the <strong>dash (-)</strong> symbol, markdown cell coverts dash into a <strong>solid circle</strong> and <strong>asterisk (*)</strong> to a <strong>solid square</strong>.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook12.png" alt="Types of cells in Jupyter Notebook"> <p>The following screenshot shows the output of the above Markdown data.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook13.png" alt="Types of cells in Jupyter Notebook"> <h3 class="h4">Hyperlinks</h3> <p>Markdown cell allows you to attach the Hyperlink. To attach the hyperlink place the name of the link in <strong>square brackets []</strong> and write link inside the <strong>parentheses ()</strong>.</p> <p>You can use the following code to insert the hyperlink.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook14.png" alt="Types of cells in Jupyter Notebook"> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook15.png" alt="Types of cells in Jupyter Notebook"> <h3 class="h4">Table Content</h3> <p>Markdown cell allows you to create a table using <strong>pipe symbol (|)</strong> and <strong>dash symbol (-)</strong>. Pipe symbol <strong>(|)</strong> is used for making columns, and dash symbol <strong>(-)</strong> is used for making the rows.</p> <p>The table creation is shown below:</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook16.png" alt="Types of cells in Jupyter Notebook"> <p>The following screenshot shows the table content of markdown cell.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook17.png" alt="Types of cells in Jupyter Notebook"> <h3 class="h4">Images</h3> <p>To insert the image in a markdown cell, you first need to insert the image in the same directory. For this, go to <strong>Jupyter dashboard -&gt; select Upload</strong>, specify the path of an image then click on <strong>Open</strong>. </p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook18.png" alt="Types of cells in Jupyter Notebook"> <br> <p>Once the image is seen in the dashboard click on the Upload, you can see that image is uploaded in the dashboard. </p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook19.png" alt="Types of cells in Jupyter Notebook"> <p>Now, go to your current Notebook, and type the following code to insert the image.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook20.png" alt="Types of cells in Jupyter Notebook"> <p>The following screenshot shows that the image is inserted on the Notebook. </p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook21.png" alt="Types of cells in Jupyter Notebook"> <h3 class="h3">3. Raw NBConvert Cell</h3> <p>Raw NBConvert Cell provides a place where you can write output directly. These cells are not evaluated by the notebook kernel. </p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook22.png" alt="Types of cells in Jupyter Notebook"> <h3 class="h3">4. Heading Cell</h3> <p>The Jupyter Notebook does not support the heading cell. When you select the Heading from the drop-down menu, a pop will open on the screen which is shown in the below screenshot. </p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/types-of-cells-in-jupyter-notebook23.png" alt="Types of cells in Jupyter Notebook"> 
+           <hr> <h2 id="IPyWidgets" class="h2">IPyWidgets in the Jupyter Notebook</h2> <p>The ipywidgets provides many common user interfaces for exploring code and data interactively. </p> <p>By default, ipywidgets are installed in Anaconda or you can also install it manually with conda.</p> <p>Some example of ipywidges are given below:</p> <h3 class="h4">1. Text widget</h3> <p>The text widget allows the user to write the String:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+from ipywidgets import widgets
+title_textbox = widgets.Text(
+    value = 'Hello World',
+    description = 'Title:',
+)
+title_textbox
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/ipywidgets-in-jupyter-notebook.png" alt="IPyWidgets in the Jupyter Notebook"> <h3 class="h4">2. Button widget</h3> <p>The button widget is similar to the HTML button. To create button, type the following code.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+from ipywidgets import widgets
+button = widgets.Button(
+    description='Press Me',
+)
+button
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/ipywidgets-in-jupyter-notebook2.png" alt="IPyWidgets in the Jupyter Notebook"> <h3 class="h4">3. color picker</h3> The Color picker allows you to select a color as per to your requirement.<p></p> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+from ipywidgets import widgets
+color_picker = widgets.ColorPicker(
+    concise = True,
+    description = 'Background color:',
+    value = '#efefef',
+)
+color_picker
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/ipywidgets-in-jupyter-notebook3.png" alt="IPyWidgets in the Jupyter Notebook"> <p>When you click on the square box, the following pop up will open.</p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/ipywidgets-in-jupyter-notebook3_2.png" alt="IPyWidgets in the Jupyter Notebook"> <h3 class="h4">4. Slider</h3> <p>Sider is used to find the range and interval between two entities.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+from ipywidgets import widgets
+range_slider = widgets.FloatRangeSlider(
+    value = [-2., +10.],
+    min = -10., max = +20., step = 0.1,
+    description = 'range:',
+    readout_format = '.1f',
+)
+range_slider
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/ipywidgets-in-jupyter-notebook4.png" alt="IPyWidgets in the Jupyter Notebook"> <p class="pq"><strong>Example: Write a code to add two numbers.</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+from ipywidgets import widgets
+lb1 = widgets.Label('Enter the First number')
+display(lb1)
+text1 = widgets.Text()
+display(text1)
+lb2 = widgets.Label('Enter the Second number')
+display(lb2)
+text2 = widgets.Text()
+display(text2)
+btn = widgets.Button(description = "add")
+display(btn)
+lb3 = widgets.Label()
+display(lb3)
+def add(x):
+    a = int(text1.value)
+    b = int(text2.value)
+    lb3.value = 'result='+str(a+b)
+btn.on_click(add)
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/jupyter-notebook/images/ipywidgets-in-jupyter-notebook5.png" alt="IPyWidgets in the Jupyter Notebook"> 
+           <hr> <h2 class="h2">Prerequisite</h2> <p>Before learning Jupyter Notebook, you must have the basic knowledge of HTML, CSS, and JavaScript.</p> <h2 class="h2">Audience</h2> <p>Our Jupyter Notebook tutorial is designed to help beginners.</p> <h2 class="h2">Problem</h2> <p>We assure that you will not find any problem in this Jupyter Notebook tutorial. But if there is any mistake or error, please post the error in the contact form.</p> 
+           <hr> <br><br> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="66000303020407050d260c0710071216090f08124805090b">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/jupyter-notebook"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/jupyter-notebook"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/jupyter-notebook"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7e160c3e141f081f0a0e1117100a501d1113">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6d051f2d070c1b0c191d02040319430e020043">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

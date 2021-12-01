@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Python Tkinter Tutorial - Javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Python Tkinter Tutorial - Javatpoint">
+  <meta property="og:description" content="Python Tkinter Tutorial with python tutorial, tkinter, button, overview, entry, checkbutton, canvas, frame, environment set-up, first python program, basics, data types, operators, etc."> 
+  <meta name="keywords" content="python tutorial, tkinter, button, overview, checkbutton, canvas, frame, entry, environment set-up, first python program, basics, data types, operators, if-else statements, loops, history, features, history, versions, example, operators, variables">
+  <meta name="description" content="Python Tkinter Tutorial with python tutorial, tkinter, button, overview, entry, checkbutton, canvas, frame, environment set-up, first python program, basics, data types, operators, etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/python-tkinter"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Python Tkinter Tutorial - Javatpoint">
+  <meta name="twitter:description" property="og:description" content="Python Tkinter Tutorial with python tutorial, tkinter, button, overview, entry, checkbutton, canvas, frame, environment set-up, first python program, basics, data types, operators, etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/python-tkinter">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/icon/home.png" alt="home"> Home</a></li> 
+       <li><a href="python-tutorial" class="selected"><img src="https://static.javatpoint.com/images/icon/python.png" alt="python"> Python</a></li> 
+       <li><a href="python-if-else"><img src="https://static.javatpoint.com/images/icon/if-else.png" alt="If Else"> If Else</a></li> 
+       <li><a href="python-for-loop"><img src="https://static.javatpoint.com/images/icon/forloop.png" alt="For Loop"> For Loop</a></li> 
+       <li><a href="python-functions"><img src="https://static.javatpoint.com/images/icon/function.png" alt="Function"> Function</a></li> 
+       <li><a href="python-arrays"><img src="https://static.javatpoint.com/images/icon/array.png" alt="Array"> Array</a></li> 
+       <li><a href="python-strings"><img src="https://static.javatpoint.com/images/icon/string.png" alt="String"> String</a></li> 
+       <li><a href="python-regex"><img src="https://static.javatpoint.com/images/icon/regex.png" alt="Regex"> Regex</a></li> 
+       <li><a href="python-lists"><img src="https://static.javatpoint.com/images/icon/list.png" alt="List"> List</a></li> 
+       <li><a href="python-set"><img src="https://static.javatpoint.com/images/icon/set.png" alt="Set"> Set</a></li> 
+       <li><a href="python-tuples"><img src="https://static.javatpoint.com/images/icon/tuple.png" alt="Tuple"> Tuple</a></li> 
+       <li><a href="python-dictionary"><img src="https://static.javatpoint.com/images/icon/dictionary.png" alt="Dictionary"> Dictionary</a></li> 
+       <li><a href="python-programs"><img src="https://static.javatpoint.com/images/icon/programs.png" alt="Programs"> Programs</a></li> 
+       <li><a href="numpy-tutorial"><img src="https://static.javatpoint.com/images/icon/numpy.png" alt="Numpy"> Numpy</a></li> 
+       <li><a href="python-interview-questions"><img src="https://static.javatpoint.com/images/icon/interview.png" alt="interview questions"> Interview Questions</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Python Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="python-tutorial">Python Tutorial</a> <a href="python-features">Python Features</a> <a href="python-history">Python History</a> <a href="python-applications">Python Applications</a> <a href="how-to-install-python">Python Install</a> <a href="python-example">Python Example</a> <a href="python-variables">Python Variables</a> <a href="python-data-types">Python Data Types</a> <a href="python-keywords">Python Keywords</a> <a href="python-literals">Python Literals</a> <a href="python-operators">Python Operators</a> <a href="python-comments">Python Comments</a> <a href="python-if-else">Python If else</a> <a href="python-loops">Python Loops</a> <a href="python-for-loop">Python For Loop</a> <a href="python-while-loop">Python While Loop</a> <a href="python-break">Python Break</a> <a href="python-continue">Python Continue</a> <a href="python-pass">Python Pass</a> <a href="python-strings"><span>Python Strings</span></a> <a href="python-lists"><span>Python Lists</span></a> <a href="python-tuples"><span>Python Tuples</span></a> <a href="python-list-vs-tuple">Python List Vs Tuple</a> <a href="python-set"><span>Python Sets</span></a> <a href="python-dictionary"><span>Python Dictionary</span></a> <a href="python-functions"><span>Python Functions</span></a> <a href="python-built-in-functions"><span>Python Built-in Functions</span></a> <a href="python-lambda-functions"><span>Python Lambda Functions</span></a> <a href="python-files-io"><span>Python Files I/O</span></a> <a href="python-modules"><span>Python Modules</span></a> <a href="python-exception-handling"><span>Python Exceptions</span></a> <a href="python-date"><span>Python Date</span></a> <a href="python-regex">Python Regex</a> <a href="python-sending-email">Python Sending Email</a> <a href="python-read-csv-file">Read CSV File</a> <a href="python-write-csv-file">Write CSV File</a> <a href="python-read-excel-file">Read Excel File</a> <a href="python-write-excel-file">Write Excel File</a> <a href="python-assert-keyword">Python Assert</a> <a href="python-list-comprehension">Python List Comprehension</a> <a href="python-collection-module">Python Collection Module</a> <a href="python-math-module">Python Math Module</a> <a href="python-os-module">Python OS Module</a> <a href="python-random-module">Python Random Module</a> <a href="python-statistics-module">Python Statistics Module</a> <a href="python-sys-module">Python Sys Module</a> <a href="python-ides">Python IDEs</a> <a href="python-arrays">Python Arrays</a> <a href="python-command-line-arguments">Command Line Arguments</a> <a href="python-magic-method">Python Magic Method</a> <a href="python-stack-and-queue">Python Stack &amp; Queue</a> <a href="pyspark-mllib">PySpark MLlib</a> <a href="python-decorator">Python Decorator</a> <a href="python-generators">Python Generators</a> <a href="web-scraping-using-python">Web Scraping Using Python</a> <a href="python-json">Python JSON</a> <a href="python-itertools">Python Itertools</a> <a href="python-multiprocessing">Python Multiprocessing</a> <a href="how-to-calculate-distance-between-two-points-using-geopy">How to Calculate Distance between Two Points using GEOPY</a> <a href="gmail-api-in-python">Gmail API in Python</a> <a href="how-to-plot-the-google-map-using-folium-package-in-python">How to Plot the Google Map using folium package in Python</a> <a href="grid-search-in-python">Grid Search in Python</a> <a href="python-high-order-function">Python High Order Function</a> <a href="nsetools-in-python">nsetools in Python</a> <a href="python-program-to-find-the-nth-fibonacci-number">Python program to find the nth Fibonacci Number</a> <a href="python-opencv-object-detection">Python OpenCV object detection</a> <a href="python-simpleimputer-module">Python SimpleImputer module</a> <a href="second-largest-number-in-python">Second Largest Number in Python</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Python OOPs</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="python-oops-concepts">Python OOPs Concepts</a> <a href="python-objects-classes">Python Object Class</a> <a href="python-constructors">Python Constructors</a> <a href="inheritance-in-python">Python Inheritance</a> <a href="abstraction-in-python">Abstraction in Python</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Python MySQL</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="python-mysql-environment-setup">Environment Setup</a> <a href="python-mysql-database-connection">Database Connection</a> <a href="python-mysql-creating-new-database">Creating New Database</a> <a href="python-mysql-creating-tables">Creating Tables</a> <a href="python-mysql-insert-operation">Insert Operation</a> <a href="python-mysql-read-operation">Read Operation</a> <a href="python-mysql-update-operation">Update Operation</a> <a href="python-mysql-join-operation">Join Operation</a> <a href="python-mysql-performing-transactions">Performing Transactions</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Python MongoDB</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="python-mongodb">Python MongoDB</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Python SQLite</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="python-sqlite">Python SQLite</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Python Questions</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="how-to-install-python-in-windows">How to install Python in Windows</a> <a href="how-to-reverse-a-string-in-python">How to reverse a string in Python</a> <a href="how-to-read-csv-file-in-python">How to read CSV file in Python</a> <a href="how-to-run-python-program">How to run Python Program</a> <a href="how-to-take-input-in-python">How to take input in Python</a> <a href="how-to-convert-list-to-string-in-python">How to convert list to string in Python</a> <a href="how-to-append-element-in-the-list">How to append element in the list</a> <a href="how-to-compare-two-lists-in-python">How to compare two lists in Python</a> <a href="how-to-convert-int-to-string-in-python">How to convert int to string in Python</a> <a href="how-to-create-a-dictionary-in-python">How to create a dictionary in Python</a> <a href="how-to-create-a-virtual-environment-in-python">How to create a virtual environment in Python</a> <a href="how-to-declare-a-variable-in-python">How to declare a variable in Python</a> <a href="how-to-install-matplotlib-in-python">How to install matplotlib in Python</a> <a href="how-to-install-opencv-in-python">How to install OpenCV in Python</a> <a href="how-to-print-in-same-line-in-python">How to print in same line in Python</a> <a href="how-to-read-json-file-in-python">How to read JSON file in Python</a> <a href="how-to-read-a-text-file-in-python">How to read a text file in Python</a> <a href="how-to-use-for-loop-in-python">How to use for loop in Python</a> <a href="is-python-scripting-language">Is Python scripting language</a> <a href="how-long-does-it-take-to-learn-python">How long does it take to learn Python</a> <a href="how-to-concatenate-two-strings-in-python">How to concatenate two strings in Python</a> <a href="how-to-connect-database-in-python">How to connect Database in Python</a> <a href="how-to-convert-list-to-dictionary-in-python">How to convert list to dictionary in Python</a> <a href="how-to-declare-a-global-variable-in-python">How to declare a global variable in Python</a> <a href="how-to-reverse-a-number-in-python">How to reverse a number in Python</a> <a href="what-is-an-object-in-python">What is an object in Python</a> <a href="which-is-the-fastest-implementation-of-python">Which is the fastest implementation of Python</a> <a href="how-to-clear-python-shell">How to clear Python shell</a> <a href="how-to-create-a-dataframes-in-python">How to create a DataFrames in Python</a> <a href="how-to-develop-a-game-in-python">How to develop a game in Python</a> <a href="how-to-install-tkinter-in-python">How to install Tkinter in Python</a> <a href="how-to-plot-a-graph-in-python">How to plot a graph in Python</a> <a href="how-to-print-pattern-in-python">How to print pattern in Python</a> <a href="how-to-remove-an-element-from-a-list-in-python">How to remove an element from a list in Python</a> <a href="how-to-round-number-in-python">How to Round number in Python</a> <a href="how-to-sort-a-dictionary-in-python">How to sort a dictionary in Python</a> <a href="strong-number-in-python">Strong Number in Python</a> <a href="how-to-convert-text-to-speech-in-python">How to Convert Text to Speech in Python </a> <a href="bubble-sort-in-python">Bubble Sort in Python</a> <a href="logging-in-python">Logging in Python</a> <a href="insertion-sort-in-python">Insertion Sort in Python</a> <a href="binary-search-in-python">Binary Search in Python</a> <a href="linear-search-in-python">Linear Search in Python</a> <a href="python-vs-scala">Python vs Scala</a> <a href="queue-in-python">Queue in Python</a> <a href="stack-in-python">Stack in Python</a> <a href="heap-sort-in-python">Heap Sort in Python</a> <a href="palindrome-program-in-python">Palindrome program in python</a> <a href="program-of-cumulative-sum-in-python">Program of Cumulative sum in python</a> <a href="merge-sort-in-python">Merge Sort in Python</a> <a href="python-matrix">Python Matrix</a> <a href="python-unit-testing">Python Unit Testing</a> <a href="python-forensics-and-virtualization">Forensics &amp; Virtualization</a> <a href="best-books-to-learn-python">Best Books to Learn Python</a> <a href="best-books-to-learn-django-for-beginners-and-advance-programmers">Best Books to Learn Django</a> <a href="gcd-of-two-number-in-python">GCD of two number in python</a> <a href="python-program-to-generate-a-random-string">Python Program to generate a Random String</a> <a href="how-to-one-hot-encode-sequence-data-in-python">How to One Hot Encode Sequence Data in Python</a> <a href="how-to-write-square-root-in-python">How to write square root in Python</a> <a href="pointer-in-python">Pointer in Python</a> <a href="python-2d-array">Python 2D array</a> <a href="python-memory-management">Python Memory Management</a> <a href="python-libraries-for-data-visualization">Python Libraries for Data Visualization</a> <a href="how-to-call-a-function-in-python">How to call a function in Python</a> <a href="git-modules-in-python">Git Modules in Python</a> <a href="top-python-frameworks-for-gaming">Top Python Frameworks for Gaming</a> <a href="python-audio-modules">Python Audio Modules</a> <a href="wikipedia-module-in-python">Wikipedia Module in Python</a> <a href="python-random-randrange">Python random randrange()</a> <a href="permutation-and-combination-in-python">Permutation and Combination in Python</a> <a href="getopt-module-in-python">Getopt module in Python</a> <a href="merge-two-dictionaries-in-python">Merge two Dictionaries in Python</a> <a href="multithreading-in-python-3">Multithreading in Python 3</a> <a href="static-in-python">Static in Python</a> <a href="how-to-get-the-current-date-in-python">How to get the current date in Python</a> <a href="argparse-in-python">argparse in Python</a> <a href="python-tqdm-module">Python tqdm Module</a> <a href="caesar-cipher-in-python">Caesar Cipher in Python</a> <a href="tokenizer-in-python">Tokenizer in Python</a> <a href="how-to-add-two-lists-in-python">How to add two lists in Python</a> <a href="shallow-copy-and-deep-copy-in-python">Shallow Copy and Deep Copy in Python</a> <a href="atom-python">Atom Python</a> <a href="contains-in-python">Contains in Python</a> <a href="label-encoding-in-python">Label Encoding in Python</a> <a href="django-vs-node-js">Django vs. Node JS</a> <a href="python-frameworks">Python Frameworks</a> <a href="how-to-create-a-vector-in-python-using-numpy">How to create a vector in Python using NumPy</a> <a href="pickle-module-of-python">Pickle Module of Python</a> <a href="how-to-convert-bytes-to-string-in-python">How to convert Bytes to string in Python</a> <a href="python-program-to-find-anagram">Python Program to Find Anagram</a> <a href="how-to-convert-list-to-set">How to convert List to Set</a> <a href="python-vs-javascript">Python vs JavaScript</a> <a href="python-holidays-module">Python Holidays Module</a> <a href="fuzzywuzzy-python-library">FuzzyWuzzy Python Library</a> <a href="dask-python">Dask Python</a> <a href="dask-python-part-2">Dask Python (Part 2)</a> <a href="mode-in-python">Mode in Python</a> <a href="menu-driven-programs-in-python">Menu-Driven Programs in Python</a> <a href="python-array-vs-list">Python Array vs. List</a> <a href="what-is-duck-typing-in-python">What is duck typing in Python</a> <a href="pep-8-in-python">PEP 8 in Python</a> <a href="python-user-groups">Python User Groups</a> <a href="basic-commands-in-python">Basic Commands in Python</a> <a href="f-string-in-python">F String in Python</a> <a href="how-brython-works">How Brython Works</a> <a href="how-to-use-brython-in-the-browser">How to use Brython in the Browser</a> <a href="arima-model-in-python">Arima Model in Python</a> <a href="python-modulus-operator">Python Modulus Operator</a> <a href="matlab-vs-python">MATLAB vs. Python</a> <a href="method-resolution-order-in-python">Method Resolution Order in Python</a> <a href="monkey-patching-in-python">Monkey Patching in Python</a> <a href="python__call__method">Python __call__ method</a> <a href="python-heapq-module">Python heapq module</a> <a href="python-substring">Python Substring</a> <a href="project-ideas-for-python-beginners">Project ideas for Python Beginners</a> <a href="python-faker">Python Faker</a> <a href="fizz-buzz-program-in-python">Fizz-Buzz Program in Python</a> <a href="tabula-python">Tabula Python</a> <a href="python-program-to-print-prime-factor-of-given-number">Python Program to Print Prime Factor of Given Number</a> <a href="python-program-to-print-pascal-triangle">Python Program to Print Pascal Triangle</a> <a href="namedtuple-in-python">NamedTuple in Python</a> <a href="ordereddict-in-python">OrderedDict in Python</a> <a href="t-test-in-python">T-Test in Python</a> <a href="python-return-statement">Python return statement</a> <a href="getter-and-setter-in-python">Getter and Setter in Python</a> <a href="enum-class-in-python">Enum class in Python</a> <a href="destructors-in-python">Destructors in Python</a> <a href="curve-fit-in-python">Curve Fit in Python</a> <a href="converting-csv-to-json-in-python">Converting CSV to JSON in Python</a> <a href="underscore-in-python">Underscore (_) in Python</a> <a href="set-vs-list-in-python">Set vs List in Python</a> <a href="locating-and-executing-modules-in-python">Locating and Executing Modules</a> <a href="flatten-list-in-python">Flatten List in Python</a> <a href="pair-plot-in-python">Pair Plot in Python</a> <a href="data-hiding-in-python">Data Hiding in Python</a> <a href="python-program-to-find-intersection-of-two-lists">Python Program to Find Intersection of Two Lists</a> <a href="how-to-create-requirements-txt-file-in-python">How to Create Requirements.txt File in Python</a> <a href="tic-tac-toe-in-python">Tic-Tac-Toe in Python</a> <a href="python-asynchronous-programming-asyncio-and-await">Python Asynchronous Programming - asyncio and await</a> <a href="python-main-function">Python main() function</a> <a href="strftime-function-in-python">strftime() function in Python</a> <a href="verbose-flag-in-python-regex">Verbose Flag in Python Regex</a> <a href="python-ast-module">Python AST Module</a> <a href="python-requests-module-http-request">Python Requests Module - HTTP Request</a> <a href="shutil-module-in-python">Shutil Module in Python</a> <a href="python-epoch-to-datetime">Python epoch to Datetime</a> <a href="python-del-statement">Python del Statement</a> <a href="looping-technique-in-python">Looping technique in Python</a> <a href="metaprogramming-with-metaclasses-in-python">Metaprogramming with Metaclasses in Python</a> <a href="precision-handling-in-python">Precision Handling in Python</a> <a href="python-join-list">Python Join List</a> <a href="strip-function-in-python">strip() function in Python</a> <a href="gradient-descent-algorithm">Gradient Descent Algorithm</a> <a href="prettytable-in-python">Prettytable in Python</a> <a href="sentiment-analysis-in-python">Sentiment Analysis in Python</a> <a href="convert-python-list-to-numpy-arrays">Convert Python List to NumPy Arrays</a> <a href="traceback-in-python">Traceback in Python</a> <a href="time-clock-method-in-python">Time clock() Method in Python</a> <a href="deque-in-python">Deque in Python</a> <a href="dictionary-comprehension-in-python">Dictionary Comprehension in Python</a> <a href="python-data-analytics">Python Data Analytics</a> <a href="python-seek-method">Python seek() Method</a> <a href="ternary-operator-in-python">Ternary Operator in Python</a> <a href="how-to-calculate-area-of-circle-using-python">How to Calculate the Area of the Circle using Python</a> <a href="how-to-write-in-text-file-using-python">How to Write in Text File using Python</a> <a href="python-keyerror">Python KeyError</a> <a href="python-super-function">Python super() Function</a> <a href="max-function-in-python">max() function in Python</a> <a href="fraction-module-in-python">Fraction Module in Python</a> <a href="popular-python-framework-to-build-api">Popular Python Framework to Build API</a> <a href="how-to-check-python-version">How to Check Python version</a> <a href="python-s-string-formatting">Python %s - String Formatting</a> <a href="python-seaborn-library">Python seaborn Library</a> <a href="countplot-in-python">Countplot in Python</a> <a href="range-vs-xrange-python">range() Vs. Xrange() Python</a> <a href="wordcloud-package-in-python">Wordcloud Package in Python</a> <a href="convert-dataframe-into-list">Convert dataframe into list</a> <a href="anova-test-in-python">ANOVA Test in Python</a> <a href="python-program-to-find-compound-interest">Python program to find compound interest</a> <a href="ansible-in-python">Ansible in Python</a> <a href="python-important-tips-and-tricks">Python Important Tips and Tricks</a> <a href="python-coroutines">Python Coroutines</a> <a href="double-underscores-in-python">Double Underscores in Python</a> <a href="re-search-vs-re-findall-in-python-regex">re.search() VS re.findall() in Python Regex</a> <a href="how-to-install-statsmodels-in-python">How to install statsmodels in Python</a> <a href="cos-in-python">Cos in Python</a> <a href="vif-in-python">vif in Python</a> <a href="__add__-in-python">__add__ Method in Python</a> <a href="ethical-hacking-with-python">Ethical Hacking with Python</a> <a href="class-variable-vs-instance">Class Variable vs Instance</a> <a href="perfect-number-in-python">Perfect Number in Python</a> <a href="eol-in-python">EOL in Python</a> <a href="python-program-to-convert-hexadecimal-string-to-decimal-string">Python Program to convert Hexadecimal String to Decimal String</a> <a href="different-methods-in-python-for-swapping-two-numbers-without-using-third-variable">Different Methods in Python for Swapping Two Numbers without using third variable</a> <a href="how-to-change-plot-size-in-matplotlib">How to Change Plot Size in Matplotlib</a> <a href="how-to-get-zip-code-in-python">How to Get the Zip Code in Python</a> <a href="eel-in-python">Eel in Python</a> <a href="assignment-operators-in-python">Assignment Operators in Python</a> <a href="speech-recognition-python">Speech Recognition python</a> <a href="yield-vs-return-in-python">Yield vs Return in Python</a> <a href="graphene-python">Graphene Python</a> <a href="name-mangling-in-python">Name Mangling in Python</a> <a href="python-combination-without-itertools">Python combination without itertools</a> <a href="python-comprehensions">Python Comprehensions</a> <a href="Influxdb-in-python">InfluxDB in Python</a> <a href="kafka-in-python">Kafka Tutorial in Python</a> <a href="augmented-assignment-expressions-in-python">Augmented Assignment Expressions in Python</a> <a href="python-x-y-software">Python (x,y) Software</a> <a href="python-event-driven-programming">Python Event-Driven programming</a> <a href="python-semaphore">Python Semaphore</a> <a href="python-sorted-reverse">Python sorted reverse</a> <a href="automorphic-number-in-python">Automorphic Number in Python</a> <a href="sizeof-in-python">sizeof in Python</a> <a href="python-program-for-accepting-the-strings-which-contains-all-vowels">Python Program for accepting the strings which contains all vowels</a> <a href="class-based-views-vs-function-based-views">Class-based views vs Function-Based Views</a> <a href="how-to-handle-cookies-in-django">How to handle cookies in Django</a> <a href="agg-function-in-python">agg() function in Python</a> <a href="amicable-numbers-in-python">Amicable Numbers in Python</a> <a href="context-manager-in-python">Context Manager in Python</a> <a href="create-bmi-calculator-using-python">Create BMI Calculator using Python</a> <a href="string-to-binary-in-python">String to Binary in Python</a> <a href="what-is-script-mode-in-python">What is script mode in Python</a> <a href="best-python-libraries-for-machine-learning">Best Python libraries for Machine Learning</a> <a href="python-program-to-display-calendar-of-given-year">Python Program to Display Calendar of Given Year</a> <a href="how-to-open-url-in-python">How to open URL in Python</a> <a href="broken-pipe-error-in-python">Broken Pipe Error in Python</a> <a href="code-template-for-creating-objects-in-python">Code Template for Creating Objects in Python</a> <a href="python-program-to-calculate-the-best-time-to-buy-and-sell-stock">Python program to calculate the best time to buy and sell stock</a> <a href="tuple-to-string-in-python">Tuple to String in Python</a> <a href="kadanes-algorithm-in-python">Kadane's Algorithm in Python</a> <a href="loggers-in-django">Loggers in Django</a> <a href="weather-app-in-django">Weather App in Django</a> <a href="missing-data-conundrum-exploration-and-imputation-techniques">Missing Data Conundrum: Exploration and Imputation Techniques</a> <a href="different-methods-of-array-rotation-in-python">Different Methods of Array Rotation in Python</a> <a href="what-is-operator-overloading-in-python">What is Operator Overloading in Python</a> <a href="defaultdict-in-python">Defaultdict in Python</a> <a href="operator-module-in-python">Operator Module in Python</a> <a href="spinner-widget-in-kivy-library-of-python">Spinner Widget in the kivy Library of Python</a> <a href="number-plate-recognition-using-python">Number Plate Recognition using Python</a> <a href="obfuscating-a-python-program">Obfuscating a Python program</a> <a href="convert-string-to-dictionary-in-python">Convert string to dictionary in Python</a> <a href="convert-string-to-json-in-python">Convert string to JSON in Python</a> <a href="dbscan-algorithm-in-python">DBSCAN algorithm in Python</a> <a href="how-to-write-a-code-for-printing-python-exception-errorhierarchy">How to Write a Code for Printing the Python Exception/Error Hierarchy</a> <a href="principal-component-analysis-with-python">Principal Component Analysis (PCA) with Python</a> <a href="python-program-to-find-number-of-days-between-two-given-dates">Python Program to Find Number of Days Between Two Given Dates</a> <a href="object-recognition-using-python">Object Recognition using Python</a> <a href="python-vlc-module">Python VLC module</a> <a href="set-to-list-in-python">Set to list in Python</a> <a href="string-to-int-in-python">String to int in Python</a> <a href="internet-of-things-with-python">Internet of Things with Python</a> <a href="python-pysftp-module">Python pysftp module</a> <a href="amazing-hacks-of-python">Amazing hacks of Python</a> <a href="average-of-list-in-python">Average of list in Python</a> <a href="check-installed-modules-in-python">Check Installed Modules in Python</a> <a href="choice-in-python">choice() in Python</a> <a href="convert-list-to-dataframe-in-python">Convert List to dataframe in Python</a> <a href="convert-string-to-float-in-python">Convert String to Float in Python</a> <a href="decorators-with-parameters-in-python">Decorators with Parameters in Python</a> <a href="dynamic-typing-in-python">Dynamic Typing in Python</a> <a href="fabs-in-python">Fabs in Python</a> <a href="how-to-remove-decimal-in-python">How to Remove Decimal in Python</a> <a href="python-closure">Python Closure</a> <a href="python-glob-module">Python Glob Module</a> <a href="writing-a-python-module">Writing a Python Module</a> <a href="modules-vs-packages-in-python">Modules vs Packages in Python</a> <a href="snmp-module-in-python">SNMP module in Python</a> <a href="average-of-list-in-python">Average of list in Python</a> <a href="append-vs-extend-vs-insert-in-python">Append vs Extend vs Insert in Python</a> <a href="how-to-remove-duplicates-from-a-list-in-python">How to Remove Duplicates from a list in Python</a> <a href="remove-multiple-characters-from-a-string-in-python">Remove Multiple Characters from a String in Python</a> <a href="shuffle-in-python">Shuffle in Python</a> <a href="floor-and-ceil-functions-in-python">floor() and ceil() Functions in Python</a> <a href="sqrt-math-function-of-python">sqrt(): Math Function of Python</a> <a href="python-yfinance-module">Python yfinance Module</a> <a href="difflib-module-in-python">Difflib module in Python</a> <a href="convert-the-column-type-from-string-to-datetime-format-in-pandas-dataframe">Convert the Column Type from String to Datetime Format in Pandas DataFrame</a> <a href="python-wxpython-module">Python wxPython Module</a> <a href="random-uniform-python">Random Uniform Python</a> <a href="relational-operators-in-python">Relational Operators in Python</a> <a href="string-to-list-in-python">String to List in Python</a> <a href="chatbot-in-python">Chatbot in Python</a> <a href="how-to-convert-float-to-int-in-python">How to Convert float to int in Python</a> <a href="multiply-all-elements-in-list-of-python">Multiply All Elements in list of Python</a> <a href="module-vs-function-in-python">module vs function in Python</a> <a href="reverse-a-tuple-in-python">Reverse a tuple in Python</a> <a href="tuple-to-dictionary-in-python">Tuple to Dictionary in Python</a> <a href="datetime-timedelta-function-of-python">datetime.timedelta() Function of Python</a> <a href="python-bio-module">Python Bio Module</a> <a href="python-dash-module">Python Dash Module</a> <a href="how-to-select-rows-in-pandas-dataframe-based-on-conditions">How to Select rows in Pandas DataFrame Based on Conditions</a> <a href="typecasting-in-python">Typecasting in Python</a> <a href="dateutil-module-in-python">Dateutil module in Python</a> <a href="getpass-module-in-python">Getpass module in Python</a> <a href="python-wand-library">Python Wand library</a> <a href="generate-a-qr-code-using-python">Generate a QR Code using Python</a> <a href="best-python-pdf-library">Best Python PDF Library</a> <a href="python-cachetools-module">Python Cachetools Module</a> <a href="python-cmdparser-module">Python Cmdparser Module</a> <a href="python-dash-module">Python Dash module</a> <a href="python-emoji-module">Python Emoji Module</a> <a href="python-nmap-module">Python Nmap Module</a> <a href="python-pylab-module">Python PyLab Module</a> <a href="working-with-pdf-files-in-python">Working with PDF files in Python</a> <a href="pdf-handling-in-python">PDF Handling in Python</a> <a href="manipulating-pdf-using-python">Manipulating PDF using Python</a> <a href="list-all-functions-from-a-python-module">List All Functions from a Python Module</a> <a href="python-list-of-dictionaries">Python list of Dictionaries</a> <a href="python-shelve-module">Python Shelve Module</a> <a href="creating-interactive-pdf-forms-using-python">Creating Interactive PDF forms using Python</a> <a href="python-newspaper-module">Python Newspaper Module</a> <a href="how-to-connect-wi-fi-using-python">How to Connect Wi-Fi using Python</a> <a href="best-python-libraries-used-for-ethical-hacking">Best Python Libraries used for Ethical Hacking</a> <a href="windows-system-administration-management-using-python">Windows System Administration Management using Python</a> <a href="indentation-error-in-python">Indentation Error in Python</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Python Tkinter (GUI)</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="python-tkinter">Python Tkinter</a> <a href="python-tkinter-button">Tkinter Button</a> <a href="python-tkinter-canvas">Tkinter Canvas</a> <a href="python-tkinter-checkbutton">Tkinter Checkbutton</a> <a href="python-tkinter-entry">Tkinter Entry</a> <a href="python-tkinter-frame">Tkinter Frame</a> <a href="python-tkinter-label">Tkinter Label</a> <a href="python-tkinter-listbox">Tkinter Listbox</a> <a href="python-tkinter-menubutton">Tkinter Menubutton</a> <a href="python-tkinter-menu">Tkinter Menu</a> <a href="python-tkinter-message">Tkinter Message</a> <a href="python-tkinter-radiobutton">Tkinter Radiobutton</a> <a href="python-tkinter-scale">Tkinter Scale</a> <a href="python-tkinter-scrollbar">Tkinter Scrollbar</a> <a href="python-tkinter-text">Tkinter Text</a> <a href="python-tkinter-toplevel">Tkinter Toplevel</a> <a href="python-tkinter-spinbox">Tkinter Spinbox</a> <a href="python-tkinter-panedwindow">Tkinter PanedWindow</a> <a href="python-tkinter-labelframe">Tkinter LabelFrame</a> <a href="python-tkinter-messagebox">Tkinter MessageBox</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Python Web Blocker</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="python-website-blocker">Introduction</a> <a href="python-website-blocker-building-python-script">Building Python Script</a> <a href="python-website-blocker-script-deployment-on-linux">Script Deployment on Linux</a> <a href="python-website-blocker-script-deployment-on-windows">Script Deployment on Windows</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Python MCQ</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="python-mcq">Python MCQ</a> <a href="python-mcq-part-2">Python MCQ Part 2</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Related Tutorials</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="numpy-tutorial"><span>NumPy Tutorial</span></a> <a href="django-tutorial"><span>Django Tutorial</span></a> <a href="flask-tutorial"><span>Flask Tutorial</span></a> <a href="python-pandas"><span>Pandas Tutorial</span></a> <a href="pytorch"><span>Pytorch Tutorial</span></a> <a href="pygame"><span>Pygame Tutorial</span></a> <a href="matplotlib"><span>Matplotlib Tutorial</span></a> <a href="opencv"><span>OpenCV Tutorial</span></a> <a href="python-openpyxl"><span>Openpyxl Tutorial</span></a> <a href="python-cgi-programming">Python CGI</a> <a href="python-design-pattern"><span>Python Design Pattern</span></a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Python Programs</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="python-programs"><span>Python Programs</span></a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> 
+           <div id="bottomnextup"> <a class="next" href="python-tkinter-button">next &#x2192;</a> <a class="next" href="python-programs">&#x2190; prev</a> 
+           </div> <h1 class="h1">Python Tkinter Tutorial</h1> <img src="https://static.javatpoint.com/python/images/tkinter-tutorial.png" alt="Python Tkinter Tutorial" class="imageright"> <p>Tkinter tutorial provides basic and advanced concepts of Python Tkinter. Our Tkinter tutorial is designed for beginners and professionals.</p> <p>Python provides the standard library Tkinter for creating the graphical user interface for desktop based applications.</p> <p>Developing desktop based applications with python Tkinter is not a complex task. An empty Tkinter top-level window can be created by using the following steps.</p> 
+           <ol class="points"> 
+            <li>import the Tkinter module.</li> 
+            <li>Create the main application window.</li> 
+            <li>Add the widgets like labels, buttons, frames, etc. to the window.</li> 
+            <li>Call the main event loop so that the actions can take place on the user's computer screen.</li> 
+           </ol> <h3 class="h3">Example</h3> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+# !/usr/bin/python3
+from tkinter import *
+#creating the application main window. 
+top = Tk()
+#Entering the event main loop
+top.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/python/images/python-tkinter.png" alt="Python Tkinter"> 
+           <hr> <h2 class="h2">Tkinter widgets </h2> <p>There are various widgets like button, canvas, checkbutton, entry, etc. that are used to build the python GUI applications.</p> 
+           <table class="alt"> 
+            <tbody>
+             <tr> 
+              <th>SN</th> 
+              <th>Widget</th> 
+              <th>Description</th> 
+             </tr> 
+             <tr> 
+              <td>1</td> 
+              <td><a href="python-tkinter-button">Button</a></td> 
+              <td>The Button is used to add various kinds of buttons to the python application.</td> 
+             </tr> 
+             <tr> 
+              <td>2</td> 
+              <td><a href="python-tkinter-canvas">Canvas</a></td> 
+              <td>The canvas widget is used to draw the canvas on the window.</td> 
+             </tr> 
+             <tr> 
+              <td>3</td> 
+              <td><a href="python-tkinter-checkbutton">Checkbutton</a></td> 
+              <td>The Checkbutton is used to display the CheckButton on the window.</td> 
+             </tr> 
+             <tr> 
+              <td>4</td> 
+              <td><a href="python-tkinter-entry">Entry</a></td> 
+              <td>The entry widget is used to display the single-line text field to the user. It is commonly used to accept user values.</td> 
+             </tr> 
+             <tr> 
+              <td>5</td> 
+              <td><a href="python-tkinter-frame">Frame</a></td> 
+              <td>It can be defined as a container to which, another widget can be added and organized.</td> 
+             </tr> 
+             <tr> 
+              <td>6</td> 
+              <td><a href="python-tkinter-label">Label</a></td> 
+              <td>A label is a text used to display some message or information about the other widgets.</td> 
+             </tr> 
+             <tr> 
+              <td>7</td> 
+              <td><a href="python-tkinter-listbox">ListBox</a></td> 
+              <td>The ListBox widget is used to display a list of options to the user.</td> 
+             </tr> 
+             <tr> 
+              <td>8</td> 
+              <td><a href="python-tkinter-menubutton">Menubutton</a></td> 
+              <td>The Menubutton is used to display the menu items to the user.</td> 
+             </tr> 
+             <tr> 
+              <td>9</td> 
+              <td><a href="python-tkinter-menu">Menu</a></td> 
+              <td>It is used to add menu items to the user.</td> 
+             </tr> 
+             <tr> 
+              <td>10</td> 
+              <td><a href="python-tkinter-message">Message</a></td> 
+              <td>The Message widget is used to display the message-box to the user.</td> 
+             </tr> 
+             <tr> 
+              <td>11</td> 
+              <td><a href="python-tkinter-radiobutton">Radiobutton</a></td> 
+              <td>The Radiobutton is different from a checkbutton. Here, the user is provided with various options and the user can select only one option among them.</td> 
+             </tr> 
+             <tr> 
+              <td>12</td> 
+              <td><a href="python-tkinter-scale">Scale</a></td> 
+              <td>It is used to provide the slider to the user. </td> 
+             </tr> 
+             <tr> 
+              <td>13</td> 
+              <td><a href="python-tkinter-scrollbar">Scrollbar</a></td> 
+              <td>It provides the scrollbar to the user so that the user can scroll the window up and down.</td> 
+             </tr> 
+             <tr> 
+              <td>14</td> 
+              <td><a href="python-tkinter-text">Text</a></td> 
+              <td>It is different from Entry because it provides a multi-line text field to the user so that the user can write the text and edit the text inside it.</td> 
+             </tr> 
+             <tr> 
+              <td>14</td> 
+              <td><a href="python-tkinter-toplevel">Toplevel</a></td> 
+              <td>It is used to create a separate window container.</td> 
+             </tr> 
+             <tr> 
+              <td>15</td> 
+              <td><a href="python-tkinter-spinbox">Spinbox</a></td> 
+              <td>It is an entry widget used to select from options of values.</td> 
+             </tr> 
+             <tr> 
+              <td>16</td> 
+              <td><a href="python-tkinter-panedwindow">PanedWindow</a></td> 
+              <td>It is like a container widget that contains horizontal or vertical panes.</td> 
+             </tr> 
+             <tr> 
+              <td>17</td> 
+              <td><a href="python-tkinter-labelframe">LabelFrame</a></td> 
+              <td>A LabelFrame is a container widget that acts as the container</td> 
+             </tr> 
+             <tr> 
+              <td>18</td> 
+              <td><a href="python-tkinter-messagebox">MessageBox</a></td> 
+              <td>This module is used to display the message-box in the desktop based applications.</td> 
+             </tr> 
+            </tbody>
+           </table> 
+           <hr> <h2 class="h2">Python Tkinter Geometry </h2> <p>The Tkinter geometry specifies the method by using which, the widgets are represented on display. The python Tkinter provides the following geometry methods.</p> 
+           <ol class="points"> 
+            <li>The pack() method </li> 
+            <li>The grid() method </li> 
+            <li>The place() method</li> 
+           </ol> <p>Let's discuss each one of them in detail.</p> <h3 class="h2">Python Tkinter pack() method </h3> <p>The pack() widget is used to organize widget in the block. The positions widgets added to the python application using the pack() method can be controlled by using the various options specified in the method call. </p> <p>However, the controls are less and widgets are generally added in the less organized manner. </p> <p>The syntax to use the pack() is given below.</p> <h3 class="h3">syntax</h3> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+widget.pack(options)
+</textarea>
+           </div> <p>A list of possible options that can be passed in pack() is given below.</p> 
+           <ul class="points"> 
+            <li><strong>expand:</strong> If the expand is set to true, the widget expands to fill any space. </li> 
+            <li><strong>Fill:</strong> By default, the fill is set to NONE. However, we can set it to X or Y to determine whether the widget contains any extra space.</li> 
+            <li><strong>size:</strong> it represents the side of the parent to which the widget is to be placed on the window.</li> 
+           </ul> <h3 class="h3">Example</h3> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+# !/usr/bin/python3
+from tkinter import *
+parent = Tk()
+redbutton = Button(parent, text = "Red", fg = "red")
+redbutton.pack( side = LEFT)
+greenbutton = Button(parent, text = "Black", fg = "black")
+greenbutton.pack( side = RIGHT )
+bluebutton = Button(parent, text = "Blue", fg = "blue")
+bluebutton.pack( side = TOP )
+blackbutton = Button(parent, text = "Green", fg = "red")
+blackbutton.pack( side = BOTTOM)
+parent.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/python/images/python-tkinter2.png" alt="Python Tkinter"> <h3 class="h2">Python Tkinter grid() method</h3> <p>The grid() geometry manager organizes the widgets in the tabular form. We can specify the rows and columns as the options in the method call. We can also specify the column span (width) or rowspan(height) of a widget. </p> <p>This is a more organized way to place the widgets to the python application. The syntax to use the grid() is given below.</p> <h3 class="h3">Syntax</h3> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+widget.grid(options)
+</textarea>
+           </div> <p>A list of possible options that can be passed inside the grid() method is given below.</p> 
+           <ul class="points"> 
+            <li><strong>Column</strong><br> The column number in which the widget is to be placed. The leftmost column is represented by 0. </li> 
+            <li><strong>Columnspan</strong> <br> The width of the widget. It represents the number of columns up to which, the column is expanded. </li> 
+            <li><strong>ipadx, ipady</strong><br> It represents the number of pixels to pad the widget inside the widget's border.</li> 
+            <li><strong>padx, pady </strong><br> It represents the number of pixels to pad the widget outside the widget's border.</li> 
+            <li><strong>row</strong><br> The row number in which the widget is to be placed. The topmost row is represented by 0.</li> 
+            <li><strong>rowspan</strong><br> The height of the widget, i.e. the number of the row up to which the widget is expanded.</li> 
+            <li><strong>Sticky</strong><br> If the cell is larger than a widget, then sticky is used to specify the position of the widget inside the cell. It may be the concatenation of the sticky letters representing the position of the widget. It may be N, E, W, S, NE, NW, NS, EW, ES.</li> 
+           </ul> <h3 class="h3">Example</h3> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+# !/usr/bin/python3
+from tkinter import *
+parent = Tk()
+name = Label(parent,text = "Name").grid(row = 0, column = 0)
+e1 = Entry(parent).grid(row = 0, column = 1)
+password = Label(parent,text = "Password").grid(row = 1, column = 0)
+e2 = Entry(parent).grid(row = 1, column = 1)
+submit = Button(parent, text = "Submit").grid(row = 4, column = 0)
+parent.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/python/images/python-tkinter3.png" alt="Python Tkinter"> <h3 class="h2">Python Tkinter place() method</h3> <p>The place() geometry manager organizes the widgets to the specific x and y coordinates.</p> <h3 class="h3">Syntax</h3> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+widget.place(options)
+</textarea>
+           </div> <p>A list of possible options is given below.</p> 
+           <ul class="points"> 
+            <li><strong>Anchor:</strong> It represents the exact position of the widget within the container. The default value (direction) is NW (the upper left corner)</li> 
+            <li><strong>bordermode:</strong> The default value of the border type is INSIDE that refers to ignore the parent's inside the border. The other option is OUTSIDE.</li> 
+            <li><strong>height, width:</strong> It refers to the height and width in pixels.</li> 
+            <li><strong>relheight, relwidth:</strong> It is represented as the float between 0.0 and 1.0 indicating the fraction of the parent's height and width.</li> 
+            <li><strong>relx, rely:</strong> It is represented as the float between 0.0 and 1.0 that is the offset in the horizontal and vertical direction.</li> 
+            <li><strong>x, y:</strong> It refers to the horizontal and vertical offset in the pixels.</li> 
+           </ul> <h3 class="h3">Example</h3> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+# !/usr/bin/python3
+from tkinter import *
+top = Tk()
+top.geometry("400x250")
+name = Label(top, text = "Name").place(x = 30,y = 50)
+email = Label(top, text = "Email").place(x = 30, y = 90)
+password = Label(top, text = "Password").place(x = 30, y = 130)
+e1 = Entry(top).place(x = 80, y = 50)
+e2 = Entry(top).place(x = 80, y = 90)
+e3 = Entry(top).place(x = 95, y = 130)
+top.mainloop()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/python/images/python-tkinter4.png" alt="Python Tkinter"> <h2 class="h2">Prerequisite</h2> <p>Before learning Tkinter, you must have the basic knowledge of Python.</p> <h2 class="h2">Audience</h2> <p>Our Python Tkinter tutorial is designed to help beginners and professionals.</p> <h2 class="h2">Problem</h2> <p>We assure that you will not find any problem in this Tkinter tutorial. But if there is any mistake, please post the problem in contact form.</p> 
+           <div class="nexttopicdiv"> <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="python-tkinter-button">Python Tkinter Button</a></span> 
+           </div> <br><br> 
+           <div id="bottomnext"> <a style="float:left" class="next" href="python-programs">&#x2190; prev</a> <a style="float:right" class="next" href="python-tkinter-button">next &#x2192;</a> 
+           </div> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c9afacacadaba8aaa289a3a8bfa8bdb9a6a0a7bde7aaa6a4">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/python-tkinter"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/python-tkinter"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/python-tkinter"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5c342e1c363d2a3d282c33353228723f3331">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c5adb785afa4b3a4b1b5aaacabb1eba6aaa8eb">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

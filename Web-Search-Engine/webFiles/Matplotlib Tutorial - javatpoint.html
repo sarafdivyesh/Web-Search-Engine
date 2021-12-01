@@ -1,0 +1,1171 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Matplotlib Tutorial - javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Matplotlib Tutorial - javatpoint">
+  <meta property="og:description" content="Matplotlib Tutorial with Data Visualization, Why need Data Visualization, Benefits, Architecture of Matplotlib, General Concept of Matplotlib, Installing Matplotlib, subplot, functions of Matplotlib etc."> 
+  <meta name="keywords" content="matplotlib tutorial, matplotlib introduction, matplotlib, what is matplotlib, matplotlib data visualization, why need data visualization, benefits of data visualization, architecture of matplotlib, general concept of matplotlib, installing matplotlib, working with pyplot, subplot, functions of matplotlib">
+  <meta name="description" content="Matplotlib Tutorial with Data Visualization, Why need Data Visualization, Benefits, Architecture of Matplotlib, General Concept of Matplotlib, Installing Matplotlib, subplot, functions of Matplotlib etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/matplotlib"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Matplotlib Tutorial - javatpoint">
+  <meta name="twitter:description" property="og:description" content="Matplotlib Tutorial with Data Visualization, Why need Data Visualization, Benefits, Architecture of Matplotlib, General Concept of Matplotlib, Installing Matplotlib, subplot, functions of Matplotlib etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/matplotlib">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="python-tutorial">Python</a></li> 
+       <li><a href="matplotlib" class="selected">Matplotlib</a></li> 
+       <li><a href="python-pygame">Pygame</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="sql-tutorial">SQL</a></li> 
+       <li><a href="cloud-computing-tutorial">Cloud</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="servlet-tutorial">Servlet</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="struts-2-tutorial">Struts2</a></li> 
+       <li><a href="spring-tutorial">Spring</a></li> 
+       <li><a href="examaccess">Quiz</a></li> 
+       <li><a href="free-java-projects">Projects</a></li> 
+       <li><a href="corejava-interview-questions">Interview Q</a></li> 
+       <li><a href="comment.jsp">Comment</a></li> 
+       <li><a href="forum">Forum</a></li> 
+       <li><a href="training">Training</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Matplotlib Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="matplotlib">Matplotlib Tutorial</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> <h1 class="h1">Matplotlib (Python Plotting Library)</h1> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-tutorial.png" class="imageright" alt="Matplotlib Tutorial"> <p>Human minds are more adaptive for the visual representation of data rather than textual data. We can easily understand things when they are visualized. It is better to represent the data through the graph where we can analyze the data more efficiently and make the specific decision according to data analysis. Before learning the matplotlib, we need to understand data visualization and why data visualization is important.</p> <h2 class="h2">Data Visualization</h2> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-data-visualization.png" alt="Matplotlib Data Visualization"> <p>Graphics provides an excellent approach for exploring the data, which is essential for presenting results. Data visualization is a new term. It expresses the idea that involves more than just representing data in the graphical form (instead of using textual form).</p> <p>This can be very helpful when discovering and getting to know a dataset and can help with classifying patterns, corrupt data, outliers, and much more. With a little domain knowledge, data visualizations can be used to express and demonstrate key relationships in plots and charts. The static does indeed focus on quantitative description and estimations of data. It provides an important set of tools for gaining a qualitative understanding. </p> <p>There are five key plots that are used for data visualization.</p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-data-visualization2.png" alt="Matplotlib Data Visualization"> <p>There are five phases which are essential to make the decision for the organization:</p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-data-visualization3.png" alt="Matplotlib Data Visualization"> 
+           <ul class="points"> 
+            <li><strong>Visualize:</strong> We analyze the raw data, which means it makes complex data more accessible, understandable, and more usable. Tabular data representation is used where the user will look up a specific measurement, while the chart of several types is used to show patterns or relationships in the data for one or more variables.</li> 
+            <li><strong>Analysis:</strong> Data analysis is defined as cleaning, inspecting, transforming, and modeling data to derive useful information. Whenever we make a decision for the business or in daily life, is by past experience. <strong>What will happen to choose a particular decision</strong>, it is nothing but analyzing our past. That may be affected in the future, so the proper analysis is necessary for better decisions for any business or organization.</li> 
+            <li><strong>Document Insight:</strong> Document insight is the process where the useful data or information is organized in the document in the standard format.</li> 
+            <li><strong>Transform Data Set:</strong> Standard data is used to make the decision more effectively.</li> 
+           </ul> <h2 class="h2">Why need data visualization?</h2> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-why-need-data-visualization3.png" alt="Why need Data Visualization"> <p>Data visualization can perform below tasks:</p> 
+           <ul class="points"> 
+            <li>It identifies areas that need improvement and attention.</li> 
+            <li>It clarifies the factors.</li> 
+            <li>It helps to understand which product to place where.</li> 
+            <li>Predict sales volumes.</li> 
+           </ul> <h2 class="h2">Benefit of Data Visualization</h2> <p>Here are some benefits of the data visualization, which helps to make an effective decision for the organizations or business:</p> <p class="pq"><strong>1. Building ways of absorbing information</strong></p> <p>Data visualization allows users to receive vast amounts of information regarding operational and business conditions. It helps decision-makers to see the relationship between multi-dimensional data sets. It offers new ways to analyses data through the use of maps, fever charts, and other rich graphical representations.</p> <p>Visual data discovery is more likely to find the information that the organization needs and then end up with being more productive than other competitive companies.</p> <p class="pq"><strong>2. Visualize relationship and patterns in Businesses</strong></p> <p>The crucial advantage of data visualization is that it is essential to find the correlation between operating conditions and business performance in today's highly competitive business environment.</p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-benefit-of-data-visualization.png" alt="Benefit of Data Visualization"> <p>The ability to make these types of correlations enables the executives to identify the root cause of the problem and act quickly to resolve it.</p> <p>Suppose a food company is looking their monthly customer data, and the data is presented with bar charts, which shows that the company's score has dropped by five points in the previous months in that particular region; the data suggest that there's a problem with customer satisfaction in this area.</p> <p class="pq"><strong>3. Take action on the emerging trends faster</strong></p> <p>Data visualization allows the decision-maker to grasp shifts in customer behavior and market conditions across multiple data sets more efficiently.</p> <p>Having an idea about the customer's sentiments and other data discloses an emerging opportunity for the company to act on new business opportunities ahead of their competitor.</p> <p class="pq"><strong>4. Geological based Visualization</strong></p> <p>Geo-spatial visualization is occurred due to many websites providing web-services, attracting visitor's interest. These types of websites are required to take benefit of location-specific information, which is already present in the customer details.</p> <p><strong>Matplotlib</strong> is a Python library which is defined as a multi-platform data visualization library built on Numpy array. It can be used in python scripts, shell, web application, and other graphical user interface toolkit.</p> <p>The <strong>John D. Hunter</strong> originally conceived the matplotlib in <strong>2002</strong>. It has an active development community and is distributed under a <strong>BSD-style license</strong>. Its first version was released in 2003, and the latest <strong>version 3.1.1</strong> is released on <strong>1 July 2019</strong>.</p> <p>Matplotlib 2.0.x supports Python versions 2.7 to 3.6 till 23 June 2007. Python3 support started with Matplotlib 1.2. Matplotlib 1.4 is the last version that supports Python 2.6.</p> <p>There are various toolkits available that are used to enhance the functionality of the <strong>matplotlib</strong>. Some of these tools are downloaded separately, others can be shifted with the matplotlib source code but have external dependencies.</p> 
+           <ul class="points"> 
+            <li><strong>Bashmap:</strong> It is a map plotting toolkit with several map projections, coastlines, and political boundaries.</li> 
+            <li><strong>Cartopy:</strong> It is a mapping library consisting of object-oriented map projection definitions, and arbitrary point, line, polygon, and image transformation abilities.</li> 
+            <li><strong>Excel tools:</strong> Matplotlib provides the facility to utilities for exchanging data with Microsoft Excel.</li> 
+            <li><strong>Mplot3d:</strong> It is used for 3D plots.</li> 
+            <li><strong>Natgrid:</strong> It is an interface to the Natgrid library for irregular gridding of the spaced data.</li> 
+           </ul> <h2 class="h2">Matplotlib Architecture</h2> <p>There are three different layers in the architecture of the matplotlib which are the following:</p> 
+           <ul class="points"> 
+            <li>Backend Layer</li> 
+            <li>Artist layer</li> 
+            <li>Scripting layer</li> 
+           </ul> <p class="pq"><strong>Backend layer</strong></p> <p>The backend layer is the bottom layer of the figure, which consists of the implementation of the various functions that are necessary for plotting. There are three essential classes from the backend layer <strong>FigureCanvas</strong>(The surface on which the figure will be drawn), <strong>Renderer</strong>(The class that takes care of the drawing on the surface), and <strong>Event</strong>(It handle the mouse and keyboard events).</p> <p class="pq"><strong>Artist Layer</strong></p> <p>The artist layer is the second layer in the architecture. It is responsible for the various plotting functions, like axis, which coordinates on how to use the renderer on the figure canvas.</p> <p class="pq"><strong>Scripting layer</strong></p> <p>The scripting layer is the topmost layer on which most of our code will run. The methods in the scripting layer, almost automatically take care of the other layers, and all we need to care about is the current state (figure &amp; subplot).</p> <h2 class="h2">The General Concept of Matplotlib</h2> <p>A Matplotlib figure can be categorized into various parts as below:</p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/general-concept-of-matplotlib.png" alt="General Concept of Matplotlib"> <p><strong>Figure:</strong> It is a whole figure which may hold one or more axes (plots). We can think of a Figure as a canvas that holds plots.</p> <p><strong>Axes:</strong> A Figure can contain several Axes. It consists of two or three (in the case of 3D) Axis objects. Each Axes is comprised of a title, an x-label, and a y-label.</p> <p><strong>Axis:</strong> Axises are the number of line like objects and responsible for generating the graph limits.</p> <p><strong>Artist:</strong> An artist is the all which we see on the graph like Text objects, Line2D objects, and collection objects. Most Artists are tied to Axes.</p> <h2 class="h2">Installing Matplotlib</h2> <p>Before start working with the Matplotlib or its plotting functions first, it needs to be installed. The installation of matplotlib is dependent on the distribution that is installed on your computer. These installation methods are following:</p> <p class="pq"><strong>Use the Anaconda distribution of Python</strong></p> <p>The easiest way to install Matplotlib is to download the Anaconda distribution of Python. Matplotlib is pre-installed in the anaconda distribution No further installation steps are necessary.</p> 
+           <ul class="points"> 
+            <li>Visit the official site of Anaconda and click on the Download Button</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/installing-matplotlib.png" alt="Installing Matplotlib"> 
+           <ul class="points"> 
+            <li>Choose download according to your Python interpreter configuration.</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/installing-matplotlib2.png" alt="Installing Matplotlib"> <p class="pq"><strong>Install Matplotlib using with Anaconda Prompt</strong></p> <p>Matplotlib can be installed using with the Anaconda Prompt by typing command. To install matplotlib, open Anaconda Prompt and type the following command:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+conda install matplotlib
+</textarea>
+           </div> <br> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/installing-matplotlib3.png" alt="Installing Matplotlib"> <p class="pq"><strong>Install Matplotlib with pip</strong></p> <p>The python package manager pip is also used to install matplotlib. Open the command prompt window, and type the following command:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+pip install matplotlib
+</textarea>
+           </div> <h2 class="h2">Verify the Installation</h2> <p>To verify that matplotlib is installed properly or not, type the following command includes calling .__version __ in the terminal.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import matplotlib
+matplotlib.__version__
+'3.1.1'
+</textarea>
+           </div> <h2 class="h2">Basic Example of plotting Graph</h2> <p>Here is the basic example of generating a simple graph; the program is following:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot as plt
+#ploting our canvas
+plt.plot([1,2,3],[4,5,1])
+#display the graph
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-basic-example-of-plotting-graph.png" alt="Basic Example of plotting Graph"> <p>It takes only three lines to plot a simple graph using the Python matplotlib. We can add titles, labels to our chart which are created by Python matplotlib library to make it more meaningful. The example is the following:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot as plt
+
+x = [5, 2, 7]
+y = [1, 10, 4]
+plt.plot(x, y)
+plt.title('Line graph')
+plt.ylabel('Y axis')
+plt.xlabel('X axis')
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-basic-example-of-plotting-graph2.png" alt="Basic Example of plotting Graph"> <p>The graph is more understandable from the previous graph.</p> <h2 class="h2">Working with Pyplot</h2> <p>The <strong>matplotlib.pyplot</strong> is the collection command style functions that make matplotlib feel like working with MATLAB. The pyplot functions are used to make some changes to figure such as create a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot including labels, etc.</p> <p>It is good to use when we want to plot something quickly without instantiating any figure or Axes.</p> <p>While working with <strong>matplotlib.pyplot</strong>, some states are stored across function calls so that it keeps track of the things like current figure and plotting area, and these plotting functions are directed to the current axes.</p> <p>The pyplot module provide the <strong>plot()</strong> function which is frequently use to plot a graph. Let's have a look on the simple example:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot as plt
+plt.plot([1,2,3,4,5])
+plt.ylabel("y axis")
+plt.xlabel('x axis')
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-working-with-pyplot.png" alt="Working with Pyplot"> <p>In the above program, it plots the graph x-axis ranges from 0-4 and the y-axis from 1-5. If we provide a single list to the plot(), matplotlib assumes it is a sequence of y values, and automatically generates the x values. Since we know that python index starts at 0, the default x vector has the same length as y but starts at 0. Hence the x data are [0, 1, 2, 3, 4]. </p> <p>We can pass the arbitrary number of arguments to the plot(). For example, to plot x versus y, we can do this following way:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot as plt
+plt.plot([1,2,3,4,5],[1,4,9,16,25])
+plt.ylabel("y axis")
+plt.xlabel('x axis')
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-working-with-pyplot2.png" alt="Working with Pyplot"> <p class="pq"><strong>Formatting the style of the plot</strong></p> <p>There is an optional third argument, which is a format string that indicates the color and line type of the plot. The default format string is '<strong>b-</strong>'which is the solid blue as you can observe in the above plotted graph. Let's consider the following example where we plot the graph with the red circle.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot as plt
+plt.plot([1, 2, 3, 4,5], [1, 4, 9, 16,25], 'ro')
+plt.axis([0, 6, 0, 20])
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-working-with-pyplot3.png" alt="Working with Pyplot"> <p class="pq"><strong>Example format String</strong></p> 
+           <table class="alt"> 
+            <tbody>
+             <tr> 
+              <td><strong>'b'</strong></td> 
+              <td>Using for the blue marker with default shape.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>'ro'</strong></td> 
+              <td>Red circle</td> 
+             </tr> 
+             <tr> 
+              <td><strong>'-g'</strong></td> 
+              <td>Green solid line</td> 
+             </tr> 
+             <tr> 
+              <td><strong>'--'</strong></td> 
+              <td>A dashed line with the default color</td> 
+             </tr> 
+             <tr> 
+              <td><strong>'^k:'</strong></td> 
+              <td>Black triangle up markers connected by a dotted line</td> 
+             </tr> 
+            </tbody>
+           </table> <p>The matplotlib supports the following color abbreviation:</p> 
+           <table class="alt"> 
+            <tbody>
+             <tr> 
+              <th>Character</th> 
+              <th>Color</th> 
+             </tr> 
+             <tr> 
+              <td><strong>'b' Blue</strong></td> 
+             </tr> 
+             <tr> 
+              <td><strong>'g'</strong></td> 
+              <td>Green</td> 
+             </tr> 
+             <tr> 
+              <td><strong>'r'</strong></td> 
+              <td>Red</td> 
+             </tr> 
+             <tr> 
+              <td><strong>'c'</strong></td> 
+              <td>Cyan</td> 
+             </tr> 
+             <tr> 
+              <td><strong>'m'</strong></td> 
+              <td>Magenta</td> 
+             </tr> 
+             <tr> 
+              <td><strong>'y'</strong></td> 
+              <td>Yellow</td> 
+             </tr> 
+             <tr> 
+              <td><strong>'k'</strong></td> 
+              <td>Black</td> 
+             </tr> 
+             <tr> 
+              <td><strong>'w'</strong></td> 
+              <td>White</td> 
+             </tr> 
+            </tbody>
+           </table> <h3 class="h3">Plotting with categorical variables</h3> <p>Matplotlib allows us to pass categorical variables directly to many plotting functions: consider the following example </p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot
+names = ['Abhishek', 'Himanshu', 'Devansh']
+marks= [87,50,98]
+
+plt.figure(figsize=(9,3))
+
+plt.subplot(131)
+plt.bar(names, marks)
+plt.subplot(132)
+plt.scatter(names, marks)
+plt.subplot(133)
+plt.plot(names, marks)
+plt.suptitle('Categorical Plotting')
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-working-with-pyplot4.png" alt="Working with Pyplot"> <p>In the above program, we have plotted the categorical graph using the <strong>subplot()</strong> function. Let's a have a look on the subplot() function. </p> <h2 class="h2">What is subplot()</h2> <p>The Matplotlib <strong>subplot()</strong> function is defined as to plot two or more plots in one figure. We can use this method to separate two graphs which plotted in the same axis Matplotlib supports all kinds of subplots, including 2x1 vertical, 2x1 horizontal, or a 2x2 grid.</p> <p>It accepts the three arguments: they are <strong>nrows, ncols, and index</strong>. It denote the number of rows, number of columns and the index.</p> <p>The subplot() function can be called in the following way:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+subplot(nrows,ncols,index,**kwargs)
+subplot(pos,**kwargs)	
+subplot(ax)
+</textarea>
+           </div> <p class="pq"><strong>Parameters:</strong></p> 
+           <ul class="points"> 
+            <li><strong>*args:</strong></li> 
+           </ul> <p>Three separate integers or three-digit integer describes the position of the subplot. If the three integers are <strong>nrows, ncols, and index</strong> in order, the subplot will take the index position on a grid with <strong>nrows row</strong> and <strong>ncol column</strong>. </p> <p>The argument <strong>pos</strong> are a three-digit integer, where the first digit is denoted the number of rows, the second digit denoted the number of columns, and the third represents the index of the subplot. <strong>For example,</strong> subplot (1, 3, 2) is the same as the subplot (132).</p> <h4 class="n"><span class="bold">Note:</span> Passed integer must be less than 10.</h4> 
+           <ul class="points"> 
+            <li><strong>**kwargs</strong></li> 
+           </ul> <p>The subplot() function also accepts the keyword arguments for the returned axes base class. </p> <p>Consider the following example:</p> <h2 class="h2">Creating different types of graph</h2> <h3 class="h3">1. Line graph</h3> <p>The line graph is one of charts which shows information as a series of the line. The graph is plotted by the plot() function. The line graph is simple to plot; let's consider the following example:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot as plt
+
+x = [4,8,9]
+y = [10,12,15]
+
+plt.plot(x,y)
+
+plt.title("Line graph")
+plt.ylabel('Y axis')
+plt.xlabel('X axis')
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph.png" alt="Creating different types of graph"> <p>We can customize the graph by importing the style module. The style module will be built into a matplotlib installation. It contains the various functions to make the plot more attractive. In the below program, we are using the style module:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot as plt
+from matplotlib import style
+
+style.use('ggplot')
+x = [16, 8, 10]
+y = [8, 16, 6]
+x2 = [8, 15, 11]
+y2 = [6, 15, 7]
+plt.plot(x, y, 'r', label='line one', linewidth=5)
+plt.plot(x2, y2, 'm', label='line two', linewidth=5)
+plt.title('Epic Info')
+fig = plt.figure()
+plt.ylabel('Y axis')
+plt.xlabel('X axis')
+plt.legend()
+plt.grid(True, color='k')
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph2.png" alt="Creating different types of graph"> <p>In Matplotlib, the figure (an instance of class plt.Figure) can be supposed of as a single container that consists of all the objects denoting axes, graphics, text, and labels. </p> <p class="pq"><strong>Example-3</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+ax = plt.axes()
+
+x = np.linspace(0, 10, 1000)
+ax.plot(x, np.sin(x))
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph3.png" alt="Creating different types of graph"> <p>The matplotlib provides the <strong>fill_between()</strong> function which is used to fill area around the lines based on the user defined logic.</p> <h3 class="h3">Example-4</h3> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+ax = plt.axes()
+
+x = np.linspace(0, 10, 1000)
+ax.plot(x, np.sin(x))
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.arange(0.0, 2, 0.01)
+y1 = np.sin(2 * np.pi * x)
+y2 = 1.2 * np.sin(4 * np.pi * x)
+fig, ax = plt.subplots(1, sharex=True)
+ax.plot(x, y1, x, y2, color='black')
+ax.fill_between(x, y1, y2, where=y2 &gt;= y1, facecolor='blue', interpolate=True)
+ax.fill_between(x, y1, y2, where=y2 &lt;= y1, facecolor='red', interpolate=True)
+ax.set_title('fill between where')
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph4.png" alt="Creating different types of graph"> <h3 class="h3">2. Bar graphs</h3> <p>Bar graphs are one of the most common types of graphs and are used to show data associated with the categorical variables. Matplotlib provides a <strong>bar()</strong> to make bar graphs which accepts arguments such as: categorical variables, their value and color.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot as plt
+players = ['Virat','Rohit','Shikhar','Hardik']
+runs = [51,87,45,67]
+plt.bar(players,runs,color = 'green')
+plt.title('Score Card')
+plt.xlabel('Players')
+plt.ylabel('Runs')
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph5.png" alt="Creating different types of graph"> <p>Another function <strong>barh()</strong> is used to make horizontal bar graphs. It accepts <strong>xerr</strong> or <strong>yerr</strong> as arguments (in case of vertical graphs) to depict the variance in our data as follows:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot as plt
+players = ['Virat','Rohit','Shikhar','Hardik']
+runs = [51,87,45,67]
+plt.barh(players,runs, color = 'green')
+plt.title('Score Card')
+plt.xlabel('Players')
+plt.ylabel('Runs')
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph6.png" alt="Creating different types of graph"> <p>Let's have a look on the other example using the <strong>style()</strong> function:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot as plt
+from matplotlib import style
+
+style.use('ggplot')
+
+x = [5,8,10]
+y = [12,16,6]
+
+x2 = [6,9,11]
+y2 = [7,15,7]
+
+
+plt.bar(x, y, color = 'y', align='center')
+plt.bar(x2, y2, color='c', align='center')
+
+plt.title('Information')
+
+plt.ylabel('Y axis')
+plt.xlabel('X axis')
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph7.png" alt="Creating different types of graph"> <p>Similarly to vertical stack, the bar graph together by using the bottom argument and define the bar graph, which we want to stack below and its value.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot as plt
+import numpy as np
+
+countries = ['USA', 'India', 'China', 'Russia', 'Germany']
+bronzes = np.array([38, 17, 26, 19, 15])
+silvers = np.array([37, 23, 18, 18, 10])
+golds = np.array([46, 27, 26, 19, 17])
+ind = [x for x, _ in enumerate(countries)]
+
+plt.bar(ind, golds, width=0.5, label='golds', color='gold', bottom=silvers+bronzes)
+plt.bar(ind, silvers, width=0.5, label='silvers', color='silver', bottom=bronzes)
+plt.bar(ind, bronzes, width=0.5, label='bronzes', color='#CD853F')
+
+plt.xticks(ind, countries)
+plt.ylabel("Medals")
+plt.xlabel("Countries")
+plt.legend(loc="upper right")
+plt.title("2019 Olympics Top Scorers")
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph8.png" alt="Creating different types of graph"> <h3 class="h3">3. Pie Chart</h3> <p>A pie chart is a circular graph that is broken down in the segment or slices of pie. It is generally used to represent the percentage or proportional data where each slice of pie represents a particular category. Let's have a look at the below example:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot as plt
+
+# Pie chart, where the slices will be ordered and plotted counter-clockwise:
+Players = 'Rohit', 'Virat', 'Shikhar', 'Yuvraj'
+Runs = [45, 30, 15, 10]
+explode = (0.1, 0, 0, 0)  # it "explode" the 1st slice 
+
+fig1, ax1 = plt.subplots()
+ax1.pie(Runs, explode=explode, labels=Players, autopct='%1.1f%%',
+        shadow=True, startangle=90)
+ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph9.png" alt="Creating different types of graph"> <h3 class="h3">4. Histogram</h3> <p>First, we need to understand the difference between the bar graph and histogram. A histogram is used for the distribution, whereas a bar chart is used to compare different entities. A histogram is a type of bar plot that shows the frequency of a number of values compared to a set of values ranges.</p> <p><strong>For example</strong> we take the data of the different age group of the people and plot a histogram with respect to the bin. Now, bin represents the range of values that are divided into series of intervals. Bins are generally created of the same size.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot as plt
+from matplotlib import pyplot as plt
+population_age = [21,53,60,49,25,27,30,42,40,1,2,102,95,8,15,105,70,65,55,70,75,60,52,44,43,42,45]
+bins = [0,10,20,30,40,50,60,70,80,90,100]
+plt.hist(population_age, bins, histtype='bar', rwidth=0.8)
+plt.xlabel('age groups')
+plt.ylabel('Number of people')
+plt.title('Histogram')
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph10.png" alt="Creating different types of graph"> <p>Let's consider the another example of plotting histogram:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot as plt
+# Importing Numpy Library
+import numpy as np
+plt.style.use('fivethirtyeight')
+
+mu = 50
+sigma = 7
+x = np.random.normal(mu, sigma, size=200)
+fig, ax = plt.subplots()
+
+ax.hist(x, 20)
+ax.set_title('Historgram')
+ax.set_xlabel('bin range')
+ax.set_ylabel('frequency')
+
+fig.tight_layout()
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph11.png" alt="Creating different types of graph"> <h3 class="h3">5. Scatter plot</h3> <p>The scatter plots are mostly used for comparing variables when we need to define how much one variable is affected by another variable. The data is displayed as a collection of points. Each point has the value of one variable, which defines the position on the horizontal axes, and the value of other variable represents the position on the vertical axis.</p> <p>Let's consider the following simple example:</p> <p class="pq"><strong>Example-1:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from matplotlib import pyplot as plt
+from matplotlib import style
+style.use('ggplot')
+
+x = [5,7,10]
+y = [18,10,6]
+
+x2 = [6,9,11]
+y2 = [7,14,17]
+
+plt.scatter(x, y)
+
+plt.scatter(x2, y2, color='g')
+
+plt.title('Epic Info')
+plt.ylabel('Y axis')
+plt.xlabel('X axis')
+
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph12.png" alt="Creating different types of graph"> <p class="pq"><strong>Example-2</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import matplotlib.pyplot as plt
+x = [2, 2.5, 3, 3.5, 4.5, 4.7, 5.0]
+y = [7.5, 8, 8.5, 9, 9.5, 10, 10.5]
+
+x1 = [9, 8.5, 9, 9.5, 10, 10.5, 12]
+y1 = [3, 3.5, 4.7, 4, 4.5, 5, 5.2]
+plt.scatter(x, y, label='high income low saving', color='g')
+plt.scatter(x1, y1, label='low income high savings', color='r')
+plt.xlabel('saving*100')
+plt.ylabel('income*1000')
+plt.title('Scatter Plot')
+plt.legend()
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph13.png" alt="Creating different types of graph"> <h3 class="h3">6. 3D graph plot</h3> <p>Matplotlib was initially developed with only two-dimension plot. Its 1.0 release was built with some of three-dimensional plotting utilities on top of two-dimension display, and the result is a convenient set of tools for 3D data visualization.</p> <p>Three-dimension plots can be created by importing the <strong>mplot3d</strong> toolkit, include with the main Matplotlib installation:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from mpl_toolkits import mplot3d
+</textarea>
+           </div> <p>When this module is imported in the program, three-dimension axes can be created by passing the keyword <strong>projection='3d'</strong> to any of the normal axes creation routines:</p> <p>Let's see the simple 3D plot</p> <p class="pq"><strong>Example-1:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from mpltoolkits import mplot3d
+import numpy as np
+import matplotlib.pyplot as plt
+fig = plt.figure()
+ax = plt.axes(projection='3d')_
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph14.png" alt="Creating different types of graph"> <p class="pq"><strong>Example-2:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from mpl_toolkits import mplot3d
+import numpy as np
+import matplotlib.pyplot as plt
+
+height = np.array([100,110,87,85,65,80,96,75,42,59,54,63,95,71,86])
+weight = np.array([105,123,84,85,78,95,69,42,87,91,63,83,75,41,80])
+
+
+scatter(height,weight)
+
+fig = plt.figure()
+ax = plt.axes(projection='3d')
+# This is used to plot 3D scatter
+ax.scatter3D(height,weight)
+plt.title("3D Scatter Plot")
+plt.xlabel("Height")
+plt.ylabel("Weight")
+plt.title("3D Scatter Plot")
+plt.xlabel("Height")
+plt.ylabel("Weight")
+
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph15.png" alt="Creating different types of graph"> <h4 class="n"><span class="bold">Note:</span> We can use the plot3D () to plot simple 3D line graph.</h4> <p class="pq"><strong>Example-3</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import matplotlib as mpl
+from mpl_toolkits.mplot3d import Axes3D
+import numpy as np
+import matplotlib.pyplot as plt
+
+mpl.rcParams['legend.fontsize'] = 10
+
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+theta1 = np.linspace(-4 * np.pi, 4 * np.pi, 100)
+z = np.linspace(-2, 2, 100)
+r = z**2 + 1
+x = r * np.sin(theta1)
+y = r * np.cos(theta1)
+ax.plot3D(x, y, z, label='parametric curve', color = 'red')
+ax.legend()
+
+plt.show()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/matplotlib/images/matplotlib-creating-different-types-of-graph16.png" alt="Creating different types of graph"> <h2 class="h2">Important functions of Matplotlib</h2> 
+           <table class="alt"> 
+            <tbody>
+             <tr> 
+              <th>Functions</th> 
+              <th>Description</th> 
+             </tr> 
+             <tr> 
+              <td>plot(x-axis value, y-axis-values)</td> 
+              <td>It is used to plot a simple line graph with x-axis value against the y-axis values. show() It is used to display the graph.</td> 
+             </tr> 
+             <tr> 
+              <td>title("string")</td> 
+              <td>It is used to set the title of the plotted graph as specified by the string.</td> 
+             </tr> 
+             <tr> 
+              <td>xlabel("string")</td> 
+              <td>It is used to set the label for the x-axis as specified by the string.</td> 
+             </tr> 
+             <tr> 
+              <td>ylabel("string")</td> 
+              <td>It is used to set the label for y-axis as specified by the string.</td> 
+             </tr> 
+             <tr> 
+              <td>figure()</td> 
+              <td>It is used to control a figure level attributes.</td> 
+             </tr> 
+             <tr> 
+              <td>subplots(nrows,ncol,index)</td> 
+              <td>It is used to add a subplot to recent figure.</td> 
+             </tr> 
+             <tr> 
+              <td>subtitle("string")</td> 
+              <td>It adds a common title to the plotted graph specified by the string.</td> 
+             </tr> 
+             <tr> 
+              <td>subplots(nrows,ncols,figsize)</td> 
+              <td>It provides the simple way to create subplot, in a single call and returns a tuple of a figure and number of axes. </td> 
+             </tr> 
+             <tr> 
+              <td>set_title("string")</td> 
+              <td>It is an axes level method which is used to set the title of the subplots.</td> 
+             </tr> 
+             <tr> 
+              <td>bar(categorical variables, values, color)</td> 
+              <td>It is used to create a vertical bar graph.</td> 
+             </tr> 
+             <tr> 
+              <td>barh(categorical variables, values, color)</td> 
+              <td>It is used to create horizontal bar graphs.</td> 
+             </tr> 
+             <tr> 
+              <td>legend(loc)</td> 
+              <td>It is used to make a legend of the graph.</td> 
+             </tr> 
+             <tr> 
+              <td>xtricks(index, categorical variables)</td> 
+              <td>It is used to set or get the current tick locations labels of the x-axis.</td> 
+             </tr> 
+             <tr> 
+              <td>pie(value, categorical variables)</td> 
+              <td>It is used to create a pie chart.</td> 
+             </tr> 
+             <tr> 
+              <td>hist(value, number of bins)</td> 
+              <td>It is used to create a histogram.</td> 
+             </tr> 
+             <tr> 
+              <td>xlim(start value, end value)</td> 
+              <td>It is used to set the limit of values of the x-axis.</td> 
+             </tr> 
+             <tr> 
+              <td>ylim(start value, end value)</td> 
+              <td>It is used to set the limit of values of the y-axis.</td> 
+             </tr> 
+             <tr> 
+              <td>scatter(x-axis values, y-axis values)</td> 
+              <td>It is used to plots a scatter plot with x-axis value against the y-axis values.</td> 
+             </tr> 
+             <tr> 
+              <td>axes()</td> 
+              <td>It is used to add axes to the recent figure.</td> 
+             </tr> 
+             <tr> 
+              <td>set_xlabel("string")</td> 
+              <td>It is an axes level method which is used to set the x-label of the plot specified as a string.</td> 
+             </tr> 
+             <tr> 
+              <td>set_ylabel("string")</td> 
+              <td>It is used to set the y-label of the plot specified as a string.</td> 
+             </tr> 
+             <tr> 
+              <td>scatter3D(x-axis values, y-axis values)</td> 
+              <td>It is used to plot a three-dimension scatter plot with x- axis value against the y-axis.</td> 
+             </tr> 
+             <tr> 
+              <td>plot3D(x-axis values, y-axis values)</td> 
+              <td>It is used to plots a three-dimension line graph with x- axis values against y-axis values.</td> 
+             </tr> 
+            </tbody>
+           </table> <p>In this tutorial, we have learned about the matplotlib (Python Library), where we covered the brief introduction of data visualization and how data visualization is essential to make a decision for the organization. We have plotted the different types of graphs for the graphical representation of the data.</p> 
+           <hr> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="66000303020407050d260c0710071216090f08124805090b">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/matplotlib"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/matplotlib"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/matplotlib"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e78f95a78d8691869397888e8993c984888a">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5a32281a303b2c3b2e2a3533342e7439353774">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

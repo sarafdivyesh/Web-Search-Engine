@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Bugzilla Tutorial - What is, Features, Installation, Components - Javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Bugzilla Tutorial - What is, Features, Installation, Components - Javatpoint">
+  <meta property="og:description" content="Bugzilla | Bugzilla Tutorial with Introduction, Bugzilla Installation, Features of Bugzilla, What is Bugzilla, Bugzilla Overview, Bugzilla Components, Jira vs Bugzilla, Bugzilla Versions, History of Bugzilla, Bugzilla Login, Bugzilla Graphical Reports, Bugzilla Search, Bugzilla Bugs, etc."> 
+  <meta name="keywords" content="bugzilla tutorial, bugzilla, bugzilla introduction, bugzilla installation, features of bugzilla, what is bugzilla, bugzilla overview, bugzilla components, jira vs bugzilla, bugzilla versions, history of bugzilla, bugzilla login, bugzilla graphical reports, bugzilla search, bugzilla bugs">
+  <meta name="description" content="Bugzilla | Bugzilla Tutorial with Introduction, Bugzilla Installation, Features of Bugzilla, What is Bugzilla, Bugzilla Overview, Bugzilla Components, Jira vs Bugzilla, Bugzilla Versions, History of Bugzilla, Bugzilla Login, Bugzilla Graphical Reports, Bugzilla Search, Bugzilla Bugs, etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/bugzilla"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Bugzilla Tutorial - What is, Features, Installation, Components - Javatpoint">
+  <meta name="twitter:description" property="og:description" content="Bugzilla | Bugzilla Tutorial with Introduction, Bugzilla Installation, Features of Bugzilla, What is Bugzilla, Bugzilla Overview, Bugzilla Components, Jira vs Bugzilla, Bugzilla Versions, History of Bugzilla, Bugzilla Login, Bugzilla Graphical Reports, Bugzilla Search, Bugzilla Bugs, etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/bugzilla">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="bugzilla" class="selected">Bugzilla</a></li> 
+       <li><a href="jira-tutorial">JIRA</a></li> 
+       <li><a href="testng-tutorial">TestNG</a></li> 
+       <li><a href="selenium-tutorial">Selenium</a></li> 
+       <li><a href="blockchain-tutorial">Blockchain</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="css-tutorial">CSS</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="selenium-tutorial">Selenium</a></li> 
+       <li><a href="jquery-tutorial">jQuery</a></li> 
+       <li><a href="free-java-projects">Projects</a></li> 
+       <li><a href="corejava-interview-questions">Interview Q</a></li> 
+       <li><a href="comment.jsp">Comment</a></li> 
+       <li><a href="forum">Forum</a></li> 
+       <li><a href="training">Training</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Bugzilla Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="bugzilla">Bugzilla Tutorial</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> 
+           <div id="bottomnextup"> <a class="next" href="#">next &#x2192;</a> <a class="next" href="#">&#x2190; prev</a> 
+           </div> <h1 class="h1">Bugzilla Tutorial</h1> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla-tutorial.png" class="imageright" alt="Bugzilla Tutorial"> <p>In this tutorial, we will discuss the following topics:</p> 
+           <ul class="points"> 
+            <li><a href="#Overview">Overview of Bugzilla</a></li> 
+            <li><a href="#Features">Features of Bugzilla</a></li> 
+            <li><a href="#Installation">Bugzilla installation</a></li> 
+            <li><a href="#Components">Components of Bugzilla</a></li> 
+           </ul> <h2 id="Overview" class="h2">What is Bugzilla?</h2> <p>Bugzilla is a bug tracking tool that helps to track the issues related to their product.</p> <p>Bugzilla tool is written in Perl language, and it uses MySQL database.</p> <p>It is a bug tracking tool. However, it can also be used as a test management tool because it can be linked with other Test case management tools such as Quality Center, Testlink, etc.</p> <p>It is an open source tool, i.e., this tool is available to the users at a free of cost.</p> 
+           <hr> <h2 id="Features" class="h2">Features of Bugzilla</h2> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla.png" alt="Bugzilla"> <p>The following are the features of a Bugzilla:</p> <p class="pq"><strong>Advanced Search capabilities</strong></p> <p>Bugzilla has two forms of search:</p> 
+           <ul class="points"> 
+            <li>It has Google-like bug search which is simple to use, and it also searches the full text of a bug.</li> 
+            <li>It provides you a very advanced search system where you can create any type of search that you want such as time-based searches (For example, you want to see the list of bugs whose priority has been changed since last two days).</li> 
+           </ul> <p class="pq"><strong>Email Notifications controlled by user preferences</strong></p> <p>You will get an email if any changes are made in the Bugzilla, and the notifications that you get on which bug is totally controlled by the user preferences.</p> <p class="pq"><strong>ug lists in multiple formats</strong></p> <p>Reports and Charts When you search for the bugs, then you can get the bug lists in multiple formats such as Atom, iCalendor format. The iCalendor format is used when you are using the time tracking feature in Bugzilla. There are even more formats available in Bugzilla such as printable format that contains the details of all the bugs, CSV format used for importing bug list into spreadsheets.</p> <p class="pq"><strong>Scheduled reports by email</strong></p> <p>Bugzilla has a system that will send you, users or a group that you specify the results of a search on a schedule that you have mentioned.</p> <p class="pq"><strong>Automatic Duplicate Bug Detection</strong></p> <p>When you are filing a new bug, and when you type the summary for the bug, then the system looks for similar bugs. If the system finds the similar bugs, then it allows the user to add themselves in the CC list of one of those bugs instead of creating a new one.</p> <p class="pq"><strong>File/Modify Bugs by email</strong></p> <p>You can send an email to Bugzilla to create a new bug or modify the existing bug. You can even attach the files to Bug.</p> <p class="pq"><strong>Time Tracking</strong></p> <p>Bugzilla also provides the feature of time tracking. You can determine how many hours a bug will take to get fixed and you can also even track the hours that you need to spend on the bug. You can also set the deadline by which the bug needs to be fixed.</p> <p class="pq"><strong>Request System</strong></p> <p>The request system is a way of asking other users to do something with a bug. The user can either grant the request or deny the request, and Bugzilla will keep track of the answer.</p> <p class="pq"><strong>ove Bugs Between Installations</strong></p> <p>Bugzilla has the ability to move the bug from one Bugzilla installation to another. In Bugzilla, a bug can also be moved across different versions.</p> <p class="pq"><strong>"Watch" Other Users</strong></p> <p>Bugzilla allows you to watch other users. You will also get an email that the user gets from Bugzilla. This feature is useful when some developer goes for leave then other developer needs to handle the bug.</p> <p class="pq"><strong>Reports and Charts</strong></p> <p>Bugzilla provides an advanced reporting system. If you want to know how the database of a bug looks like, then you can create the two fields across the X-axis and Y-axis. With the help of search criteria, you can limit the information of a bug. You can also export these reports in CSV format.</p> 
+           <hr> <h2 id="Installation" class="h2">Bugzilla Installation</h2> <p><strong>The following are the requirements to install Bugzilla:</strong></p> 
+           <ul class="points"> 
+            <li>You need to download and install the Active Perl.</li> 
+            <li>Download Bugzilla</li> 
+            <li>Install the Database setup</li> 
+            <li>Bugzilla Configuration</li> 
+            <li>Configure Apache</li> 
+           </ul> <h3 class="h3">Logging in to Bugzilla</h3> <p>The Bugzilla installation requires the several software. But, some websites provide Bugzilla web application, and <a href="https://bugzilla.mozilla.org/home" rel="nofollow" target="_blank">https://bugzilla.mozilla.org/home</a> website is one of them.</p> 
+           <ul class="points"> 
+            <li>Navigate to <a href="https://bugzilla.mozilla.org/home" rel="nofollow" target="_blank">https://bugzilla.mozilla.org/home</a> website. When you click on the given URL, then the screen appears, or we can say Welcome page appears which is shown below:</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla1.png" alt="Bugzilla"> <br> 
+           <ul class="points"> 
+            <li>If you are already an existing user, then you can log in to the Bugzilla. If you are the first user, then you can create a New Account.</li> 
+           </ul> <p>Click on the <strong>New Account</strong> to create a new user.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla2.png" alt="Bugzilla"> <p>In the above screen, enter your email id and click on the Create Account button. On clicking on the Create Account button, a confirmation mail is sent to your email id.</p> <p>When you click on the link sent to your email id, then the <strong>Bugzilla</strong> page appears asking to reset the password.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla3.png" alt="Bugzilla"> <p>When you enter the name and password, click on the <strong>Create</strong> button.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla4.png" alt="Bugzilla"> 
+           <hr> <h2 id="Components" class="h2">Components of Bugzilla</h2> <p>Some of the main components that are available in a Bugzilla:</p> <h3 class="h3">1) New Bug</h3> <p><strong>Following are the steps required to file a bug:</strong></p> <p><strong>Step 1:</strong> Click on the <strong>New Bug</strong> icon to file a new bug.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla5.png" alt="Bugzilla"> <p><strong>Step 2:</strong> On clicking on the New Bug, you will be redirected to the new page showing all the products.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla6.png" alt="Bugzilla"> <p><strong>Step 3:</strong> Suppose I choose the product <strong>Data Platform and Tools</strong>. When I select the product, the screen appears, which is shown below:</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla7.png" alt="Bugzilla"> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla8.png" alt="Bugzilla"> <p class="pq"><strong>In the above screen, we need to fill the following fields:</strong></p> <p><strong>Product:</strong> It is a product that you selected just now, i.e., <strong>Data Platform and Tools</strong>.</p> <p><strong>Component:</strong> Each product can be split into several components based on its functionalities.</p> <p><strong>Version:</strong> Version of the product determines the product in which the bug has been detected.</p> <p><strong>Summary:</strong> It is used to define the summary of a product.</p> <p class="pq"><strong>Request information from:</strong></p> <p><strong>Attachment:</strong> File can also be attached related to the bug.</p> <p><strong>Description:</strong> It provides the complete description of a bug.</p> <p><strong>Security:</strong> You can check the security box so that this bug can be kept hidden from the public until and unless it gets resolved.</p> <h3 class="h3">2) Search</h3> <p>You can also search for a particular bug.</p> <p>There are two types of searches:</p> 
+           <ul class="points"> 
+            <li>Simple search</li> 
+            <li>Advanced search</li> 
+           </ul> <p class="pq"><strong>Simple search</strong></p> <p><strong>Follow the steps to search for a bug:</strong></p> <p><strong>Step 1:</strong> Click on the <strong>Search icon</strong> available on the home page.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla9.png" alt="Bugzilla"> <p><strong>Step 2:</strong> After clicking on the search icon, the screen appears which is shown below:</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla10.png" alt="Bugzilla"> <p>In the above screen, we need to enter the three fields, i.e., Status, Product, and Words. </p> <p><strong>Step 3:</strong> Click on the <strong>Search</strong> button. After clicking on the Search button, the bug list appears which is shown below:</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla11.png" alt="Bugzilla"> <p class="pq"><strong>Advanced search</strong></p> <p><strong>Following steps are required for an advanced search:</strong></p> <p><strong>Step 1:</strong> Click on the <strong>Advanced search</strong> option.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla12.png" alt="Bugzilla"> <p>On clicking on the <strong>Advanced Search</strong> option, the screen appears which is shown below:</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla13.png" alt="Bugzilla"> <p><strong>Step 2:</strong> Select the category of bug under the classification box, so I select Client software. Select the product in which bug has been created, so I select Data Platform and Tools under the Product box. Select the com. In the Component section, I have selected Client Count. You can also select the Status of a bug and Resolution.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla14.png" alt="Bugzilla"> <p><strong>Step 3:</strong> After selecting all the fields, click on the <strong>Search</strong> button.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla15.png" alt="Bugzilla"> <p>The above screen shows the bug list according to the search that you made.</p> <h3 class="h3">3) Preferences</h3> <p>Preferences are used in Bugzilla to customize the default settings according to our requirements.</p> <p>Preferences in Bugzilla are given below:</p> <p class="pq"><strong>a) Account Information</strong></p> <p>In Account Preferences, you can change the account information. For security purpose, you need to enter first your current password in the password field, and if you want to change the email address then the confirmation mail is sent to both old and new email address, this prevents from the account hijacking.</p> <p><strong>Following are the steps required for the Account preferences:</strong></p> <p><strong>Step 1:</strong> Click on the <strong>User Preferences</strong> in the home page.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla16.png" alt="Bugzilla"> <p><strong>Step 2:</strong> Click on the <strong>Account Information</strong> tab shown in the below screen:</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla17.png" alt="Bugzilla"> <p>The above screen shows some fields related to your account, if you want to change your password then you need to enter your current password, new password, real name, and if you want to change your email address then enter your new email address. </p> <p><strong>Step 3:</strong> After filling all the fields, click on the <strong>Submit Changes</strong> button.</p> <p class="pq"><strong>b) General Preferences</strong></p> <p>General preferences are used to customize the default settings in Bugzilla. We can customize the following settings:</p> 
+           <ul class="points"> 
+            <li>You can add New: to the subject line of email sent when a new bug is filed.</li> 
+            <li>You can also set the language used in email.</li> 
+            <li>You can also display the possible duplicates when reporting a new bug.</li> 
+           </ul> <p><strong>Following are the steps required to customize the default settings:</strong></p> <p><strong>Step 1:</strong> Click on the <strong>User Preferences</strong> in the Home page.</p> <p><strong>Step 2:</strong> Click on the <strong>General Preferences</strong> tab.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla18.png" alt="Bugzilla"> <p>The above screen shows the number of settings that we can customize.</p> <p class="pq"><strong>c) Email Preferences</strong></p> <p>Email Preferences allow you to send the email notifications on some specific events. It provides you a complete control over how much email should Bugzilla send. If you want to receive the maximum possible emails then click on the <strong>Enable All Mail</strong> button and if you do not want to receive any email from the Bugzilla then click on the <strong>Disable All Mail</strong> button.</p> <p><strong>Following are the steps required for the Email preferences:</strong></p> <p><strong>Step 1:</strong> Click on the <strong>User Preferences</strong> in the home page.</p> <p><strong>Step 2:</strong> Click on the <strong>Email Preferences</strong> tab.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla19.png" alt="Bugzilla"> <p>The rows represent the events that can happen to a bug while the columns represent the relationship with a bug.</p> <p><strong>Assignee:</strong> The Assignee is the person who has been designated with the responsibility of the bug. The name/account field appears in the "<strong>Assigned to</strong>" field.</p> <p><strong>Reporter:</strong> The person who reported the bug. The name/account field exists in the "<strong>Reporter</strong>" field.</p> <p><strong>CCed:</strong> It means that you are on the CC list of the bug. Your account appears on the CC: text for the bug.</p> <p><strong>QA Contact:</strong> It is The X-Bugzilla-Reason header that defines the QA contacts for the bug.</p> <p class="pq"><strong>d) Saved searches</strong></p> <p>In saved searches, you can run the saved searches that you have created, and it also allows you to share the saved searches. You can also add the saved searches to the page footer in the screen. </p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla20.png" alt="Bugzilla"> <p class="pq"><strong>e) Permissions</strong></p> <p>It's an informative page that defines the current permissions on the installation of Bugzilla.</p> <p>A complete list of permission is given below:</p> <p>bz_canusewhines: User can configure whine reports for self</p> <p>Canconfirm : Can confirm a bug.</p> <p>Editbugs : Can edit all aspects of any bug.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla21.png" alt="Bugzilla"> <h3 class="h3">4) Reports</h3> <p>Reports help to standardize the current state of a bug. The purpose of the defect is to see the analysis, progress and communication of a defect, and the current stage of a life cycle. Defect report is also useful after creating a bug that helps the developers to analyze the quality of a product.</p> <p><strong>There are three types of reports that can be generated in Bugzilla:</strong></p> 
+           <ol class="points"> 
+            <li>Graphical reports</li> 
+            <li>Tabular reports</li> 
+            <li>Duplicates</li> 
+           </ol> <p class="pq"><strong>Graphical reports</strong></p> <p>Graphical reports are a group of line graphs, bar and pie charts. Graphical reports are helpful in many ways, for example, which component has the highest number of bugs, which bug has the highest priority, etc.</p> <p><strong>To generate the graphical report, you need to follow the steps which are given below:</strong></p> <p><strong>Step 1:</strong> Log in to the Bugzilla account.</p> <p><strong>Step 2:</strong> Click on the <strong>Reports</strong> link.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla22.png" alt="Bugzilla"> <p><strong>Step 3:</strong> Click on the <strong>Graphical reports</strong> link.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla23.png" alt="Bugzilla"> <p><strong>Step 4:</strong> After clicking on the Graphical reports, the screen appears which is shown below:</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla24.png" alt="Bugzilla"> <p>In the above screen, we need to first define the x-axis, y-axis and format of a graph. Suppose I choose the Bar graph as a format, y-axis as a Severity and x-axis as a Component. Now, we need to describe the product and component of which we have to create the graphical report.</p> <p><strong>Bar Graph</strong></p> <p>When the x-axis is a component and y-axis represents severity.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla25.png" alt="Bugzilla"> <p><strong>Line graph</strong></p> <p>When the x-axis is a component and y-axis represents severity.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla26.png" alt="Bugzilla"> <p><strong>Pie chart</strong></p> <p>When the x-axis is Assignee and y-axis is severity.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla27.png" alt="Bugzilla"> <p>The red portion represents the major severity while green portion represents the normal severity. The above pie chart represents that the bugs assigned to the <em><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f59881879c9b9e949994b5989a8f9c999994db969a98">[email&nbsp;protected]</a></em> are of major severity and the bugs assigned to the <em><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2e40414c414a576e4341544742424f00415c49">[email&nbsp;protected]</a></em> are of normal severity.</p> <p class="pq"><strong>Tabular reports</strong></p> <p>Tabular reports generate the tables of bug counts in 1, 2 or 3 dimensions, as HTML or CSV format.</p> <p><strong>The following are the steps required to generate a tabular report:</strong></p> <p><strong>Step 1:</strong> Click on the <strong>Reports</strong> section.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla28.png" alt="Bugzilla"> <p><strong>Step 2:</strong> Click on the <strong>Tabular reports</strong>, as shown in the below screenshot:</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla29.png" alt="Bugzilla"> <p><strong>Step 3:</strong> On clicking on the <strong>Tabular reports</strong>, the screen appears, which is shown below:</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla30.png" alt="Bugzilla"> <p>In the above screen, you need to fill some required fields to generate a tabular report such as the vertical axis (y-axis), the horizontal axis(x-axis), and product details. The product details are <strong>Classification</strong>, Product, Component, and Status. Under Classification, I selected Client software, Under <strong>Product</strong>, I selected Data Platform and Tools. Under <strong>Component</strong>, I choose Client Count, and under the <strong>Status</strong> section, I selected New. I selected Severity as a vertical axis and Assignee as a horizontal axis.</p> <p><strong>Step 3:</strong> After filling all the required fields, click on the <strong>Generate Report</strong> button.</p> <p><strong>Step 4:</strong> The below screen shows the generated tabular report.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla31.png" alt="Bugzilla"> <p class="pq"><strong>Duplicates</strong></p> <p>In Bugzilla, duplicates are the most frequently reported bugs. The most frequently reported bugs mean the most frequently seen open bugs. Duplicates contain the field, i.e., Dupe Count that counts the number of direct and indirect of bugs. This helps in minimizing the number of duplicate bugs that are entered into Bugzilla. It also helps the QA tester to log a new defect rather than a defect that already exist. It also helps the stakeholders to find the root cause of a bug that are reopened.</p> <p><strong>How to use a Duplicate list</strong></p> 
+           <ul class="points"> 
+            <li>Review the most frequently reported bugs.</li> 
+            <li>If your bug is listed in reported bug list then click on the bug number to confirm that you have found the bug, and you can also add the additional information in comments.</li> 
+            <li>If your bug is not listed in a bug list, then you can perform the following steps: 
+             <ul class="points"> 
+              <li>Try to locate the similar bug that has already been filed.</li> 
+              <li>If your bug is found then you are free to add the additional information in comments.</li> 
+              <li>If your bug is not listed in the bug list then File a New bug.</li> 
+             </ul></li> 
+           </ul> <p>The following are the steps required to use a duplicate list:</p> <p><strong>Step 1:</strong> Click on the <strong>Reports</strong>.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla32.png" alt="Bugzilla"> <p><strong>Step 2:</strong> Click on the <strong>Duplicates</strong> as shown below:</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla33.png" alt="Bugzilla"> <p><strong>Step 3:</strong> After clicking on the Duplicates, the screen appears which is shown below:</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla34.png" alt="Bugzilla"> <p>The above screen shows the most frequently reported bug table. This bug table consists of some important fields such as Dupe Count, Component, Severity, Summary, OS.</p> <p><strong>Changing Parameters</strong></p> <p>We can also customize the most frequently reported bug table. Following are the fields used to customize the bug table:</p> 
+           <ul class="points"> 
+            <li><strong>Restrict to products</strong><br> This field is used to filter out some specific products or components. The user can choose either a single product or multiple products.</li> 
+            <li><strong>When sorting or restricting, work with</strong><br> It contains two options, i.e., entire list and currently visible list.</li> 
+            <li><strong>Max Rows</strong><br> The user can provide the maximum number that he/she can see the number of defects on a single page.</li> 
+            <li><strong>Change column is change in the last</strong><br> In this field, the user can provide the number of days that he/she can see the changes that have been taken within these days.</li> 
+            <li><strong>Open Bugs only</strong><br> This field allows you to filter out those bugs that are closed</li> 
+           </ul> <p><strong>Let's change some parameters, and then we look at the bug table.</strong></p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla35.png" alt="Bugzilla"> <p>In the above screen, we have selected the Core Graveyard product, maximum rows are 20, and we have checked the <strong>Open bugs only</strong> field.</p> <p>After filling all the above fields, click on the <strong>Change</strong> button.</p> <img src="https://static.javatpoint.com/tutorial/bugzilla/images/bugzilla36.png" alt="Bugzilla"> <p>The above screen shows that the bug table has been filtered based on the data that we entered in the "<strong>Change Parameters</strong>".</p> 
+           <hr> 
+           <div class="nexttopicdiv"> <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="#">#</a></span> 
+           </div> <br><br> 
+           <div id="bottomnext"> <a style="float:left" class="next" href="#">&#x2190; prev</a> <a style="float:right" class="next" href="#">next &#x2192;</a> 
+           </div> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0d6b6868696f6c6e664d676c7b6c797d62646379236e6260">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/bugzilla"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/bugzilla"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/bugzilla"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5d352f1d373c2b3c292d32343329733e3230">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1b73695b717a6d7a6f6b7472756f3578747635">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

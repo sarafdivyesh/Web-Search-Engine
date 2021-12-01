@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Google Cloud Platform Tutorial - Javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Google Cloud Platform Tutorial - Javatpoint">
+  <meta property="og:description" content="Google Cloud Platform Tutorial with What is Google Cloud Platform, Cloud Computing, Benefits, Key Features, Working of Google Cloud Platform, Google Cloud Platform Services, Compute Services etc."> 
+  <meta name="keywords" content="google cloud platform, google cloud platform tutorial, what is google cloud platform, what is cloud computing, why google cloud platform, benefits of google cloud platform, key features of google cloud platform, working of google cloud platform, google cloud platform services, compute services">
+  <meta name="description" content="Google Cloud Platform Tutorial with What is Google Cloud Platform, Cloud Computing, Benefits, Key Features, Working of Google Cloud Platform, Google Cloud Platform Services, Compute Services etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/google-cloud-platform"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Google Cloud Platform Tutorial - Javatpoint">
+  <meta name="twitter:description" property="og:description" content="Google Cloud Platform Tutorial with What is Google Cloud Platform, Cloud Computing, Benefits, Key Features, Working of Google Cloud Platform, Google Cloud Platform Services, Compute Services etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/google-cloud-platform">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="google-cloud-platform" class="selected">Google Cloud Platform</a></li> 
+       <li><a href="cloud-computing-tutorial">Cloud Computing</a></li> 
+       <li><a href="sql-tutorial">SQL</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="cpp-tutorial">C++</a></li> 
+       <li><a href="c-programming-language-tutorial">C</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="bootstrap-tutorial">Bootstrap</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="xhtml-tutorial">XHTML</a></li> 
+       <li><a href="css-tutorial">CSS</a></li> 
+       <li><a href="jquery-tutorial">jQuery</a></li> 
+       <li><a href="xml-tutorial">XML</a></li> 
+       <li><a href="comment.jsp">Comment</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">GCP Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="google-cloud-platform">GCP Tutorial</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> <h1 class="h1">Google Cloud Platform Tutorial</h1> <img src="https://static.javatpoint.com/tutorial/google-cloud-platform/images/google-cloud-platform.png" class="imageright" alt="Google Cloud Platform Tutorial"> <p>Our Google Cloud Platform Tutorial contains the basic and advanced concepts of Google Cloud Platform. This tutorial is designed to help both beginners and professionals.</p> <p>This tutorial gives you an introduction to Google Cloud Platform along with a wide range of topics such as <strong>why use Google Cloud Platform, Benefits of Google Cloud Platform, Key features of Google Cloud Platform, Google Cloud Platform Services, Creating a Free Tier Account and VM Instance on Google Cloud Platform,</strong> etc.</p> <p>Before we start learning Google Cloud Platform, let's understand about 'Cloud Computing' first:</p> <h2 class="h2">What is Cloud Computing?</h2> <p><a href="https://www.javatpoint.com/cloud-computing-tutorial">Cloud computing</a> is defined as the services offered through remote servers on the internet. These services might include database storage, applications, compute power and other IT resources over the pay-as-you-go pricing approach. The remote server allows users to save, modify, or process data on the internet or cloud-based platform instead of storing it on a local server or their devices.</p> <p>Cloud computing is evolving due to fast performance, better manageability, and less maintenance. It helps organizations to minimize the number of resources and overall infrastructure costs. Additionally, it helps IT teams better focus on the important applications, services, and processes and achieve the company's goals.</p> <p>Typically, the cloud-computing providers offer their services according to the following three standard models:</p> 
+           <ul class="points"> 
+            <li><a href="https://www.javatpoint.com/platform-as-a-service">Platform as a Service (PaaS)</a></li> 
+            <li><a href="https://www.javatpoint.com/software-as-a-service">Software as a Service (SaaS)</a></li> 
+            <li><a href="https://www.javatpoint.com/infrastructure-as-a-service">Infrastructure as a Service (IaaS)</a></li> 
+           </ul> <h2 class="h2">What is Google Cloud Platform?</h2> <p>Google Cloud Platform (GCP) is a suite of cloud computing services provided by Google. It is a public cloud computing platform consisting of a variety of services like compute, storage, networking, application development, Big Data, and more, which run on the same cloud infrastructure that Google uses internally for its end-user products, such as Google Search, Photos, Gmail and YouTube, etc.</p> <p>The services of GCP can be accessed by software developers, cloud administrators and IT professionals over the Internet or through a dedicated network connection.</p> <h2 class="h2">Why Google Cloud Platform?</h2> <p>Google Cloud Platform is known as one of the leading cloud providers in the <a href="https://www.javatpoint.com/it-full-form">IT</a> field. The services and features can be easily accessed and used by the software developers and users with little technical knowledge. Google has been on top amongst its competitors, offering the highly scalable and most reliable platform for building, testing and deploying the applications in the real-time environment.</p> <p>Apart from this, GCP was announced as the leading cloud platform in the Gartner's IaaS Magic Quadrant in 2018. Gartner is one of the leading research and advisory company. Gartner organized a campaign where Google Cloud Platform was compared with other cloud providers, and GCP was selected as one of the top three providers in the market.</p> <p>Most companies use data centers because of the availability of cost forecasting, hardware certainty, and advanced control. However, they lack the necessary features to run and maintain resources in the data center. GCP, on the other side, is a fully-featured cloud platform that includes:</p> 
+           <ul class="points"> 
+            <li><strong>Capacity</strong>: Sufficient resources for easy scaling whenever required. Also, effective management of those resources for optimum performance.</li> 
+            <li><strong>Security</strong>: Multi-level security options to protect resources, such as assets, network and OS -components.</li> 
+            <li><strong>Network Infrastructure</strong>: Number of physical, logistical, and human-resource-related components, such as wiring, routers, switches, firewalls, load balancers, etc.</li> 
+            <li><strong>Support</strong>: Skilled professionals for installation, maintenance, and support.</li> 
+            <li><strong>Bandwidth</strong>: Suitable amount of bandwidth for peak load.</li> 
+            <li><strong>Facilities</strong>: Other infrastructure components, including physical equipment and power resources.</li> 
+           </ul> <p>Therefore, Google Cloud Platform is a viable option for businesses, especially when the businesses require an extensive catalog of services with global recognition.</p> <h2 class="h2">Benefits of Google Cloud Platform</h2> <p>Some of the main benefits of Google Cloud Platform are explained below:</p> <p><strong>Best Pricing</strong>: Google enables users to get Google Cloud hosting at the cheapest rates. The hosting plans are not only cheaper than other hosting platforms but also offer better features than others. GCP provides a pay-as-you-go option to the users where users can pay separately only for the services and resources they want to use.</p> <p><strong>Work from Anywhere</strong>: Once the account is configured on GCP, it can be accessed from anywhere. That means that the user can use GCP across different devices from different places. It is possible because Google provides web-based applications that allow users to have complete access to GCP.</p> <p><strong>Private Network</strong>: Google has its own network that enables users to have more control over GCP functions. Due to this, users achieve smooth performance and increased efficiency over the network.</p> <p><strong>Scalable</strong>: Users are getting a more scalable platform over the private network. Because Google uses fiber-optic cables to extend its network range, it is likely to have more scalability. Google is always working to scale its network because there can be any amount of traffic at any time.</p> <p><strong>Security</strong>: There is a high number of security professionals working at Google. They always keep trying to secure the network and protect the data stored on servers. Additionally, Google uses an algorithm that encrypts all the data on the Cloud platform. This gives assurance to the users that their data is completely safe and secure from unauthorized sources.</p> <p><strong>Redundant Backup</strong>: Google always keeps backup of user's data with built-in redundant backup integration. In case a user has lost the stored data, it's not a big problem. Google always has a copy of the users' data unless the data is deleted forcefully. This adds data integrity, reliability and durability with GCP.</p> <h2 class="h2">Key Features of Google Cloud Platform</h2> <p>The following are some key features of Google Cloud Platform:</p> 
+           <ul class="points"> 
+            <li><strong>On-demand services</strong>: Automated environment with web-based tools. Therefore, no human intervention is required to access the resources.</li> 
+            <li><strong>Broad network access</strong>: The resources and the information can be accessed from anywhere.</li> 
+            <li><strong>Resource pooling</strong>: On-demand availability of a shared pool of computing resources to the users.</li> 
+            <li><strong>Rapid elasticity</strong>: The availability of more resources whenever required.</li> 
+            <li><strong>Measured service</strong>: Easy-to-pay feature enables users to pay only for consumed services.</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/google-cloud-platform/images/key-features-of-google-cloud-platform.png" alt="Google Cloud Platform Tutorial"> <h2 class="h2">Working of Google Cloud Platform</h2> <p>When a file is uploaded on the Google cloud, the unique metadata is inserted into a file. It helps identify the different files and track the changes made across all the copies of any particular file. All the changes made by individuals get synchronized automatically to the main file, also called a master file. GCP further updates all the downloaded files using metadata to maintain the correct records.</p> <p>Let's understand the working of GCP with a general example:</p> <p>Suppose that MS Office is implemented on Cloud to enable several people to work together. The primary aim of using cloud technology is to work on the same project at the same time. We can create and save a file on the cloud once we install a plugin for the MS Office suite. This will allow several people to edit a document at the same time. The owner can assign access to specific people to allow them to download and start editing the document in MS Office.</p> <p>Once users are assigned as an editor, they can use and edit the document's cloud copy as desired. The combined, edited copy is generated that is known as the master document. GCP helps to assign a unique <a href="https://www.javatpoint.com/url-full-form">URL</a> to each specific copy of the existing document given to different users. However, any of the authorized users' changes will be visible on all the copies of documents shared over the cloud. In case multiple changes are made to the same document, then GCP allows the owner to select the appropriate changes to keep.</p> <h2 class="h2">Google Cloud Platform Services</h2> <p>Google provides a considerable number of services with several unique features. That is the reason why Google Cloud Platform is continually expanding across the globe. Some of the significant services of GCP are:</p> 
+           <ul class="points"> 
+            <li>Compute Services</li> 
+            <li><a href="https://www.javatpoint.com/networking-interview-questions">Networking</a></li> 
+            <li>Storage Services</li> 
+            <li>Big Data</li> 
+            <li>Security and Identity Management</li> 
+            <li>Management Tools</li> 
+            <li>Cloud AI</li> 
+            <li>IoT (Internet of Things)</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/google-cloud-platform/images/google-cloud-platform-services.png" alt="Google Cloud Platform Tutorial"> <p>Let's understand each of these services in details:</p> <h3 class="h3">Compute Services</h3> <p>GCP offers a scalable range of computing services, such as:</p> 
+           <ul class="points"> 
+            <li><strong>Google App Engine</strong>: It is a cloud computing platform that follows the concept of Platform-as-a-Service to deploy PHP, Java and other software. It is also used to develop and deploy web-based software in Google-managed data centers. The most significant advantage of Google App Engine is its automatic scaling capability. This means that the App Engine automatically allocates more resources for the application when there is an increase in requests.</li> 
+            <li><strong>Compute Engine</strong>: It is a cloud computing platform that follows the concept of Infrastructure-as-a-Service to run Windows and Linux based virtual machines. It is an essential component of GCP. It is designed on the same infrastructure used by Google search engine, YouTube and other Google services.</li> 
+            <li><strong>Kubernetes Engines</strong>: This computing service is responsible for offering a platform for automatic deployment, scaling, and other operations of application containers across clusters of hosts. The engine supports several container tools like a docker, etc.</li> 
+           </ul> <h3 class="h3">Networking</h3> <p>GCP includes the following network services:</p> 
+           <ul class="points"> 
+            <li><strong>VPC</strong>: VPC stands for Virtual Private Network. The primary function of VPC is to offer a private network with routing, IP allocation, and network firewall policies. This will help to create a secure environment for the application deployments.</li> 
+            <li><strong>Cloud Load Balancing</strong>: As its name states, Cloud balancing is used to distribute workload across different computing resources to balance the entire system performance. This also results in cost-reduction. The process also helps in minimizing the availability and maximizing the capability of the resources.</li> 
+            <li><strong>Content Delivery Network</strong>: CDN is a geographically distributed network of proxy servers and their data centers. The primary aim of using CDN is to provide maximum performance to the users. Additionally, it also helps deliver high availability of resources by equally distributing the related services to the end-users.</li> 
+           </ul> <h3 class="h3">Storage Services</h3> <p>GCP has the following storage services:</p> 
+           <ul class="points"> 
+            <li><strong>Google Cloud Storage</strong>: It is an online data storage web service that Google provides to its users to store and access data from anywhere. The service also includes a wide range of features like maximum performance, scalability, security and sharing.</li> 
+            <li><strong>Cloud SQL</strong>: It is a web-service that enables users to create, manage, and use relational databases stored on Google Cloud servers. The service itself maintains and protects the databases, which helps users focus on their applications and other operations.</li> 
+            <li><strong>Cloud Bigtable</strong>: It is known for its fast performance and highly manageable feature. It is a highly scalable NoSQL database service that allows collecting and retaining data from as low as 1 TB to hundreds of PB.</li> 
+           </ul> <h3 class="h3">Big Data</h3> <p>GCP provides a variety of services related to big data; they are:</p> 
+           <ul class="points"> 
+            <li><strong>BigQuery</strong>: It is a fully managed data analysis service by Google. The primary aim of Google BigQuery service is to helps businesses to analyze Big Data. It offers a highly scalable data management option. This means BigQuery allows users to perform ad-hoc queries and share data insights across the web.</li> 
+            <li><strong>Google Cloud Datastore</strong>: Google Cloud Datastore is a kind of datastore service that is fully managed, schema-less, and non-relational. This service enables businesses to perform automatic transactions and a rich set of queries. The main advantage of Google Cloud Datastore is the capability of automatic scaling. This means that the service can itself scale up and down, depending on the requirement of resources.</li> 
+            <li><strong>Google Cloud Dataproc</strong>: It is a very fast and easy to use big data service offered by Google. It mainly helps in managing Hadoop and Spark services for distributed data processing. The service allows users to create Hadoop or Spark clusters sized according to the overall workload and can be accessed whenever users want them.</li> 
+           </ul> <h3 class="h3">Security and Identity Management</h3> <p>GCP includes the following services related to Security and Identity management:</p> 
+           <ul class="points"> 
+            <li><strong>Cloud Data Loss Prevention API</strong>: It is mainly designed to manage sensitive data. It helps users manage sensitive data elements like credit card details, debit card details, passport numbers, etc. It offers fast and scalable classification for sensitive data.</li> 
+            <li><strong>Cloud IAM</strong>: It stands for Cloud Identity and Access Management. It is a framework that contains rules and policies and validates the authentication of the users for accessing the technology resources. That is why it is also known as Identity Management (IdM).</li> 
+           </ul> <h3 class="h3">Management Tools</h3> <p>GCP includes the following services related to management tools:</p> 
+           <ul class="points"> 
+            <li><strong>Google Stackdriver</strong>: Google Stackdriver service is primarily responsible for displaying the overall performance and diagnostics information. This may include insights of data monitoring, tracing, logging, error reporting, etc. The service also prompts an alert notification to the public cloud users.</li> 
+            <li><strong>Google Cloud Console App</strong>: It is a native mobile application powered by Google. The primary aim of this service is to enable users to manage the core features of Google Cloud services directly from their mobile devices anytime, anywhere. The primary functions of this service are alerting, monitoring, and performing critical actions on resources.</li> 
+           </ul> <h3 class="h3">Cloud AI</h3> <p>When it comes to Cloud AI, GCP offers these services:</p> 
+           <ul class="points"> 
+            <li><strong>Cloud Machine Learning Engine</strong>: It is another fully managed service that allows users to create Machine Learning models. The service is mainly used for those ML models, which are based on mainstream frameworks.</li> 
+            <li><strong>Cloud AutoML</strong>: It is the type of service that is based on Machine Learning. It helps users to enter their data sets and gain access to quality trained pre-designed ML models. The service works by following Google's transfer learning and Neural Architecture Search method.</li> 
+           </ul> <h3 class="h3">IoT (Internet of Things)</h3> <p>GCP contains the following <a href="https://www.javatpoint.com/iot-internet-of-things">IoT</a> services:</p> <p><strong>Cloud IoT Core</strong>: It is one of the fully managed core services. It allows users to connect, control, and ingest data from various devices that are securely connected to the Internet. This allows other Google cloud services to analyze, process, collect and visualize IoT data in real-time.</p> <p><strong>Cloud IoT Edge</strong>: The Edge computing service brings memory and other computing-power resources near to the location where it is required.</p> <h2 class="h2">Advantages of Google Cloud Platform</h2> <p>There are several advantages of using Google Cloud Platform, such as:</p> 
+           <ul class="points"> 
+            <li><strong>Google Cloud Offers Quick and Easy Collaboration</strong>: Multiple users can access the data and simultaneously contribute their information. This is possible because the data is stored on the cloud servers, not on the user's personal computers.</li> 
+            <li><strong>Higher Productivity with Continuous Development</strong>: Google is always working on adding new features and functionalities to provide higher productivity to the customers. Therefore, Google delivers frequent updates to its products and services.</li> 
+            <li><strong>Less Disruption with Adopting New Features</strong>: Instead of pushing huge disruptive updates of changes, Google provides small updates weekly. This helps users to understand and adopt new features easily.</li> 
+            <li><strong>Least or Minimal Data is stored on Vulnerable Devices</strong>: Google does not store data on local devices unless a user explicitly tries to do it. This is because the data stored on local devices may get compromised compared to the cloud's data.</li> 
+            <li><strong>Users can access Google Cloud from Anywhere</strong>: The best thing is that a user can easily access the information stored on Google cloud from anywhere because it is operated through web-based applications.</li> 
+            <li><strong>Google provides Maximum Security with its Robust Structure</strong>: Google hires leading security professionals to protect user's data. Users get process-based and physical security features made by Google.</li> 
+            <li><strong>Users have Full Control over their Data</strong>: Users gain full control over services and the data stored in Google Cloud. If a user does not want to use Google services any longer and wants to delete the cloud data, it can be easily performed.</li> 
+            <li><strong>Google provides Higher Uptime and Reliability</strong>: Google uses several resources to provide higher and reliable up-time servers. If a data center is not working for technical issues, the system will automatically communicate with the secondary center without interruption visible to users.</li> 
+           </ul> <h2 class="h2">Creating a Free Tier Account on GCP</h2> <p>To start using Google Cloud Platform, we are first required to create an account GCP. Here, we will create a free tier account for explaining the upcoming topic of this tutorial. The best thing about free account is that Google provides $300 worth credit to spend over the next 90 days after the date of account creation. Google offers all the core services of GCP with a free account for the next 90 days.</p> <p>However, users must have a credit card to start a free tier account. Google asks for the credit card details to make sure that it is a genuine human request. Google does not charge automatically even after the 90 days or when we have exhausted the $300 free credit. The amount will only be charged when we will be upgrading our free account to a paid account manually.</p> <p>Let's start with the steps of creating a free tier account on Google Cloud Platform:</p> <p><strong>Step 1</strong>: First, we are required to navigate to the following link: <a href="https://cloud.google.com/gcp/" rel="nofollow" target="_blank">https://cloud.google.com/gcp/</a></p> <p><strong>Step 2</strong>: On the next screen, we need to click on 'Get started for free', as shown below:</p> <img src="https://static.javatpoint.com/tutorial/google-cloud-platform/images/creating-a-free-tier-account-on-gcp.png" alt="Google Cloud Platform Tutorial"> <p><strong>Step 3</strong>: Next, we are required to login to the Google Account. We can use the 'create an account' button if we don't have an existing Google account.</p> <img src="https://static.javatpoint.com/tutorial/google-cloud-platform/images/creating-a-free-tier-account-on-gcp2.png" alt="Google Cloud Platform Tutorial"> <p><strong>Step 4</strong>: Once we have logged in, we will get to the following screen:</p> <img src="https://static.javatpoint.com/tutorial/google-cloud-platform/images/creating-a-free-tier-account-on-gcp3.png" alt="Google Cloud Platform Tutorial"> <p>Here, we must select the Country, agree to the Terms of Service, and then click on the 'CONTINUE' button.</p> <p><strong>Step 5</strong>: On the next screen, we have to enter some necessary details such as name and address details. Also, we have to enter payment details like the method of payments and credit card details. After filling all the details, we need to click on the button 'START MY FREE TRIAL' from the bottom of the page:</p> <img src="https://static.javatpoint.com/tutorial/google-cloud-platform/images/creating-a-free-tier-account-on-gcp4.png" alt="Google Cloud Platform Tutorial"> <p><strong>Step 6</strong>: Google asks for the confirmation to use the credit card for the small deduction to ensure that the card information is correct. However, the amount is refunded back to the same account. Here, we need to click on the 'CONTINUE' button:</p> <img src="https://static.javatpoint.com/tutorial/google-cloud-platform/images/creating-a-free-tier-account-on-gcp5.png" alt="Google Cloud Platform Tutorial"> <p><strong>Step 7</strong>: On the next screen, we must click on the 'GO TO CONSOLE' button:</p> <img src="https://static.javatpoint.com/tutorial/google-cloud-platform/images/creating-a-free-tier-account-on-gcp6.png" alt="Google Cloud Platform Tutorial"> <p>After clicking on the 'GO TO CONSOLE' button, we will be redirected to the Dashboard that includes a summary of GCP services along with projects and other insights. It looks like this:</p> <img src="https://static.javatpoint.com/tutorial/google-cloud-platform/images/creating-a-free-tier-account-on-gcp7.png" alt="Google Cloud Platform Tutorial"> <p>To be specific, a Dashboards of GCP displays the summarized view of the followings:</p> 
+           <ul class="points"> 
+            <li><strong>Project Info</strong>: contains project details such as project name, ID, and number.</li> 
+            <li><strong>Resources</strong>: contains a list of resources being used in the related project.</li> 
+            <li><strong>APIs</strong>: contains various API requests running with the project (in request/sec form).</li> 
+            <li><strong>Google Cloud Platform Status</strong>: displays an overall summary of services that are part of GCP.</li> 
+            <li><strong>Monitoring</strong>: displays alerts, performance stats, Uptime, etc. to ensure that systems are running reliably.</li> 
+            <li><strong>Error Reporting</strong>: displays errors occurring in the projects, but it needs to be configured first.</li> 
+            <li><strong>Trace</strong>: displays latency data of existing applications across a distributed tracing system.</li> 
+            <li><strong>Compute Engine</strong>: displays the insights of CPU usage in percentage (%).</li> 
+            <li><strong>Tutorials</strong>: contains Getting Started guides (basic guides) to explain how the GCP features work.</li> 
+            <li><strong>News</strong>: displays news and other important updates regarding Google Cloud Platform.</li> 
+            <li><strong>Documentation</strong>: contains in-depth guides to teach more about Compute Engine, Cloud Storage, and App Engine.</li> 
+           </ul> <h2 class="h2">Google Cloud Platform Pricing</h2> <p>When it comes to pricing, Google Cloud Platform is the cheapest solution in the market. GCP is not only low on price but also offers more features and services than other providers.</p> <p>When comparing GCP with other leading competitors, it has more benefits over them. Google provides its users a massive 60% savings, including:</p> 
+           <ul class="points"> 
+            <li>15% rightsizing recommendation</li> 
+            <li>21% list price differences</li> 
+            <li>24% of sustained usage discounts</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/google-cloud-platform/images/google-cloud-platform-pricing.png" alt="Google Cloud Platform Tutorial"> <p>Some of the main benefits of GCP pricing are:</p> <p><strong>No Hidden Charges</strong>: There are no hidden charges behind the GCP pricing. Google's pricing structure is straightforward and can be easily understood.</p> <p><strong>Pay-as-you-go</strong>: Google offers its customer 'use now, pay later' option. So, users will have to pay only for those services which they want to use or already using.</p> <p><strong>No Termination Fee</strong>: Users are free to stop using Google services whenever they want, and there will not have to pay any termination fee. That means the moment users stop using Google services; they stop paying for it.</p> <h2 class="h2">Difference between Google Cloud Platform, AWS and Azure</h2> <p>Like Google cloud platform, AWS and Azure are the other popular cloud-based platforms. However, there are differences amongst them. Some of the main differences between GCP, <a href="https://www.javatpoint.com/aws-tutorial">AWS</a> and <a href="https://www.javatpoint.com/microsoft-azure">Azure</a> are tabulated below:</p> 
+           <table class="alt"> 
+            <tbody>
+             <tr> 
+              <th>Google Cloud</th> 
+              <th>AWS</th> 
+              <th>Azure</th> 
+             </tr> 
+             <tr> 
+              <td>It uses GCE (Google Compute Engine) for computing purposes.</td> 
+              <td>AWS EC2 offers core compute services.</td> 
+              <td>It uses virtual machines for computation purposes.</td> 
+             </tr> 
+             <tr> 
+              <td>It uses Google Cloud Storage for storage purposes.</td> 
+              <td>It uses Amazon S3 for storing the data.</td> 
+              <td>It uses a storage block bob that comprises blocks for storing the data.</td> 
+             </tr> 
+             <tr> 
+              <td>It offers the lowest price to the customers to beat other cloud providers.</td> 
+              <td>AWS pricing is generally keen to have inscrutable. The overall structure of granular pricing is a bit complex.</td> 
+              <td>Like AWS, Azure pricing structure is also difficult to understand unless you have considerable experience.</td> 
+             </tr> 
+             <tr> 
+              <td>It uses Cloud Test labs for App Testing purposes.</td> 
+              <td>It uses a device farm for App Testing purposes.</td> 
+              <td>It uses DevTest labs for App Testing purposes.</td> 
+             </tr> 
+             <tr> 
+              <td>It uses Subnet as a virtual network.</td> 
+              <td>It uses VPC as a virtual network.</td> 
+              <td>It uses VNet as a virtual Network.</td> 
+             </tr> 
+             <tr> 
+              <td>It follows the Cloud Load Balancing configuration.</td> 
+              <td>It follows the Elastic Load Balancing configuration.</td> 
+              <td>It follows the Load-Balancer Application Gateway configuration.</td> 
+             </tr> 
+            </tbody>
+           </table> <h2 class="h2">Job Opportunities with GCP</h2> <p>Having a piece of in-depth knowledge in the Google Cloud Platform is very useful as per job purposes. However, an experience or little more expertise in using GCP will help a person stand aside from the crowd. This will not only make a resume more effective but will also open a variety of job opportunities.</p> <p>There are many job-opportunities with GCP. Some popular job-roles are listed below:</p> 
+           <ul class="points"> 
+            <li>Technical Lead Manager</li> 
+            <li>Sales Engineer</li> 
+            <li>Technical Solutions Engineer</li> 
+            <li>Account Executive</li> 
+            <li>Technical Program Manager</li> 
+            <li>Cloud Software Engineer</li> 
+            <li>Data Center Software Engineer</li> 
+            <li>Solutions Architect</li> 
+            <li>Strategic Customer Engineer</li> 
+           </ul> <h2 class="h2">Prerequisite</h2> <p>There is no special prerequisite for this GCP Tutorial. All you need is continuous learning and practicing with the tools. However, if you want to extend functionalities to match your requirements, then a basic knowledge of working with cloud-based software and tools will be beneficial and put you at an advantage. We have designed this tutorial to help you learn all the concepts of Google Cloud Platform from scratch.</p> <h2 class="h2">Audience</h2> <p>Our Google Cloud Platform Tutorial is designed to help beginners and professionals.</p> <h2 class="h2">Problem</h2> <p>We assure you that you will not find any difficulty while learning through our Google Cloud Platform Tutorial. But if you find any mistake in this tutorial, we request you to kindly post the problem in the contact form so that we can improve it.</p> 
+           <hr> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1c7a7979787e7d7f775c767d6a7d686c73757268327f7371">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/google-cloud-platform"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/google-cloud-platform"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/google-cloud-platform"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f09882b09a91869184809f999e84de939f9d">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e08892a08a81968194908f898e94ce838f8dce">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

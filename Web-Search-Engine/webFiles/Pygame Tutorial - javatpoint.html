@@ -1,0 +1,1103 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Pygame Tutorial - javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Pygame Tutorial - javatpoint">
+  <meta property="og:description" content="Python Pygame Tutorial with Pygame, Pygame Installation, Install Pygame in Mac, Pygame Surface, Pygame Clock, Pygame Adding Image, Pygame Rect, Pygame Keydown, Pygame Draw, Pygame Text and Font etc."> 
+  <meta name="keywords" content="python pygame tutorial, pygame introduction, python pygame, what is python pygame, pygame, pygame installation, install pygame in windows, install pygame in mac, pygame surface, pygame clock, pygame blit, pygame adding image, pygame rect, pygame keydown, pygame draw, pygame text and font">
+  <meta name="description" content="Python Pygame Tutorial with Pygame, Pygame Installation, Install Pygame in Mac, Pygame Surface, Pygame Clock, Pygame Adding Image, Pygame Rect, Pygame Keydown, Pygame Draw, Pygame Text and Font etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/pygame"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Pygame Tutorial - javatpoint">
+  <meta name="twitter:description" property="og:description" content="Python Pygame Tutorial with Pygame, Pygame Installation, Install Pygame in Mac, Pygame Surface, Pygame Clock, Pygame Adding Image, Pygame Rect, Pygame Keydown, Pygame Draw, Pygame Text and Font etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/pygame">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="python-tutorial">Python</a></li> 
+       <li><a href="python-pygame" class="selected">Pygame</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="sql-tutorial">SQL</a></li> 
+       <li><a href="android-tutorial">Android</a></li> 
+       <li><a href="cloud-computing-tutorial">Cloud</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="servlet-tutorial">Servlet</a></li> 
+       <li><a href="jsp-tutorial">JSP</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="struts-2-tutorial">Struts2</a></li> 
+       <li><a href="spring-tutorial">Spring</a></li> 
+       <li><a href="examaccess">Quiz</a></li> 
+       <li><a href="free-java-projects">Projects</a></li> 
+       <li><a href="corejava-interview-questions">Interview Q</a></li> 
+       <li><a href="comment.jsp">Comment</a></li> 
+       <li><a href="forum">Forum</a></li> 
+       <li><a href="training">Training</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Pygame Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="python-pygame">Pygame Tutorial</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> <h1 class="h1">Python Pygame (Game Development Library)</h1> <img src="https://static.javatpoint.com/tutorial/pygame/images/python-pygame-tutorial.png" class="imageright" alt="Python Pygame Tutorial"> <p>Python is the most popular programming language or nothing wrong to say that it is the next-generation programming language. In every emerging field in computer science, Python makes its presence actively. Python has vast libraries for various fields such as <strong>Machine Learning (Numpy, Pandas, Matplotlib), Artificial intelligence (Pytorch, TensorFlow), and Game development (Pygame,Pyglet)</strong>.</p> <p>In this tutorial, we are going to learn about game development using the <strong>Pygame</strong> (Python library)</p> <h2 class="h2">Pygame</h2> 
+           <ul class="points"> 
+            <li>Pygame is a cross-platform set of Python modules which is used to create video games. </li> 
+            <li>It consists of computer graphics and sound libraries designed to be used with the Python programming language.</li> 
+            <li>Pygame was officially written by <strong>Pete Shinners</strong> to replace PySDL. </li> 
+            <li>Pygame is suitable to create client-side applications that can be potentially wrapped in a standalone executable.</li> 
+           </ul> <h3 class="h3">Prerequisites for Pygame:</h3> <p>Before learning about pygame, we need to understand what kind of game we want to develop. </p> 
+           <ul class="points"> 
+            <li>To learn pygame, it is required to have basic knowledge of Python.</li> 
+           </ul> <h2 class="h2">Pygame Installation</h2> <h3 class="h3">Install pygame in Windows</h3> <p>Before installing Pygame, Python should be installed in the system, and it is good to have 3.6.1 or above version because it is much friendlier to beginners, and additionally runs faster. There are mainly two ways to install Pygame, which are given below:</p> <p><strong>1. Installing through pip:</strong> The good way to install Pygame is with the pip tool (which is what python uses to install packages). The command is the following:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+py -m pip install -U pygame --user
+</textarea>
+           </div> <p><strong>2. Installing through an IDE:</strong> The second way is to install it through an IDE and here we are using Pycharm IDE. Installation of pygame in the pycharm is straightforward. We can install it by running the above command in the terminal or use the following steps:</p> 
+           <ul class="points"> 
+            <li>Open the <strong>File</strong> tab and click on the <strong>Settings</strong> option.</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-installation.png" alt="Pygame Installation"> <br> 
+           <ul class="points"> 
+            <li>Select the <strong>Project Interpreter</strong> and click on the <strong>+</strong> icon.</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-installation2.png" alt="Pygame Installation"> <br> 
+           <ul class="points"> 
+            <li>It will display the search box. Search the pygame and click on the <strong>install package</strong> button.</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-installation3.png" alt="Pygame Installation"> <br> <p>To check whether the pygame is properly installed or not, in the IDLE interpreter, type the following command and press Enter:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import pygame
+</textarea>
+           </div> <p>If the command runs successfully without throwing any errors, it means we have successfully installed Pygame and found the correct version of IDLE to use for pygame programming.</p> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-installation4.png" alt="Pygame Installation"> <h3 class="h3">Install pygame in Mac</h3> <p>The steps are following to install pygame in Mac</p> 
+           <ul class="points"> 
+            <li>Visit the official site of pygame <strong>pygame.org</strong> and, it will display the following window, download the <strong>pygame-1.9.1release-python.org-32bit-py2.7-macosx10.3.dmg:</strong></li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-installation5.png" alt="Pygame Installation"> <h4 class="n"><span class="bold">Note:</span> If you are using the different version of Python, download the last link.</h4> 
+           <ul class="points"> 
+            <li>Double click on the downloaded file and unzip it. Now double click on the unzipped <strong>mpkg</strong> file that appears to run the installer. Follow the instructions to install pygame.</li> 
+            <li>Start the terminal (<strong>Cmd+Space</strong>, then enter '<strong>terminal</strong>' in the search box). In the terminal, type 'python2.7' and press enter.</li> 
+            <li>Python should start up, display the version as 2.7.2 (2.7.1 is fine too), and give you a prompt. At the Python prompt, type 'import pygame'. If you don't get any errors, everything is working fine.</li> 
+           </ul> <h2 class="h2">Simple pygame Example</h2> <p>Here is the simple program of pygame which gives a basic idea of the syntax.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import pygame
+
+pygame.init()
+screen = pygame.display.set_mode((400,500))
+done = False
+
+while not done:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+    pygame.display.flip()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <p>After successful execution it will give the following window as an output:</p> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-installation6.png" alt="Pygame Installation"> <p>Let's understand the basic syntax of the above program line by line:</p> <p><strong>import pygame -</strong> This provides access to the pygame framework and imports all functions of pygame.</p> <p><strong>pygame.init() -</strong> This is used to initialize all the required module of the pygame.</p> <p><strong>pygame.display.set_mode((width, height)) -</strong> This is used to display a window of the desired size. The return value is a Surface object which is the object where we will perform graphical operations.</p> <p><strong>pygame.event.get()-</strong> This is used to empty the event queue. If we do not call this, the window messages will start to pile up and, the game will become unresponsive in the opinion of the operating system.</p> <p><strong>pygame.QUIT -</strong> This is used to terminate the event when we click on the close button at the corner of the window.</p> <p><strong>pygame.display.flip() -</strong> Pygame is double-buffered, so this shifts the buffers. It is essential to call this function in order to make any updates that you make on the game screen to make visible.</p> <h2 class="h2">Pygame Surface</h2> <p>The pygame Surface is used to display any image. The Surface has a pre-defined resolution and pixel format. The Surface color is by default black. Its size is defined by passing the <strong>size</strong> argument.</p> <p>Surfaces can have the number of extra attributes like <strong>alpha planes, color keys, source rectangle clipping, etc</strong>. The blit routines will attempt to use hardware acceleration when possible; otherwise, they will use highly enhanced software blitting methods.</p> <h2 class="h2">Pygame Clock</h2> <p>Times are represented in millisecond (1/1000 seconds) in pygame. Pygame clock is used to track the time. The time is essential to create motion, play a sound, or, react to any event. In general, we don't count time in seconds. We count it in milliseconds. The clock also provides various functions to help in controlling the game's frame rate. The few functions are the following:</p> <p class="pq"><strong>tick()</strong></p> <p>This function is used to update the clock. The syntax is the following:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+tick(framerate=0)
+</textarea>
+           </div> <p>This method should be called once per frame. It will calculate how many milliseconds have passed since the previous call. The <strong>framerate</strong> argument is optional to pass in the function, and if it is passed as an argument then the function will delay to keep the game running slower than the given ticks per second.</p> <p class="pq"><strong>tick_busy_loop()</strong></p> <p>The tick_busy_loop() is same as the tick(). By calling the <strong>Clock.tick_busy_loop(20)</strong> once per frame, the program will never run at more than 20 frames per second. The syntax is the following:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+tick_busy_loop()
+</textarea>
+           </div> <p class="pq"><strong>get_time()</strong></p> <p>The get_time() is used to get the previous tick. The number of a millisecond that isdra passed between the last two calls in Clock.tick().</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+get_time()
+</textarea>
+           </div> <h2 class="h2">Pygame Blit</h2> <p>The pygame blit is the process to render the game object onto the surface, and this process is called <strong>blitting</strong>. When we create the game object, we need to render it. If we don't render the game objects and run the program, then it will give the black window as an output.</p> <p>Blitting is one of the slowest operations in any game so, we need to be careful to not to blit much onto the screen in every frame. The primary function used in blitting is blit(), which is:</p> <p><strong>blit()</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+blit(source,dest,area=None,special_flags=0)
+</textarea>
+           </div> <p>This function is used to draw one image into another. The draw can be placed with the dest argument. The dest argument can either be a pair of coordinates representing the upper left corner of the source. </p> <h2 class="h2">Pygame Adding Image</h2> <p>To add an image on the window, first, we need to instantiate a blank surface by calling the Surface constructor with a width and height tuple. </p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+surface = pygame.Surface((100,100))
+</textarea>
+           </div> <p>The above line creates a blank 24-bit RGB image that's 100*100 pixels with the default black color.</p> <p>For the transparent initialization of Surface, pass the SRCALPHA argument.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+surface = pygame.Surface((100,100), pygame.SRCALPHA)
+</textarea>
+           </div> <p>Consider the following example to display image on the surface:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import pygame
+pygame.init()
+white = (255, 255, 255)
+# assigning values to height and width variable 
+height = 400
+width = 400
+# creating the display surface object 
+# of specific dimension..e(X, Y). 
+display_surface = pygame.display.set_mode((height, width))
+
+# set the pygame window name 
+pygame.display.set_caption('Image')
+
+# creating a surface object, image is drawn on it. 
+image = pygame.image.load(r'C:\Users\DEVANSH SHARMA\Desktop\download.png')
+
+# infinite loop 
+while True:
+    display_surface.fill(white)
+    display_surface.blit(image, (0, 0))
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            # quit the program. 
+            quit()
+        # Draws the surface object to the screen. 
+        pygame.display.update() 
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-adding-image.png" alt="Pygame Adding Image"> <h2 class="h2">Pygame Rect</h2> <p>Rect is used to draw a rectangle in Pygame. Pygame uses Rect objects to store and manipulate rectangular areas. A Rect can be formed from a combination of left, top, width, and height values. It can also be created from Python objects that are already a Rect or have an attribute named "rect".</p> <p>The <strong>rect()</strong> function is used to perform changes in the position or size of a rectangle. It returns the new copy of the Rect with the affected changes. No modification happens in the original rectangle.</p> <p>The Rect object has various virtual attributes which can be used to move and align the Rect:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+x,y
+top, left, right, bottom
+topleft, bottomleft, topright, bottomright
+midtop, midleft, midbottom, midright
+center, centerx, centery
+size, width, height
+w,h
+</textarea>
+           </div> <p>The dimension of the rectangle can be changed by assigning the size, width, or height. All other assignment moves the rectangle without resizing it.</p> <p>If the width or height is a non-zero value of Rect, then it will return True for a non-zero test. Some methods return a Rect with 0 sizes to represent an invalid rectangle.</p> <p>Let's create a Rectangle on the pygame window using the Rect:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import pygame
+
+pygame.init()
+screen = pygame.display.set_mode((400, 300))
+done = False
+
+while not done:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+    pygame.draw.rect(screen, (0, 125, 255), pygame.Rect(30, 30, 60, 60))  
+
+    pygame.display.flip()
+</textarea>
+           </div> <p>After execution of the above code, it will display the rectangle on the pygame window.</p> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-rect.png" alt="Pygame Rect"> <h2 class="h2">Pygame Keydown</h2> <p>Pygame KEYDOWN and KEYUP detect the event if a key is physically pressed and released. <strong>KEYDOWN</strong> detects the key press and, <strong>KEYUP</strong> detects the key release. Both events (Key press and Key release) have two attributes which are the following:</p> 
+           <ul class="points"> 
+            <li><strong>key:</strong> Key is an integer id which represents every key on the keyword.</li> 
+            <li><strong>mod:</strong> This is a bitmask of all the modifier keys that were in the pressed state when the event occurred.</li> 
+           </ul> <p>Consider the following example of the key press and key release.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import pygame
+pygame.init()
+# sets the window title
+pygame.display.set_caption(u'Keyboard events')
+# sets the window size
+pygame.display.set_mode((400, 400))
+
+while True:
+    # gets a single event from the event queue
+    event = pygame.event.wait()
+    # if the 'close' button of the window is pressed
+    if event.type == pygame.QUIT:
+        # stops the application
+        break
+    # Detects the 'KEYDOWN' and 'KEYUP' events
+    if event.type in (pygame.KEYDOWN, pygame.KEYUP):
+        # gets the key name
+        key_name = pygame.key.name(event.key)
+        # converts to uppercase the key name
+        key_name = key_name.upper()
+        # if any key is pressed
+        if event.type == pygame.KEYDOWN:
+            # prints on the console the key pressed
+            print(u'"{}" key pressed'.format(key_name))
+        # if any key is released
+        elif event.type == pygame.KEYUP:
+            # prints on the console the released key
+            print(u'"{}" key released'.format(key_name))
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-keydown.png" alt="Pygame Keydown"> <p>Let's have a look the another example </p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import pygame
+
+pygame.init()
+screen = pygame.display.set_mode((400, 300))
+done = False
+is_blue = True
+x = 30
+y = 30
+
+while not done:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+            is_blue = not is_blue
+
+    pressed = pygame.key.get_pressed()
+    if pressed[pygame.K_UP]: y -= 3
+    if pressed[pygame.K_DOWN]: y += 3
+    if pressed[pygame.K_LEFT]: x -= 3
+    if pressed[pygame.K_RIGHT]: x += 3
+
+    if is_blue:
+        color = (0, 128, 255)
+    else: 
+        color = (255, 100, 0)
+    pygame.draw.rect(screen, color, pygame.Rect(x, y, 60, 60))
+
+    pygame.display.flip()
+</textarea>
+           </div> <p>In the above code, the rectangle will be displayed on the pygame window.</p> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-keydown2.png" alt="Pygame Keydown"> <p>When we press the Down key, the rectangle is reshaped in the downwards. The output is the following:</p> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-keydown3.png" alt="Pygame Keydown"> <h2 class="h2">Pygame Draw</h2> <p>Pygame provides geometry functions to draw simple shapes to the surface. These functions will work for rendering to any format to surfaces. Most of the functions accept a width argument to signify the size of the thickness around the edge of the shape. If the width is passed 0, then the shape will be solid(filled).</p> <p>All the drawing function takes the color argument that can be one of the following formats:</p> 
+           <ul class="points"> 
+            <li>A pygame.Color objects </li> 
+            <li>An (RGB) triplet(tuple/list)</li> 
+            <li>An (RGBA) quadruplet(tuple/list)</li> 
+            <li>An integer value that has been mapped to the surface's pixel format</li> 
+           </ul> <h3 class="h3">Draw a rectangle</h3> <p>The following functions are used to draw a rectangle on the given surface.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+pygame.draw.rect(surface, color, rect)
+pygame.draw.rect(surface, color, rect, width=0)
+</textarea>
+           </div> <p class="pq"><strong>Parameters: </strong></p> 
+           <ul class="points"> 
+            <li><strong>surface -</strong> Screen to draw on.</li> 
+            <li><strong>color-</strong> This argument is used to color the given shape. The alpha value is optional if we are using a tuple.</li> 
+            <li><strong>rect(Rect)-</strong> Draw rectangle, position, and dimensions.</li> 
+            <li><strong>width(int)-</strong> This is optional to use the line thickness or to indicate that the rectangle is filled.</li> 
+           </ul> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+if width == 0, (default) fill the rectangle
+if width &gt; 0, used for line thickness
+if width &lt; 0, nothing will be drawn
+</textarea>
+           </div> <h3 class="h3">Draw a polygon</h3> <p>The following functions are used to draw a polygon on the given surface.</p> 
+           <ul class="points"> 
+            <li>pygame.draw.polygon(surface,color,points)</li> 
+            <li>pygame.draw.polygon(surface, color, points, width=0)</li> 
+           </ul> <p class="pq"><strong>Parameters:</strong></p> 
+           <ul class="points"> 
+            <li><strong>surface -</strong> Screen to draw on. </li> 
+            <li><strong>color-</strong> This argument is used to color the given shape. The alpha value is optional if we are using a tuple.</li> 
+            <li><strong>points(tuple(coordinate) or list(coordinate)):</strong> A sequence of 3 or more (x,y) coordinates that make up the vertices of the polygon. Each coordinate in the sequence must be tuple/list.</li> 
+           </ul> <h4 class="n"><span class="bold">Note: -</span> If the len(points) &lt; 3 or points is not a sequence or points does not contain number pair, then it will raise the Value Error</h4> <h3 class="h3">Draw an ellipse</h3> <p>The following functions are used to draw an ellipse on the given surface.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+pygame.draw.ellipse(surface, color, rect)
+pygame.draw.ellipse(surface, color, rect, width=0)
+</textarea>
+           </div> <p class="pq"><strong>Parameters:</strong></p> 
+           <ul class="points"> 
+            <li><strong>surface -</strong> Screen to draw on.</li> 
+            <li><strong>color-</strong> This argument is used to color the given shape. The alpha value is optional if we are using a tuple.</li> 
+            <li><strong>rect(Rect)-</strong> Draw rectangle, position, and dimensions.</li> 
+           </ul> <h3 class="h3">Draw a straight line</h3> <p>This method is used to draw a straight line on the given surface. There are no endcaps.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+pygame.draw.line(surface,color,start_pos,end_pos,width)
+pygame.draw.line(surface,color,start_pos,end_pos,width=1)
+</textarea>
+           </div> <p class="pq"><strong>Parameters:</strong></p> 
+           <ul class="points"> 
+            <li><strong>surface -</strong> Screen to draw on. </li> 
+            <li><strong>color-</strong> This argument is used to color the given shape. The alpha value is optional if we are using a tuple. </li> 
+            <li><strong>start_pos-</strong> start position of the line(x,y)</li> 
+            <li><strong>end_pos-</strong> End position of the line</li> 
+           </ul> <h3 class="h3">Draw a Circle</h3> <p>Below are the functions, which are used to draw a circle on the given surface.</p> 
+           <ul class="points"> 
+            <li>circle(surface, color, center, radius)</li> 
+            <li>circle(surface, color, center, radius, width=0)</li> 
+           </ul> <p class="pq"><strong>Parameters:</strong></p> 
+           <ul class="points"> 
+            <li><strong>surface -</strong> Screen to draw on.</li> 
+            <li><strong>color-</strong> This argument is used to color the given shape. The alpha value is optional if we are using a tuple.</li> 
+            <li><strong>center -</strong> The center point of the circle as a sequence of two int/float, e.g. (x,y)</li> 
+            <li><strong>radius(int or float)-</strong> radius of the circle, measured from the center parameter, if the radius is zero, then it will only draw the center pixel.</li> 
+           </ul> <h3 class="h3">Draw an elliptical arc </h3> <p>Below functions are used to draw an elliptical arc on the given surface.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+?  arc(surface, color, rect, start_angle, stop_angle) 
+?  arc(surface, color, rect, start_angle, stop_angle, width=1)
+</textarea>
+           </div> <p class="pq"><strong>Parameters:</strong></p> 
+           <ul class="points"> 
+            <li><strong>surface -</strong> Screen to draw on. </li> 
+            <li><strong>color-</strong> This argument is used to color the given shape. The alpha value is optional if we are using a tuple.</li> 
+            <li><strong>rect(Rect)-</strong> Draw rectangle, position, and dimensions.</li> 
+            <li><strong>start_angle-</strong> Start angle of the arc in radians.</li> 
+            <li><strong>stop_angle-</strong> Stop angle of the arc in radians.</li> 
+           </ul> <p>There are three conditions for start_angle and stop_angle parameter:</p> 
+           <ol class="pointsa"> 
+            <li>If start_angle &lt; stop_angle then the arc will be drawn in a counter-clock direction from the start_angle to end_angle.</li> 
+            <li>If start_angle&gt;stop_angle then tau(tau=2*pi) will be added to the stop angle.</li> 
+            <li>If start_angle==stop_angle, nothing will be drawn.</li> 
+           </ol> <p>Let's consider an example:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import pygame
+from math import pi
+pygame.init()
+# size variable is using for set screen size
+size = [400, 300]
+screen = pygame.display.set_mode(size)
+pygame.display.set_caption("Example program to draw geometry")
+# done variable is using as flag 
+done = False
+clock = pygame.time.Clock()
+while not done:
+    # clock.tick() limits the while loop to a max of 10 times per second.
+        clock.tick(10)
+
+    for event in pygame.event.get():  # User did something
+        if event.type == pygame.QUIT:  # If user clicked on close symbol 
+            done = True  # done variable that we are complete, so we exit this loop
+
+    # All drawing code occurs after the for loop and but
+    # inside the main while done==False loop.
+
+    # Clear the default screen background and set the white screen background
+    screen.fill((0, 0, 0))
+
+    # Draw on the screen a green line which is 5 pixels wide.
+    pygame.draw.line(screen, (0, 255, 0), [0, 0], [50, 30], 5)
+    # Draw on the screen a green line which is 5 pixels wide.
+    pygame.draw.lines(screen, (0, 0, 0), False, [[0, 80], [50, 90], [200, 80], [220, 30]], 5)
+
+    # Draw a rectangle outline
+    pygame.draw.rect(screen, (0, 0, 0), [75, 10, 50, 20], 2)
+
+    # Draw a solid rectangle
+    pygame.draw.rect(screen, (0, 0, 0), [150, 10, 50, 20])
+
+    # This draw an ellipse outline, using a rectangle as the outside boundaries
+    pygame.draw.ellipse(screen, (255, 0, 0), [225, 10, 50, 20], 2)
+
+    # This draw a solid ellipse, using a rectangle as the outside boundaries
+    pygame.draw.ellipse(screen, (255, 0, 0), [300, 10, 50, 20])
+
+    # Draw a triangle using the polygon function
+    pygame.draw.polygon(screen, (0, 0, 0), [[100, 100], [0, 200], [200, 200]], 5)
+
+    # This draw a circle
+    pygame.draw.circle(screen, (0, 0, 255), [60, 250], 40)
+
+    # This draw an arc
+    pygame.draw.arc(screen, (0, 0, 0), [210, 75, 150, 125], 0, pi / 2, 2)
+
+    # This function must write after all the other drawing commands.
+    pygame.display.flip()
+
+# Quite the execution when clicking on close
+pygame.quit()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-draw.png" alt="Pygame Draw"> <h2 class="h2">Pygame Text and Font</h2> <p>Pygame also provides facilities to render the font and text. We can load fonts from the system by using the <strong>pygame.font.SysFont()</strong> function. Pygame comes with the built-in default font which can be accessed by passing the font name or None. There are many functions to help to work with the font.</p> <p>The font objects are created with <strong>pygame.font.Font()</strong>.The actual font objects do most of the works done with fonts. Font objects are generally used to render the text into new Surface objects. Few important font functions are the following:</p> <p class="pq"><strong>render()</strong></p> <p>This function is used to draw text on a new Surface. Pygame has no facility to draw text on the existing Surface. This creates a new Surface with the specified text render on it. The syntax is the following:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+render(text, antialias, color, background=None)
+</textarea>
+           </div> <p class="pq"><strong>size()</strong></p> <p>This function is used to determine the number of space or positioning needed to render text. It can also be used for word-wrapping and other layout effects. The syntax is the following: </p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+size(bool)
+</textarea>
+           </div> <p class="pq"><strong>set_bold()</strong></p> <p>This function is used for bold rending of text. The syntax is following:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+set_bold(bool)
+</textarea>
+           </div> <p>Let's consider the following example:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import pygame
+pygame.init()
+screen = pygame.display.set_mode((640, 480))
+done = False
+
+#load the fonts
+font = pygame.font.SysFont("Times new Roman", 72)
+# Render the text in new surface
+text = font.render("Hello, Pygame", True, (158, 16, 16))
+while not done:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+            done = True
+    screen.fill((255, 255, 255))
+    #We will discuss blit() in the next topic
+    screen.blit(text,(320 - text.get_width() // 2, 240 - text.get_height() // 2))
+
+    pygame.display.flip()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-text-and-font.png" alt="Pygame Text and Font"> <h4 class="n"><span class="bold">Note-</span> It is necessary to remember that the certain font must be installed on the user's computer. If you don't know whether fonts install or not, pygame has the following function to enumerate all the fonts available on the machine:</h4> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+ all_font = pygame.font.get_fonts()
+</textarea>
+           </div> <p>There is another function to instantiate the default system font:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+font = pygame.font.Font(None,size)
+</textarea>
+           </div> <p>Using any above functions, we can work with the attractive font in game.</p> <h2 class="h2">Pygame Sprite and Collision detection</h2> <p>A pygame sprite is a two-dimensional image that is part of the large graphical scene. Usually, a sprite will be some object in the scene.</p> <p>One of the most advantages of working with sprites is the ability to work with them in groups. We can easily move and draw all the sprites with the one command if they are in the group.</p> <p>The Sprite module contains the various simple classes to be used within the games. It is optional to use Sprite classes and different group classes when using pygame.</p> <p>Pygame provides sprites and sprite groups that help for collision detection. Collision detection is the process when two objects on the screen collide each other. For example, if a player is hit by the enemy's bullet, then it may lose a life or, the program need to know when the player touches a coin so that they automatically picked up.</p> <p>Let's consider the following example:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import pygame
+import sys
+#Sprite class 
+class Sprite(pygame.sprite.Sprite):
+    def __init__(self, pos):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.Surface([20, 20])
+        self.image.fill((255, 0, 255))
+        self.rect = self.image.get_rect()
+        self.rect.center = pos
+def main():
+    pygame.init()
+    clock = pygame.time.Clock()
+    fps = 50
+    bg = [0, 0, 0]
+    size =[300, 300]
+    screen = pygame.display.set_mode(size)
+    player = Sprite([40, 50])
+    # Define keys for player movement
+    player.move = [pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN]
+    player.vx = 5
+    player.vy = 5
+
+    wall = Sprite([100, 60])
+
+    wall_group = pygame.sprite.Group()
+    wall_group.add(wall)
+
+    player_group = pygame.sprite.Group()
+    player_group.add(player)
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                return False
+        key = pygame.key.get_pressed()
+        for i in range(2):
+            if key[player.move[i]]:
+                player.rect.x += player.vx * [-1, 1][i]
+
+        for i in range(2):
+            if key[player.move[2:4][i]]:
+                player.rect.y += player.vy * [-1, 1][i]
+        screen.fill(bg)
+        # first parameter takes a single sprite
+        # second parameter takes sprite groups
+        # third parameter is a kill command if true
+        hit = pygame.sprite.spritecollide(player, wall_group, True)
+        if hit:
+        # if collision is detected call a function to destroy
+            # rect
+            player.image.fill((255, 255, 255))
+        player_group.draw(screen)
+        wall_group.draw(screen)
+        pygame.display.update()
+        clock.tick(fps)
+    pygame.quit()
+    sys.exit
+if __name__ == '__main__':
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-sprite-and-collision-detection.png" alt="Pygame Sprite and Collision detection"> <p>After pressing the arrow keys, one rectangle will collide with another rectangle then output is:</p> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-sprite-and-collision-detection2.png" alt="Pygame Sprite and Collision detection"> <h2 class="h2">Pyglet</h2> <p>Python provide another game library named pyglet which is cross-platform windowing and multimedia library for Python. It is used to developing games and other visually rich applications. It supports user interface event handling, windowing, OpenGL graphics, loading images and videos, and playing sounds and music.</p> <p>Few features of pyglet are the following:</p> 
+           <ul class="points"> 
+            <li>No external installation requirements or dependencies.</li> 
+            <li>Take benefit of multiple windows and multi-monitor.</li> 
+            <li>It can load images, sound, music, and video in any format.</li> 
+            <li>Pyglet is provided under the BSD open-source license.</li> 
+            <li>It supports both Python 2 and 3.</li> 
+           </ul> <p>Installation of pyglet is simple; it can be installed by typing the following command.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+pip install pyglet
+</textarea>
+           </div> <p><strong>Consider the following example.</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import pyglet
+window = pyglet.window.Window()
+lable = pyglet.text.Label('Hello world', font_name='Times New Roman', font_size=36,
+                          x= window.width//2,y=window.height//2,anchor_x='center', anchor_y='center')
+@window.event
+def on_draw():
+    window.clear()
+    lable.draw()
+pyglet.app.run()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/pygame/images/pygame-pyglet.png" alt="Pyglet"> <h2 class="h2">Comparison between Pygame and Pyglet</h2> 
+           <table class="alt" border="1"> 
+            <tbody>
+             <tr> 
+              <th>Pyglet</th> 
+              <th>Pygame</th> 
+             </tr> 
+             <tr> 
+              <td><strong>3d support</strong><br> Since pyglet is so firmly merged with OpenGL. It allows the support of drawing in 3D.</td> 
+              <td><strong>Easy Python syntax</strong><br> Pygame uses Python as its scripting language. Python is widely treated one of the most natural languages to grasp even for beginners.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>Cross-platform</strong><br> It can work with Window, Linux, and OS X.</td> 
+              <td><strong>Usage API</strong><br> The API is very straightforward.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>Written in pure Python</strong><br> It can be compiled using the other Python interpreters.</td> 
+              <td><strong>Best canvas system</strong><br> Pygame provides a drawing system that allows the user to create and draw an unlimited number of the canvas.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>Less Popularity</strong><br> Pyglet is less popularee because it has small community support.</td> 
+              <td><strong>More popular</strong><br> Pygame is more popular than the pyglet.</td> 
+             </tr> 
+            </tbody>
+           </table> <p>In this tutorial, we have discussed the simple game development programming approach by installing the open-source module pygame into Python 3 programming environment.</p> 
+           <hr> <br><br> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="41272424252320222a012b20372035312e282f356f222e2c">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/pygame"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/pygame"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/pygame"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0b63794b616a7d6a7f7b6462657f25686466">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2f475d6f454e594e5b5f4046415b014c404201">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

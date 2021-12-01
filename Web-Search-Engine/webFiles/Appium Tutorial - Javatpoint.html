@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Appium Tutorial - Javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Appium Tutorial - Javatpoint">
+  <meta property="og:description" content="Appium Tutorial with What is Appium, Limitation, Architecture, Installation, Advantages, Disadvantages, Types of Mobile Application, Prerequisite to use Appium, Features, Competitors of Appium etc."> 
+  <meta name="keywords" content="appium, appium tutorial, what is appium, features of appium, appium architecture, advantages of appium, disadvantages of appium, how appium works, types of mobile application, Prerequisite to use appium, installation of appium on windows os, limitation of appium, competitors of appium">
+  <meta name="description" content="Appium Tutorial with What is Appium, Limitation, Architecture, Installation, Advantages, Disadvantages, Types of Mobile Application, Prerequisite to use Appium, Features, Competitors of Appium etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/appium"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Appium Tutorial - Javatpoint">
+  <meta name="twitter:description" property="og:description" content="Appium Tutorial with What is Appium, Limitation, Architecture, Installation, Advantages, Disadvantages, Types of Mobile Application, Prerequisite to use Appium, Features, Competitors of Appium etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/appium">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/icon/home.png" alt="home"> Home</a></li> 
+       <li><a href="appium" class="selected"><img src="https://static.javatpoint.com/images/icon/appium.png" alt="appium"> Appium</a></li> 
+       <li><a href="software-testing-tutorial"><img src="https://static.javatpoint.com/images/icon/testing.png" alt="software testing"> Software Testing</a></li> 
+       <li><a href="selenium-tutorial"><img src="https://static.javatpoint.com/images/icon/selenium.png" alt="selenium"> Selenium</a></li> 
+       <li><a href="jmeter-tutorial"><img src="https://static.javatpoint.com/images/icon/jmeter.png" alt="jmeter"> JMeter</a></li> 
+       <li><a href="junit-tutorial"><img src="https://static.javatpoint.com/images/icon/junit.png" alt="junit"> JUnit</a></li> 
+       <li><a href="postman"><img src="https://static.javatpoint.com/images/icon/postman.png" alt="postman"> Postman</a></li> 
+       <li><a href="jira-tutorial"><img src="https://static.javatpoint.com/images/icon/jira.png" alt="jira"> Jira</a></li> 
+       <li><a href="testng-tutorial"><img src="https://static.javatpoint.com/images/icon/testng.png" alt="testng"> TestNG</a></li> 
+       <li><a href="soapui"><img src="https://static.javatpoint.com/images/icon/soapui.png" alt="soapui"> SoapUI</a></li> 
+       <li><a href="uipath"><img src="https://static.javatpoint.com/images/icon/uipath.png" alt="uipath"> UIPath</a></li> 
+       <li><a href="rpa"><img src="https://static.javatpoint.com/images/icon/rpa.png" alt="rpa"> RPA</a></li> 
+       <li><a href="quality-assurance"><img src="https://static.javatpoint.com/images/icon/qa.png" alt="qa"> QA</a></li> 
+       <li><a href="selenium-python"><img src="https://static.javatpoint.com/images/icon/selenium-python.png" alt="selenium python"> Selenium Python</a></li> 
+       <li><a href="software-testing-interview-questions"><img src="https://static.javatpoint.com/images/icon/interview.png" alt="manual testing interview questions"> Interview Q</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Appium Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="appium">Appium Tutorial</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> <h1 class="h1">Appium Tutorial</h1> <img src="https://static.javatpoint.com/tutorial/appium/images/appium-tutorial.png" class="imageright" alt="Appium Tutorial"> <p>Appium tutorial provides basic and advanced concepts of the Appium Automation testing tool. Our Appium tutorial is designed for beginners and professionals.</p> <p>In this tutorial, we are going to discuss the following topic:</p> 
+           <ul class="points"> 
+            <li><a href="#Whatis">What is Appium?</a></li> 
+            <li><a href="#Features">Features of Appium</a></li> 
+            <li><a href="#Architecture">Appium Architecture</a></li> 
+            <li><a href="#Advantages">Advantages of Appium</a></li> 
+            <li><a href="#Disadvantages">Disadvantages of Appium</a></li> 
+            <li><a href="#works">How Appium works?</a></li> 
+            <li><a href="#MobileApplication">Types of Mobile Application</a></li> 
+            <li><a href="#Prerequisite">Prerequisite to use Appium</a></li> 
+            <li><a href="#Installation">Installation of Appium on Windows OS</a></li> 
+            <li><a href="#Limitation">Limitation of Appium</a></li> 
+            <li><a href="#Competitors">Competitors of Appium</a> 
+             <ul class="points"> 
+              <li>Appium vs Robotium</li> 
+              <li>Appium vs Selendroid</li> 
+             </ul></li> 
+           </ul> 
+           <hr> <h2 id="Whatis" class="h2">What is Appium?</h2> <p><strong>Appium</strong> is an open-source automation mobile testing tool, which is used to test the application. It is developed and supported by <strong>Sauce Labs</strong> to automate native and hybrid mobile apps. It is a cross-platform mobile automation tool, which means that it allows the same test to be run on multiple platforms. Multiple devices can be easily tested by Appium in parallel.</p> <p>In today's development area, the demand for mobile applications is high. Currently, people are converting their websites into mobile apps. Therefore, it is very important to know about mobile software automation testing technology and also stay connected with new technology. <strong>Appium</strong> is a mobile application testing tool that is currently trending in <strong>Mobile Automation Testing Technology</strong>.</p> <p>Appium is used for automated testing of <strong>native</strong>, <strong>hybrid</strong>, and <strong>web</strong> applications. It supports automation test on the simulators (iOS) and emulators (Android) as well as physical devices (Android and iOS both). Previously, this tool mainly focused on IOS and Android applications that were limited to mobile application testing only. Few updates back, Appium declared that it would now support desktop application testing for windows as well.</p> <img src="https://static.javatpoint.com/tutorial/appium/images/what-is-appium.png" alt="Appium Tutorial"> <p>Appium is very much similar to the <strong>Selenium Webdriver</strong> testing tool. So, if you already know Selenium Webdriver, Appium becomes very easy to learn. Appium has <strong>NO dependency</strong> on mobile device OS because it has a framework that converts the Selenium Webdriver commands to UIAutomator and UIAutomation commands for Android and iOS respectively, that depends on the device type rather than the OS type.</p> <p>It supports several languages such as Java, PHP, Objective C, C#, Python, JavaScript with node.js, and Ruby, and many more that have Selenium client libraries. Selenium is the backend of Appium that provides control over the functionality of Selenium for testing needs.</p> <h2 id="Features" class="h2">Features of Appium</h2> 
+           <ul class="points"> 
+            <li>Appium does not require application source code or library.</li> 
+            <li>Appium provides a strong and active community.</li> 
+            <li>Appium has multi-platform support i.e., it can run the same test cases on multiple platforms.</li> 
+            <li>Appium allows the parallel execution of test scripts.</li> 
+            <li>In Appium, a small change does not require re-installation of the application.</li> 
+            <li>Appium supports various languages like C#, Python, Java, Ruby, PHP, JavaScript with node.js, and many others that have Selenium client library.</li> 
+           </ul> <h2 id="Advantages" class="h2">Advantages of Appium</h2> 
+           <ul class="points"> 
+            <li>Appium is an open-source tool, which means it is freely available. It is easy to install.</li> 
+            <li>It allows the automated testing of hybrid, native, and web applications.</li> 
+            <li>Unlike other testing tools, you do not need to include any additional agents in your app to make Appium compatible with automation. It tests the same app, which is going to upload in App Store.</li> 
+            <li>An additional feature added to Appium. Now it would support desktop application testing for windows as well along with mobile application testing.</li> 
+            <li>Appium is a cross-platform, freely available mobile testing tool, which allows us the cross-platform mobile testing. This means you can test on multiple platforms (single API for both Android and IOS platforms).</li> 
+           </ul> <h2 id="Disadvantages" class="h2">Disadvantages of Appium</h2> <p>Along with some features and advantages, Appium has some drawbacks too, which are as follows-</p> 
+           <ul class="points"> 
+            <li>Lack of detailed reports.</li> 
+            <li>Since the tests depend on the remote web driver, so it is a bit slow.</li> 
+            <li>It is not a limitation, but an overhead that Appium uses <strong>UIAutomator</strong> for Android that only supports Android SDK, API 16, or higher. However, Appium supports older APIs, but not directly. It uses another open-source library <strong>Selendroid</strong> to support older APIs.</li> 
+            <li>In iOS, only one instance (iOS Script) can run on one Mac OS device, which means one test can be executed at a time per Mac. If you want to run your tests on multiple iOS devices at the same time, you need to arrange the same number of Mac machines. But it would be expensive to arrange various Mac machines.</li> 
+           </ul> <p><strong>Solution:</strong> This problem can be resolved if you will run your script in the <strong>mobile cloud of Sauce Lab</strong>. Currently, it allows scripts to run on multiple iOS simulators at the same time.</p> <h2 id="Architecture" class="h2">Appium Architecture</h2> <p>Appium is an HTTP server that is written in <strong>node.js</strong>. It starts a "<strong>test case</strong>" on the device that gives rise to a server and listens for proxied commands from the main Appium server. Tester writes the Test scripts to execute on device or Emulator. Several webdriver sessions for different platforms like Android and IOS are created and handled by the Appium.</p> <img src="https://static.javatpoint.com/tutorial/appium/images/appium-architecture.png" alt="Appium Tutorial"> <p>Test Scripts written by the tester executes on the Emulator or device by sending them as requests to the Appium server. Each vendor, such as IOS or Android, has a different method and mechanism to execute test cases on the device. So, the test case executes after listening commands from the Appium server. Appium uses JSON wire protocols to send command requests to Appium server.</p> <h2 id="works" class="h2">How Appium work?</h2> 
+           <ul class="points"> 
+            <li>When we install the Appium, a server is also installed with it on our machine that exposes the REST API.</li> 
+            <li>It receives command and connection requests from the client and executes that command on devices like iOS or Android.</li> 
+            <li>It replies with the HTTP responses.</li> 
+            <li>To execute requests, it uses a mobile test automation framework to run the user interface of the app. For Example - 
+             <ul class="points"> 
+              <li><strong>Apple</strong> instruments used for iOS</li> 
+              <li><strong>Selendroid</strong> used for Android API 15 or less</li> 
+              <li><strong>UIAutomator</strong> used for Android API 16 or higher</li> 
+             </ul></li> 
+           </ul> <h4 class="n">Remember that Appium uses another open-source library Selendroid to support older APIs because UIAutomator only supports API 16 or higher.</h4> <p>Now we will discuss how Appium works on different platforms -</p> <h3 class="h3">Appium in Android</h3> <p>On Android, Appium proxies the command to a <strong>UIAutomator</strong> script running on the device. UIAutomator is a native UI automation framework of Android that allows you to run <strong>Junit</strong> test cases directly into the device using command line. Although it uses Java programming language, but Appium allows to run it from any WebDriver supported language.</p> <p>Android uses <strong>bootstrap.jar</strong>, which works as a TCP server. It is used to send the test commands to perform the actions on Android device using UIAutomator.</p> <p>In the below figure, see the Appium architecture in respect to Android automation -</p> <img src="https://static.javatpoint.com/tutorial/appium/images/appium-in-android.png" alt="Appium Tutorial"> <h3 class="h3">Appium in iOS</h3> <p>As Android uses UIAutomator, iOS uses UIAutomation. Similar to the Android, Appium proxies the command to a <strong>UIAutomation</strong> test case running on the Mac instruments environment. Apple provides this application "<strong>instrument</strong>" that performs various activities like building, profiling, and controlling iOS apps. On the other hand, it also has an automation component where you can write commands in JavaScript. It uses UIAutomation API to interact with Application UI. Appium uses same libraries to automate iOS Apps.</p> <p>In the below figure, see the Appium architecture in respect to iOS automation -</p> <img src="https://static.javatpoint.com/tutorial/appium/images/appium-in-ios.png" alt="Appium Tutorial"> <h4 class="n">Note in the above diagram that bootstrap.js is used in place of bootstrap.jar. It performs the actions on our AUT (Application Under Test).</h4> <h2 id="MobileApplication" class="h2">Types of Mobile Applications</h2> <p>As we discussed earlier, Appium has the ability to deal with all sorts of applications, i.e., native, hybrid, and web. Let's understand them in details -</p> <h3 class="h3">Native Applications</h3> <p>Native applications are software programs that are developed by keeping a certain platform in mind. These applications are developed using a specific software development kit. Native apps are developed for use on a specific device and can be installed from the App Store, such as Google Play Store or Apple's App Store. They can work offline and can also use the device notification system.</p> <p>Some native application examples are - Pinterest, Skype, Snapchat, etc.</p> <h3 class="h3">Web Applications</h3> <p>Web applications are not real applications, they are websites that run on browsers. These applications are developed using HTML, CSS, and JavaScript at a very low price. Unlike Android and iOS apps, they do not require a Software Development Kit (SDK) for developers to work with. Web applications are not developed for a particular platform. Since the web applications run on web browsers, they don't require any installation.</p> <p>Some web application examples are - Flipkart, Ali Express, twitter, etc.</p> <h3 class="h3">Hybrid Applications</h3> <p>Hybrid application is a combination of native and web applications. Like native applications, these applications can be downloaded from the App Store and also can take advantage of device features, but actually they are web applications inside. They are developed using web development languages - HTML, CSS, and JavaScript like the hybrid app, which allows them to run on any platform.</p> <p>Some hybrid application examples are - OLA, Instagram, Basecamp, etc.</p> <h2 id="Prerequisites" class="h2">Prerequisites to use Appium</h2> 
+           <ul class="points"> 
+            <li>Install <strong>Java</strong> (JDK)</li> 
+            <li>Install <strong>Android Studio</strong></li> 
+            <li>Install additional Android <strong>SDK tools</strong></li> 
+            <li>Install <strong>Appium jar</strong> file</li> 
+            <li>js (Not required - It by default comes with "node.js" and "NPM", whenever the Appium server is installed. Therefore, it is not required to install node.js and NPM separately. It is already included in current version of Appium.)</li> 
+            <li>Install <strong>Appium Desktop Client</strong></li> 
+            <li>Install <strong>Eclipse IDE</strong> for Java</li> 
+           </ul> <h2 id="Installation" class="h2">Appium Installation on windows</h2> <p>Setting up Appium is not only the installation of a single tool or setting up a few variables. A complete setup of Appium requires the installation of many other tools. Then Appium starts testing of an application. This tutorial mainly focuses on Appium setup for Android on Windows Operating system.</p> <h3 class="h3">Install and setup Java</h3> <p>With Appium, you need to write automation test scripts that can interact with your mobile screen and control fields (such as text boxes, buttons, etc.) in your mobile application, and also can perform actions on them. Java is used to write these automation test scripts. So, download the latest version of JDK and setup the environment variable.</p> 
+           <ul class="points"> 
+            <li><a href="https://www.oracle.com/in/java/technologies/javase-downloads.html" rel="nofollow" target="_blank">Download the latest version of Java</a></li> 
+            <li>Setup Java Environment Variable.</li> 
+           </ul> <h3 class="h3">Install and setup Android Studio</h3> <p>This is one of the most time taking step to download and install the Android Studio. It may cause of errors in Appium if not done properly. With downloading the Android Studio, there are many other changes need to be setup. Here, we would recommend you to download the latest version of Android Studio.</p> 
+           <ul class="points"> 
+            <li><a href="http://www.automationtestinghub.com/download-and-install-android/" rel="nofollow" target="_blank">Download the Android Studio</a><br> Download the<strong> latest version of Android Studio</strong> by clicking the above link. Double click on downloaded <strong>.exe</strong> file to run. To complete the installation process, continue with all default options and finish the installation process. Android studio takes time to install.</li> 
+            <li><strong>Install additional Android SDK tools</strong><br> After the complete installation of Android Studio, you will see the main panel of Android Studio, as given in the screenshot below. Click on the <strong>Configure</strong> drop-down menu at the bottom right corner and select the <strong>SDK Manager</strong>.<br> <img src="https://static.javatpoint.com/tutorial/appium/images/appium-installation.png" alt="Appium Tutorial"> <br> The default screen will open up with Android SDK, where under the SDK Platform, check the latest version of Android is installed. You can also use another android version if you are working with a real android device.<br> <img src="https://static.javatpoint.com/tutorial/appium/images/appium-installation2.png" alt="Appium Tutorial"> <br> On the same page, switch to <strong>SDK Tools</strong> and check that some of the marked components are installed/updated. If not, mark the checkbox and install them.<br> <img src="https://static.javatpoint.com/tutorial/appium/images/appium-installation3.jpg" alt="Appium Tutorial"></li> 
+            <li><strong>Setup Android Environment Variable</strong></li> 
+           </ul> <h3 class="h3">Step by step installation of Appium Desktop Client</h3> <p>Now after installing Java and Android Studio and setting up environment variables for both, install Appium Desktop Client. Appium Studio is a GUI app to install Appium server. It comes with all pre-requirements for installing and using Appium server. It has an inspector, which is used to get basic information on your mobile app. Steps for installing Appium Desktop Client on windows are as follow:</p> <p><strong>Step 1:</strong> Go to the following link <a href="http://appium.io/" rel="nofollow" target="_blank">http://appium.io/</a> and click on the <strong>Download Appium</strong> button.</p> <img src="https://static.javatpoint.com/tutorial/appium/images/appium-installation-step1.png" alt="Appium Tutorial"> <p><strong>Step 2:</strong> For Windows OS, download the <strong>exe</strong> file of <strong>Appium desktop setup</strong>. So, click on the file as shown in below screenshot.</p> <img src="https://static.javatpoint.com/tutorial/appium/images/appium-installation-step2.png" alt="Appium Tutorial"> <p><strong>Step 3:</strong> After downloading the exe file, double click on the downloaded file to run.</p> <img src="https://static.javatpoint.com/tutorial/appium/images/appium-installation-step3.png" alt="Appium Tutorial"> <h4 class="n">Note: On window OS, you don't need to install Appium. It runs from .exe file directly, whereas you need to install the dmg for Mac machine.</h4> <p><strong>Step 4:</strong> Here, you need to choose the installation options. You can select all users, if you have multiple users on your system, otherwise select <strong>only me</strong> for the administrator of the system.</p> <p>After choosing the installation option, click on the <strong>install</strong> button.</p> <img src="https://static.javatpoint.com/tutorial/appium/images/appium-installation-step4.png" alt="Appium Tutorial"> <p>This will start the installation, which may take time to install.</p> <p><strong>Step 5:</strong> Appium has been successfully installed on your system. For completing Appium setup, click on the <strong>Finish</strong> button.</p> <p>Note that <strong>Run Appium</strong> is checked. This will start the Appium Desktop.</p> <img src="https://static.javatpoint.com/tutorial/appium/images/appium-installation-step5.png" alt="Appium Tutorial"> <p><strong>Step 6:</strong> Now, Appium Desktop UI will appear on the screen containing the default <strong>Host</strong> and <strong>Port</strong>, which can be changed.</p> <p>Default Host - 0.0.0.0</p> <p>Default Port - 4723</p> <p>Click on the <strong>Start Server</strong> button and start Appium Server.</p> <p><strong>Step 7:</strong> A new server will launch on the Host and Port specified in previous step. You can see the message on the top of the screen that Server is running.</p> <img src="https://static.javatpoint.com/tutorial/appium/images/appium-installation-step7.png" alt="Appium Tutorial"> <p><strong>Step 8:</strong> Go to <strong>File</strong> and click on the <strong>New Session Window</strong>.</p> <img src="https://static.javatpoint.com/tutorial/appium/images/appium-installation-step8.png" alt="Appium Tutorial"> <p><strong>Step 9:</strong> Provide all desired capabilities here and Click on the <strong>Start Session</strong> button to start a new session.</p> <img src="https://static.javatpoint.com/tutorial/appium/images/appium-installation-step9.png" alt="Appium Tutorial"> 
+           <ul class="points"> 
+            <li><a href="https://www.eclipse.org/downloads/eclipse-packages/" rel="nofollow" target="_blank">Download Eclipse IDE for Java</a></li> 
+            <li>Turn on USB Debugging in Android Mobile Phone</li> 
+            <li>Download Appium Jar file for Eclipse</li> 
+            <li>Create a new Project for Appium in Eclipse</li> 
+            <li>Design test case to test application to launch the app on Android Device</li> 
+           </ul> <h4 class="n">Note that Microsoft window does not support to run Appium Inspector.</h4> <h3 class="h3">Appium Doctor</h3> <p>To check the Appium installation and dependencies, you can install <strong>appium-doctor</strong> from <a href="https://github.com/appium/appium-doctor" rel="nofollow" target="_blank">here</a>.</p> <p><strong>Appium-doctor</strong> is an application tool to <strong>verify Appium installation</strong>. It shows all the missing things that you need to do. So, this will be very useful to run appium-doctor whenever you get any issue. It will install through <strong>npm</strong>.</p> <h2 id="Limitation" class="h2">Limitation of Appium</h2> 
+           <ul class="points"> 
+            <li>Microsoft Windows does not support running Appium Inspector.</li> 
+            <li>Appium does not allow the testing for Android versions lower than 4.2.</li> 
+            <li>Appium provides limited support for testing Hybrid applications. E.g., Switching action of application is not possible to test i.e., web app to native app and vice versa.</li> 
+           </ul> <h2 id="Competitors" class="h2">Competitors of Appium</h2> <p>There are several tools available for automated testing mobile applications, such as Robotium, Appium, Experitest, Selendroid, Kobiton, and Testdroid, etc. They all are tough contestants for Appium. But Selendroid and Robotium are one of the top competitors of Appium. Let us know some differences and see how they differ from each other.</p> <h3 class="h3">Appium vs Robotium</h3> 
+           <ul class="points"> 
+            <li><strong>Appium</strong> is a cross-platform tool that supports both iOS and Android. Whereas <strong>Robotium</strong> only supports Android.</li> 
+            <li><strong>Appium</strong> supports various languages while <strong>Robotium</strong> only supports Java programming language.</li> 
+            <li><strong>Appium</strong> does not require application source code/library, whereas <strong>Robotium</strong> tool requires application source code or library.</li> 
+            <li><strong>Appium</strong> can be used to test native, web, and hybrid mobile applications, whereas <strong>Robotium</strong> can only test native and hybrid applications.</li> 
+            <li><strong>Appium</strong> supports many frameworks like Selenium. But <strong>Robotium</strong> is not compatible with Selenium at all.</li> 
+            <li><strong>In Appium</strong>, you don't have to reinstall the application for a small change. But <strong>Robotium</strong> code leads to complete rebuild for a small change.</li> 
+           </ul> <h3 class="h3">Appium vs Selendroid</h3> 
+           <ul class="points"> 
+            <li><strong>Appium</strong> is an open-source automation tool that supports both iOS and Android, while <strong>Selendroid</strong> is a test automation framework that only supports Android.</li> 
+            <li>In <strong>Appium</strong>, a small change does not require reinstallation of the application. But <strong>Selendroid</strong> requires reinstallation of the application.</li> 
+            <li><strong>Appium</strong> has a strong and active community, whereas <strong>Selendroid</strong> does not have a strong community like Appium.</li> 
+            <li><strong>Appium</strong> supports many frameworks and languages. On the other hand, <strong>Selendroid</strong> is compatible with Jenkin and Selenium.</li> 
+            <li><strong>Appium</strong> does not require application source code/library, while <strong>Selendroid</strong> requires application source code or library.</li> 
+            <li><strong>Appium</strong> supports all Android APIs with a limitation. Appium uses UIAutomator for tests running on API&gt;=17, while for older APIs, it runs tests using Selendroid.</li> 
+           </ul> 
+           <hr> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="583e3d3d3c3a393b331832392e392c283731362c763b3735">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/appium"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/appium"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/appium"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d8b0aa98b2b9aeb9aca8b7b1b6acf6bbb7b5">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="48203a0822293e293c382721263c662b272566">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

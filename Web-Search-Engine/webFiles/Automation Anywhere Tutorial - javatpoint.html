@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Automation Anywhere Tutorial - javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Automation Anywhere Tutorial - javatpoint">
+  <meta property="og:description" content="Automation Anywhere Tutorial with History of Automation Anywhere, Automation Anywhere Architecture, Features of Automation Anywhere, Types of Automation Anywhere, Installation etc."> 
+  <meta name="keywords" content="automation anywhere, history of automation anywhere, automation anywhere architecture, features of automation anywhere, types of automation anywhere, installation">
+  <meta name="description" content="Automation Anywhere Tutorial with History of Automation Anywhere, Automation Anywhere Architecture, Features of Automation Anywhere, Types of Automation Anywhere, Installation etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/automation-anywhere"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Automation Anywhere Tutorial - javatpoint">
+  <meta name="twitter:description" property="og:description" content="Automation Anywhere Tutorial with History of Automation Anywhere, Automation Anywhere Architecture, Features of Automation Anywhere, Types of Automation Anywhere, Installation etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/automation-anywhere">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="automation-anywhere" class="selected">Automation Anywhere</a></li> 
+       <li><a href="python-tutorial">Python</a></li> 
+       <li><a href="php-tutorial">PHP</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="cpp-tutorial">C++</a></li> 
+       <li><a href="c-sharp-tutorial">C#</a></li> 
+       <li><a href="reasoning">Reasoning</a></li> 
+       <li><a href="selenium-tutorial">Selenium</a></li> 
+       <li><a href="data-structure-tutorial">DS</a></li> 
+       <li><a href="dbms-tutorial">DBMS</a></li> 
+       <li><a href="c-programming-language-tutorial">C</a></li> 
+       <li><a href="sql-tutorial">SQL</a></li> 
+       <li><a href="https://training.javatpoint.com">Training</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Automation Anywhere</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="automation-anywhere">Automation Anywhere Tutorial</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> <h1 class="h1">Automation Anywhere Tutorial</h1> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial.png" class="imageright" alt="Automation Anywhere Tutorial"> <p>Our Automation Anywhere Tutorial provides the basic and advanced concepts of Automation Anywhere. This tutorial is designed for both beginners and professionals.</p> <p>This tutorial gives you an introduction to Automation Anywhere along with a wide range of topics such as <strong>why use automation anywhere, history of automation anywhere, automation anywhere architecture, features of automation anywhere, types of automation anywhere, installation,</strong> etc.</p> <h2 class="h2">What is Automation?</h2> <p>Automation is a technique that is used to complete the tasks with minimal or no human intervention. This technique is used to make devices, systems, or processes to operate automatically. The primary aim of automation is to boost the efficiency of business processes and reduce/replace the human workforce.</p> <p>The word automation and its usage first came into existence after the 1920s. However, it got popularity in the early days of the 1990s. As the term 'automation' speaks, the technique is used to add support for completing different types of repetitive and rule-based tasks such as data entry, invoice processing, etc. To perform these types of tasks, we have to make use of <strong>Robotic Process Automation</strong>. Automation Anywhere is one of the popular <a href="https://www.javatpoint.com/rpa-tools">RPA tools</a> that is used to perform such kinds of tedious tasks with ease.</p> 
+           <blockquote>
+            RPA or Robotic Process Automation is a technique that uses software to mimic repetitive and rule-based human actions. It allows users to automate the actions on computer systems or other digital devices.
+           </blockquote> <p>The automation can be divided into four different categories, as listed below:</p> 
+           <ul class="points"> 
+            <li>Macro Recorders</li> 
+            <li>Application-level Macro Recorders</li> 
+            <li>Artificial Intelligence</li> 
+            <li>Business Process Automation (BPA)</li> 
+            <li>Robotic Process Automation (RPA)</li> 
+           </ul> <h2 class="h2">Automation Anywhere</h2> <p>Automation Anywhere is one of the popular RPA tools that provides powerful features to automate complex business tasks. It is used to automate such processes that are repetitive, rule-based, and manually performed by humans. It offers end to end automation strategy for organizations.</p> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial2.png" alt="Automation Anywhere Tutorial"> <p>Automation Anywhere is a web-based management system. It has a Control Room that helps in managing automated tasks. It is mainly used at the enterprise level and changes the way the enterprises operate. The primary aim of Automation Anywhere is to offer scalable, secure, and resilient services to its users.</p> <h2 class="h2">History of Automation Anywhere</h2> <p>Automation Anywhere is an <a href="https://www.javatpoint.com/rpa">RPA</a> tool designed by Automation Anywhere, Inc. The company was initially founded in 2003 under the name Tethys Solutions, LLC. Back in 2010, the name was changed to Automation Anywhere, the company's flagship product name.</p> <h2 class="h2">Why use Automation Anywhere</h2> <p>The selection of the RPA tool depends on the requirements of any enterprise. However, there are several other things that force enterprises to choose Automation Anywhere. According to the official site, more than 700 global enterprises have deployed RPA solutions by Automation Anywhere. It has provided the industry-leading RPA platform that allows enterprises to empower their employees.</p> <p>Some of the important reasons why enterprises should use Automation Anywhere are listed below:</p> <h3 class="h3">No Programming</h3> <p>There is no requirement for coding skills or any programming knowledge. According to the enterprise's requirements, one can easily use recorders to record the manual actions and edit them using the task editor.</p> <h3 class="h3">No Errors</h3> <p>Automation Anywhere provides error-free automation. It eliminates human errors by automating the tasks properly.</p> <h3 class="h3">Fast Deployment</h3> <p>Automation Anywhere delivers the fastest deployment of RPA solutions. It can be set up and running within a few weeks.</p> <h3 class="h3">Fast Performance</h3> <p>It saves time with the fast automation processes.</p> <h3 class="h3">Precise Engineering</h3> <p>Automation Anywhere is designed to provide a visionary roadmap and adds innovations for enterprises with automation techniques.</p> <h3 class="h3">Security and Compliance</h3> <p>Automation Anywhere includes enterprise-level security with its inbuilt governance and compliance controls.</p> <h3 class="h3">Experienced Leadership</h3> <p>Automation Anywhere has deployed RPA solutions for several enterprises. It has many experienced RPA professionals who can automate the business processes to achieve good ROI.</p> <h3 class="h3">Scalable</h3> <p>Enterprises can easily and quickly scale up automation in the future using Automation Anywhere. It can be used to scale from Desktop to Data Centre.</p> <h2 class="h2">Automation Anywhere Architecture</h2> <p>Automation Anywhere has a distributed architecture. It offers a centralized management system by using its control room. The architecture of Automation Anywhere is separated into two components, Bot Creators and Bot Runners. Both components are attached to the Control Room.</p> <p>Take a look into the following diagram that displays the structural view of Automation Anywhere Architecture:</p> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial3.png" alt="Automation Anywhere Tutorial"> <p>Let's understand more about its components. The core components of Automation Anywhere architecture are:</p> <h3 class="h3">Bot Creators</h3> <p>As the name speaks, Bot Creators are used for creating bots. They offer developers a desktop-based application and tools that validate against an active Control Room and help in the creation of bots. The configured code of the bots is stored in the Control Room. Multiple developers can upload, download, or create individual bots/tasks and execute all of them at the same time.</p> <h3 class="h3">Control Room</h3> <p>The Control Room is said to be the most important component of the Automation Anywhere architecture. It is a web-based server that deals with the bots created by Bot Creators. It acts as a controller that controls the entire execution and management of clients, scripts, roles, credentials, security, etc. All of the automated tasks/scripts are uploaded in the Control Room. Control Room further manages and schedule the execution of the task in the host server or machine. It also offers features such as <strong>user management, source control, license management, automation deployment, and a dashboard:</strong></p> <p><strong>User Management</strong></p> <p>Control Room adds an ability for administrators to manage user access to different systems, applications, or networks.</p> <p><strong>Source Control</strong></p> <p>Control Room helps in the management of the codes for the bots. It makes the sharing of code easier across different systems.</p> <p><strong>License Management</strong></p> <p>Control Room manages the purchased licenses for Automation Anywhere.</p> <p>Automation Anywhere has two types of licenses, such as:</p> <p><strong>Dev License:</strong> This license allows access to create, edit, and run a bot.</p> <p><strong>Run License:</strong> This license allows access only to run a bot. We cannot create or alter a bot.</p> <p><strong>Automation Deployment</strong></p> <p>Control Room provides options for the deployment of automation bots.</p> <p><strong>Dashboard</strong></p> <p>A dashboard provides full insights of Automation Anywhere bots. It also displays the number of running bots, failed bots and passed bots, etc.</p> <h3 class="h3">Bot Runners</h3> <p>The Bot Runner is a set of machine-level code that is used to execute the bots. Several bots can be simultaneously executed. To run the bots, Run License is required. Bot Runners are run-time clients that are usually installed on windows based systems. The Bot Runner can report back the execution status to the control room.</p> <h2 class="h2">Other Important Products of Automation Anywhere</h2> <p>Some other important products of Automation Anywhere are:</p> <h3 class="h3">Bot Insights</h3> <p>Bot Insight is a tool that allows users to analyze the performance of bots. It displays graphs and statistics to measure each bot's performance. It also enables users to calculate the time that a user has saved with the automation. It is said to be the first analytics solution used for bots. Bot Insights uses real-time business insights with digital workforce performance.</p> <h3 class="h3">Bot Farm</h3> <p>Bot Farm is a tool used for the expansion of the number of RPA bots. It is integrated with the Enterprise edition of Automation Anywhere. Bot Farm can also scale the capacity of the digital workforce with a single-click deployment anytime from anywhere. It allows users to develop, deploy, and manage hundreds or thousands of bots, ensuring the elasticity and scalability.</p> <h3 class="h3">Bot Store</h3> <p>Bot Store is the first digital marketplace that contains several pre-built bots for different business automation tasks. It allows enterprises to deploy different bots such as application bots, process bots, and cognitive bots in a short period.</p> <h2 class="h2">Types of Bots in Automation Anywhere</h2> <p>There are three types of bots used in Automation Anywhere:</p> 
+           <ul class="points"> 
+            <li>Task bot</li> 
+            <li>Meta bot</li> 
+            <li>IQ bot</li> 
+           </ul> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial4.png" alt="Automation Anywhere Tutorial"> <h3 class="h3">Task Bots</h3> <p>Task bots are bots that are used to automate rule-based, repetitive tasks. Task bots are usually beneficial in document administration, claims management, HR department, <a href="https://www.javatpoint.com/it-full-form">IT</a>, etc. They enhance productivity, error reduction, and cost-saving.</p> <h3 class="h3">Meta Bots</h3> <p>Meta bots are known as automation building blocks that facilitate scalability with next-generation integration. These are designed for complex, scalable processes. If there is a requirement of any change in the process, we have to perform some edits to the bot. The changes will be automatically applied to all the processes linked with that specific bot. </p> <h3 class="h3">IQ Bots</h3> <p>IQ Bot is an advanced tool that includes the capability of thinking like a human. IQ bots are also referred to as Cognitive bots. These bots are developed to learn on their own and perform the tasks according to it. IQ bots use advanced cognitive technology and advanced artificial technologies that enable users to experience the power of automation. These bots include features like self-learning, decision making, and subject matter expertise, etc. These bots can extract data from semi-structured and unstructured data.</p> <h2 class="h2">Automation Anywhere Features</h2> <p>Automation Anywhere has several unique features that make it notable amongst RPA tools. Check out the following important functionalities available in this RPA tool:</p> <h3 class="h3">Task Editor</h3> <p>Automation Anywhere allows users to generate tasks with the help of a task editor. The task editor provides a toolbox, and users can easily drag and drop the items from the toolbox to generate a task. Task editor also allows users to edit, modify, break down, or improve the recorded tasks. The task editor has more than 380 actions. Some of the important actions are Windows Actions, Database Actions, Files/Folder Actions, Conditional Actions, Keyboard &amp; Mouse Actions, Internet Actions, Loop Actions, and Clipboard Actions.</p> <h3 class="h3">Workflow Designer</h3> <p>This feature allows enterprises to create simple, easy to understand graphical-interface of the business processes. It is used to automate multiple tasks in a queue, including alternate path locations, that is executed when there is any failure in the primary process execution.</p> <h3 class="h3">Report Designer</h3> <p>This feature allows users to generate and print the insight that displays the statistics of the execution logs of any particular task. It can also be used to create custom reports or insights. The report designer provides options such as Workflow Timeline, Task Timeline, Task Run, Visual Logs, and ROI reports, etc.</p> <h3 class="h3">Trigger Manager</h3> <p>Trigger manager is used for processing any task or workflow based on the other process, service, or task such as start/stop, system change, file or folder change, etc.</p> <h3 class="h3">Workload Management</h3> <p>This feature is used to prioritize the process for execution. Workload management (WLM) allows enterprises to manually set the high-value processes inside the automated queue to fulfill the enterprise's requirements. It uses hundreds or thousands of software bots to satisfy the demand and ensures better optimization for process automation.</p> <h3 class="h3">Recorders</h3> <p>It is one of the top features of Automation Anywhere. It allows enterprises to record, save, and test their actions. It follows the user's actions and creates a bot according to it. There are no programming skills required to develop bots as recording any task is more straightforward than manually coding it. There are three types of recording option available in Automation Anywhere:</p> <p><strong>Smart Recorder:</strong> It is used to capture whole actions, just like object cloning.</p> <p><strong>Screen Recorder:</strong> It is used to capture actions like mouse clicks and movements, keyboard operations, etc.</p> <p><strong>Web Recorder:</strong> It is used for extracting data from the web. It accurately records user-actions and further automates web-based tasks without the requirement of any coding or programming language.</p> <h3 class="h3">Image Recognition and OCR</h3> <p>Image recognition is used to read objects of an image as well as compare it with other images. It can also read or recognize an image from any document or the entire web page. Similarly, OCR (Optical Character Recognition) recognizes an image and converts the image data into text or characters in an excellent way.</p> <p>These are the important features present in Automation Anywhere. Apart from that, there are several other features such as <strong>lifecycle management, operational analytic, Citrix automation, visualization, screen scraping, web data extraction, centralized backup, security, data recovery,</strong> etc.</p> <h2 class="h2">What Processes we can automate with Automation Anywhere?</h2> <p>Almost all the repetitive and rule-based digital processes can be controlled by Automation Anywhere. It uses GUI to control the processes just like a human. It can also automate complex processes and efficiently complete them.</p> <p>Some of the important processes that can be automated using Automation Anywhere are:</p> 
+           <ul class="points"> 
+            <li>Data extraction and submission</li> 
+            <li>Data comparison and validation</li> 
+            <li>All windows and web-based user actions</li> 
+            <li>Navigation through web, windows, cloud, legacy systems</li> 
+            <li>Rule-based decisions</li> 
+           </ul> <h4 class="n">Note- Hand-written data and non-rule based judgment calls cannot be automated by Automation Anywhere.</h4> <h2 class="h2">How to Install Automation Anywhere?</h2> <p>Installation of Automation Anywhere mainly includes the configuration of different software, such as IQ Bots, Automation Anywhere extension, and Automation Anywhere Bot Agent. Automation Anywhere has different versions such as Cloud Starter Pack, Advanced Pack, and Community Edition. We can choose as per our requirements. It is better to try all of them before you decide which one is right for you.</p> <p>Automation Anywhere allows us to try a full-featured version for 30 days. So, once we fill-up the form given on the official website, we are given a chance to take a trial with the instructions on how to set it up. We don't need to download anything to check the trial version. It is based on the cloud so we can test it directly from our <a href="https://www.javatpoint.com/browsers">web browser</a>. However, we need to download and install "Automation Anywhere Bot Agent", "Automation Anywhere Browser Extension", and connect our machine with the control room to implement the software bots.</p> <p>Follow the steps given below to install or configure products of Automation Anywhere:</p> <p><strong>Step 1:</strong> First, we need to navigate to the official site here:<br> <a href="https://www.automationanywhere.com/" rel="nofollow" target="_blank">https://www.automationanywhere.com/</a></p> <p><strong>Step 2:</strong> Then, we need to click on the "Start Free Trial" button, as shown in the following image:</p> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial5.png" alt="Automation Anywhere Tutorial"> <p><strong>Step 3:</strong> On the next screen, we will see different versions of Automation Anywhere and their features. Again, we need to click on a button "Start Free Trial".</p> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial6.png" alt="Automation Anywhere Tutorial"> <p><strong>Step 4:</strong> On the next screen, we will see a form asking several details from our side. We need to fill all the details and submit the form to get the trial of Automation Anywhere.</p> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial7.png" alt="Automation Anywhere Tutorial"> <p>Once we submit the form, we receive the confirmation of the submission, as shown below:</p> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial8.png" alt="Automation Anywhere Tutorial"> <p>The login details and a link are sent over the mail that we used while filling up the form.</p> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial9.png" alt="Automation Anywhere Tutorial"> <p><strong>Step 5:</strong> Next, we are required to open a link and sign-in with the credential given in the email. As soon as we log in, we get a screen asking us to set a new password rather than using the default one sent over mail.</p> <p>Also, we need to set up some security questions required to recover our account if we forget the login credentials.</p> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial10.png" alt="Automation Anywhere Tutorial"> <p>Once we have configured all these steps, we will get to the Control Room (dashboard) of Automation Anywhere.</p> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial11.png" alt="Automation Anywhere Tutorial"> <p><strong>Step 6:</strong> At last, we need to connect our local machine by following on-screen instructions and installing some packages to implement IQ Bots into our machine.</p> <p>That is how we can configure/install Automation Anywhere.</p> <h3 class="h3">Creating a Bot</h3> <p>Let's create a simple bot using this tool. To get a better idea about how it works, we are creating a bot that will automatically open a web page just by executing the bot.</p> <p><strong>Step 1:</strong> First, we need to click on a button "Create a bot":</p> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial12.png" alt="Automation Anywhere Tutorial"> <p><strong>Step 2:</strong> We also get the option to write a short description that we can use to illustrate a bot's working:</p> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial13.png" alt="Automation Anywhere Tutorial"> <p><strong>Step 3:</strong> Then, we need to choose an action to be performed by the bot. Here, we choose the "Launch Website" action. We need to drag and drop the appropriate action between 'start' and 'end' point of the flow chart:</p> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial14.png" alt="Automation Anywhere Tutorial"> <p><strong>Step 4:</strong> As soon as we drag and drop the action onto the flowchart, we get a new screen where we need to fill an address (URL) of the web page and select the browser that we want to use to open the specific webpage address:</p> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial15.png" alt="Automation Anywhere Tutorial"> <p><strong>Step 5:</strong> After configuring all the above steps, we need to click on the "Save" button. We can also check the final flowchart structure to ensure that everything is configured correctly.</p> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial16.png" alt="Automation Anywhere Tutorial"> <p><strong>Step 6:</strong> At last, we can execute the created bot to launch the specified action using the option "Run" from the top menu-bar:</p> <img src="https://static.javatpoint.com/tutorial/automation-anywhere/images/automation-anywhere-tutorial17.png" alt="Automation Anywhere Tutorial"> <p>Once the bot is run successfully, the specified action is processed automatically. That is how we can configure IQ Bot in Automation Anywhere to automate the tasks.</p> <h2 class="h2">Industries using Automation Anywhere</h2> <p>The tool is designed in such a way that it can benefit many types of businesses by automating business processes across multiple machines. Because at least someone in every organization performs manual, repetitive, and time-consuming tasks, therefore, almost any industry you think can benefit through automation.</p> <p>Some of the popular industries that use this tool are as follows:</p> 
+           <table class="alt"> 
+            <tbody>
+             <tr> 
+              <th>Industries Using Automation Anywhere</th> 
+              <th>Applications of Automation Anywhere</th> 
+             </tr> 
+             <tr> 
+              <td>Financial/Banking/Accounting</td> 
+              <td>Invoice processing, data entry, data validations, data migration between banking application, reporting, auditing, customer account management, form-filling, claim processing, etc.</td> 
+             </tr> 
+             <tr> 
+              <td>HR</td> 
+              <td>Automating tasks in PeopleSoft. Email notifications and populating, etc.</td> 
+             </tr> 
+             <tr> 
+              <td>Operations/Technology</td> 
+              <td>Creating accounts, software set-up, system integrations, application integrations, batch processing, hardware and software testing for functional, load, and mobile performance, etc.</td> 
+             </tr> 
+             <tr> 
+              <td>Telecommunications</td> 
+              <td>Data collection and consolidation from client phone systems, backing up data from client systems, automatic data uploads, gathering data about competitor pricing, and phone manufacturing information, etc.</td> 
+             </tr> 
+             <tr> 
+              <td>Sales</td> 
+              <td>Invoice creating and printing, adding or removing customer data in CRM, etc.</td> 
+             </tr> 
+             <tr> 
+              <td>Marketing</td> 
+              <td>Creating lead generation reports, monitoring social sentiment, etc.</td> 
+             </tr> 
+             <tr> 
+              <td>Manufacturing</td> 
+              <td>Inventory management, ERP automation, data monitoring, automating logistics data, product price comparisons, etc.</td> 
+             </tr> 
+             <tr> 
+              <td>Government</td> 
+              <td>Verification process, automating daily reports, integrate legacy systems with updated systems, populating subcontractor forms, etc.</td> 
+             </tr> 
+             <tr> 
+              <td>Healthcare</td> 
+              <td>Reporting for doctors, patient data migration and processing, medical bill generation, insurance data automation and claim processing, automation of claim status and eligibility criteria, patient record storage, etc.</td> 
+             </tr> 
+             <tr> 
+              <td>Hospitality</td> 
+              <td>Price analysis and comparison of competitors, guest data processing, verification of data, payment processing, account generation, etc.</td> 
+             </tr> 
+             <tr> 
+              <td>Retail</td> 
+              <td>Extracting product details from manufacturer's websites, automatically updating online inventory and item information, importing site and email sales, etc.</td> 
+             </tr> 
+             <tr> 
+              <td>Consumer goods</td> 
+              <td>Data entry, order processing, order status updates, claims processing, resolution consulting, FTP automation, incentive claims updates, etc.</td> 
+             </tr> 
+            </tbody>
+           </table> <h2 class="h2">Future Scope of Automation Anywhere</h2> <p>The market for RPA is growing rapidly. More than 3 million positions have been opened so far for manufacturing automation and robotics. According to the report by McKinsey &amp; Company, it is predicted that RPA will have a significant economic impact of nearly $5.2 to $6.7 trillion by 2025. Because this is code-free, anyone can learn automation anywhere without the requirements of any coding or programming skills.</p> <p>Operating experts, marketing specialists, and digital marketing personalities with a primary knowledge of programming can easily adopt this tool. All engineers who want to pursue a career in robotic process automation can go with automation anywhere.</p> <p>There are several roles in Automation Anywhere, such as:</p> 
+           <ul class="points"> 
+            <li>Developer (70 % Job Openings)</li> 
+            <li>Manager (20% % Job Openings)</li> 
+            <li>Architect (10% % Job Openings)</li> 
+           </ul> <p>As you can see, the most crucial role is that of the developer; therefore, there are more opportunities as an RPA developer. You can be a better RPA developer with little or no programming knowledge.</p> <h2 class="h2">Audience</h2> <p>Our Automation Anywhere Tutorial is designed to help beginners and professionals.</p> <h2 class="h2">Problem</h2> <p>We assure you that you will not find any difficulty while learning through our Automation Anywhere Tutorial. But if you find any mistake in this tutorial, we request you to kindly post the problem in the contact form so that we can improve it.</p> 
+           <hr> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="593f3c3c3d3b383a321933382f382d293630372d773a3634">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/automation-anywhere"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/automation-anywhere"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/automation-anywhere"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d5bda795bfb4a3b4a1a5babcbba1fbb6bab8">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2c445e6c464d5a4d585c43454258024f434102">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

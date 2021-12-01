@@ -1,0 +1,1468 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Kivy Tutorial - javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Kivy Tutorial - javatpoint">
+  <meta property="og:description" content="Kivy Tutorial with What is Kivy, Features of Kivy, Advantages and Disadvantages of Kivy, Kivy Architecture, Kivy Installation on Windows, Create a Hello World program etc."> 
+  <meta name="keywords" content="kivy tutorial, kivy, wWhat is kivy, features of kivy, advantages and disadvantages of kivy, kivy architecture, kivy installation on windows, create a hello world program, add image in kivy, kivy buttons, kivy widgets, kivy layouts, crete sign in window in kivy">
+  <meta name="description" content="Kivy Tutorial with What is Kivy, Features of Kivy, Advantages and Disadvantages of Kivy, Kivy Architecture, Kivy Installation on Windows, Create a Hello World program etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/kivy"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Kivy Tutorial - javatpoint">
+  <meta name="twitter:description" property="og:description" content="Kivy Tutorial with What is Kivy, Features of Kivy, Advantages and Disadvantages of Kivy, Kivy Architecture, Kivy Installation on Windows, Create a Hello World program etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/kivy">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="kivy" class="selected">Kivy</a></li> 
+       <li><a href="jupyter-notebook">Jupyter Notebook</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="python-tutorial">Python</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="sql-tutorial">SQL</a></li> 
+       <li><a href="android-tutorial">Android</a></li> 
+       <li><a href="cloud-computing-tutorial">Cloud</a></li> 
+       <li><a href="servlet-tutorial">Servlet</a></li> 
+       <li><a href="jsp-tutorial">JSP</a></li> 
+       <li><a href="struts-2-tutorial">Struts2</a></li> 
+       <li><a href="spring-tutorial">Spring</a></li> 
+       <li><a href="corejava-interview-questions">Interview Q</a></li> 
+       <li><a href="comment.jsp">Comment</a></li> 
+       <li><a href="forum">Forum</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Kivy Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="kivy">Kivy Tutorial</a> <a href="dropdown-list-in-kivy">Dropdown List in Kivy</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> 
+           <div id="bottomnextup"> <a class="next" href="dropdown-list-in-kivy">next &#x2192;</a> 
+           </div> <h1 class="h1">Kivy Tutorial</h1> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-tutorial.png" class="imageright" alt="Kivy Tutorial"> <p>Kivy tutorial provides basic and advances concepts of Kivy. Our Kivy tutorial is designed for beginners as well as working professionals.</p> <p>Kivy is a <strong>multi-platform application development framework</strong> for <a href="https://www.javatpoint.com/python-tutorial">Python</a>. It allows us to develop multi-platform applications on various platforms such as <strong><a href="https://www.javatpoint.com/windows">Windows</a>, <a href="https://www.javatpoint.com/linux-tutorial">Linux</a>, <a href="https://www.javatpoint.com/android-tutorial">Android</a>, macOS, iOS, and Raspberry Pi</strong>.</p> <p>In our Kivy tutorial, we will discuss the following topics -</p> 
+           <ul class="points"> 
+            <li><a href="#Whatis">What is Kivy</a></li> 
+            <li><a href="#Features">Features of Kivy</a></li> 
+            <li><a href="#AdvantagesDisadvantages">Advantages &amp; Disadvantages of Kivy</a></li> 
+            <li><a href="#Architecture">Kivy Architecture</a></li> 
+            <li><a href="#Installation">Kivy Installation on Windows</a></li> 
+            <li><a href="#HelloWorldprogram">Create a Hello World program in Kivy</a></li> 
+            <li><a href="#Addimage">Add image in Kivy</a></li> 
+            <li><a href="#Buttons">Kivy Buttons</a></li> 
+            <li><a href="#Widgets">Kivy Widgets</a></li> 
+            <li><a href="#Layouts">Kivy Layouts</a></li> 
+            <li><a href="#popupwindow">Create popup window in Kivy</a></li> 
+            <li><a href="#SigninWindow">Crete Sign in Window in Kivy</a></li> 
+           </ul> 
+           <hr> <h2 id="Whatis" class="h2">What is Kivy?</h2> 
+           <ul class="points"> 
+            <li>Kivy is an <strong>open-source</strong> and <strong>Graphical User Interface</strong> (GUI) development platform for Python.</li> 
+            <li>It helps us to develop <strong>mobile applications</strong> and <strong>multi-touch application software</strong> with a NUI (Natural User Interface)</li> 
+            <li>It allows developers to build an application once and use it across all devices.</li> 
+            <li>It can also access mobile APIs to manipulate things such as the <strong>camera on a phone, GPS tracking, vibrator, and so on</strong>.</li> 
+            <li>It contains various components for creating an application such as: 
+             <ul class="points"> 
+              <li>A <strong>graphical library</strong> OpenGL ES 2.</li> 
+              <li>An extensive range of <strong>widgets</strong> that support multi-touch.</li> 
+              <li>An intermediate <strong>Kv language</strong> to design custom widgets.</li> 
+              <li>An extensive support for <strong>input devices</strong> such as a mouse, keyboard, TUIO, as well as OS-specific multi touches events.</li> 
+             </ul></li> 
+           </ul> 
+           <hr> <h2 id="Features" class="h2">Features of Kivy</h2> <p>There are the following cool features of Kivy -</p> <h3 class="h3">1. Video</h3> <p>Kivy includes various modules to play video files and streams. Kivy Video player also supports some common requirements related to videos such as play, pause, stop buttons, text that can be used as a subtitle, display messages to the user on videos, and more.</p> <p><strong>Example:</strong> pygame video provider supports MPEG1 on Linux.</p> <h3 class="h3">2. Multi-touch and gestures</h3> <p>Kivy uses a wide range of widgets that support multi-touch and gestures. Kivy developers provide a gesture library to record the user's gesture.</p> <p>There are the following three gestures that we can record -</p> 
+           <ul class="points"> 
+            <li>Left to right horizontal line</li> 
+            <li>Right to left horizontal line</li> 
+            <li>Bottom to top vertical line</li> 
+           </ul> <h3 class="h3">3. UI features</h3> <p>Kivy comes with a number of widgets and controls to make our mobile interface more attractive and beautiful. It is also used to improve one-handed usability, navigate gestures, create new icons or design elements, dark mode, and new animations.</p> <h3 class="h3">4. Visual effects and OpenGL</h3> <p>Kivy uses PyGame for easily creating new games. PyGame comes with various modules to drawing shapes, dealing with colors, and playing music.</p> <h3 class="h3">5. Flexible</h3> <p>Kivy is more flexible because it can run on a variety of devices, including <strong>Linux, mobile phones, <a href="https://www.javatpoint.com/what-is-windows">windows</a>, tablets, iOS</strong>, and <strong>Raspberry Pi</strong>. Kivy is flexible so it can adapt to new technologies quickly.</p> <h3 class="h3">6. Free</h3> <p>Kivy framework is completely free to use. To work with Kivy, you must have 1 GHz 32 bit (x86), or 64 bit (x64) <a href="https://www.javatpoint.com/central-processing-unit">CPU</a>, 1 GB of <a href="https://www.javatpoint.com/ram-full-form">RAM</a>, 128 MB of graphical memory, and Python installed on your system.</p> 
+           <hr> <h2 id="AdvantagesDisadvantages" class="h2">Advantages and Disadvantages of Kivy</h2> <h3 class="h3">Advantages</h3> <p>A list of advantages of Kivy is given below -</p> 
+           <ul class="points"> 
+            <li>Kivy helps us to design innovative user interfaces with multi-touch functionalities.</li> 
+            <li>It can smoothly work with various platforms such as Windows, Android, Linux, iOs, macOS, and Raspberry Pi.</li> 
+            <li>It helps us to run code on all supported platforms.</li> 
+            <li>It provides well-documented APIs.</li> 
+            <li>It offers a better representation of programs, including classes, widget configuration, and inherited classes.</li> 
+            <li>It performs better than HTML 5.</li> 
+           </ul> <h3 class="h3">Disadvantages</h3> 
+           <ul class="points"> 
+            <li>Kivy uses kV language, which is not suitable for us to compile our code alone.</li> 
+            <li>It is not always up-to-date with the latest Android APIs.</li> 
+            <li>It takes a lot of time for building and compiling mobile applications.</li> 
+            <li>The sizes of the package are unnecessarily huge.</li> 
+            <li>It has a lack of community support.</li> 
+           </ul> 
+           <hr> <h2 id="Architecture" class="h2">Kivy Architecture</h2> <p>The below screenshot shows the Kivy Architecture -</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-architecture.png" alt="Kivy Tutorial"> <p>Kivy Architecture contains the following components -</p> <h3 class="h3">1. Core Providers and Input Providers</h3> <p>Kivy Providers mainly abstract the various core tasks includes <strong>opening a window, displaying images and text, playing audio, spelling correction, fetching images from a camera, and so on.</strong> </p> <p>An input provider is a piece of code that helps us to add support for a specific input device such as TUIO, mouse emulator, or Apple's trackpads. We can also add support for new input devices by providing a new class that reads our input data from our device and transform them into Kivy events.</p> <h3 class="h3">2. Graphics</h3> <p>Kivy Graphics APIs have the ability to automatically optimize the drawing commands.</p> <h3 class="h3">3. Core</h3> <p>Core provides the following features -</p> 
+           <ul class="points"> 
+            <li><strong>Clock</strong><br> A clock is used to schedule the timer events. Clock supported both <strong>one-shot timers</strong> and <strong>periodic timers</strong>.</li> 
+            <li><strong>Cache</strong><br> In Kivy, the cache is used to store python objects. We can control the cache in the following two ways - 
+             <ul class="points"> 
+              <li>Object limit</li> 
+              <li>Timeout</li> 
+             </ul></li> 
+           </ul> <h4 class="n">Note: We can also create a new cache in the Kivy with the limit of 10 objects and a timeout of 5 seconds.</h4> 
+           <ul class="points"> 
+            <li><strong>Gesture Detection</strong><br> Kivy uses a simple gesture detection, which is used to detect various types of strokes, circles, rectangles, or squares.</li> 
+            <li><strong>Kivy Language</strong><br> Kivy language is used to describe user interfaces more quickly and easily.</li> 
+            <li><strong>Properties</strong><br> In Kivy, properties classes are used to link our widget code to the user interface description.</li> 
+           </ul> <h3 class="h3">4. UIX</h3> <p>The UIX module commonly contains Widgets and Layouts to quickly create a user interface.</p> <p><strong>Widgets</strong></p> <p>Widgets are the user interface components that we add to our program to provide some kind of functionality.</p> <p><strong>Example:</strong> file browser, buttons, lists, sliders, and more.</p> <p><strong>Layouts</strong></p> <p>Layouts are used to arrange widgets.</p> <h3 class="h3">5. Modules</h3> <p>Modules are the classes that can be loaded on the Kivy when we start the Kivy application. The config file is used to manage the loading of modules.</p> <h4 class="n">Note: In Kivy, we can also write our own modules.</h4> <h3 class="h3">6. Input Events</h3> <p>Kivy Input events are an essential part of the kivy Architecture. Kivy abstract contains different input events such as touches, mice, TUIO, Mouse, MTDev, and HIDInput. We can also add 2D onscreen-position with any individual input event.</p> <p>All input types are characterized by an instance of the touch () class. A touch () class instance can be one of the following three states.</p> 
+           <ul class="points"> 
+            <li>Down</li> 
+            <li>Move</li> 
+            <li>Up</li> 
+           </ul> <h3 class="h3">7. Widgets and Input Dispatching</h3> <p>The term Widgets are most frequently used in <a href="https://www.javatpoint.com/gui-full-form">GUI</a> programming to describe that part of the program which interacts with a user. In kivy, widgets are works as an object that receives input events. All widgets are arranged in the form of a widget tree. One widget may contain any number of child or none child.</p> <p>Whenever new data is available, Kivy sends one per touch. Every event is first received by the root widget of the widget tree.</p> 
+           <hr> <h2 id="Installation" class="h2">Kivy Installation on Windows</h2> <p>To install the kivy on Windows, first, we need to install Python and Anaconda on our system.</p> <p>Follow the below steps to install Python -</p> <p><strong>Step 1:</strong> Copy-paste the below link on any browser or you just simply click on the below link - <a href="https://www.python.org/" rel="nofollow" target="_blank">https://www.python.org/</a></p> <p><strong>Step 2:</strong> The following page appears on the screen, in which click on the <strong>Downloads</strong> and select <strong>Windows</strong> from the drop-down menu.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-installation.png" alt="Kivy Tutorial"> <p><strong>Step 3:</strong> Select the Python Releases version for windows.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-installation2.png" alt="Kivy Tutorial"> <p><strong>Step 4:</strong> Double click on the downloaded file, the below window appears on the screen in which click on <strong>Install Now</strong>.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-installation3.png" alt="Kivy Tutorial"> <p><strong>Step 5:</strong> The below screenshot shows that Python installation is in progress.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-installation4.png" alt="Kivy Tutorial"> <p><strong>Step 6:</strong> The below screenshot shows that the setup is installed successfully. You just simply click on the <strong>Close</strong> button.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-installation5.png" alt="Kivy Tutorial"> <p>Now, follow the below steps to download the Anaconda -</p> <p><strong>Step 1:</strong> Click on the below link to install Anaconda <a href="https://www.anaconda.com/products/individual" rel="nofollow" target="_blank">https://www.anaconda.com/products/individual</a></p> <p><strong>Step 2:</strong> The following page appears on the screen. Scroll down the window and click on <strong>64-bit Graphical Installer (446 MB)</strong> at the bottom of the screen.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-installation6.png" alt="Kivy Tutorial"> <p><strong>Step 3:</strong> You can see that Anaconda Graphical Installer is to started download. Once the file is downloaded, double click on that executable file. The following window appears on the screen in which click on the <strong>Next</strong>.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-installation10.png" alt="Kivy Tutorial"> <p><strong>Step 4:</strong> A License Agreement window appears on the screen, in which click on the <strong>I Agree.</strong></p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-installation11.png" alt="Kivy Tutorial"> <p><strong>Step 5:</strong> In Installer type, select Install for <strong>Just Me (recommended)</strong>.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-installation12.png" alt="Kivy Tutorial"> <p><strong>Step 6: Browse the location</strong> where you want to install Anaconda and click on the <strong>Next</strong>.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-installation13.png" alt="Kivy Tutorial"> <p><strong>Step 7: An Advanced Installation Options</strong> window appears on the screen, tick on <strong>Register Anaconda3 as my default Python 3.7</strong>. And click on the <strong>Install</strong>.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-installation14.png" alt="Kivy Tutorial"> <p><strong>Step 8:</strong> The below screenshot shows that Anaconda Installation is in progress.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-installation15.png" alt="Kivy Tutorial"> <p><strong>Step 9:</strong> Once the Installation process is completed, click on the <strong>Next</strong> button.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-installation16.png" alt="Kivy Tutorial"> <p><strong>Step 10:</strong> The following window appears on the screen in which click on the <strong>Next</strong>.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-installation17.png" alt="Kivy Tutorial"> <p><strong>Step 11:</strong> A completing Anaconda set up window appears on the screen, simply click on the <strong>Finish</strong> on that window.</p> <h3 class="h3">Install Kivy</h3> <p>Once you installed the Anaconda, now we are able to install kivy.</p> <p>There are the following steps to install kivy -</p> <p><strong>Step 1:</strong> Go to the Anaconda Prompt.</p> <p><strong>Step 2:</strong> Before installing kivy, first update the pip by using the following command.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+python -m pip install - -upgrade pip wheel setuptools
+</textarea>
+           </div> <p><strong>Step 3: Install the Dependencies</strong></p> <p>There are the following 3 dependencies that we need to install while installing the Kivy.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+Python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew
+</textarea>
+           </div> <br> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+python -m pip install kivy.deps.gstreamer
+</textarea>
+           </div> <br> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+python -m pip install kivy.deps.angle
+</textarea>
+           </div> <p><strong>Step 4: Install Kivy</strong></p> <p>Use the following command to install Kivy.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="python">
+python -m pip install kivy
+</textarea>
+           </div> 
+           <hr> <h2 id="HelloWorldprogram" class="h2">Create a Hello World program in Kivy</h2> <p>There are the following steps to create a Hello World program in Kivy -</p> <p><strong>Step 1:</strong> Open any text editor (Notepad or Notepad++)</p> <p><strong>Step 2:</strong> Write the following code on the Editor.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy  # import kivy module
+from kivy.app import App # import Kivy App module to create a Kivy interface
+from kivy.uix.label import Label # import Label Module
+  
+kivy.require('1.11.1')  # version required to run Kivy Application  
+  
+ 
+class MyKivyApp(App): # Create a class MyKivyApp
+      
+    
+    def build(self): 
+          
+        return Label(text ="Hello World !") #return a Label with text Hello World ! as a root widget       
+  
+  
+ 
+MyKivyApp().run()  # Class MyKivyApp is initialized and run () method is called to run the App.
+</textarea>
+           </div> <p><strong>Step 3:</strong> Save the file with <strong>.py</strong> extension for example Javatpoint.py</p> <p><strong>Step 4:</strong> Open the Anaconda Prompt and provide the valid path where your kivy program is saved.</p> <p><strong>Step 5:</strong> To run program, use the flowing command and press Enter.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+python file_name.py (Ex: python javatpoint.py) 
+</textarea>
+           </div> <p>When you run the command following output appears on the screen.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/create-hello-world-program.png" alt="Kivy Tutorial"> 
+           <hr> <h2 id="Addimage" class="h2">Add image widget in Kivy</h2> <p>Kivy image widget uses <strong>kivy.uix.image</strong> module to display image. There are the following two ways to add images in Kivy.</p> <h3 class="h3">From System</h3> <p>From system, image widget is used to load images from the system.</p> <p>The below code is used to add an image widget in Kivy.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy  # import kivy module
+from kivy.app import App # import Kivy App module to create a Kivy interface
+from kivy.uix.image import Image # import image Module
+  
+kivy.require('1.11.1')  # version required to run Kivy Application  
+  
+ 
+class MyKivyApp(App): # Create a class MyKivyApp
+      
+    
+    def build(self): 
+          
+       return Image(source ="G:\Office\Images\Kivy\download.jpg") #return an Image as a root widget       
+  
+  
+ 
+MyKivyApp().run()  # Class MyKivyApp is initialized and run () method is called to run the App.
+</textarea>
+           </div> <p>When we run code, the following output will appear on the screen.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/add-image-widget.png" alt="Kivy Tutorial"> <h3 class="h3">Asynchronous Loading</h3> <p>The asynchronous loading e image widget is used to load images from the external web server.</p> <p>We can use the following code to add an image from the external web server.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy  # import kivy module
+from kivy.app import App # import Kivy App module to create a Kivy interface
+from kivy.uix.image import AsyncImage # import image Module
+  
+kivy.require('1.11.1')  # version required to run Kivy Application  
+  	
+ 
+class MyKivyApp(App): # Create a class MyKivyApp
+      
+    
+    def build(self): 
+          
+       return AsyncImage(source ="https://media.gettyimages.com/photos/stack-of-books-picture-id157482029?s=612x612") #return an Image as a root widget       
+  
+      #Copy the image link address.
+ 
+MyKivyApp().run()  # Class MyKivyApp is initialized and run () method is called to run the App.
+</textarea>
+           </div> <p>The below screenshot shows that an image is added from the external web server.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/add-image-widget2.png" alt="Kivy Tutorial"> 
+           <hr> <h2 id="Buttons" class="h2">Kivy Buttons</h2> <p>Buttons are an essential part of every application. It performs some specific tasks when we click on the button. The main advantage of a button is that it allows users to interact with the software and application directly.</p> <p>To create a button in Kivy, we need to import Button <strong>form kivy.uix.button</strong>.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy 
+from kivy.app import App 
+from kivy.uix.button import Button #import Button
+kivy.require("1.9.1") 
+ 
+class kivyButtonApp(App): 
+      
+    def build(self): 
+          
+        btn = Button(text = "Press Me!") 
+        return btn 
+  
+  
+root = kivyButtonApp() 
+root.run()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-buttons.png" alt="Kivy Tutorial"> <h3 class="h3">Create a stylish button</h3> <p>In Kivy, we can also design a stylish button using various different background colors, size_hint, and pos.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy 
+from kivy.app import App 
+from kivy.uix.button import Button #import Button
+kivy.require("1.9.1") 
+ 
+class kivyButtonApp(App): 
+      
+    def build(self): 
+          
+        btn = Button(text = "Press Me!", size_hint = (.2,.2), pos = (300,250)) 
+        return btn 
+  	
+  
+root = kivyButtonApp() 
+root.run()
+</textarea>
+           </div> <p>The below screenshot shows the output of a stylish button.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-buttons2.png" alt="Kivy Tutorial"> <h3 class="h3">Add an image in the button</h3> <p>Kivy allows us to add an image in the button to make the button more effective and attractive.</p> <p>To add an image in the button, we need to import the following module:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from kivy.uix.button import Button
+from kivy.config import Config
+</textarea>
+           </div> <p><strong>Code:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy    
+kivy.require("1.9.1")  
+from kivy.app import App    
+from kivy.uix.button import Button 
+from kivy.config import Config   
+Config.set('graphics', 'resizable', True) 
+    
+class Button_Demo(App):  
+         
+    def build(self):  
+   
+          	
+        btn = Button(text ="Click ME", 
+                     color =(1, 0, .65, 1), 
+                     background_normal = 'G:\Office\Images\Kivy\download.jpg', 
+                     
+                     size_hint = (.4, .4), 
+                     pos_hint = {"x":0.39, "y":0.3} 
+                   )  
+      
+        return btn  
+             
+     
+  
+root = Button_Demo()  
+     
+
+root.run()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-buttons3.png" alt="Kivy Tutorial"> 
+           <hr> <h2 id="Widgets" class="h2">Kivy Widgets</h2> <p>Kivy Widgets are used to develop GUI interfaces in kivy. Kivy widgets allow us to create Labels, Canvas, drop-down menu, and more.</p> <h3 class="h3">1. Label Widgets</h3> <p>Label widget is used for rendering the text. To make labels more attractive, we can add font size, color, and text color in the label.</p> <p>To create label, we need to import <strong>from kivy.uix.label import Label</strong> module.</p> <p><strong>Code:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy  
+from kivy.app import App 
+from kivy.uix.label import Label  #import Label Module
+  
+ 
+class Label_Demo(App): 
+    def build(self): 
+       
+        label1 = Label(text ="javaTpoint", font_size = 120) #Disply label on the screen
+        return label1 
+  
+root=Label_Demo()
+root.run()
+</textarea>
+           </div> <p><strong>Output:</strong> The below screenshot shows the output of the label.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-widgets.png" alt="Kivy Tutorial"> <h3 class="h3">3. Checkbox</h3> <p>Checkbox is also referred to as a selection box, tick box, and checkmark. It is used in the forms to make forms options easier to read and answer.</p> <p><strong>Code:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy   
+from kivy.app import App  
+from kivy.uix.widget import Widget 
+from kivy.uix.label import Label  
+from kivy.uix.gridlayout import GridLayout 
+from kivy.uix.checkbox import CheckBox  
+
+class checkboxDemo(GridLayout): 
+  
+    def __init__(self, **kwargs): 
+         
+        super().__init__() 
+  
+         
+        self.cols = 2
+  
+      
+        self.add_widget(Label(text ='Python')) #add checkbox
+        self.check = CheckBox(active = True) 
+        self.add_widget(self.check) 
+  
+        self.add_widget(Label(text ='C')) 
+        self.check = CheckBox(active = False) 
+        self.add_widget(self.check) 
+  
+        self.add_widget(Label(text ='C++')) 
+        self.check= CheckBox(active = False) 
+        self.add_widget(self.check)
+		
+		
+        self.add_widget(Label(text ='Java')) 
+        self.check = CheckBox(active = True) 
+        self.add_widget(self.check) 
+  
+        self.add_widget(Label(text ='Other')) 
+        self.check = CheckBox(active = False) 
+        self.add_widget(self.check)
+ 
+class CheckBox_App(App): 
+    def build(self):       
+        return checkboxDemo()
+		
+root= CheckBox_App()
+root.run()
+</textarea>
+           </div> <p>The below screenshot shows the output of checkbox:</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-widgets2.png" alt="Kivy Tutorial"> <h3 class="h3">Slider</h3> <p>Slider is used to handle a specific numeric value within a range (minimum to maximum values). Mostly, Sliders are used in mobile phones to increase and decrease the volume as well as the brightness of the mobile phone.</p> <p>To create the slider, first, we have to import <strong>from kivy.uix.slider import Slider</strong> Module.</p> <p>In Kivy, we use the below code to create the Range Slider:</p> <p><strong>Code:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from kivy.app import App
+from kivy.uix.slider import Slider
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.label import Label
+ 	
+class Slider_Demo(GridLayout):
+    def __init__(self):
+        super().__init__()
+ 
+        self.cols = 2
+ 
+        self.slider = Slider(min = 0, max = 100)
+        self.add_widget(self.slider)
+        self.slider.bind(value = self.on_value_change)
+ 
+        self.label = Label(text = "0")
+        self.add_widget(self.label)
+ 
+    def on_value_change(self, instance, value):
+        self.label.text = "Value Is : {} ".format(int(value))
+ 
+ 
+class SliderWindow(App):
+    def build(self):
+ 
+        return Slider_Demo()
+ 
+ 
+ 
+root = SliderWindow()
+root.run()
+</textarea>
+           </div> <p>The below screenshot shows the output of the slider.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-widgets3.png" alt="Kivy Tutorial"> <h4 class="n">Note: Kivy also supports normalized slider, which contains minimum value 0 and maximum value 1.</h4> <h3 class="h3">Switch Widget</h3> <p>Switch widget contains only two states (On or OFF).</p> <p>To create a Switch widget, we need to import <strong>from kivy.uix.switch import Switch</strong> module.</p> <p><strong>Code:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy    
+from kivy.app import App   
+kivy.require('1.9.0') 
+from kivy.uix.switch import Switch #import switch Module 
+from kivy.uix.gridlayout import GridLayout   
+from kivy.uix.label import Label 
+  
+class SimpleSwitch(GridLayout): 
+  
+     
+     def __init__(self, **kwargs): 
+  
+          
+          super(SimpleSwitch, self).__init__(**kwargs) 
+  
+          
+          self.cols = 2
+  
+      
+          self.add_widget(Label(text ="Switch")) 
+  
+          
+          self.settings_sample = Switch(active = False) 
+  
+         
+          self.add_widget(self.settings_sample) 
+  
+          
+          self.settings_sample.bind(active = switch_callback)        
+  
+ 
+def switch_callback(switchObject, switchValue): 
+      
+   
+    if(switchValue): 
+        print('Switch is ON:):):)') 
+    else: 
+        print('Switch is OFF:(:(:(') 
+  
+   
+
+class SwitchApp(App): 
+     
+     def build(self): 
+          
+          return SimpleSwitch() 
+  
+   
+
+if __name__ == '__main__': 
+     SwitchApp().run()
+</textarea>
+           </div> <p><strong>Output:</strong> The below screenshot shows the output of the Switch Widget.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-widgets4.png" alt="Kivy Tutorial"> <h3 class="h3">Progress Bar</h3> <p>Progress Bar in one of the most important graphical control element, which is used to analyze the progress of operation such as <strong>downloading progress, file transfer progress, loading app, saving updates, and installation progress</strong>.</p> <p>To create a progress bar, fist import the below module:</p> <p><strong>from kivy.uix.progressbar import ProgressBar</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy
+from kivy.app import App
+from kivy.uix.widget import Widget
+from kivy.uix.button import Button
+from kivy.uix.progressbar import ProgressBar
+from kivy.uix.boxlayout import BoxLayout
+from kivy.clock import Clock
+from time import sleep
+ 
+class MainMenu(BoxLayout):
+    def __init__(self):
+        super().__init__()
+        self.orientation = 'vertical'
+       
+        btn = Button(text="Start")
+        btn.bind(on_release=self.trigger)
+        self.add_widget(btn)
+       
+        self.MyList = ('My', 'first', 'Progress', 'Bar')
+        self.i = 0
+        self.pb = ProgressBar(max = len(self.MyList), value = 0)    
+        self.add_widget(self.pb)
+               
+    def trigger(self, *args):
+      self.i = 0
+      self.pb.value = 0
+     
+      Clock.schedule_interval(self.heavyFunc,0.1)
+   
+    def heavyFunc(self, dt):
+        sleep(0.5)
+        print(self.MyList[self.i])
+        self.i += 1
+        self.pb.value +=1
+        if self.i &gt;= len(self.MyList):
+            Clock.unschedule(self.heavyFunc)
+            print('unscheduled')
+ 
+class TestApp(App):
+    def build(self):
+        return MainMenu()
+ 
+root = TestApp()
+root.run()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-widgets5.png" alt="Kivy Tutorial"> <p>When we click on the Start, the below progress bar appears on the screen.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-widgets6.png" alt="Kivy Tutorial"> 
+           <hr> <h2 id="Layouts" class="h2">Kivy Layouts</h2> <p>Layout is the most important term in graphics design. It is used to arrange elements for a better look.</p> <p>There are the following different types of layout that we generally use in the Kivy.</p> <h3 class="h3">1. GridLayout</h3> <p>GridLayout is designed to arrange the components in the form of a rectangular grid. In GridLayout, every rectangular grid is exactly the same in size.</p> <p>To create Grid layout in Kivy, first, we need to import the following GridLayout module -</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from kivy.uix.gridlayout import GridLayout
+</textarea>
+           </div> <p><strong>Implement Grid Layout:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy  #import kivy    
+from kivy.app import App   
+from kivy.uix.button import Button
+from kivy.uix.gridlayout import GridLayout #import GridLayout
+class Grid_LayoutApp(App):   
+    def build(self):  
+        layout = GridLayout(cols = 3) #define number of columns
+  
+        layout.add_widget(Button(text = 'java')) #first row 
+        layout.add_widget(Button(text = 'T'))
+        layout.add_widget(Button(text = 'point'))		
+  
+        layout.add_widget(Button(text = 'Python')) #second row
+        layout.add_widget(Button(text = '+'))
+        layout.add_widget(Button(text = 'Kivy'))
+		
+        return layout 
+		
+root = Grid_LayoutApp() 
+
+root.run()
+</textarea>
+           </div> <p>The below screenshot shows the output of the Grid Layout.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-layouts.png" alt="Kivy Tutorial"> <h3 class="h3">2. BoxLayout</h3> <p>BoxLayout is used to arrange the component based on the axis's [along X-axis (horizontally) and along Y-axis (Vertically)].</p> <p>To import BoxLayout, we need to import BoxLayout using below module:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from kivy.uix.boxlayout import BoxLayout.
+</textarea>
+           </div> <p><strong>Implement Box Layout:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy
+from kivy.app import App
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.button import Button
+
+class Box_LayoutApp(App):
+
+    def build(self):
+
+        superBox        = BoxLayout(orientation='vertical')
+
+        horizontalBox   = BoxLayout(orientation='horizontal')
+
+        button1         = Button(text = "Python")
+
+        button2         = Button(text = "Pygame")
+
+        horizontalBox.add_widget(button1)
+
+        horizontalBox.add_widget(button2)
+
+        verticalBox     = BoxLayout(orientation = 'vertical')
+
+        button3         = Button(text = "Jupyter")
+
+        button4         = Button(text = "OpenGL")
+
+        verticalBox.add_widget(button3)
+
+        verticalBox.add_widget(button4)
+	    
+        button1         = Button(text = "Kivy")
+
+        horizontalBox.add_widget(button1)
+
+        superBox.add_widget(horizontalBox)
+
+        superBox.add_widget(verticalBox)
+
+        return superBox
+
+root= Box_LayoutApp()
+root.run()
+</textarea>
+           </div> <p>The below screenshot shows the output of the Box Layout:</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-layouts2.png" alt="Kivy Tutorial"> <h3 class="h3">3. FloatLayout</h3> <p>FloatLayout is used to place element according to the size of the current window (in terms of height and width of window).</p> <p>FloatLayout contains <strong>pos_hint</strong> and <strong>size_hint</strong>, which are the properties of its children.</p> <h4 class="n">Note 1: FloatLayout is mostly used in the Mobile Applications.</h4> <h4 class="n">Note 2: By default, size_hint is (1,1) for all widgets.</h4> <p>To create FloatLayout, we need to import the below module:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from kivy.uix.floatlayout import FloatLayout
+</textarea>
+           </div> <p><strong>Implement FloatLayout:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy 
+from kivy.app import App   
+from kivy.uix.button import Button 
+from kivy.uix.floatlayout import FloatLayout # import FloatLayout
+class Float_LayoutApp(App): 
+  
+    def build(self): 
+  
+       
+        Layout = FloatLayout(size = (300,300))  
+        btn = Button(text ='Kivy', 
+		size_hint = (.3, .5), 
+        background_color = (.6, .7, .7, 1), 
+        pos_hint = {'x':.4, 'y':.3 }) 
+  
+         
+        Layout.add_widget(btn) 
+  
+        
+        return Layout 
+  
+root=Float_LayoutApp()
+root.run()
+</textarea>
+           </div> <p>The below screenshot shows the output of the FloatLayout:</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-layouts3.png" alt="Kivy Tutorial"> <h3 class="h3">4. AnchorLayout</h3> <p>AnchorLayout is used to align the border top, bottom, left, right, or center.</p> <p>AnchorLayout is initialized using the below parameters:</p> 
+           <ul class="points"> 
+            <li>anchor_x = (Parameter can be passed: "left", "right", and "center")</li> 
+            <li>anchor_y = (Parameter can be passed: "top", "bottom", and "center")</li> 
+           </ul> <p>We can implement Anchor Layout using the following module:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from kivy.uix.anchorlayout.AnchorLayout
+</textarea>
+           </div> <p>The below code is used to create AnchorLayout.</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy 
+from kivy.app import App 
+from kivy.uix.anchorlayout import AnchorLayout  # import AnchorLayout
+from kivy.uix.boxlayout import BoxLayout 
+from kivy.uix.button import Button 
+  
+class Anchor_LayoutDemo(App): 
+      
+    def build(self):
+
+        # Anchor1 (anchor_x = Left, anchor_y = center)
+
+        anchorLayout1 = AnchorLayout(anchor_x = 'left', anchor_y = 'center')
+
+        button1       = Button(text ='Python', size_hint = (0.4, 0.4), 
+		                       background_color = (.6,1.0,.7,1))
+
+        anchorLayout1.add_widget(button1)
+
+        # Anchor2 (anchor_x = center, anchor_y = top)
+
+        anchorLayout2    = AnchorLayout()
+
+        anchorLayout2 = AnchorLayout(anchor_x = 'center', anchor_y = 'top')
+
+        button2       = Button(text = 'Kivy', size_hint = (0.2, 0.2), 
+		                       background_color = (.6,1.0,.7,1))
+
+        anchorLayout2.add_widget(button2)
+		 
+		
+		# Anchor3 (anchor_x = right anchor_y = center)
+
+        anchorLayout3    = AnchorLayout()
+
+        anchorLayout3 = AnchorLayout(anchor_x = 'right', anchor_y = 'center')
+
+        button3       = Button(text = 'OpenGL', size_hint = (0.4, 0.4), 
+		                       background_color = (.6,1.0,.8,1))
+
+        anchorLayout3.add_widget(button3)
+
+        boxLayout = BoxLayout() # crete boxLayout
+
+        # Add the anchor layouts to the box layout
+
+        boxLayout.add_widget(anchorLayout1)
+
+        boxLayout.add_widget(anchorLayout2)
+
+        boxLayout.add_widget(anchorLayout3)
+
+        return boxLayout
+
+root = Anchor_LayoutDemo()
+root.run()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-layouts4.png" alt="Kivy Tutorial"> <h3 class="h3">5. StackLayout</h3> <p>StackLayout helps us to arrange buttons vertically and horizontally. In StackLayout, it is not compulsory that the sizes of all buttons are the same, so we can arrange buttons according to our requirement.</p> <p>To create StackLayout, we need to import the below module:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+from kivy.uix.stacklayout import StackLayout 
+</textarea>
+           </div> <p><strong>Code:</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy   
+kivy.require("1.9.1")    
+from kivy.app import App   
+from kivy.uix.button import Button  
+from kivy.uix.stacklayout import StackLayout 
+
+class StackLayout_Demo(App):  
+        
+    def build(self): 
+           
+        SL = StackLayout(orientation ='lr-tb') # Different orientation ['lr-tb', 'tb-lr', 'rl-tb', 'tb-rl', 'lr-bt', 'bt-lr', 'rl-bt', 'bt-rl']
+       
+         
+        button1 = Button(text ="1", 
+                      font_size = 18, 
+                      size_hint =(.1, .1)) 
+        button2 = Button(text ="2", 
+                      font_size = 18, 
+                      size_hint =(.1, .1)) 
+        button3 = Button(text ="3", 
+                      font_size = 18, 
+                      size_hint =(.1, .1)) 
+        button4 = Button(text ="4", 
+                      font_size = 18, 
+                      size_hint =(.1, .1)) 
+        button5 = Button(text ="5", 
+                      font_size = 18, 
+                      size_hint =(.1, .1)) 
+        button6 = Button(text ="6", 
+                      font_size = 18, 
+                      size_hint =(.1, .1)) 
+        button7 = Button(text ="7", 
+                      font_size = 18, 
+                      size_hint =(.1, .1)) 
+        button8 = Button(text ="8", 
+                      font_size = 18, 
+                      size_hint =(.1, .1)) 
+        button9 = Button(text ="9", 
+                      font_size = 18, 
+                      size_hint =(.1, .1)) 
+        button0 = Button(text ="0", 
+                      font_size = 18, 
+                      size_hint =(.1, .1)) 
+		
+        button11 = Button(text ="11", 
+                      font_size = 18, 
+                      size_hint =(.1, .1))
+        # adding widgets 
+        SL.add_widget(button1) 
+        SL.add_widget(button2) 
+        SL.add_widget(button3) 
+        SL.add_widget(button4) 
+        SL.add_widget(button5) 
+        SL.add_widget(button6) 
+        SL.add_widget(button7) 
+        SL.add_widget(button8) 
+        SL.add_widget(button9) 
+        SL.add_widget(button0) 
+	
+        return SL 
+root = StackLayout_Demo()
+root.run()
+</textarea>
+           </div> <p>The output of the StackLayout is shown below:</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/kivy-layouts5.png" alt="Kivy Tutorial"> 
+           <hr> <h2 id="popupwindow" class="h2">Create a Popup Window in Kivy</h2> <p>Popup window is a type of window that suddenly pops up on the screen. Generally, a popup window appears to users when they visit a page or closes a window.</p> <p>In Kivy, we create a popup window using the below code:</p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy
+from kivy.app import App
+from kivy.uix.button import Button
+from kivy.uix.label import Label
+from kivy.uix.popup import Popup
+from kivy.uix.gridlayout import GridLayout
+
+class Popup_Demo(App):
+
+    def build(self):
+
+        layout = GridLayout(cols = 1, padding = 10)
+
+        self.button = Button(text="Click Here to view Popup",
+		                     size_hint = (0.8, 0.2),
+                             pos_hint = {"x":0.1, "y":0.1})
+
+        layout.add_widget(self.button)
+
+        self.button.bind(on_press = self.onButtonPress) 
+
+        return layout
+
+    def onButtonPress(self, button):
+
+        layout      = GridLayout(cols = 1, padding = 10)
+
+        popupLabel  = Label(text  = "Welcome User")
+
+        closeButton = Button(text = "Close the pop-up window")
+
+        layout.add_widget(popupLabel)
+
+        layout.add_widget(closeButton)       
+
+        popup = Popup(title = 'Demo Popup',
+
+                      content = layout)  
+
+                 
+
+        popup.open()   
+
+        closeButton.bind(on_press = popup.dismiss)   
+
+root = Popup_Demo()
+root.run()
+</textarea>
+           </div> <p><strong>Output:</strong></p> <p>The below screenshot shows the output of popup window -</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/create-popup-window.png" alt="Kivy Tutorial"> <p>When we click on the popup window, the following screen appears on the screen.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/create-popup-window2.png" alt="Kivy Tutorial"> 
+           <hr> <h2 id="SigninWindow" class="h2">Create a Sign in Window in Kivy</h2> <p>Now, we are going to create a simple sign in page using Kivy. To create a sign in page in kivy, we need to create the following two files -</p> 
+           <ol class="points"> 
+            <li><strong>.py file -</strong> .py file is a script file which is written in Python. It can be created in any text editor but requires a Python interpreter to run.</li> 
+            <li><strong>.kv file -</strong> .kv file is same as css file in the HTML.</li> 
+           </ol> <h4 class="n">Note: Here, we are using .kv file to create Sign in window.</h4> <p><strong>.py file</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+import kivy
+from kivy.app import App
+from kivy.uix.boxlayout import BoxLayout
+
+class SigninWindow(BoxLayout):
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+    def validate_user(self):
+        user = self.ids.username_field
+        pwd = self.ids.pwd_field
+        info = self.ids.info
+
+        uname = user.text
+        passwd = pwd.text
+
+        if uname == '' or passwd == '':
+            info.text = '[color=#FF0000]username and password are required[/color]'
+        else:
+            if uname == 'admin' and passwd == 'admin':
+                info.text = '[color=#00FF00]Logged In successfully!!![/color]'
+            else:
+                info.text = '[color=#FF0000]Invalid Username and Password[/color]'
+
+
+
+class SigninApp(App):
+    def build(self):
+	    return SigninWindow()
+	
+	
+root = SigninApp()
+root.run()
+</textarea>
+           </div> <p><strong>.kv file</strong></p> 
+           <div class="codeblock">
+            <textarea name="code" class="java">
+&lt;FlatButton@ButtonBehavior+Label&gt;:
+    font_sixe: 16
+&lt;SigninWindow&gt;:
+    id: main_win
+    orientation: "vertical"
+	spacing: 10
+	space_x: self.size[0]/3
+	canvas.before:
+	    Color:
+		    rgba: (255, 255, 255, 255)
+		Rectangle:
+		    size: self.size
+			pos: self.pos
+	
+	BoxLayout:
+	    size_hint_y: None
+		height: 100
+		canvas.before:
+	        Color:
+		        rgba: (128, 0, 0, 1)
+		    Rectangle:
+		        size: self.size
+			    pos: self.pos
+	    Label:
+		    text: "Login Page"
+			bold: True
+			size_hint_x: .9
+			FlatButton:
+			    text: "x"
+				size_hint_x: .1
+		
+	BoxLayout:
+	    orientation: 'vertical'
+		padding: main_win.space_x, 10
+		spacing: 20
+		size_hint_y: None
+		height: 500
+	    BoxLayout:
+	        orientation: "vertical"
+			spacing: 10
+			size_hint_y: None
+			height: 80
+			Label
+			    id: info
+				text: ''
+				markup: True
+	        TextInput:
+			    id: username_field
+		        hint_text: "Username"
+				multiline: False
+				focus: True
+				on_text_validate: pwd_field.focus= True
+				size_hint_y: None
+				height: 30
+				
+		    TextInput:
+			    id: pwd_field
+		        hint_text: "Password"
+				multiline: False
+				password: True #for * pattern password
+				on_text_validate: root.validate_user()
+				size_hint_y: None
+				height: 30
+		Label:
+		    id: sp
+			size_hint_y: None
+			height: 20
+	    Button:
+		    text: "Sign In" 
+            size_hint_y: None
+            height: 40
+            background_color: (.06,.06,.06,1)
+            background_normal: ''
+            on_release: root.validate_user()			
+        Label:
+		    id: sp2
+</textarea>
+           </div> <p>When we run the code, the following window appears on the screen.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/create-sign-in-window.png" alt="Kivy Tutorial"> <p><strong>Case1:</strong> If the username and the password are empty, then the following screen appears on the screen.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/create-sign-in-window2.png" alt="Kivy Tutorial"> <p><strong>Case 2:</strong> If we enter an invalid username and password, the following screen appears on the screen.</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/create-sign-in-window3.png" alt="Kivy Tutorial"> <p><strong>Case 3:</strong> If we enter username <strong>admin</strong> and password is <strong>admin</strong> then the following screen appears on the screen</p> <img src="https://static.javatpoint.com/tutorial/kivy/images/create-sign-in-window4.png" alt="Kivy Tutorial"> <h2 class="h2">Prerequisite</h2> <p>Before learning Kivy, you must have the fundamental knowledge of Python so that you can understand the Kivy concepts easily.</p> <h2 class="h2">Audience</h2> <p>Our Kivy tutorial is designed for beginners and working professionals.</p> <h2 class="h2">Problem</h2> <p>We assure you that you will not find any difficulty while learning our Kivy tutorial. Buts if there any mistake, kindly posts the problem in the contact form.</p> 
+           <hr> 
+           <div class="nexttopicdiv"> <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="dropdown-list-in-kivy">Dropdown List in Kivy</a></span> 
+           </div> <br><br> 
+           <div id="bottomnext"> <a style="float:right" class="next" href="dropdown-list-in-kivy">next &#x2192;</a> 
+           </div> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b0d6d5d5d4d2d1d3dbf0dad1c6d1c4c0dfd9dec49ed3dfdd">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/kivy"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/kivy"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/kivy"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bcd4cefcd6ddcaddc8ccd3d5d2c892dfd3d1">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7a12083a101b0c1b0e0a1513140e5419151754">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>

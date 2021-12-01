@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Software Engineering Tutorial - javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Software Engineering Tutorial - javatpoint">
+  <meta property="og:description" content="Software Engineering Tutorial with introduction, models, engineering, software development life cycle, sdlc, requirement engineering, waterfall model, spiral model, rapid application development model, rad, software management, etc."> 
+  <meta name="keywords" content="software engineering tutorial, models, engineering, software development life cycle, sdlc, requirement engineering, waterfall model, spiral model, rapid application development model, rad, software management, software engineering designs, testing, maintenance, case tool, overview, quality control vs quality assurance">
+  <meta name="description" content="Software Engineering Tutorial with introduction, models, engineering, software development life cycle, sdlc, requirement engineering, waterfall model, spiral model, rapid application development model, rad, software management, etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/software-engineering-tutorial"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Software Engineering Tutorial - javatpoint">
+  <meta name="twitter:description" property="og:description" content="Software Engineering Tutorial with introduction, models, engineering, software development life cycle, sdlc, requirement engineering, waterfall model, spiral model, rapid application development model, rad, software management, etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/software-engineering-tutorial">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="software-testing-tutorial">Software Testing</a> </li>
+       <li><a href="software-engineering-tutorial" class="selected">Software Engineering</a> </li>
+       <li><a href="compiler-tutorial">Compiler</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="computer-organization-and-architecture-tutorial">COA</a></li> 
+       <li><a href="computer-network-tutorial">Computer Network</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="css-tutorial">CSS</a></li> 
+       <li><a href="selenium-tutorial">Selenium</a></li> 
+       <li><a href="servlet-tutorial">Servlet</a></li> 
+       <li><a href="jsp-tutorial">JSP</a></li> 
+       <li><a href="jquery-tutorial">jQuery</a></li> 
+       <li><a href="examaccess">Quiz</a></li> 
+       <li><a href="free-java-projects">Projects</a></li> 
+       <li><a href="corejava-interview-questions">Interview Q</a></li> 
+       <li><a href="comment.jsp">Comment</a></li> 
+       <li><a href="forum">Forum</a></li> 
+       <li><a href="training">Training</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Software Engineering</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-engineering-tutorial">Tutorial</a> <a href="software-processes">Software Processes</a> <a href="software-engineering-software-development-life-cycle">SDLC</a> <a href="software-engineering-sdlc-models">SDLC Models</a> <a href="software-engineering-requirement-engineering">Requirement Engineering</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Models</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-engineering-waterfall-model">Waterfall Model</a> <a href="software-engineering-rapid-application-development-model">RAD Model</a> <a href="software-engineering-spiral-model">Spiral Model</a> <a href="software-engineering-v-model">V-model</a> <a href="software-engineering-incremental-model">Incremental Model</a> <a href="software-engineering-agile-model">Agile Model</a> <a href="software-engineering-iterative-model">Iterative Model</a> <a href="software-engineering-big-bang-model">Big-Bang Model</a> <a href="software-engineering-prototype-model">Prototype Model</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Software Management</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-project-management">Project Management</a> <a href="software-project-management-activities">Activities</a> <a href="software-project-management-tools">Project Management Tools</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Software Metrics</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-engineering-software-metrics">Software Metrics</a> <a href="software-engineering-size-oriented-metrics">Size Oriented Metrics</a> <a href="software-engineering-halsteads-software-metrics">Halstead's Software Metrics</a> <a href="software-engineering-functional-point-fp-analysis">Functional Point (FP) Analysis</a> <a href="software-engineering-extended-function-point-efp-metrics">Extended Function Point (EFP) Metrics</a> <a href="software-engineering-data-structure-metrics">Data Structure Metrics</a> <a href="software-engineering-information-flow-metrics">Information Flow Metrics</a> <a href="software-engineering-cyclomatic-complexity">Cyclomatic Complexity</a> <a href="software-engineering-case-tools-for-software-metrics">Case Tools For Software Metrics</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Project Planning</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-project-planning">Software Project Planning</a> <a href="software-cost-estimation">Software Cost Estimation</a> <a href="cocomo-model">COCOMO Model</a> <a href="putnam-resource-allocation-model">Putnam Resource Allocation Model</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Risk Management</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-engineering-risk-management">Risk Management</a> <a href="software-engineering-risk-management-activities">Risk Management Activities</a> <a href="software-engineering-project-scheduling">Project Scheduling</a> <a href="software-engineering-personnel-planning">Personnel Planning</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Software Requirement</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-requirement-specifications">Software Requirement Specifications</a> <a href="software-engineering-requirement-analysis">Requirements Analysis</a> <a href="software-engineering-data-flow-diagrams">Data Flow Diagrams</a> <a href="software-engineering-data-dictionaries">Data Dictionaries</a> <a href="software-engineering-entity-relationship-diagrams">Entity-Relationship Diagram</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">S/W Configuration</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-configuration-management">Software Configuration Management</a> <a href="scm-process">SCM Process</a> <a href="software-quality-assurance">Software Quality Assurance</a> <a href="project-monitoring-and-control">Project Monitoring &amp; Control</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Software Quality</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-engineering-software-quality">Software Quality</a> <a href="software-engineering-iso-9000-certification">ISO 9000 Certification</a> <a href="software-engineering-institute-capability-maturity-model">SEICMM</a> <a href="software-engineering-people-capability-maturity-model">PCMM</a> <a href="software-engineering-six-sigma">Six Sigma</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Software Design</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-engineering-software-design">Software Design</a> <a href="software-engineering-software-design-principles">Software Design Principles</a> <a href="software-engineering-coupling-and-cohesion">Coupling and Cohesion</a> <a href="software-engineering-function-oriented-design">Function Oriented Design</a> <a href="software-engineering-object-oriented-design">Object Oriented Design</a> <a href="software-engineering-user-interface-design">User Interface Design</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Coding</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-engineering-coding">Coding</a> <a href="software-engineering-programming-style">Programming Style</a> <a href="software-engineering-structured-programming">Structured Programming</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Software Reliability</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-engineering-software-reliability">Software Reliability</a> <a href="software-engineering-software-failure-mechanisms">Software Failure Mechanisms</a> <a href="software-engineering-software-reliability-measurement-techniques">Software Reliability Measurement Techniques</a> <a href="software-engineering-software-reliability-metrics">Software Reliability Metrics</a> <a href="software-engineering-software-fault-tolerance">Software Fault Tolerance</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">S. Reliability Models</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-engineering-software-reliability-models">Software Reliability Models</a> <a href="software-engineering-jelinski-and-moranda-model">Jelinski &amp; Moranda Model</a> <a href="software-engineering-basic-execution-time-model">Basic Execution Time Model</a> <a href="software-engineering-goel-okumoto-model">Goel-Okumoto (GO) Model</a> <a href="software-engineering-musa-okumoto-logarithmic-model">Musa-Okumoto Logarithmic Model</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Software Maintenance</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-engineering-software-maintenance">Software Maintenance</a> <a href="software-engineering-causes-of-software-maintenance-problems">Causes of Software Maintenance Problems</a> <a href="software-engineering-software-maintenance-cost-factors">Software Maintenance Cost Factors</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">MCQ</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-engineering-mcq">Software Eng. MCQ</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Software Testing</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="software-testing-tutorial">Software Testing Tutorial</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> 
+           <div id="bottomnextup"> <a class="next" href="software-processes">next &#x2192;</a> 
+           </div> <h1 class="h1">Software Engineering Tutorial</h1> <img src="https://static.javatpoint.com/tutorial/software-engineering/images/software-engineering-tutorial.png" alt="Software Engineering Tutorial" style="float:right;padding-left:15px"> <p>Software Engineering Tutorial delivers basic and advanced concepts of Software Engineering. Software Engineering Tutorial is designed to help beginners and professionals both.</p> <p>Software Engineering provides a standard procedure to design and develop a software.</p> <p>Our Software Engineering Tutorial contains all the topics of Software Engineering like Software Engineering Models, Software Development Life Cycle, Requirement Engineering, Software Design tools, Software Design Strategies, Software Design levels, Software Project Management, Software Management activities, Software Management Tools, Software Testing levels, Software Testing approaches, Quality Assurance Vs. Quality control, Manual Testing, Software Maintenance, Software Re-engineering and Software Development Tool such as CASE Tool.</p> <h2 class="h2">What is Software Engineering?</h2> <p>The term <strong>software engineering</strong> is the product of two words, <strong>software</strong>, and <strong>engineering</strong>.</p> <p>The <strong>software</strong> is a collection of integrated programs.</p> <p>Software subsists of carefully-organized instructions and code written by developers on any of various particular computer languages.</p> <p>Computer programs and related documentation such as requirements, design models and user manuals.</p> <p><strong>Engineering</strong> is the application of <strong>scientific</strong> and <strong>practical</strong> knowledge to <strong>invent, design, build, maintain</strong>, and <strong>improve frameworks, processes, etc</strong>.</p> <img src="https://static.javatpoint.com/tutorial/software-engineering/images/software-engineering-introduction.png" alt="Software Engineering Introduction"> <p><strong>Software Engineering</strong> is an engineering branch related to the evolution of software product using well-defined scientific principles, techniques, and procedures. The result of software engineering is an effective and reliable software product.</p> <h2 class="h2">Why is Software Engineering required?</h2> <p>Software Engineering is required due to the following reasons:</p> 
+           <ul class="points"> 
+            <li>To manage Large software</li> 
+            <li>For more Scalability</li> 
+            <li>Cost Management</li> 
+            <li>To manage the dynamic nature of software</li> 
+            <li>For better quality Management</li> 
+           </ul> <h2 class="h2">Need of Software Engineering</h2> <p>The necessity of software engineering appears because of a higher rate of progress in user requirements and the environment on which the program is working.</p> 
+           <ul class="points"> 
+            <li><strong>Huge Programming: </strong> It is simpler to manufacture a wall than to a house or building, similarly, as the measure of programming become extensive engineering has to step to give it a scientific process.</li> 
+            <li><strong>Adaptability: </strong> If the software procedure were not based on scientific and engineering ideas, it would be simpler to re-create new software than to scale an existing one.</li> 
+            <li><strong>Cost: </strong> As the hardware industry has demonstrated its skills and huge manufacturing has let down the cost of computer and electronic hardware. But the cost of programming remains high if the proper process is not adapted.</li> 
+            <li><strong>Dynamic Nature: </strong> The continually growing and adapting nature of programming hugely depends upon the environment in which the client works. If the quality of the software is continually changing, new upgrades need to be done in the existing one.</li> 
+            <li><strong>Quality Management:</strong> Better procedure of software development provides a better and quality software product. </li> 
+           </ul> <h2 class="h2">Characteristics of a good software engineer </h2> <p><strong>The features that good software engineers should possess are as follows: </strong></p> <p>Exposure to systematic methods, i.e., familiarity with software engineering principles.</p> <p>Good technical knowledge of the project range (Domain knowledge).</p> <p>Good programming abilities.</p> <p>Good communication skills. These skills comprise of oral, written, and interpersonal skills. </p> <p>High motivation.</p> <p>Sound knowledge of fundamentals of computer science.</p> <p>Intelligence.</p> <p>Ability to work in a team</p> <p>Discipline, etc.</p> <h2 class="h2">Importance of Software Engineering</h2> <img src="https://static.javatpoint.com/tutorial/software-engineering/images/software-engineering-introduction2.png" alt="Software Engineering Introduction"> <p><strong>The importance of Software engineering is as follows: </strong></p> 
+           <ol class="points"> 
+            <li><strong>Reduces complexity:</strong> Big software is always complicated and challenging to progress. Software engineering has a great solution to reduce the complication of any project. Software engineering divides big problems into various small issues. And then start solving each small issue one by one. All these small problems are solved independently to each other.</li> 
+            <li><strong>To minimize software cost:</strong> Software needs a lot of hardwork and software engineers are highly paid experts. A lot of manpower is required to develop software with a large number of codes. But in software engineering, programmers project everything and decrease all those things that are not needed. In turn, the cost for software productions becomes less as compared to any software that does not use software engineering method.</li> 
+            <li><strong>To decrease time:</strong> Anything that is not made according to the project always wastes time. And if you are making great software, then you may need to run many codes to get the definitive running code. This is a very time-consuming procedure, and if it is not well handled, then this can take a lot of time. So if you are making your software according to the software engineering method, then it will decrease a lot of time.</li> 
+            <li><strong>Handling big projects:</strong> Big projects are not done in a couple of days, and they need lots of patience, planning, and management. And to invest six and seven months of any company, it requires heaps of planning, direction, testing, and maintenance. No one can say that he has given four months of a company to the task, and the project is still in its first stage. Because the company has provided many resources to the plan and it should be completed. So to handle a big project without any problem, the company has to go for a software engineering method.</li> 
+            <li><strong>Reliable software:</strong> Software should be secure, means if you have delivered the software, then it should work for at least its given time or subscription. And if any bugs come in the software, the company is responsible for solving all these bugs. Because in software engineering, testing and maintenance are given, so there is no worry of its reliability.</li> 
+            <li><strong>Effectiveness:</strong> Effectiveness comes if anything has made according to the standards. Software standards are the big target of companies to make it more effective. So Software becomes more effective in the act with the help of software engineering.</li> 
+           </ol> 
+           <hr> <h2 class="h2 center" style="text-shadow: 1px 1px 2px #ccc;">Software Engineering Tutorial Index</h2> 
+           <hr> 
+           <div class="responsivediv"> 
+            <div class="col-3"> 
+             <p><strong>Tutorial</strong></p> 
+             <ul class="points"> 
+              <li><a href="software-engineering-tutorial">Tutorial</a></li> 
+              <li><a href="software-processes">Software Processes</a></li> 
+              <li><a href="software-engineering-software-development-life-cycle">SDLC</a></li> 
+              <li><a href="software-engineering-sdlc-models">SDLC Models</a></li> 
+              <li><a href="software-engineering-requirement-engineering">Requirement Engineering</a></li> 
+             </ul> 
+             <p><strong>Models</strong></p> 
+             <ul class="points"> 
+              <li><a href="software-engineering-waterfall-model">Waterfall Model</a></li> 
+              <li><a href="software-engineering-rapid-application-development-model">RAD Model</a></li> 
+              <li><a href="software-engineering-spiral-model">Spiral Model</a></li> 
+              <li><a href="software-engineering-v-model">V-model</a></li> 
+              <li><a href="software-engineering-incremental-model">Incremental Model</a></li> 
+              <li><a href="software-engineering-agile-model">Agile Model</a></li> 
+              <li><a href="software-engineering-iterative-model">Iterative Model</a></li> 
+              <li><a href="software-engineering-big-bang-model">Big-Bang Model</a></li> 
+              <li><a href="software-engineering-prototype-model">Prototype Model</a></li> 
+             </ul> 
+             <p><strong>Software Management</strong></p> 
+             <ul class="points"> 
+              <li><a href="software-project-management">Project Management</a></li> 
+              <li><a href="software-project-management-activities">Activities</a></li> 
+              <li><a href="software-project-management-tools">Project Management Tools</a></li> 
+             </ul> 
+             <p><strong>Software Metrics</strong></p> 
+             <ul class="points"> 
+              <li><a href="software-engineering-software-metrics">Software Metrics</a></li> 
+              <li><a href="software-engineering-size-oriented-metrics">Size Oriented Metrics</a></li> 
+              <li><a href="software-engineering-halsteads-software-metrics">Halstead's Software Metrics</a></li> 
+              <li><a href="software-engineering-functional-point-fp-analysis">Functional Point (FP) Analysis</a></li> 
+              <li><a href="software-engineering-extended-function-point-efp-metrics">Extended Function Point (EFP) Metrics</a></li> 
+              <li><a href="software-engineering-data-structure-metrics">Data Structure Metrics</a></li> 
+              <li><a href="software-engineering-information-flow-metrics">Information Flow Metrics</a></li> 
+              <li><a href="software-engineering-cyclomatic-complexity">Cyclomatic Complexity</a></li> 
+              <li><a href="software-engineering-case-tools-for-software-metrics">Case Tools For Software Metrics</a></li> 
+             </ul> 
+            </div> 
+            <div class="col-3"> 
+             <p><strong>Project Planning</strong></p> 
+             <ul class="points"> 
+              <li><a href="software-project-planning">Software Project Planning</a></li> 
+              <li><a href="software-cost-estimation">Software Cost Estimation</a></li> 
+              <li><a href="cocomo-model">COCOMO Model</a></li> 
+              <li><a href="putnam-resource-allocation-model">Putnam Resource Allocation Model</a></li> 
+             </ul> 
+             <p><strong>Risk Management</strong></p> 
+             <ul class="points"> 
+              <li><a href="software-engineering-risk-management">Risk Management</a></li> 
+              <li><a href="software-engineering-risk-management-activities">Risk Management Activities</a></li> 
+              <li><a href="software-engineering-project-scheduling">Project Scheduling</a></li> 
+              <li><a href="software-engineering-personnel-planning">Personnel Planning</a></li> 
+             </ul> 
+             <p><strong>Software Requirement</strong></p> 
+             <ul class="points"> 
+              <li><a href="software-requirement-specifications">Software Requirement Specifications</a></li> 
+              <li><a href="software-engineering-requirement-analysis">Requirements Analysis</a></li> 
+              <li><a href="software-engineering-data-flow-diagrams">Data Flow Diagrams</a></li> 
+              <li><a href="software-engineering-data-dictionaries">Data Dictionaries</a></li> 
+              <li><a href="software-engineering-entity-relationship-diagrams">Entity-Relationship Diagram</a></li> 
+             </ul> 
+             <p><strong>S/W Configuration</strong></p> 
+             <ul class="points"> 
+              <li><a href="software-configuration-management">Software Configuration Management</a></li> 
+              <li><a href="scm-process">SCM Process</a></li> 
+              <li><a href="software-quality-assurance">Software Quality Assurance</a></li> 
+              <li><a href="project-monitoring-and-control">Project Monitoring &amp; Control</a></li> 
+             </ul> 
+             <p><strong>Software Quality</strong></p> 
+             <ul class="points"> 
+              <li><a href="software-engineering-software-quality">Software Quality</a></li> 
+              <li><a href="software-engineering-iso-9000-certification">ISO 9000 Certification</a></li> 
+              <li><a href="software-engineering-institute-capability-maturity-model">SEICMM</a></li> 
+              <li><a href="software-engineering-people-capability-maturity-model">PCMM</a></li> 
+              <li><a href="software-engineering-six-sigma">Six Sigma</a></li> 
+             </ul> 
+            </div> 
+            <div class="col-3"> 
+             <p><strong>Software Design</strong></p> 
+             <ul class="points"> 
+              <li><a href="software-engineering-software-design">Software Design</a></li> 
+              <li><a href="software-engineering-software-design-principles">Software Design Principles</a></li> 
+              <li><a href="software-engineering-coupling-and-cohesion">Coupling and Cohesion</a></li> 
+              <li><a href="software-engineering-function-oriented-design">Function Oriented Design</a></li> 
+              <li><a href="software-engineering-object-oriented-design">Object Oriented Design</a></li> 
+              <li><a href="software-engineering-user-interface-design">User Interface Design</a></li> 
+             </ul> 
+             <p><strong>Coding</strong></p> 
+             <ul class="points"> 
+              <li><a href="software-engineering-coding">Coding</a></li> 
+              <li><a href="software-engineering-programming-style">Programming Style</a></li> 
+              <li><a href="software-engineering-structured-programming">Structured Programming</a></li> 
+             </ul> 
+             <p><strong>Software Reliability</strong></p> 
+             <ul class="points"> 
+              <li><a href="software-engineering-software-reliability">Software Reliability</a></li> 
+              <li><a href="software-engineering-software-failure-mechanisms">Software Failure Mechanisms</a></li> 
+              <li><a href="software-engineering-software-reliability-measurement-techniques">Software Reliability Measurement Techniques</a></li> 
+              <li><a href="software-engineering-software-reliability-metrics">Software Reliability Metrics</a></li> 
+              <li><a href="software-engineering-software-fault-tolerance">Software Fault Tolerance</a></li> 
+             </ul> 
+             <p><strong>S. Reliability Models</strong></p> 
+             <ul class="points"> 
+              <li><a href="software-engineering-software-reliability-models">Software Reliability Models</a></li> 
+              <li><a href="software-engineering-jelinski-and-moranda-model">Jelinski &amp; Moranda Model</a></li> 
+              <li><a href="software-engineering-basic-execution-time-model">Basic Execution Time Model</a></li> 
+              <li><a href="software-engineering-goel-okumoto-model">Goel-Okumoto (GO) Model</a></li> 
+              <li><a href="software-engineering-musa-okumoto-logarithmic-model">Musa-Okumoto Logarithmic Model</a></li> 
+             </ul> 
+             <p><strong>Software Maintenance</strong></p> 
+             <ul class="points"> 
+              <li><a href="software-engineering-software-maintenance">Software Maintenance</a></li> 
+              <li><a href="software-engineering-causes-of-software-maintenance-problems">Causes of Software Maintenance Problems</a></li> 
+              <li><a href="software-engineering-software-maintenance-cost-factors">Software Maintenance Cost Factors</a></li> 
+             </ul> 
+            </div> 
+           </div> 
+           <hr> <h2 class="h2">Prerequisite</h2> <p>There is nothing prerequisite required for learning Software Engineering. </p> <h2 class="h2">Audience</h2> <p>This Tutorial helps Beginners and professionals for understanding Software Engineering. </p> <h2 class="h2">Problems</h2> <p>We assure you that you will not found any mistake in this tutorial, but if there is any mistake, please post in the comment section. </p> 
+           <hr> 
+           <div class="nexttopicdiv"> <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="software-processes">Software Processes</a></span> 
+           </div> <br><br> 
+           <div id="bottomnext"> <a style="float:right" class="next" href="software-processes">next &#x2192;</a> 
+           </div> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5a3c3f3f3e383b39311a303b2c3b2e2a3533342e74393537">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/software-engineering-tutorial"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/software-engineering-tutorial"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/software-engineering-tutorial"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c6aeb486aca7b0a7b2b6a9afa8b2e8a5a9ab">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="375f45775d5641564347585e59431954585a19">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>
